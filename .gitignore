@@ -1,3 +1,16 @@
+# Dependencies
+node_modules
+dist
+dist-ssr
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Documentation / Source files to ignore
+BULGARCA_PROJECT_SOURCE_FILES_v1
+
 # Logs
 logs
 *.log
@@ -6,11 +19,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
 
 # Editor directories and files
 .vscode/*
