@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Question } from '../types/exercise';
+import { ExerciseItem } from '../types/exercise';
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 
 interface ExerciseCardProps {
-  question: Question;
+  item: ExerciseItem;
   onNext: (isCorrect: boolean) => void;
 }
 
-export function ExerciseCard({ question, onNext }: ExerciseCardProps) {
+export function ExerciseCard({ item, onNext }: ExerciseCardProps) {
   const [selected, setSelected] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
 
@@ -21,17 +21,17 @@ export function ExerciseCard({ question, onNext }: ExerciseCardProps) {
     setIsAnswered(true);
   };
 
-  const isCorrect = selected === question.answer;
+  const isCorrect = selected === item.answer;
 
   return (
     <div className="card p-6 space-y-6">
       <div className="space-y-2">
         <div className="text-[10px] uppercase font-bold text-primary-500 tracking-widest">Soru</div>
-        <h3 className="text-xl font-bold text-slate-800">{question.question}</h3>
+        <h3 className="text-xl font-bold text-slate-800">{item.prompt_tr}</h3>
       </div>
 
       <div className="space-y-3">
-        {question.options?.map((option) => (
+        {item.choices?.map((option) => (
           <button
             key={option}
             onClick={() => handleSelect(option)}
@@ -51,7 +51,7 @@ export function ExerciseCard({ question, onNext }: ExerciseCardProps) {
               {isAnswered && selected === option && (
                 isCorrect ? <CheckCircle size={20} /> : <XCircle size={20} />
               )}
-              {isAnswered && option === question.answer && selected !== option && (
+              {isAnswered && option === item.answer && selected !== option && (
                 <CheckCircle size={20} className="text-emerald-500" />
               )}
             </div>

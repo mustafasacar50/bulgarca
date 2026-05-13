@@ -1,10 +1,3 @@
-export interface LessonItem {
-  type: 'text' | 'vocabulary' | 'image';
-  value?: string;
-  items?: VocabularyItem[];
-  imageUrl?: string;
-}
-
 export interface VocabularyItem {
   bg: string;
   tr: string;
@@ -15,11 +8,26 @@ export interface VocabularyItem {
   ruleId?: string;
 }
 
+export interface LessonBlock {
+  type: 'explanation' | 'vocabulary' | 'image' | 'alphabet_grid' | 'rule_cards';
+  text_tr?: string;
+  items?: any[];
+  rules?: any[];
+  imageUrl?: string;
+}
+
+export interface LessonSection {
+  section_id: string;
+  title_tr: string;
+  blocks: LessonBlock[];
+}
+
 export interface Lesson {
-  id: string;
-  title: string;
-  description?: string;
-  content: LessonItem[];
+  lesson_id: string;
+  title_tr: string;
+  title_bg?: string;
+  level: string;
+  sections: LessonSection[];
 }
 
 export interface LessonMeta {

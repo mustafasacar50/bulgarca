@@ -1,11 +1,15 @@
-export interface Question {
-  type: 'multiple-choice' | 'fill-in-the-blank' | 'matching';
-  question: string;
-  options?: string[];
+export interface ExerciseItem {
+  id: string;
+  type: 'multiple_choice' | 'fill_in_the_blank' | 'matching';
+  prompt_tr: string;
+  choices?: string[];
   answer: string | string[];
+  explanation_tr?: string;
 }
 
 export interface ExerciseSet {
-  lessonId: string;
-  questions: Question[];
+  lesson_id: string;
+  exercise_set_id: string;
+  title_tr: string;
+  items: ExerciseItem[];
 }
