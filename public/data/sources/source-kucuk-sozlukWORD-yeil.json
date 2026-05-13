@@ -1,0 +1,14 @@
+{
+  "source_id": "source_kucuk_sozluk_word_yeil",
+  "file": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+  "title_tr": "Türkçe ve Bulgarca’da Ortak Kelimeler – Küçük Çaplı Eğitim Sözlüğü",
+  "title_bg": "Малък учебен речник на сходните думи в турски и български език",
+  "pages": 91,
+  "content_type": "dictionary_pdf",
+  "used_for": [
+    "glossary",
+    "cognate_rules",
+    "lesson-006"
+  ],
+  "notes_tr": "Kaynak, 750’den fazla ortak/benzer kelime içerdiğini ve gramer cinsi/çoğul alanları bıraktığını belirtir. Otomatik çıkarımda 687 sözlük girdisi üretildi; düzeltme/audit için review_status alanı eklendi."
+}
