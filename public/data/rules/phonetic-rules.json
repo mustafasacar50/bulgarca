@@ -1,0 +1,14 @@
+{
+  "id": "phonetic-rules",
+  "title": "Fonetik Kurallar",
+  "rules": [
+    {
+      "id": "sh-rule",
+      "pattern": "Ш",
+      "description": "Ş → Ш. Türkçedeki Ş sesi Bulgarcada Ш ile yazılır.",
+      "examples": [
+        { "bg": "марш", "tr": "MARŞ" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "alphabet-rules",
+  "title": "Alfabe Kuralları",
+  "rules": [
+    {
+      "id": "cyrillic-vowels",
+      "pattern": "А, Е, И, О, У, Ъ",
+      "description": "Bulgarcadaki temel sesli harflerdir.",
+      "examples": [
+        { "bg": "Аз", "tr": "Ben" },
+        { "bg": "Езеро", "tr": "Göl" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "lessonId": "lesson-001-alfabe",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "Bulgarca 'Ben' nasıl denir?",
+      "options": ["Аз", "Баba", "Ден"],
+      "answer": "Аз"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "'Баба' kelimesinin okunuşu nedir?",
+      "options": ["Baba", "Dede", "Anne"],
+      "answer": "Baba"
+    }
+  ]
+}

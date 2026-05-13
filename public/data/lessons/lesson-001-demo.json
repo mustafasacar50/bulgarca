@@ -1,0 +1,41 @@
+{
+  "id": "lesson-001-demo",
+  "title": "Tanışma ve Alfabe",
+  "content": [
+    {
+      "type": "text",
+      "value": "Bulgarca alfabesi Kiril alfabesidir. Bazı harfler Türkçedeki seslerle benzerlik gösterir."
+    },
+    {
+      "type": "vocabulary",
+      "items": [
+        {
+          "bg": "марш",
+          "tr": "MARŞ",
+          "note": "Türkçedeki Ş sesi Bulgarcada Ш ile yazılır.",
+          "ruleId": "sh-rule"
+        },
+        {
+          "bg": "Здравей",
+          "tr": "Merhaba",
+          "pronunciation": "Zdravey"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "Çoğul yaparken bazı kurallar değişebilir. Örneğin:"
+    },
+    {
+      "type": "vocabulary",
+      "items": [
+        {
+          "bg": "анархия",
+          "tr": "anarşi",
+          "plural": "анархии",
+          "ruleId": "plural-ia-rule"
+        }
+      ]
+    }
+  ]
+}

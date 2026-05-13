@@ -1,0 +1,14 @@
+{
+  "id": "plural-rules",
+  "title": "Çoğul Yapma Kuralları",
+  "rules": [
+    {
+      "id": "plural-ia-rule",
+      "pattern": "-ия → -ии",
+      "description": "-ия ile biten bazı kelimeler çoğulda -ии olur.",
+      "examples": [
+        { "bg": "анархия", "tr": "anarşi", "plural": "анархии" }
+      ]
+    }
+  ]
+}

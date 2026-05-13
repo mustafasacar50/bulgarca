@@ -1,0 +1,22 @@
+{
+  "app_name": "BULGARCA",
+  "version": "0.1.0",
+  "lessons": [
+    {
+      "id": "lesson-001-alfabe",
+      "title_tr": "Bulgar Alfabesine Giriş",
+      "level": "A1",
+      "path": "/data/lessons/lesson-001-alfabe.json",
+      "exercise_path": "/data/exercises/exercises-001.json"
+    }
+  ],
+  "rules": [
+    {
+      "id": "alphabet-rules",
+      "title": "Alfabe Kuralları",
+      "filePath": "/data/rules/alphabet-rules.json"
+    }
+  ],
+  "glossary": "/data/glossary/bg-tr-glossary.json",
+  "sources": "/data/sources/source-index.json"
+}

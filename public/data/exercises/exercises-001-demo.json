@@ -1,0 +1,11 @@
+{
+  "lessonId": "lesson-001-demo",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "'марш' kelimesinin Türkçe karşılığı nedir?",
+      "options": ["MARŞ", "MERHABA", "ELMA"],
+      "answer": "MARŞ"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "lesson-001-alfabe",
+  "title": "Bulgar Alfabesine Giriş",
+  "description": "Kiril alfabesinin temel harfleri ve sesleri.",
+  "content": [
+    {
+      "type": "text",
+      "value": "Bulgar Alfabesi (Kiril) 30 harften oluşur. İşte ilk birkaç harf:"
+    },
+    {
+      "type": "vocabulary",
+      "items": [
+        {
+          "bg": "А а",
+          "tr": "A",
+          "note": "Türkçedeki 'A' sesi gibi okunur.",
+          "example": "Аз (Ben)"
+        },
+        {
+          "bg": "Б б",
+          "tr": "B",
+          "note": "Türkçedeki 'B' sesi gibi okunur.",
+          "example": "Баба (Büyükanne)"
+        },
+        {
+          "bg": "В в",
+          "tr": "V",
+          "note": "Türkçedeki 'V' sesi gibi okunur.",
+          "example": "Вино (Şarap)"
+        },
+        {
+          "bg": "Г г",
+          "tr": "G",
+          "note": "Türkçedeki 'G' sesi gibi okunur.",
+          "example": "Град (Şehir)"
+        },
+        {
+          "bg": "Д д",
+          "tr": "D",
+          "note": "Türkçedeki 'D' sesi gibi okunur.",
+          "example": "Ден (Gün)"
+        }
+      ]
+    }
+  ]
+}
