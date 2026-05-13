@@ -65,7 +65,7 @@ export function RightInfoPanel({ item, onClose, onSelectItem }: RightInfoPanelPr
               <div className="space-y-3">
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Örnekler</h4>
                 <div className="flex flex-wrap gap-2">
-                  {(data.panel_examples || data.examples).map((ex: any, i: number) => (
+                  {(data.panel_examples || data.examples || []).map((ex: any, i: number) => (
                     <LearningText 
                       key={i} 
                       bg={typeof ex === 'string' ? ex : ex.bg} 
@@ -94,7 +94,7 @@ export function RightInfoPanel({ item, onClose, onSelectItem }: RightInfoPanelPr
               <div className="space-y-3">
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Örnekler</h4>
                 <div className="space-y-3">
-                  {(data.examples || data.panel_examples).map((ex: any, i: number) => (
+                  {(data.examples || data.panel_examples || []).map((ex: any, i: number) => (
                     <div key={i} className="bg-slate-50 p-3 rounded-xl border border-slate-100">
                       <div className="font-bold text-slate-800">
                         {ex.bg_singular 
