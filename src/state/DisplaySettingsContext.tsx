@@ -6,19 +6,19 @@ import { GitHubConfig } from '../types/sync';
 export type ScriptMode = "print" | "handwriting";
 
 export type LetterCaseMode =
+  | "normal"
   | "uppercase"
   | "lowercase"
-  | "titlecase_words"
+  | "titlecase"
   | "sentencecase";
 
 export type LanguageMode =
   | "bg_hover_tr"
   | "tr_hover_bg"
-  | "both_bg_first"
-  | "both_tr_first"
-  | "quiz_hide_secondary";
+  | "bg_tr"
+  | "quiz_hidden";
 
-export type MarkerMode = "off" | "soft" | "strong";
+export type MarkerMode = "off" | "subtle" | "strong";
 
 export interface DisplaySettings {
   scriptMode: ScriptMode;
@@ -31,9 +31,9 @@ export interface DisplaySettings {
 
 const defaultSettings: DisplaySettings = {
   scriptMode: "print",
-  letterCaseMode: "sentencecase",
+  letterCaseMode: "normal",
   languageMode: "bg_hover_tr",
-  markerMode: "soft",
+  markerMode: "strong",
   showTransliteration: true,
   showPronunciation: true
 };

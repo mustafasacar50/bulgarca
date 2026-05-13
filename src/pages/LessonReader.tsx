@@ -92,9 +92,10 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
             </div>
             <button 
               onClick={() => setShowSettings(!showSettings)}
-              className={`p-3 rounded-xl transition-all ${showSettings ? 'bg-primary-600 text-white shadow-lg' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all ${showSettings ? 'bg-primary-600 text-white shadow-lg' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}`}
             >
-              <SettingsIcon size={20} />
+              <SettingsIcon size={18} />
+              <span className="text-xs font-bold uppercase tracking-wider">Görünüm</span>
             </button>
           </div>
 
@@ -179,7 +180,8 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                                       key={idx} 
                                       bg={ex.bg} 
                                       tr={ex.tr} 
-                                      markers={ex.markers}
+                                      detail={ex}
+                                      onSelect={(data) => setSelectedItem({ type: 'word', data })}
                                       className="px-2 py-1 bg-white text-[10px] font-bold rounded border border-slate-100"
                                     />
                                   ))}
@@ -208,9 +210,9 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                             <div className="space-y-2">
                               {item.examples.slice(0, 3).map((ex: any, idx: number) => (
                                 <div key={idx} className="flex justify-between text-sm">
-                                  <LearningText bg={ex.bg_singular} tr={ex.tr} markers={ex.markers} />
+                                  <LearningText bg={ex.bg_singular} tr={ex.tr} detail={ex} onSelect={(data) => setSelectedItem({ type: 'word', data })} />
                                   <ChevronRight size={12} className="text-slate-300" />
-                                  <LearningText bg={ex.bg_plural} tr={ex.tr} markers={ex.markers} />
+                                  <LearningText bg={ex.bg_plural} tr={ex.tr} detail={ex} onSelect={(data) => setSelectedItem({ type: 'word', data })} />
                                 </div>
                               ))}
                             </div>
@@ -236,7 +238,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                                 onClick={() => setSelectedItem({ type: 'word', data: item })}
                               >
                                 <td className="p-4">
-                                  <LearningText bg={item.bg || item.pattern || item.form} tr={item.tr} markers={item.markers} />
+                                  <LearningText bg={item.bg || item.pattern || item.form} tr={item.tr} detail={item} onSelect={(data) => setSelectedItem({ type: 'word', data })} />
                                 </td>
                                 <td className="p-4 text-sm text-slate-500">
                                   {item.tr}
@@ -257,7 +259,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                             className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between hover:border-primary-300 transition-all cursor-pointer"
                             onClick={() => setSelectedItem({ type: 'word', data: item })}
                           >
-                            <LearningText bg={item.bg} tr={item.tr} markers={item.markers} tooltip={item.note_tr} />
+                            <LearningText bg={item.bg} tr={item.tr} detail={item} tooltip_tr={item.note_tr} onSelect={(data) => setSelectedItem({ type: 'word', data })} />
                             <ChevronRight size={18} className="text-slate-300" />
                           </div>
                         ))}
@@ -281,7 +283,8 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                                     <LearningText 
                                       bg={line.bg} 
                                       tr={line.tr} 
-                                      markers={line.markers}
+                                      detail={line}
+                                      onSelect={(data) => setSelectedItem({ type: 'word', data })}
                                       className={idx % 2 !== 0 ? 'text-white' : ''}
                                     />
                                   </div>
@@ -306,7 +309,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                                 <tr key={i}>
                                   {item.person && <td className="py-3 px-4 font-bold text-slate-400 italic">{item.person}</td>}
                                   <td className="py-3 px-4">
-                                    <LearningText bg={item.form || item.pattern} tr={item.tr} markers={item.markers} />
+                                    <LearningText bg={item.form || item.pattern} tr={item.tr} detail={item} onSelect={(data) => setSelectedItem({ type: 'word', data })} />
                                   </td>
                                   <td className="py-3 px-4 text-slate-500">{item.tr}</td>
                                 </tr>
@@ -329,7 +332,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                           >
                             <div className="space-y-0.5">
                               <div className="flex items-center gap-2">
-                                <LearningText bg={item.bg} tr={item.tr} markers={item.markers} />
+                                <LearningText bg={item.bg} tr={item.tr} detail={item} onSelect={(data) => setSelectedItem({ type: 'word', data })} />
                                 {item.pronunciation && <span className="text-xs text-slate-400 font-medium">/{item.pronunciation}/</span>}
                               </div>
                             </div>
@@ -345,6 +348,12 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                           <Info size={20} />
                         </div>
                         <p className="text-amber-900 text-sm leading-relaxed italic">{block.text_tr}</p>
+                      </div>
+                    )}
+
+                    {!['explanation', 'alphabet_grid', 'alphabet_grid_v2', 'alphabet_cards', 'rule_cards', 'rule_cards_v2', 'conversion_rule_grid', 'plural_rule_cards', 'word_table', 'word_table_v2', 'grammar_table', 'phrase_cards', 'phrases', 'dialogue', 'dialog_cards', 'grammar_panel', 'vocabulary', 'study_tip'].includes(block.type) && (
+                      <div className="p-4 bg-red-50 border border-red-100 rounded-xl text-red-600 text-xs font-mono">
+                        [DEBUG] Desteklenmeyen blok türü: {block.type}
                       </div>
                     )}
                   </div>
@@ -377,7 +386,11 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.2 }}
               >
-                <RightInfoPanel item={selectedItem} onClose={() => setSelectedItem(null)} />
+              <RightInfoPanel 
+                item={selectedItem} 
+                onClose={() => setSelectedItem(null)} 
+                onSelectItem={(type, data) => setSelectedItem({ type, data })}
+              />
               </motion.div>
             ) : (
               <div className="hidden lg:block border-2 border-dashed border-slate-200 rounded-3xl p-8 text-center text-slate-400">

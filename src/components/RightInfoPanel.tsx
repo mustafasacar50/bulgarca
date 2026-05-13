@@ -10,9 +10,10 @@ interface RightInfoPanelProps {
     data: any;
   } | null;
   onClose: () => void;
+  onSelectItem: (type: 'rule' | 'word' | 'letter', data: any) => void;
 }
 
-export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
+export function RightInfoPanel({ item, onClose, onSelectItem }: RightInfoPanelProps) {
   const { settings } = useDisplaySettings();
   if (!item) return null;
 
@@ -69,6 +70,8 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
                       key={i} 
                       bg={typeof ex === 'string' ? ex : ex.bg} 
                       tr={typeof ex === 'string' ? '' : ex.tr}
+                      detail={typeof ex === 'string' ? { bg: ex } : ex}
+                      onSelect={(data) => onSelectItem('word', data)}
                       className="px-3 py-1.5 bg-primary-50 text-primary-700 rounded-lg text-sm font-medium"
                     />
                   ))}
@@ -97,12 +100,12 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
                         {ex.bg_singular 
                           ? (
                               <div className="flex items-center gap-2">
-                                <LearningText bg={ex.bg_singular} tr={ex.tr} markers={ex.markers} />
+                                <LearningText bg={ex.bg_singular} tr={ex.tr} detail={ex} onSelect={(data) => onSelectItem('word', data)} />
                                 <ChevronRight size={14} className="text-slate-300" />
-                                <LearningText bg={ex.bg_plural} tr={ex.tr} markers={ex.markers} />
+                                <LearningText bg={ex.bg_plural} tr={ex.tr} detail={ex} onSelect={(data) => onSelectItem('word', data)} />
                               </div>
                             )
-                          : <LearningText bg={ex.bg || ex.form} tr={ex.tr} markers={ex.markers} />}
+                          : <LearningText bg={ex.bg || ex.form} tr={ex.tr} detail={ex} onSelect={(data) => onSelectItem('word', data)} />}
                       </div>
                       <div className="text-xs text-slate-500 mt-1">{ex.tr}</div>
                     </div>
@@ -120,7 +123,8 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
                 <LearningText 
                   bg={data.bg || data.pattern || data.form} 
                   tr={data.tr} 
-                  markers={data.markers} 
+                  detail={data}
+                  onSelect={(data) => onSelectItem('word', data)}
                   className="text-4xl font-bold text-slate-900"
                 />
               </div>
@@ -146,7 +150,7 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
               <div className="bg-slate-50 p-3 rounded-xl">
                 <div className="text-[10px] font-bold text-slate-400 uppercase">Çoğul</div>
                 <div className="text-sm font-medium text-slate-700">
-                  <LearningText bg={data.plural} tr={data.tr} markers={data.markers} />
+                  <LearningText bg={data.plural} tr={data.tr} detail={{ bg: data.plural, tr: data.tr }} onSelect={(data) => onSelectItem('word', data)} />
                 </div>
               </div>
             )}

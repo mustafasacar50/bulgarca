@@ -7,13 +7,16 @@ export function formatBulgarianText(text: string, settings: DisplaySettings): st
 
   // Handle casing
   switch (settings.letterCaseMode) {
+    case "normal":
+      // Keep as is
+      break;
     case "uppercase":
       formatted = formatted.toUpperCase();
       break;
     case "lowercase":
       formatted = formatted.toLowerCase();
       break;
-    case "titlecase_words":
+    case "titlecase":
       formatted = formatted.split(' ').map(word => 
         word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
       ).join(' ');

@@ -5,22 +5,26 @@ import { formatBulgarianText, getScriptClass } from '../utils/textFormat';
 interface LearningTextProps {
   bg?: string;
   tr?: string;
-  markers?: any[];
-  tooltip?: string;
-  detail?: string;
+  tooltip_tr?: string;
+  tooltip_bg?: string;
+  detail?: any;
+  type?: "letter" | "word" | "rule" | "phrase" | "sentence" | "example";
+  ruleIds?: string[];
+  onSelect?: (detail: any) => void;
   className?: string;
-  onClick?: () => void;
   as?: 'span' | 'div' | 'p' | 'h1' | 'h2' | 'h3';
 }
 
 export function LearningText({ 
   bg = "", 
   tr = "", 
-  markers = [], 
-  tooltip, 
-  detail, 
+  tooltip_tr,
+  tooltip_bg,
+  detail,
+  type = "word",
+  ruleIds = [],
+  onSelect,
   className = "", 
-  onClick,
   as: Component = 'span'
 }: LearningTextProps) {
   const { settings } = useDisplaySettings();
@@ -30,13 +34,18 @@ export function LearningText({
   const formattedBg = formatBulgarianText(bg, settings);
 
   const renderWithMarkers = (text: string) => {
+    // Collect all markers from ruleIds if possible, but usually markers are passed directly.
+    // In this MVP, we use the markers passed in the detail or props if available.
+    // For now, let's assume markers are in detail or passed as a separate prop if needed.
+    const markers = (detail?.markers || []);
+
     if (settings.markerMode === "off" || !markers || markers.length === 0) {
       return text;
     }
     
     let result: (string | React.ReactNode)[] = [text];
     
-    markers.forEach((marker, mIdx) => {
+    markers.forEach((marker: any, mIdx: number) => {
       const source = formatBulgarianText(marker.source || marker.from, settings);
       const target = formatBulgarianText(marker.target || marker.to || marker.from, settings);
 
@@ -77,27 +86,19 @@ export function LearningText({
 
   if (mode === "bg_hover_tr") {
     content = <span className={scriptClass}>{renderWithMarkers(formattedBg)}</span>;
-    hoverMsg = tr || tooltip || "";
+    hoverMsg = tr || tooltip_tr || "";
   } else if (mode === "tr_hover_bg") {
     content = <span>{tr}</span>;
-    hoverMsg = formattedBg;
-  } else if (mode === "both_bg_first") {
+    hoverMsg = formattedBg || tooltip_bg || "";
+  } else if (mode === "bg_tr") {
     content = (
       <div className="flex flex-col leading-tight">
         <span className={`${scriptClass} font-bold text-slate-900`}>{renderWithMarkers(formattedBg)}</span>
         <span className="text-xs text-slate-500 font-medium">{tr}</span>
       </div>
     );
-    hoverMsg = tooltip || detail || "";
-  } else if (mode === "both_tr_first") {
-    content = (
-      <div className="flex flex-col leading-tight">
-        <span className="font-bold text-slate-900">{tr}</span>
-        <span className={`${scriptClass} text-xs text-slate-500 font-medium`}>{renderWithMarkers(formattedBg)}</span>
-      </div>
-    );
-    hoverMsg = tooltip || detail || "";
-  } else if (mode === "quiz_hide_secondary") {
+    hoverMsg = tooltip_tr || "";
+  } else if (mode === "quiz_hidden") {
     content = <span className={scriptClass}>{renderWithMarkers(formattedBg)}</span>;
     hoverMsg = tr || "Cevap için tıklayın";
   }
@@ -108,9 +109,9 @@ export function LearningText({
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
       onClick={(e) => {
-        if (onClick) {
+        if (onSelect) {
           e.stopPropagation();
-          onClick();
+          onSelect(detail || { bg, tr, type });
         }
       }}
     >

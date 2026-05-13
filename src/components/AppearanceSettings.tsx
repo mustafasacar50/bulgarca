@@ -46,10 +46,11 @@ export function AppearanceSettings() {
           onChange={(e) => updateSettings({ letterCaseMode: e.target.value as LetterCaseMode })}
           className="w-full bg-transparent border-none py-1.5 px-2 text-[10px] font-bold text-slate-700 outline-none cursor-pointer"
         >
+          <option value="normal">Normal</option>
           <option value="sentencecase">Cümle Başı Büyük</option>
           <option value="uppercase">TÜMÜ BÜYÜK</option>
           <option value="lowercase">tümü küçük</option>
-          <option value="titlecase_words">Her Kelime Büyük</option>
+          <option value="titlecase">Her Kelime Büyük</option>
         </select>
       </OptionGroup>
 
@@ -61,16 +62,15 @@ export function AppearanceSettings() {
         >
           <option value="bg_hover_tr">Bulgarca (Hover: TR)</option>
           <option value="tr_hover_bg">Türkçe (Hover: BG)</option>
-          <option value="both_bg_first">BG + TR (Alt alta)</option>
-          <option value="both_tr_first">TR + BG (Alt alta)</option>
-          <option value="quiz_hide_secondary">Ezber/Quiz Modu</option>
+          <option value="bg_tr">Bulgarca + Türkçe</option>
+          <option value="quiz_hidden">Ezber/Quiz Modu</option>
         </select>
       </OptionGroup>
 
       <OptionGroup label="Vurgu (Marker)">
         <OptionBtn active={settings.markerMode === 'off'} onClick={() => updateSettings({ markerMode: 'off' })} label="KAPALI" />
-        <OptionBtn active={settings.markerMode === 'soft'} onClick={() => updateSettings({ markerMode: 'soft' })} label="YUMUŞAK" />
-        <OptionBtn active={settings.markerMode === 'strong'} onClick={() => updateSettings({ markerMode: 'strong' })} label="NET" />
+        <OptionBtn active={settings.markerMode === 'subtle'} onClick={() => updateSettings({ markerMode: 'subtle' })} label="SADE" />
+        <OptionBtn active={settings.markerMode === 'strong'} onClick={() => updateSettings({ markerMode: 'strong' })} label="GÜÇLÜ" />
       </OptionGroup>
     </div>
   );
