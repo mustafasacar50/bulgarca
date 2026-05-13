@@ -1,0 +1,14 @@
+{
+  "patch_type": "glossary_patch",
+  "entries": [
+    {"entry_id":"bg-anarhiya","bg":"анархия","tr":"anarşi","tags":["lesson-002","lesson-003"]},
+    {"entry_id":"bg-anatomiya","bg":"анатомия","tr":"anatomi","tags":["lesson-002","lesson-003"]},
+    {"entry_id":"bg-entsiklopediya","bg":"енциклопедия","tr":"ansiklopedi","tags":["lesson-002","lesson-003"]},
+    {"entry_id":"bg-menyu","bg":"меню","tr":"menü","tags":["lesson-002"]},
+    {"entry_id":"bg-byuro","bg":"бюро","tr":"büro","tags":["lesson-001","lesson-002"]},
+    {"entry_id":"bg-nevrolog","bg":"невролог","tr":"nörolog","tags":["lesson-002","lesson-003"]},
+    {"entry_id":"bg-dobur-den","bg":"Добър ден!","tr":"İyi günler!","tags":["lesson-004"]},
+    {"entry_id":"bg-kazvam-se","bg":"Казвам се...","tr":"Benim adım...","tags":["lesson-004"]},
+    {"entry_id":"bg-zdraveyte","bg":"Здравейте!","tr":"Merhaba!","tags":["lesson-004"]}
+  ]
+}

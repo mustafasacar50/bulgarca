@@ -1,0 +1,53 @@
+{
+  "patch_type": "app_feature_patch",
+  "schema_version": "1.0",
+  "features": [
+    {
+      "feature_id": "lesson_importer",
+      "title_tr": "Yerel JSON import / paste import",
+      "requirements": [
+        "Ayarlar veya Admin altında 'İçerik İçe Aktar' ekranı olsun.",
+        "Tek JSON dosyası upload edilebilsin.",
+        "Zip dışı olarak kopyala-yapıştır JSON import alanı olsun.",
+        "manifest, lessons, rules, glossary, exercises patchleri arayüzden işlenebilsin.",
+        "Import sonrası önizleme ve doğrulama ekranı olsun."
+      ]
+    },
+    {
+      "feature_id": "rule_marker_toggle",
+      "title_tr": "Kural marker açık / kapalı",
+      "requirements": [
+        "Ders ekranında 'Kural Boyalarını Göster' anahtarı olsun.",
+        "Açıkken hedef segmentler renkli marker ile gösterilsin.",
+        "Kapalıyken sade metin görünsün."
+      ]
+    },
+    {
+      "feature_id": "right_panel_rich",
+      "title_tr": "Zengin sağ panel",
+      "requirements": [
+        "Harfe tıklayınca sağ panelde ayrıntı açılsın.",
+        "Panelde: harf varyantları, telaffuz, karışan harfler, örnek kelimeler, mini quiz olsun.",
+        "Kural kartına tıklayınca sağ panelde çoklu örnekler ve Türkçe açıklama açılsın."
+      ]
+    },
+    {
+      "feature_id": "alphabet_view_modes",
+      "title_tr": "Alfabe görünüm modları",
+      "requirements": [
+        "Basılı büyük/küçük ve el yazısı büyük/küçük görünümü seçilebilir olsun.",
+        "Varsayılan görünüm: basılı büyük+küçük.",
+        "İstenirse tek harf görünümü ve karşılaştırmalı görünüm açılabilsin."
+      ]
+    },
+    {
+      "feature_id": "lesson_card_descriptions",
+      "title_tr": "Ders kartlarında açıklama",
+      "requirements": [
+        "Dashboard kartlarında boş açıklama yerine lesson.summary_tr gösterilsin.",
+        "Dördüncü ders de kart listesinde görünmeli.",
+        "Kartlarda tahmini süre, etiket ve zorluk seviyesi gösterilebilsin."
+      ]
+    }
+  ]
+}

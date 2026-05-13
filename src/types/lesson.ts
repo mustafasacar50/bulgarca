@@ -6,11 +6,14 @@ export interface VocabularyItem {
   note?: string;
   example?: string;
   ruleId?: string;
+  gender?: string;
+  notes_tr?: string;
 }
 
 export interface LessonBlock {
-  type: 'explanation' | 'vocabulary' | 'image' | 'alphabet_grid' | 'rule_cards';
+  type: 'explanation' | 'vocabulary' | 'image' | 'alphabet_grid' | 'rule_cards' | 'alphabet_grid_v2' | 'rule_cards_v2' | 'plural_rule_cards' | 'word_table_v2' | 'phrase_cards' | 'dialog_cards' | 'grammar_panel' | 'study_tip';
   text_tr?: string;
+  title_tr?: string;
   items?: any[];
   rules?: any[];
   imageUrl?: string;
@@ -27,12 +30,20 @@ export interface Lesson {
   title_tr: string;
   title_bg?: string;
   level: string;
+  summary_tr?: string;
+  ui_hints?: {
+    default_show_marker?: boolean;
+    supports_handwriting_toggle?: boolean;
+    supports_right_panel?: boolean;
+    supports_example_drawer?: boolean;
+  };
   sections: LessonSection[];
 }
 
 export interface LessonMeta {
   id: string;
   title_tr: string;
+  summary_tr?: string;
   description?: string;
   level: string;
   path: string;

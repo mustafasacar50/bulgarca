@@ -65,7 +65,7 @@ export function Dashboard({ onStartLesson }: DashboardProps) {
                   <span className="px-2 py-0.5 bg-primary-50 text-primary-700 text-[10px] font-bold rounded uppercase tracking-wider">{lesson.level}</span>
                   <h3 className="font-bold text-slate-800">{lesson.title_tr}</h3>
                 </div>
-                <p className="text-sm text-slate-500">{lesson.description || 'Bu ders için açıklama bulunmuyor.'}</p>
+                <p className="text-sm text-slate-500 line-clamp-1">{lesson.summary_tr || 'Bu ders için açıklama bulunmuyor.'}</p>
               </div>
               <div className="w-10 h-10 rounded-full border border-slate-100 flex items-center justify-center group-hover:bg-primary-600 group-hover:text-white transition-colors">
                 <ArrowRight size={18} />

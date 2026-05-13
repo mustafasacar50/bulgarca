@@ -291,7 +291,7 @@
     "notes_tr": "Başlangıç seed sözlük girdisi."
   },
   {
-    "entry_id": "bg_anarhiya",
+    "entry_id": "bg-anarhiya",
     "bg": "анархия",
     "tr": "anarşi",
     "part_of_speech": "noun",
@@ -309,10 +309,14 @@
         ]
       }
     ],
-    "notes_tr": "Başlangıç seed sözlük girdisi."
+    "notes_tr": "Başlangıç seed sözlük girdisi.",
+    "tags": [
+      "lesson-002",
+      "lesson-003"
+    ]
   },
   {
-    "entry_id": "bg_anatomiya",
+    "entry_id": "bg-anatomiya",
     "bg": "анатомия",
     "tr": "anatomi",
     "part_of_speech": "noun",
@@ -330,10 +334,14 @@
         ]
       }
     ],
-    "notes_tr": "Başlangıç seed sözlük girdisi."
+    "notes_tr": "Başlangıç seed sözlük girdisi.",
+    "tags": [
+      "lesson-002",
+      "lesson-003"
+    ]
   },
   {
-    "entry_id": "bg_entsiklopediya",
+    "entry_id": "bg-entsiklopediya",
     "bg": "енциклопедия",
     "tr": "ansiklopedi",
     "part_of_speech": "noun",
@@ -351,7 +359,11 @@
         ]
       }
     ],
-    "notes_tr": "Başlangıç seed sözlük girdisi."
+    "notes_tr": "Başlangıç seed sözlük girdisi.",
+    "tags": [
+      "lesson-002",
+      "lesson-003"
+    ]
   },
   {
     "entry_id": "bg_amonyak",
@@ -438,9 +450,9 @@
     "notes_tr": "Başlangıç seed sözlük girdisi."
   },
   {
-    "entry_id": "bg_kazvam_se",
+    "entry_id": "bg-kazvam-se",
     "bg": "Казвам се...",
-    "tr": "Adım...",
+    "tr": "Benim adım...",
     "part_of_speech": "phrase",
     "gender": null,
     "plural": null,
@@ -456,10 +468,13 @@
         ]
       }
     ],
-    "notes_tr": "Başlangıç seed sözlük girdisi."
+    "notes_tr": "Başlangıç seed sözlük girdisi.",
+    "tags": [
+      "lesson-004"
+    ]
   },
   {
-    "entry_id": "bg_dobar_den",
+    "entry_id": "bg-dobur-den",
     "bg": "Добър ден!",
     "tr": "İyi günler!",
     "part_of_speech": "phrase",
@@ -475,10 +490,13 @@
         ]
       }
     ],
-    "notes_tr": "Başlangıç seed sözlük girdisi."
+    "notes_tr": "Başlangıç seed sözlük girdisi.",
+    "tags": [
+      "lesson-004"
+    ]
   },
   {
-    "entry_id": "bg_zdraveyte",
+    "entry_id": "bg-zdraveyte",
     "bg": "Здравейте!",
     "tr": "Merhaba!",
     "part_of_speech": "phrase",
@@ -494,7 +512,10 @@
         ]
       }
     ],
-    "notes_tr": "Başlangıç seed sözlük girdisi."
+    "notes_tr": "Başlangıç seed sözlük girdisi.",
+    "tags": [
+      "lesson-004"
+    ]
   },
   {
     "entry_id": "bg_dovizhdane",
@@ -533,5 +554,31 @@
       }
     ],
     "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg-menyu",
+    "bg": "меню",
+    "tr": "menü",
+    "tags": [
+      "lesson-002"
+    ]
+  },
+  {
+    "entry_id": "bg-byuro",
+    "bg": "бюро",
+    "tr": "büro",
+    "tags": [
+      "lesson-001",
+      "lesson-002"
+    ]
+  },
+  {
+    "entry_id": "bg-nevrolog",
+    "bg": "невролог",
+    "tr": "nörolog",
+    "tags": [
+      "lesson-002",
+      "lesson-003"
+    ]
   }
 ]

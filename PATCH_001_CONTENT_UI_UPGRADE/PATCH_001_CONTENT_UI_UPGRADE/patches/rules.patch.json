@@ -1,0 +1,19 @@
+{
+  "patch_type": "rules_patch",
+  "operations": [
+    {"op":"ensure_rule","rule_id":"phon_tr_sh_to_bg_sh"},
+    {"op":"ensure_rule","rule_id":"phon_tr_j_to_bg_zh"},
+    {"op":"ensure_rule","rule_id":"phon_tr_ji_to_bg_gia"},
+    {"op":"ensure_rule","rule_id":"phon_tr_c_to_bg_ch"},
+    {"op":"ensure_rule","rule_id":"phon_tr_c_to_bg_ts"},
+    {"op":"ensure_rule","rule_id":"phon_tr_o_umlaut_mix"},
+    {"op":"ensure_rule","rule_id":"phon_tr_u_umlaut_mix"},
+    {"op":"ensure_rule","rule_id":"phon_tr_y_variants"},
+    {"op":"ensure_rule","rule_id":"phon_tr_syon_to_bg_tsiya"},
+    {"op":"ensure_rule","rule_id":"phon_tr_izm_to_bg_izam"},
+    {"op":"ensure_rule","rule_id":"phon_tr_oto_to_avto"},
+    {"op":"ensure_rule","rule_id":"plural_ia_to_ii"},
+    {"op":"ensure_rule","rule_id":"plural_k_to_tsi"},
+    {"op":"ensure_rule","rule_id":"plural_g_to_zi"}
+  ]
+}

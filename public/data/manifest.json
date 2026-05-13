@@ -4,35 +4,39 @@
   "lessons": [
     {
       "id": "lesson-001-alfabe",
-      "title_tr": "Bulgar Alfabesine Giriş",
-      "level": "A1",
-      "order": 1,
+      "title_tr": "Bulgar Alfabesi: Basılı + El Yazısı + Örnekler",
+      "summary_tr": "30 harf, basılı/el yazısı biçimleri ve zengin örnek kelimeler.",
       "path": "/data/lessons/lesson-001-alfabe.json",
-      "exercise_path": "/data/exercises/exercises-001.json"
+      "exercise_path": "/data/exercises/exercises-001.json",
+      "order": 1,
+      "level": "A1"
     },
     {
       "id": "lesson-002-ses-harf-donusumleri",
-      "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri",
-      "level": "A1",
-      "order": 2,
+      "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri: Genişletilmiş",
+      "summary_tr": "Ş→Ш, J→Ж, Ö/Ü dönüşümleri ve çok sayıda örnek kelime.",
       "path": "/data/lessons/lesson-002-ses-harf-donusumleri.json",
-      "exercise_path": "/data/exercises/exercises-002.json"
+      "exercise_path": "/data/exercises/exercises-002.json",
+      "order": 2,
+      "level": "A1"
     },
     {
       "id": "lesson-003-cogul-ve-ortak-kelimeler",
-      "title_tr": "Ortak Kelimelerle İlk Çoğul Kuralları",
-      "level": "A1",
-      "order": 3,
+      "title_tr": "Ortak Kelimelerle İlk Çoğul Kuralları: Örnekli",
+      "summary_tr": "-ия→-ии, -к→-ци, -г→-зи kuralları örnekli tablo ile.",
       "path": "/data/lessons/lesson-003-cogul-ve-ortak-kelimeler.json",
-      "exercise_path": "/data/exercises/exercises-003.json"
+      "exercise_path": "/data/exercises/exercises-003.json",
+      "order": 3,
+      "level": "A1"
     },
     {
       "id": "lesson-004-tanisma-ve-selamlasma",
       "title_tr": "Tanışma, Hitaplar ve Selamlaşma",
-      "level": "A1",
-      "order": 4,
+      "summary_tr": "Merhaba, nasılsın, adın ne, kendini tanıtma ve kısa diyaloglar.",
       "path": "/data/lessons/lesson-004-tanisma-ve-selamlasma.json",
-      "exercise_path": "/data/exercises/exercises-004.json"
+      "exercise_path": "/data/exercises/exercises-004.json",
+      "order": 4,
+      "level": "A1"
     }
   ],
   "rules": [

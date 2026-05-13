@@ -7,6 +7,7 @@ export interface Rule {
     tr: string;
     plural?: string;
   }[];
+  title?: string;
 }
 
 export interface RuleSet {

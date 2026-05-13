@@ -3,17 +3,18 @@ import { Dashboard } from './pages/Dashboard';
 import { Lessons } from './pages/Lessons';
 import { LessonReader } from './pages/LessonReader';
 import { Settings } from './pages/Settings';
+import { Import } from './pages/Import';
 import { SyncState } from './types/sync';
 import { storage } from './engine/storage';
-import { Book, Settings as SettingsIcon, LayoutDashboard, Menu, X } from 'lucide-react';
+import { Book, Settings as SettingsIcon, LayoutDashboard, Menu, X, Upload } from 'lucide-react';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'dashboard' | 'lessons' | 'reader' | 'settings'>('dashboard');
+  const [currentPage, setCurrentPage] = useState<'dashboard' | 'lessons' | 'reader' | 'settings' | 'import'>('dashboard');
   const [selectedLessonId, setSelectedLessonId] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Navigation handlers
-  const navigateTo = (page: 'dashboard' | 'lessons' | 'reader' | 'settings', lessonId?: string) => {
+  const navigateTo = (page: 'dashboard' | 'lessons' | 'reader' | 'settings' | 'import', lessonId?: string) => {
     setCurrentPage(page);
     if (lessonId) setSelectedLessonId(lessonId);
     setIsSidebarOpen(false);
@@ -43,6 +44,12 @@ export default function App() {
             label="Dersler" 
             active={currentPage === 'lessons' || currentPage === 'reader'} 
             onClick={() => navigateTo('lessons')} 
+          />
+          <SidebarLink 
+            icon={<Upload size={20} />} 
+            label="İçe Aktar" 
+            active={currentPage === 'import'} 
+            onClick={() => navigateTo('import')} 
           />
           <SidebarLink 
             icon={<SettingsIcon size={20} />} 
@@ -96,6 +103,7 @@ export default function App() {
         <nav className="p-4 space-y-1">
           <SidebarLink icon={<LayoutDashboard size={20} />} label="Dashboard" active={currentPage === 'dashboard'} onClick={() => navigateTo('dashboard')} />
           <SidebarLink icon={<Book size={20} />} label="Dersler" active={currentPage === 'lessons' || currentPage === 'reader'} onClick={() => navigateTo('lessons')} />
+          <SidebarLink icon={<Upload size={20} />} label="İçe Aktar" active={currentPage === 'import'} onClick={() => navigateTo('import')} />
           <SidebarLink icon={<SettingsIcon size={20} />} label="Ayarlar" active={currentPage === 'settings'} onClick={() => navigateTo('settings')} />
         </nav>
       </aside>
@@ -111,6 +119,7 @@ export default function App() {
               onBack={() => navigateTo('lessons')} 
             />
           )}
+          {currentPage === 'import' && <Import />}
           {currentPage === 'settings' && <Settings />}
         </div>
         

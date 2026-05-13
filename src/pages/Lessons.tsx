@@ -18,7 +18,7 @@ export function Lessons({ onSelectLesson }: LessonsProps) {
 
   const filteredLessons = lessons.filter(l => 
     l.title_tr.toLowerCase().includes(search.toLowerCase()) || 
-    (l.description || '').toLowerCase().includes(search.toLowerCase())
+    (l.summary_tr || '').toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -55,7 +55,7 @@ export function Lessons({ onSelectLesson }: LessonsProps) {
               <span className="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded uppercase tracking-wider">{lesson.level}</span>
             </div>
             <h3 className="font-bold text-slate-800 mb-1">{lesson.title_tr}</h3>
-            <p className="text-sm text-slate-500 line-clamp-2">{lesson.description || 'Bu ders için açıklama bulunmuyor.'}</p>
+            <p className="text-sm text-slate-500 line-clamp-2">{lesson.summary_tr || 'Bu ders için açıklama bulunmuyor.'}</p>
           </div>
         ))}
       </div>

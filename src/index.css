@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +10,7 @@
   }
   
   body {
-    @apply antialiased;
+    @apply antialiased text-slate-900;
   }
 }
 
@@ -22,6 +24,22 @@
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden;
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden;
   }
+
+  .font-handwriting {
+    font-family: 'Caveat', cursive;
+  }
+
+  .sidebar-link {
+    @apply w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-medium text-slate-500 hover:bg-slate-50 hover:text-slate-900;
+  }
+
+  .sidebar-link.active {
+    @apply bg-primary-50 text-primary-600 shadow-sm shadow-primary-100;
+  }
+}
+
+.marker-highlight {
+  @apply bg-primary-100 px-1 rounded-sm border-b-2 border-primary-300;
 }
