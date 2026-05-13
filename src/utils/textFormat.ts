@@ -1,12 +1,12 @@
-import { DisplayPreferences } from '../state/DisplayPreferencesContext';
+import { DisplaySettings } from '../state/DisplaySettingsContext';
 
-export function formatBulgarianText(text: string, prefs: DisplayPreferences): string {
+export function formatBulgarianText(text: string, settings: DisplaySettings): string {
   if (!text) return "";
   
   let formatted = text;
 
   // Handle casing
-  switch (prefs.letterCaseMode) {
+  switch (settings.letterCaseMode) {
     case "uppercase":
       formatted = formatted.toUpperCase();
       break;
@@ -26,6 +26,6 @@ export function formatBulgarianText(text: string, prefs: DisplayPreferences): st
   return formatted;
 }
 
-export function getScriptClass(prefs: DisplayPreferences): string {
-  return prefs.scriptMode === "handwriting" ? "font-handwriting" : "";
+export function getScriptClass(settings: DisplaySettings): string {
+  return settings.scriptMode === "handwriting" ? "font-handwriting" : "";
 }

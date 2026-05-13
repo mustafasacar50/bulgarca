@@ -1,7 +1,8 @@
 import React from 'react';
 import { X, Book, Lightbulb, Languages, ChevronRight, Info } from 'lucide-react';
-import { useDisplayPreferences } from '../state/DisplayPreferencesContext';
+import { useDisplaySettings } from '../state/DisplaySettingsContext';
 import { formatBulgarianText, getScriptClass } from '../utils/textFormat';
+import { LearningText } from './LearningText';
 
 interface RightInfoPanelProps {
   item: {
@@ -12,57 +13,15 @@ interface RightInfoPanelProps {
 }
 
 export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
-  const { preferences } = useDisplayPreferences();
+  const { settings } = useDisplaySettings();
   if (!item) return null;
 
-  const scriptClass = getScriptClass(preferences);
+  const scriptClass = getScriptClass(settings);
   const { type, data } = item;
 
-  const renderWithMarkers = (text: string, markers: any[]) => {
-    if (preferences.markerMode === "off" || !markers || markers.length === 0) {
-      return formatBulgarianText(text, preferences);
-    }
-    
-    let result: React.ReactNode[] = [formatBulgarianText(text, preferences)];
-    
-    // Note: markers in data might refer to original casing, we need to be careful.
-    // For now, simple replacement if match found.
-    markers.forEach(marker => {
-      const source = formatBulgarianText(marker.source || marker.from, preferences);
-      const target = formatBulgarianText(marker.target || marker.to || marker.from, preferences);
-
-      const newResult: React.ReactNode[] = [];
-      result.forEach(segment => {
-        if (typeof segment !== 'string') {
-          newResult.push(segment);
-          return;
-        }
-        
-        const parts = segment.split(source);
-        parts.forEach((part, i) => {
-          newResult.push(part);
-          if (i < parts.length - 1) {
-            newResult.push(
-              <span 
-                key={`${source}-${i}`} 
-                className={preferences.markerMode === 'strong' ? 'bg-primary-500 text-white px-1 rounded' : 'bg-primary-100 px-1 rounded border-b border-primary-300'}
-                title={marker.tooltip_tr}
-              >
-                {target}
-              </span>
-            );
-          }
-        });
-      });
-      result = newResult;
-    });
-    
-    return result;
-  };
-
   return (
-    <aside className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden animate-in slide-in-from-right duration-300">
-      <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-primary-600 text-white">
+    <aside className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden flex flex-col h-full max-h-[85vh]">
+      <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-primary-600 text-white flex-shrink-0">
         <h3 className="font-bold flex items-center gap-2">
           {type === 'rule' ? <Lightbulb size={18} /> : type === 'letter' ? <Book size={18} /> : <Languages size={18} />}
           {type === 'rule' ? 'Kural Detayı' : type === 'letter' ? 'Harf Detayı' : 'Kelime Detayı'}
@@ -72,16 +31,16 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
         </button>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-6 space-y-6 max-h-[70vh]">
+      <div className="flex-1 overflow-y-auto p-6 space-y-6">
         {type === 'letter' && (
           <>
             <div>
               <div className="flex items-end gap-4 mb-4">
                 <div className={`text-6xl font-bold text-slate-900 ${scriptClass}`}>
-                  {preferences.scriptMode === 'handwriting' ? data.hand_upper : data.print_upper}
+                  {settings.scriptMode === 'handwriting' ? data.hand_upper : data.print_upper}
                 </div>
                 <div className={`text-3xl font-medium text-slate-400 mb-1 ${scriptClass}`}>
-                  {preferences.scriptMode === 'handwriting' ? data.hand_lower : data.print_lower}
+                  {settings.scriptMode === 'handwriting' ? data.hand_lower : data.print_lower}
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-2">
@@ -101,14 +60,17 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
               <p className="text-sm text-slate-600 leading-relaxed">{data.note_tr || data.tr_hint}</p>
             </div>
 
-            {data.panel_examples && (
+            {(data.panel_examples || data.examples) && (
               <div className="space-y-3">
-                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Örnek Kelimeler</h4>
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Örnekler</h4>
                 <div className="flex flex-wrap gap-2">
-                  {data.panel_examples.map((ex: string, i: number) => (
-                    <span key={i} className={`px-3 py-1.5 bg-primary-50 text-primary-700 rounded-lg text-sm font-medium ${scriptClass}`}>
-                      {formatBulgarianText(ex, preferences)}
-                    </span>
+                  {(data.panel_examples || data.examples).map((ex: any, i: number) => (
+                    <LearningText 
+                      key={i} 
+                      bg={typeof ex === 'string' ? ex : ex.bg} 
+                      tr={typeof ex === 'string' ? '' : ex.tr}
+                      className="px-3 py-1.5 bg-primary-50 text-primary-700 rounded-lg text-sm font-medium"
+                    />
                   ))}
                 </div>
               </div>
@@ -120,7 +82,7 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
           <>
             <div>
               <div className="text-2xl font-bold text-slate-900 mb-2">{data.title_tr || data.display || data.title}</div>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm text-slate-600 leading-relaxed whitespace-pre-wrap">
                 {data.explanation_tr || data.summary_tr || data.panel_tr || data.description}
               </p>
             </div>
@@ -131,16 +93,16 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
                 <div className="space-y-3">
                   {(data.examples || data.panel_examples).map((ex: any, i: number) => (
                     <div key={i} className="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                      <div className={`font-bold text-slate-800 ${scriptClass}`}>
+                      <div className="font-bold text-slate-800">
                         {ex.bg_singular 
                           ? (
                               <div className="flex items-center gap-2">
-                                <span>{formatBulgarianText(ex.bg_singular, preferences)}</span>
+                                <LearningText bg={ex.bg_singular} tr={ex.tr} markers={ex.markers} />
                                 <ChevronRight size={14} className="text-slate-300" />
-                                <span>{renderWithMarkers(ex.bg_plural, ex.markers)}</span>
+                                <LearningText bg={ex.bg_plural} tr={ex.tr} markers={ex.markers} />
                               </div>
                             )
-                          : renderWithMarkers(ex.bg, ex.markers)}
+                          : <LearningText bg={ex.bg || ex.form} tr={ex.tr} markers={ex.markers} />}
                       </div>
                       <div className="text-xs text-slate-500 mt-1">{ex.tr}</div>
                     </div>
@@ -154,8 +116,13 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
         {type === 'word' && (
           <>
             <div className="text-center py-4">
-              <div className={`text-4xl font-bold text-slate-900 mb-1 ${scriptClass}`}>
-                {formatBulgarianText(data.bg || data.pattern || data.form, preferences)}
+              <div className="mb-1">
+                <LearningText 
+                  bg={data.bg || data.pattern || data.form} 
+                  tr={data.tr} 
+                  markers={data.markers} 
+                  className="text-4xl font-bold text-slate-900"
+                />
               </div>
               <div className="text-xl text-primary-600 font-medium">{data.tr}</div>
             </div>
@@ -178,8 +145,8 @@ export function RightInfoPanel({ item, onClose }: RightInfoPanelProps) {
             {data.plural && (
               <div className="bg-slate-50 p-3 rounded-xl">
                 <div className="text-[10px] font-bold text-slate-400 uppercase">Çoğul</div>
-                <div className={`text-sm font-medium text-slate-700 ${scriptClass}`}>
-                  {formatBulgarianText(data.plural, preferences)}
+                <div className="text-sm font-medium text-slate-700">
+                  <LearningText bg={data.plural} tr={data.tr} markers={data.markers} />
                 </div>
               </div>
             )}

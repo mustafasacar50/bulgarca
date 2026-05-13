@@ -1,77 +1,77 @@
 import React from 'react';
-import { useDisplayPreferences, ScriptMode, LetterCaseMode, LanguageMode, MarkerMode } from '../state/DisplayPreferencesContext';
-import { Type, PenTool, CaseUpper, CaseLower, Eye, EyeOff, Languages } from 'lucide-react';
+import { useDisplaySettings, ScriptMode, LetterCaseMode, LanguageMode, MarkerMode } from '../state/DisplaySettingsContext';
+import { Type, PenTool, CaseUpper, CaseLower, Eye, EyeOff, Languages, Check } from 'lucide-react';
 
 export function AppearanceSettings() {
-  const { preferences, updatePreferences } = useDisplayPreferences();
+  const { settings, updateSettings } = useDisplaySettings();
+
+  const OptionGroup = ({ label, children }: { label: string, children: React.ReactNode }) => (
+    <div className="space-y-2">
+      <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest block">{label}</label>
+      <div className="flex bg-slate-50 p-1 rounded-xl border border-slate-100">
+        {children}
+      </div>
+    </div>
+  );
+
+  const OptionBtn = ({ active, onClick, icon, label }: { active: boolean, onClick: () => void, icon?: React.ReactNode, label: string }) => (
+    <button 
+      onClick={onClick}
+      className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-[10px] font-bold transition-all ${active ? 'bg-white text-primary-600 shadow-sm ring-1 ring-slate-100' : 'text-slate-500 hover:bg-white/50'}`}
+    >
+      {icon} {label}
+    </button>
+  );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-2">
-      {/* Script Mode */}
-      <div className="space-y-3">
-        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Yazı Tipi</label>
-        <div className="flex bg-slate-100 p-1 rounded-xl">
-          <button 
-            onClick={() => updatePreferences({ scriptMode: 'print' })}
-            className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-bold transition-all ${preferences.scriptMode === 'print' ? 'bg-white text-primary-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
-          >
-            <Type size={14} /> Basılı
-          </button>
-          <button 
-            onClick={() => updatePreferences({ scriptMode: 'handwriting' })}
-            className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-bold transition-all ${preferences.scriptMode === 'handwriting' ? 'bg-white text-primary-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
-          >
-            <PenTool size={14} /> El Yazısı
-          </button>
-        </div>
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+      <OptionGroup label="Yazı Tipi">
+        <OptionBtn 
+          active={settings.scriptMode === 'print'} 
+          onClick={() => updateSettings({ scriptMode: 'print' })} 
+          icon={<Type size={14} />} 
+          label="BASILI" 
+        />
+        <OptionBtn 
+          active={settings.scriptMode === 'handwriting'} 
+          onClick={() => updateSettings({ scriptMode: 'handwriting' })} 
+          icon={<PenTool size={14} />} 
+          label="EL YAZISI" 
+        />
+      </OptionGroup>
 
-      {/* Case Mode */}
-      <div className="space-y-3">
-        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Harf Büyüklüğü</label>
+      <OptionGroup label="Harf Büyüklüğü">
         <select 
-          value={preferences.letterCaseMode}
-          onChange={(e) => updatePreferences({ letterCaseMode: e.target.value as LetterCaseMode })}
-          className="w-full bg-slate-100 border-none rounded-xl py-2 px-3 text-xs font-bold text-slate-700 focus:ring-2 focus:ring-primary-500 outline-none"
+          value={settings.letterCaseMode}
+          onChange={(e) => updateSettings({ letterCaseMode: e.target.value as LetterCaseMode })}
+          className="w-full bg-transparent border-none py-1.5 px-2 text-[10px] font-bold text-slate-700 outline-none cursor-pointer"
         >
-          <option value="uppercase">BÜYÜK HARF</option>
-          <option value="lowercase">küçük harf</option>
-          <option value="titlecase_words">Kelime İlk Harf Büyük</option>
-          <option value="sentencecase">Cümle İlk Harf Büyük</option>
+          <option value="sentencecase">Cümle Başı Büyük</option>
+          <option value="uppercase">TÜMÜ BÜYÜK</option>
+          <option value="lowercase">tümü küçük</option>
+          <option value="titlecase_words">Her Kelime Büyük</option>
         </select>
-      </div>
+      </OptionGroup>
 
-      {/* Language Mode */}
-      <div className="space-y-3">
-        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Dil Gösterimi</label>
+      <OptionGroup label="Görünüm Modu">
         <select 
-          value={preferences.languageMode}
-          onChange={(e) => updatePreferences({ languageMode: e.target.value as LanguageMode })}
-          className="w-full bg-slate-100 border-none rounded-xl py-2 px-3 text-xs font-bold text-slate-700 focus:ring-2 focus:ring-primary-500 outline-none"
+          value={settings.languageMode}
+          onChange={(e) => updateSettings({ languageMode: e.target.value as LanguageMode })}
+          className="w-full bg-transparent border-none py-1.5 px-2 text-[10px] font-bold text-slate-700 outline-none cursor-pointer"
         >
-          <option value="bg_hover_tr">BG (Hover: TR)</option>
-          <option value="tr_hover_bg">TR (Hover: BG)</option>
-          <option value="both_bg_first">BG + TR</option>
-          <option value="both_tr_first">TR + BG</option>
-          <option value="quiz_hide_secondary">Quiz Modu</option>
+          <option value="bg_hover_tr">Bulgarca (Hover: TR)</option>
+          <option value="tr_hover_bg">Türkçe (Hover: BG)</option>
+          <option value="both_bg_first">BG + TR (Alt alta)</option>
+          <option value="both_tr_first">TR + BG (Alt alta)</option>
+          <option value="quiz_hide_secondary">Ezber/Quiz Modu</option>
         </select>
-      </div>
+      </OptionGroup>
 
-      {/* Marker Mode */}
-      <div className="space-y-3">
-        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Marker (Vurgu)</label>
-        <div className="flex bg-slate-100 p-1 rounded-xl">
-          {(['off', 'soft', 'strong'] as MarkerMode[]).map((mode) => (
-            <button 
-              key={mode}
-              onClick={() => updatePreferences({ markerMode: mode })}
-              className={`flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-tighter transition-all ${preferences.markerMode === mode ? 'bg-white text-primary-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
-            >
-              {mode}
-            </button>
-          ))}
-        </div>
-      </div>
+      <OptionGroup label="Vurgu (Marker)">
+        <OptionBtn active={settings.markerMode === 'off'} onClick={() => updateSettings({ markerMode: 'off' })} label="KAPALI" />
+        <OptionBtn active={settings.markerMode === 'soft'} onClick={() => updateSettings({ markerMode: 'soft' })} label="YUMUŞAK" />
+        <OptionBtn active={settings.markerMode === 'strong'} onClick={() => updateSettings({ markerMode: 'strong' })} label="NET" />
+      </OptionGroup>
     </div>
   );
 }

@@ -5,9 +5,8 @@ import { Rule } from '../types/rule';
 import { RightInfoPanel } from '../components/RightInfoPanel';
 import { Modal } from '../components/Modal';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useDisplayPreferences } from '../state/DisplayPreferencesContext';
-import { formatBulgarianText, getScriptClass } from '../utils/textFormat';
-import { LangHover } from '../components/LangHover';
+import { useDisplaySettings } from '../state/DisplaySettingsContext';
+import { LearningText } from '../components/LearningText';
 import { AppearanceSettings } from '../components/AppearanceSettings';
 
 interface LessonReaderProps {
@@ -23,7 +22,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
 
-  const { preferences } = useDisplayPreferences();
+  const { settings } = useDisplaySettings();
 
   useEffect(() => {
     async function loadData() {
@@ -132,12 +131,12 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                       </p>
                     )}
 
-                    {(block.type === 'alphabet_grid' || block.type === 'alphabet_grid_v2') && (block.items || (block as any).cards) && (
+                    {(block.type === 'alphabet_grid' || block.type === 'alphabet_grid_v2' || block.type === 'alphabet_cards') && (block.items || (block as any).cards) && (
                       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {(block.items || (block as any).cards).map((item: any, i: number) => {
-                          const displayChar = preferences.scriptMode === "handwriting" 
-                            ? (preferences.letterCaseMode === "lowercase" ? item.hand_lower : item.hand_upper)
-                            : (preferences.letterCaseMode === "lowercase" ? (item.print_lower || item.letter?.split(' ')[1]) : (item.print_upper || item.letter?.split(' ')[0]));
+                          const displayChar = settings.scriptMode === "handwriting" 
+                            ? (settings.letterCaseMode === "lowercase" ? item.hand_lower : item.hand_upper)
+                            : (settings.letterCaseMode === "lowercase" ? (item.print_lower || item.letter?.split(' ')[1]) : (item.print_upper || item.letter?.split(' ')[0]));
                           
                           return (
                             <div 
@@ -145,7 +144,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                               onClick={() => setSelectedItem({ type: 'letter', data: item })}
                               className="bg-white p-4 rounded-xl border border-slate-200 hover:border-primary-300 transition-all hover:shadow-sm cursor-pointer group"
                             >
-                              <div className={`text-4xl font-bold text-primary-700 mb-1 ${preferences.scriptMode === "handwriting" ? 'font-handwriting' : ''}`}>
+                              <div className={`text-4xl font-bold text-primary-700 mb-1 ${settings.scriptMode === "handwriting" ? 'font-handwriting' : ''}`}>
                                 {displayChar || item.letter}
                               </div>
                               <div className="flex justify-between items-center">
@@ -169,16 +168,20 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                               onClick={() => setSelectedItem({ type: 'rule', data: ruleData || ruleRef })}
                             >
                               <div className="flex justify-between items-start mb-3">
-                                <h3 className="font-bold text-slate-900 text-lg">{ruleRef.display || ruleData?.title}</h3>
+                                <h3 className="font-bold text-slate-900 text-lg">{ruleRef.display || ruleData?.title || ruleRef.title_tr}</h3>
                                 <Info size={18} className="text-slate-400 group-hover:text-primary-500" />
                               </div>
                               <p className="text-sm text-slate-600 line-clamp-2">{ruleRef.explanation_tr || ruleRef.panel_tr || ruleData?.description}</p>
                               {ruleRef.examples && (
                                 <div className="mt-4 flex flex-wrap gap-2">
                                   {ruleRef.examples.slice(0, 3).map((ex: any, idx: number) => (
-                                    <span key={idx} className="px-2 py-1 bg-white text-[10px] font-bold text-slate-500 rounded border border-slate-100">
-                                      {ex.bg}
-                                    </span>
+                                    <LearningText 
+                                      key={idx} 
+                                      bg={ex.bg} 
+                                      tr={ex.tr} 
+                                      markers={ex.markers}
+                                      className="px-2 py-1 bg-white text-[10px] font-bold rounded border border-slate-100"
+                                    />
                                   ))}
                                 </div>
                               )}
@@ -205,9 +208,9 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                             <div className="space-y-2">
                               {item.examples.slice(0, 3).map((ex: any, idx: number) => (
                                 <div key={idx} className="flex justify-between text-sm">
-                                  <LangHover bg={ex.bg_singular} tr={ex.tr} />
+                                  <LearningText bg={ex.bg_singular} tr={ex.tr} markers={ex.markers} />
                                   <ChevronRight size={12} className="text-slate-300" />
-                                  <LangHover bg={ex.bg_plural} tr={ex.tr} />
+                                  <LearningText bg={ex.bg_plural} tr={ex.tr} markers={ex.markers} />
                                 </div>
                               ))}
                             </div>
@@ -233,7 +236,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                                 onClick={() => setSelectedItem({ type: 'word', data: item })}
                               >
                                 <td className="p-4">
-                                  <LangHover bg={item.bg || item.pattern || item.form} tr={item.tr} />
+                                  <LearningText bg={item.bg || item.pattern || item.form} tr={item.tr} markers={item.markers} />
                                 </td>
                                 <td className="p-4 text-sm text-slate-500">
                                   {item.tr}
@@ -254,7 +257,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                             className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between hover:border-primary-300 transition-all cursor-pointer"
                             onClick={() => setSelectedItem({ type: 'word', data: item })}
                           >
-                            <LangHover bg={item.bg} tr={item.tr} detail={item.note_tr} />
+                            <LearningText bg={item.bg} tr={item.tr} markers={item.markers} tooltip={item.note_tr} />
                             <ChevronRight size={18} className="text-slate-300" />
                           </div>
                         ))}
@@ -275,9 +278,10 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                                   <div className={`max-w-[85%] p-3 rounded-2xl ${
                                     idx % 2 === 0 ? 'bg-white border border-slate-100 rounded-tl-none' : 'bg-primary-600 text-white rounded-tr-none'
                                   }`}>
-                                    <LangHover 
+                                    <LearningText 
                                       bg={line.bg} 
                                       tr={line.tr} 
+                                      markers={line.markers}
                                       className={idx % 2 !== 0 ? 'text-white' : ''}
                                     />
                                   </div>
@@ -301,8 +305,9 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                               {block.items?.map((item: any, i: number) => (
                                 <tr key={i}>
                                   {item.person && <td className="py-3 px-4 font-bold text-slate-400 italic">{item.person}</td>}
-                                  {item.form && <td className="py-3 px-4 font-bold text-primary-600">{item.form}</td>}
-                                  {item.pattern && <td className="py-3 px-4 font-bold text-slate-800">{item.pattern}</td>}
+                                  <td className="py-3 px-4">
+                                    <LearningText bg={item.form || item.pattern} tr={item.tr} markers={item.markers} />
+                                  </td>
                                   <td className="py-3 px-4 text-slate-500">{item.tr}</td>
                                 </tr>
                               ))}
@@ -324,7 +329,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                           >
                             <div className="space-y-0.5">
                               <div className="flex items-center gap-2">
-                                <LangHover bg={item.bg} tr={item.tr} />
+                                <LearningText bg={item.bg} tr={item.tr} markers={item.markers} />
                                 {item.pronunciation && <span className="text-xs text-slate-400 font-medium">/{item.pronunciation}/</span>}
                               </div>
                             </div>
@@ -363,16 +368,24 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
       {/* Info Panel */}
       <div className="lg:w-96 flex-shrink-0">
         <div className="sticky top-24">
-          {selectedItem ? (
-            <div className="animate-in fade-in slide-in-from-right-4 duration-300">
-              <RightInfoPanel item={selectedItem} onClose={() => setSelectedItem(null)} />
-            </div>
-          ) : (
-            <div className="hidden lg:block border-2 border-dashed border-slate-200 rounded-3xl p-8 text-center text-slate-400">
-              <Info className="mx-auto mb-4 opacity-20" size={48} />
-              <p className="text-sm">Kelime veya kural hakkında detaylı bilgi almak için üzerine tıklayın.</p>
-            </div>
-          )}
+          <AnimatePresence mode="wait">
+            {selectedItem ? (
+              <motion.div 
+                key={selectedItem.data.id || selectedItem.data.entry_id || selectedItem.data.bg || 'panel'}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.2 }}
+              >
+                <RightInfoPanel item={selectedItem} onClose={() => setSelectedItem(null)} />
+              </motion.div>
+            ) : (
+              <div className="hidden lg:block border-2 border-dashed border-slate-200 rounded-3xl p-8 text-center text-slate-400">
+                <Info className="mx-auto mb-4 opacity-20" size={48} />
+                <p className="text-sm">Kelime veya kural hakkında detaylı bilgi almak için üzerine tıklayın.</p>
+              </div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
 
