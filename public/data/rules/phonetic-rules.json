@@ -7,8 +7,175 @@
       "pattern": "Ш",
       "description": "Ş → Ш. Türkçedeki Ş sesi Bulgarcada Ш ile yazılır.",
       "examples": [
-        { "bg": "марш", "tr": "MARŞ" }
+        {
+          "bg": "марш",
+          "tr": "MARŞ"
+        }
       ]
+    },
+    {
+      "rule_id": "cognate_k_to_h",
+      "title_tr": "Türkçedeki -k bazen Bulgarcada -х olur",
+      "pattern_source": "-k",
+      "pattern_target": "-х",
+      "examples": [
+        {
+          "tr": "ALMANAK",
+          "bg": "алманах"
+        }
+      ],
+      "tooltip_tr": "Türkçe/ortak kelime sonundaki k sesi Bulgarcada h/х ile karşılanabilir.",
+      "source": {
+        "file": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+        "pages": [
+          7,
+          18
+        ]
+      }
+    },
+    {
+      "rule_id": "cognate_s_to_ts",
+      "title_tr": "s / si / desi kalıplarında ц sesi",
+      "pattern_source": "s/desi",
+      "pattern_target": "ц/деци",
+      "examples": [
+        {
+          "tr": "DESİGRAM",
+          "bg": "дециграм"
+        },
+        {
+          "tr": "GLİSERİN",
+          "bg": "глицерин"
+        }
+      ],
+      "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki s sesi Bulgarcada ц olabilir.",
+      "source": {
+        "file": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+        "pages": [
+          7,
+          18
+        ]
+      }
+    },
+    {
+      "rule_id": "cognate_syon_i_to_cia",
+      "title_tr": "-syon / -i → -ция",
+      "pattern_source": "-syon / -i",
+      "pattern_target": "-ция",
+      "examples": [
+        {
+          "tr": "DEKORASYON",
+          "bg": "декорация"
+        },
+        {
+          "tr": "GARANTİ",
+          "bg": "гаранция"
+        }
+      ],
+      "tooltip_tr": "Türkçedeki -syon ve bazı -i sonları Bulgarcada -ция olarak görülür.",
+      "source": {
+        "file": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+        "pages": [
+          7,
+          18
+        ]
+      }
+    },
+    {
+      "rule_id": "cognate_u_umlaut_to_u",
+      "title_tr": "ü → у",
+      "pattern_source": "ü",
+      "pattern_target": "у",
+      "examples": [
+        {
+          "tr": "MÜZE",
+          "bg": "музей"
+        },
+        {
+          "tr": "MÜZİK",
+          "bg": "музика"
+        }
+      ],
+      "tooltip_tr": "Türkçedeki ü sesi bazı ortak kelimelerde Bulgarcada у ile yazılır.",
+      "source": {
+        "file": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+        "pages": [
+          8,
+          18
+        ]
+      }
+    },
+    {
+      "rule_id": "cognate_ji_to_gia",
+      "title_tr": "-ji / -loji → -гия",
+      "pattern_source": "-ji / -loji",
+      "pattern_target": "-гия",
+      "examples": [
+        {
+          "tr": "ANTOLOJİ",
+          "bg": "антология"
+        },
+        {
+          "tr": "MORFOLOJİ",
+          "bg": "морфология"
+        }
+      ],
+      "tooltip_tr": "Türkçedeki -ji / -loji kalıbı Bulgarcada sıkça -гия biçimine döner.",
+      "source": {
+        "file": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+        "pages": [
+          8,
+          18
+        ]
+      }
+    },
+    {
+      "rule_id": "cognate_oto_to_avto",
+      "title_tr": "oto- → авто-",
+      "pattern_source": "oto-",
+      "pattern_target": "авто-",
+      "examples": [
+        {
+          "tr": "OTOMOBİL",
+          "bg": "автомобил"
+        },
+        {
+          "tr": "OTOPARK",
+          "bg": "автопарк"
+        }
+      ],
+      "tooltip_tr": "Türkçedeki oto- başlangıcı Bulgarcada авто- olarak görülebilir.",
+      "source": {
+        "file": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+        "pages": [
+          8,
+          19
+        ]
+      }
+    },
+    {
+      "rule_id": "cognate_izm_to_izam",
+      "title_tr": "-izm → -изъм",
+      "pattern_source": "-izm",
+      "pattern_target": "-изъм",
+      "examples": [
+        {
+          "tr": "ATEİZM",
+          "bg": "атеизъм"
+        },
+        {
+          "tr": "HÜMANİZM",
+          "bg": "хуманизъм"
+        }
+      ],
+      "tooltip_tr": "Türkçedeki -izm sonu Bulgarcada -изъм olur.",
+      "source": {
+        "file": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+        "pages": [
+          18,
+          19
+        ]
+      }
     }
   ]
 }
