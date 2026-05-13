@@ -11,7 +11,7 @@ export interface VocabularyItem {
 }
 
 export interface LessonBlock {
-  type: 'explanation' | 'vocabulary' | 'image' | 'alphabet_grid' | 'rule_cards' | 'alphabet_grid_v2' | 'rule_cards_v2' | 'plural_rule_cards' | 'word_table_v2' | 'phrase_cards' | 'dialog_cards' | 'grammar_panel' | 'study_tip';
+  type: 'explanation' | 'vocabulary' | 'image' | 'alphabet_grid' | 'rule_cards' | 'alphabet_grid_v2' | 'rule_cards_v2' | 'plural_rule_cards' | 'word_table_v2' | 'phrase_cards' | 'dialog_cards' | 'grammar_panel' | 'study_tip' | 'text' | 'alphabet_cards' | 'conversion_rule_grid' | 'plural_rule_grid' | 'dialogue' | 'grammar_table' | 'word_table' | 'exercise_preview' | 'phrases';
   text_tr?: string;
   title_tr?: string;
   items?: any[];

@@ -27,6 +27,25 @@ IMPORT_PACKAGE_XXX/
   source-index.patch.json
   changelog.md
   codex-apply-prompt.md
+
+### Import Bundle Standardı (Tek Dosya)
+
+```json
+{
+  "bundle_type": "bulgarca_import_bundle",
+  "schema_version": "1.0",
+  "bundle_id": "import-XXX",
+  "created_at": "2026-05-13",
+  "lessons": [ ... ],
+  "exercises": [ ... ],
+  "patches": {
+    "rules": [ ... ],
+    "glossary": [ ... ],
+    "source_index": [ ... ],
+    "manifest": [ ... ]
+  }
+}
+```
 ```
 
 Gerekirse ek dosyalar:

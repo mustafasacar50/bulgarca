@@ -1,6 +1,7 @@
 import React from 'react';
 import { GitHubSyncPanel } from '../components/GitHubSyncPanel';
-import { Shield, Smartphone, Bell, HelpCircle } from 'lucide-react';
+import { Shield, Smartphone, Bell, HelpCircle, Palette } from 'lucide-react';
+import { AppearanceSettings } from '../components/AppearanceSettings';
 
 export function Settings() {
   return (
@@ -11,6 +12,14 @@ export function Settings() {
       </header>
 
       <div className="space-y-6">
+        <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm space-y-4">
+          <h3 className="font-bold text-slate-800 flex items-center gap-2">
+            <Palette size={20} className="text-primary-500" />
+            Görünüm Ayarları
+          </h3>
+          <AppearanceSettings />
+        </div>
+
         <GitHubSyncPanel />
 
         <div className="card divide-y divide-slate-100">

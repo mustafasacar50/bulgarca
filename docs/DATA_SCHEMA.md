@@ -23,6 +23,28 @@ users/mustafa/
   difficult-words.json
   review-queue.json
   lesson-state.json
+
+---
+
+# 0. Global Display Preferences (UI State)
+
+Kullanıcının görünüm tercihleri `localStorage` ve `lesson-state.json` içinde saklanır.
+
+```json
+{
+  "scriptMode": "print",
+  "letterCaseMode": "sentencecase",
+  "languageMode": "bg_hover_tr",
+  "markerMode": "soft",
+  "showTransliteration": true,
+  "showPronunciation": true
+}
+```
+
+- `scriptMode`: "print" | "handwriting"
+- `letterCaseMode`: "uppercase" | "lowercase" | "titlecase_words" | "sentencecase"
+- `languageMode`: "bg_hover_tr" | "tr_hover_bg" | "both_bg_first" | "both_tr_first" | "quiz_hide_secondary"
+- `markerMode`: "off" | "soft" | "strong"
 ```
 
 ---

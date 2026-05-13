@@ -86,7 +86,7 @@ Tek bir kelimeye ait açıklama.
 
 ---
 
-# 2. Marker sistemi
+# 2. Marker sistemi ve Görünüm Modları
 
 Her kural, marker alanı taşımalıdır.
 
@@ -101,7 +101,23 @@ Her kural, marker alanı taşımalıdır.
 }
 ```
 
-## color_key önerileri
+## 2.1 Marker Modları (MarkerMode)
+
+Kullanıcı arayüzden marker yoğunluğunu seçebilir:
+
+- `off`: Hiçbir renkli marker veya kural vurgusu gösterilmez. Sadece düz metin.
+- `soft`: Hafif vurgu. Arka plan rengi yerine sadece altı çizili veya soluk renkli metin.
+- `strong`: Belirgin vurgu. Arka plan rengi + kural etiketi + yüksek kontrast.
+
+## 2.2 Global Görünüm Tercihleri (DisplayPreferences)
+
+Kuralların ve metinlerin gösterimi şu global ayarlara uymalıdır:
+
+- `scriptMode`: "print" (basılı) veya "handwriting" (el yazısı).
+- `letterCaseMode`: "uppercase", "lowercase", "titlecase_words", "sentencecase".
+- `languageMode`: "bg_hover_tr", "tr_hover_bg", "both_bg_first", "both_tr_first", "quiz_hide_secondary".
+
+## 2.3 color_key önerileri
 
 - `blue`: ses/harf dönüşümü
 - `green`: kelime anlamı

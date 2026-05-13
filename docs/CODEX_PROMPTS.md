@@ -156,3 +156,25 @@ Settings / GitHub Sync ekranına şu özellikleri ekle:
 
 Token hiçbir şekilde console.log edilmemeli.
 ```
+
+---
+
+# PROMPT 004 — Patch 003 UI Standartları
+
+```md
+# Görev: BULGARCA Patch 003 UI Standartlarını Uygula
+
+Uygulamayı yeni global görünüm, dil modu ve hover sistemine geçir.
+
+## Kalıcı Kurallar
+
+1. **Global Store**: `scriptMode`, `letterCaseMode`, `languageMode`, `markerMode` state'lerini yönet.
+2. **Text Formatting**: `formatBulgarianText` fonksiyonu ile tüm Bulgarca metinleri (ders, panel, örnek) merkezi olarak biçimlendir.
+3. **LangHover**: Tüm Bulgarca/Türkçe içerikleri `LangHover` bileşeni ile sarmala. Hover'da karşılık dil gösterilmeli.
+4. **Right Panel Sync**: Sağ panel, ana paneldeki görünüm ayarlarıyla (el yazısı, harf büyüklüğü vb.) tam senkron çalışmalı.
+5. **Marker System**: `off`, `soft`, `strong` modlarını destekle. Kural markerları bu modlara göre render edilmeli.
+6. **Import Bundle**: `bulgarca_import_bundle` formatını destekleyen gelişmiş içe aktar ekranı oluştur.
+7. **Boş Ders Koruması**: `LessonReader` bilinmeyen section'ları atlamamalı, debug bilgisi göstermeli.
+
+Tüm derslerin (001-004) bu kurallara uyduğundan emin ol.
+```
