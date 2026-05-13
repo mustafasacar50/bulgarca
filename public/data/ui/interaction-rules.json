@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "rules": [
+    {
+      "id": "right-panel-rerender-on-every-selection",
+      "title_tr": "Her tıklamada sağ panel güncellenir",
+      "description_tr": "Seçilen öğe aynı tipte bile olsa selectedAt timestamp ile panel yeniden render edilmelidir."
+    },
+    {
+      "id": "global-learning-text",
+      "title_tr": "Her öğrenme metni tek bileşenden geçer",
+      "description_tr": "Bulgarca/Türkçe gösterim, hover, tıklama ve marker davranışı LearningText bileşeni ile yönetilmelidir."
+    },
+    {
+      "id": "marker-consistency",
+      "title_tr": "Marker her yerde aynı motorla uygulanır",
+      "description_tr": "Kural kartı, sağ panel, tablo, örnek ve quizlerde marker vurgusu aynı applyRuleMarkers fonksiyonuyla üretilmelidir."
+    }
+  ]
+}
