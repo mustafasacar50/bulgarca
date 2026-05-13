@@ -1,0 +1,307 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-006-kucuk-sozluk-ortak-kelimeler",
+  "exercise_id": "exercises-006",
+  "items": [
+    {
+      "id": "ex006_match_001",
+      "type": "multiple_choice",
+      "prompt_tr": "Агробиология kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Агробиология",
+      "answer": "AGROBİYOLOJİ",
+      "options": [
+        "AGROBİYOLOJİ",
+        "LEGAL",
+        "ANTARKTİK",
+        "ROMANTİK"
+      ],
+      "source_entry_id": "cog_agrobiyoloji_0006",
+      "tooltip_tr": "AGROBİYOLOJİ / agrobiyoloji"
+    },
+    {
+      "id": "ex006_match_002",
+      "type": "multiple_choice",
+      "prompt_tr": "Акация kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Акация",
+      "answer": "AKASYA",
+      "options": [
+        "PLATİN",
+        "AKASYA",
+        "PLATFORM",
+        "BETONCU"
+      ],
+      "source_entry_id": "cog_akasya_0010",
+      "tooltip_tr": "AKASYA / akasya"
+    },
+    {
+      "id": "ex006_match_003",
+      "type": "multiple_choice",
+      "prompt_tr": "Алитерация kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Алитерация",
+      "answer": "ALİTERASYON",
+      "options": [
+        "ZEYTİN",
+        "VAMPİR",
+        "ALİTERASYON",
+        "AMBALAJ"
+      ],
+      "source_entry_id": "cog_aliterasyon_0021",
+      "tooltip_tr": "ALİTERASYON / aliterasyon"
+    },
+    {
+      "id": "ex006_match_004",
+      "type": "multiple_choice",
+      "prompt_tr": "Алкохолизъм kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Алкохолизъм",
+      "answer": "ALKOLIZM",
+      "options": [
+        "DEKOLTE",
+        "NEKROLOG",
+        "NERGİS",
+        "ALKOLIZM"
+      ],
+      "source_entry_id": "cog_alkolizm_0025",
+      "tooltip_tr": "ALKOLIZM / alkolızm"
+    },
+    {
+      "id": "ex006_match_005",
+      "type": "multiple_choice",
+      "prompt_tr": "Анархия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Анархия",
+      "answer": "ANARŞİ",
+      "options": [
+        "ANARŞİ",
+        "SAM YELI",
+        "ROZET",
+        "MORFOLOJİ"
+      ],
+      "source_entry_id": "cog_anarsi_0041",
+      "tooltip_tr": "ANARŞİ / anarşi"
+    },
+    {
+      "id": "ex006_match_006",
+      "type": "multiple_choice",
+      "prompt_tr": "Анархизъм kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Анархизъм",
+      "answer": "ANARŞİZM",
+      "options": [
+        "ANARŞİZM",
+        "METEOROLOJİ",
+        "HİDRO",
+        "PIRANGA"
+      ],
+      "source_entry_id": "cog_anarsizm_0043",
+      "tooltip_tr": "ANARŞİZM / anarşizm"
+    },
+    {
+      "id": "ex006_match_007",
+      "type": "multiple_choice",
+      "prompt_tr": "Анатомия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Анатомия",
+      "answer": "ANATOMİ",
+      "options": [
+        "KAPRİS",
+        "ZANAAT",
+        "GRAFİK",
+        "ANATOMİ"
+      ],
+      "source_entry_id": "cog_anatomi_0045",
+      "tooltip_tr": "ANATOMİ / anatomi"
+    },
+    {
+      "id": "ex006_match_008",
+      "type": "multiple_choice",
+      "prompt_tr": "Ангария kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Ангария",
+      "answer": "ANGARYA",
+      "options": [
+        "SAM YELI",
+        "KRONOLOJİ",
+        "ANGARYA",
+        "SPERM"
+      ],
+      "source_entry_id": "cog_angarya_0047",
+      "tooltip_tr": "ANGARYA / angarya"
+    },
+    {
+      "id": "ex006_match_009",
+      "type": "multiple_choice",
+      "prompt_tr": "Енциклопедия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Енциклопедия",
+      "answer": "ANSİKLOPEDİ",
+      "options": [
+        "BİYOLOJİ",
+        "ANTİMARKSİST",
+        "ANSİKLOPEDİ",
+        "BUKLE"
+      ],
+      "source_entry_id": "cog_ansiklopedi_0048",
+      "tooltip_tr": "ANSİKLOPEDİ / ansiklopedi"
+    },
+    {
+      "id": "ex006_match_010",
+      "type": "multiple_choice",
+      "prompt_tr": "Антифашизъм kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Антифашизъм",
+      "answer": "ANTİFAŞİZM",
+      "options": [
+        "DEMAGOJİ",
+        "HEKTOLİTRE",
+        "KUKLA",
+        "ANTİFAŞİZM"
+      ],
+      "source_entry_id": "cog_antifasizm_0053",
+      "tooltip_tr": "ANTİFAŞİZM / antifaşizm"
+    },
+    {
+      "id": "ex006_match_011",
+      "type": "multiple_choice",
+      "prompt_tr": "Антипатия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Антипатия",
+      "answer": "ANTİPATİ",
+      "options": [
+        "ARNAVUT ERKEK",
+        "RADYOTELEGRAF",
+        "ANTİPATİ",
+        "CÜCE"
+      ],
+      "source_entry_id": "cog_antipati_0062",
+      "tooltip_tr": "ANTİPATİ / antipati"
+    },
+    {
+      "id": "ex006_match_012",
+      "type": "multiple_choice",
+      "prompt_tr": "Антология kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Антология",
+      "answer": "ANTOLOGJİ",
+      "options": [
+        "BRE",
+        "GOL",
+        "ANTOLOGJİ",
+        "FİRKETE"
+      ],
+      "source_entry_id": "cog_antologji_0064",
+      "tooltip_tr": "ANTOLOGJİ / antologji"
+    },
+    {
+      "id": "ex006_match_013",
+      "type": "multiple_choice",
+      "prompt_tr": "Артерия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Артерия",
+      "answer": "ARTER",
+      "options": [
+        "ANGARYA",
+        "BOT",
+        "KATALOG",
+        "ARTER"
+      ],
+      "source_entry_id": "cog_arter_0083",
+      "tooltip_tr": "ARTER / arter"
+    },
+    {
+      "id": "ex006_match_014",
+      "type": "multiple_choice",
+      "prompt_tr": "Азия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Азия",
+      "answer": "ASYA",
+      "options": [
+        "ZÜRİH",
+        "DRAGON",
+        "ASYA",
+        "KULÜP"
+      ],
+      "source_entry_id": "cog_asya_0088",
+      "tooltip_tr": "ASYA / asya"
+    },
+    {
+      "id": "ex006_match_015",
+      "type": "multiple_choice",
+      "prompt_tr": "Атеизъм kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Атеизъм",
+      "answer": "ATEİZM",
+      "options": [
+        "ELEKTROLİT",
+        "MODISTRA",
+        "ATEİZM",
+        "ZOOLOG"
+      ],
+      "source_entry_id": "cog_ateizm_0092",
+      "tooltip_tr": "ATEİZM / ateizm"
+    },
+    {
+      "id": "ex006_match_016",
+      "type": "multiple_choice",
+      "prompt_tr": "Австралия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Австралия",
+      "answer": "AVUSTRALYA",
+      "options": [
+        "ÇİNKO",
+        "TEMPO",
+        "DOKÜMAN",
+        "AVUSTRALYA"
+      ],
+      "source_entry_id": "cog_avustralya_0101",
+      "tooltip_tr": "AVUSTRALYA / avustralya"
+    },
+    {
+      "id": "ex006_match_017",
+      "type": "multiple_choice",
+      "prompt_tr": "Австрия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Австрия",
+      "answer": "AVUSTURYA",
+      "options": [
+        "AVUSTURYA",
+        "DELEGASYON",
+        "POTUR",
+        "ANTRE"
+      ],
+      "source_entry_id": "cog_avusturya_0102",
+      "tooltip_tr": "AVUSTURYA / avusturya"
+    },
+    {
+      "id": "ex006_match_018",
+      "type": "multiple_choice",
+      "prompt_tr": "Белгия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Белгия",
+      "answer": "BELÇİKA",
+      "options": [
+        "KRONİK",
+        "AZERBAYCAN",
+        "AMBALAJ",
+        "BELÇİKA"
+      ],
+      "source_entry_id": "cog_belcika_0122",
+      "tooltip_tr": "BELÇİKA / belçika"
+    },
+    {
+      "id": "ex006_match_019",
+      "type": "multiple_choice",
+      "prompt_tr": "Бетонджия kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Бетонджия",
+      "answer": "BETONCU",
+      "options": [
+        "ATLAS",
+        "KUPLE",
+        "RADYOAKTİF",
+        "BETONCU"
+      ],
+      "source_entry_id": "cog_betoncu_0125",
+      "tooltip_tr": "BETONCU / betoncu"
+    },
+    {
+      "id": "ex006_match_020",
+      "type": "multiple_choice",
+      "prompt_tr": "Библиография kelimesinin Türkçe ortak karşılığı hangisi?",
+      "prompt_bg": "Библиография",
+      "answer": "BİBLİOGRAFYA",
+      "options": [
+        "AFİŞ",
+        "BANKA",
+        "PROTESTAN",
+        "BİBLİOGRAFYA"
+      ],
+      "source_entry_id": "cog_bibliografya_0130",
+      "tooltip_tr": "BİBLİOGRAFYA / bibliografya"
+    }
+  ]
+}
