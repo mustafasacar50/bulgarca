@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-002-ses-harf-donusumleri",
+  "exercise_set_id": "exercises-002",
+  "title_tr": "Ses dönüşümü alıştırmaları",
+  "items": [
+    {
+      "id": "ex002_001",
+      "type": "transform",
+      "prompt_tr": "MARŞ kelimesini Bulgarca yaz.",
+      "answer": "марш",
+      "rule_id": "phon_tr_sh_to_bg_sh"
+    },
+    {
+      "id": "ex002_002",
+      "type": "multiple_choice",
+      "prompt_tr": "DEKORASYON kelimesinin Bulgarca karşılığı hangisidir?",
+      "choices": [
+        "декорация",
+        "декоратор",
+        "декор",
+        "деколте"
+      ],
+      "answer": "декорация",
+      "rule_id": "phon_tr_yon_to_bg_cia"
+    }
+  ]
+}

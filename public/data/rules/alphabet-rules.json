@@ -3,12 +3,422 @@
   "title": "Alfabe Kuralları",
   "rules": [
     {
-      "id": "cyrillic-vowels",
-      "pattern": "А, Е, И, О, У, Ъ",
-      "description": "Bulgarcadaki temel sesli harflerdir.",
+      "id": "alphabet_yu_y_plus_u",
+      "pattern": "ю",
+      "description": "Ю harfi çoğu durumda й + у birleşimi gibi açıklanır ve Türkçedeki 'yu' sesine yaklaşır.",
       "examples": [
-        { "bg": "Аз", "tr": "Ben" },
-        { "bg": "Езеро", "tr": "Göl" }
+        {
+          "bg": "ютия",
+          "tr": "ütü"
+        },
+        {
+          "bg": "юрган",
+          "tr": "yorgan"
+        }
+      ]
+    },
+    {
+      "id": "alphabet_ya_y_plus_a",
+      "pattern": "я",
+      "description": "Я harfi çoğu durumda й + а birleşimi gibi açıklanır ve Türkçedeki 'ya' sesine yaklaşır.",
+      "examples": [
+        {
+          "bg": "ябълка",
+          "tr": "elma"
+        },
+        {
+          "bg": "ято",
+          "tr": "sürü"
+        }
+      ]
+    },
+    {
+      "id": "alphabet_sht_sh_plus_t",
+      "pattern": "щ",
+      "description": "Щ harfi ş+t birleşimi gibi düşünülebilir ve Latinleştirmede genellikle sht yazılır.",
+      "examples": [
+        {
+          "bg": "щъркел",
+          "tr": "leylek"
+        },
+        {
+          "bg": "щраус",
+          "tr": "devekuşu"
+        }
+      ]
+    },
+    {
+      "id": "alphabet_short_i_y",
+      "pattern": "й",
+      "description": "Й harfi yarı ünlü gibi çalışır; Türkçedeki y sesine yaklaşır.",
+      "examples": [
+        {
+          "bg": "йена",
+          "tr": "yen"
+        },
+        {
+          "bg": "лейка",
+          "tr": "sulama kabı"
+        }
+      ]
+    },
+    {
+      "id": "alphabet_vowels",
+      "pattern": "а ъ е и о у",
+      "description": "Bulgarcada temel ünlü harfler а, ъ, е, и, о, у olarak verilir.",
+      "examples": [
+        {
+          "bg": "ръка",
+          "tr": "el/kol"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_sh_to_bg_sh",
+      "pattern": "Ş → Ш",
+      "description": "Türkçedeki ş sesi Bulgarcada ш ile yazılır.",
+      "examples": [
+        {
+          "tr": "DUŞ",
+          "bg": "душ"
+        },
+        {
+          "tr": "AFİŞ",
+          "bg": "афиш"
+        },
+        {
+          "tr": "MARŞ",
+          "bg": "марш"
+        },
+        {
+          "tr": "GİŞE",
+          "bg": "гише"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_j_to_bg_zh",
+      "pattern": "J → Ж",
+      "description": "Türkçedeki j sesi çoğu ortak kelimede Bulgarcada ж olur.",
+      "examples": [
+        {
+          "tr": "AJUR",
+          "bg": "ажур"
+        },
+        {
+          "tr": "STAJ",
+          "bg": "стаж"
+        },
+        {
+          "tr": "MASAJ",
+          "bg": "масаж"
+        },
+        {
+          "tr": "KOLEJ",
+          "bg": "колеж"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_ji_to_bg_gia",
+      "pattern": "-Jİ → -ГИ(Я)",
+      "description": "Türkçedeki -loji/-ji yapıları Bulgarcada çoğunlukla -логия/-гия ile görünür.",
+      "examples": [
+        {
+          "tr": "MORFOLOJİ",
+          "bg": "морфология"
+        },
+        {
+          "tr": "STRATEJİ",
+          "bg": "стратегия"
+        },
+        {
+          "tr": "ZOOLOJİ",
+          "bg": "зоология"
+        },
+        {
+          "tr": "ENERJİ",
+          "bg": "енергия"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_c_to_bg_ch",
+      "pattern": "Ç → Ч",
+      "description": "Türkçedeki ç sesi birçok ortak kelimede Bulgarcada ч ile yazılır.",
+      "examples": [
+        {
+          "tr": "SANDVİÇ",
+          "bg": "сандвич"
+        },
+        {
+          "tr": "ÇORAP",
+          "bg": "чорап"
+        },
+        {
+          "tr": "ÇORBA",
+          "bg": "чорба"
+        },
+        {
+          "tr": "ÇİROZ",
+          "bg": "чироз"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_c_to_bg_ts",
+      "pattern": "Ç → Ц",
+      "description": "Bazı kelimelerde Türkçedeki ç karşılığı Bulgarcada ц olabilir.",
+      "examples": [
+        {
+          "tr": "DOÇENT",
+          "bg": "доцент"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_o_umlaut_to_bg_yo",
+      "pattern": "Ö → ЬО",
+      "description": "Bazı kelimelerde ö sesi yumuşatma işareti + о ile yazılır.",
+      "examples": [
+        {
+          "tr": "GÖN",
+          "bg": "гьон"
+        },
+        {
+          "tr": "DUBLÖR",
+          "bg": "дубльор"
+        },
+        {
+          "tr": "KLASÖR",
+          "bg": "класьор"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_o_umlaut_to_bg_o",
+      "pattern": "Ö → О",
+      "description": "Bazı ortak kelimelerde ö doğrudan о ile karşılanır.",
+      "examples": [
+        {
+          "tr": "DEKORATÖR",
+          "bg": "декоратор"
+        },
+        {
+          "tr": "DİREKTÖR",
+          "bg": "директор"
+        },
+        {
+          "tr": "PROFESÖR",
+          "bg": "професор"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_u_umlaut_to_bg_yu",
+      "pattern": "Ü → Ю",
+      "description": "Bazı kelimelerde ü sesi Bulgarcada ю olur.",
+      "examples": [
+        {
+          "tr": "MENÜ",
+          "bg": "меню"
+        },
+        {
+          "tr": "BÜRO",
+          "bg": "бюро"
+        },
+        {
+          "tr": "BÜST",
+          "bg": "бюст"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_u_umlaut_to_bg_u",
+      "pattern": "Ü → У",
+      "description": "Bazı kelimelerde ü sesi Bulgarcada у olur.",
+      "examples": [
+        {
+          "tr": "ALBÜM",
+          "bg": "албум"
+        },
+        {
+          "tr": "LÜKS",
+          "bg": "лукс"
+        },
+        {
+          "tr": "KAPSÜL",
+          "bg": "капсула"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_yon_to_bg_cia",
+      "pattern": "S(YON) → Ц(ИЯ)",
+      "description": "Türkçedeki -syon/-asyon yapıları Bulgarcada sıklıkla -ция olur.",
+      "examples": [
+        {
+          "tr": "DEKORASYON",
+          "bg": "декорация"
+        },
+        {
+          "tr": "DELEGASYON",
+          "bg": "делегация"
+        },
+        {
+          "tr": "NAVİGASYON",
+          "bg": "навигация"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_izm_to_bg_izum",
+      "pattern": "-İZM → -ИЗЪМ",
+      "description": "Türkçedeki -izm sonu Bulgarcada -изъм olarak görünür.",
+      "examples": [
+        {
+          "tr": "ATEİZM",
+          "bg": "атеизъм"
+        },
+        {
+          "tr": "BUDİZM",
+          "bg": "будизъм"
+        },
+        {
+          "tr": "HÜMANİZM",
+          "bg": "хуманизъм"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_oto_to_bg_avto",
+      "pattern": "OTO- → АВТО-",
+      "description": "Türkçedeki oto- başlangıcı Bulgarcada авто- olur.",
+      "examples": [
+        {
+          "tr": "OTOBÜS",
+          "bg": "автобус"
+        },
+        {
+          "tr": "OTOMAT",
+          "bg": "автомат"
+        },
+        {
+          "tr": "OTOBİYOGRAFİ",
+          "bg": "автобиография"
+        }
+      ]
+    },
+    {
+      "id": "phon_tr_p_to_bg_b",
+      "pattern": "P → Б",
+      "description": "Bazı ortak kelimelerde Türkçedeki p Bulgarcada б olur.",
+      "examples": [
+        {
+          "tr": "MİKROP",
+          "bg": "микроб"
+        },
+        {
+          "tr": "PORSUK",
+          "bg": "борсук"
+        },
+        {
+          "tr": "POTİNKA",
+          "bg": "ботинка"
+        }
+      ]
+    },
+    {
+      "id": "plural_ia_to_ii",
+      "pattern": "ия",
+      "description": "Bulgarcada -ия ile biten bazı kelimeler çoğulda -ии biçimine geçer.",
+      "examples": [
+        {
+          "singular": "анархия",
+          "plural": "анархии",
+          "tr": "anarşi"
+        },
+        {
+          "singular": "анатомия",
+          "plural": "анатомии",
+          "tr": "anatomi"
+        },
+        {
+          "singular": "енциклопедия",
+          "plural": "енциклопедии",
+          "tr": "ansiklopedi"
+        }
+      ]
+    },
+    {
+      "id": "plural_k_to_ci",
+      "pattern": "к",
+      "description": "Bulgarcada -к ile biten bazı kelimeler çoğulda -ци alır.",
+      "examples": [
+        {
+          "singular": "амоняк",
+          "plural": "амоняци",
+          "tr": "amonyak"
+        },
+        {
+          "singular": "аналитик",
+          "plural": "аналитици",
+          "tr": "analitik/analist"
+        }
+      ]
+    },
+    {
+      "id": "plural_g_to_zi",
+      "pattern": "г",
+      "description": "Bulgarcada -г ile biten bazı kelimeler çoğulda -зи alır.",
+      "examples": [
+        {
+          "singular": "монолог",
+          "plural": "монолози",
+          "tr": "monolog"
+        },
+        {
+          "singular": "зоолог",
+          "plural": "зоолози",
+          "tr": "zoolog"
+        }
+      ]
+    },
+    {
+      "id": "verb_kazvam_se_present",
+      "pattern": "казвам се",
+      "description": "Казвам се Bulgarcada 'adım...' demek için kullanılan dönüşlü fiildir. Аз се казвам... = Benim adım...",
+      "examples": [
+        {
+          "bg": "Аз се казвам Мустафа.",
+          "tr": "Benim adım Mustafa."
+        },
+        {
+          "bg": "Как се казвате?",
+          "tr": "Adınız nedir?"
+        }
+      ]
+    },
+    {
+      "id": "verb_sum_present",
+      "pattern": "съм",
+      "description": "съм Bulgarcada olmak fiilinin temel çekimidir: аз съм, ти си, той/тя/то е, ние сме, вие сте, те са.",
+      "examples": [
+        {
+          "bg": "Аз съм студент.",
+          "tr": "Ben öğrenciyim."
+        }
+      ]
+    },
+    {
+      "id": "question_particle_li",
+      "pattern": "ли",
+      "description": "ли parçacığı Bulgarcada evet/hayır sorusu kurmak için kullanılır. Türkçedeki mı/mi gibi düşünülebilir.",
+      "examples": [
+        {
+          "bg": "Студент ли си?",
+          "tr": "Öğrenci misin?"
+        }
       ]
     }
   ]

@@ -1,0 +1,76 @@
+{
+  "patch_type": "manifest_patch",
+  "schema_version": "1.0",
+  "created_at": "2026-05-13T20:40:17.290691+00:00",
+  "operations": [
+    {
+      "op": "add_lesson",
+      "lesson": {
+        "id": "lesson-001-alfabe",
+        "title_tr": "Bulgar Alfabesine Giriş",
+        "level": "A1",
+        "order": 1,
+        "path": "/data/lessons/lesson-001-alfabe.json",
+        "exercise_path": "/data/exercises/exercises-001.json",
+        "tags": [
+          "alfabe",
+          "kiril",
+          "telaffuz",
+          "transliterasyon"
+        ]
+      }
+    },
+    {
+      "op": "add_lesson",
+      "lesson": {
+        "id": "lesson-002-ses-harf-donusumleri",
+        "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri",
+        "level": "A1",
+        "order": 2,
+        "path": "/data/lessons/lesson-002-ses-harf-donusumleri.json",
+        "exercise_path": "/data/exercises/exercises-002.json",
+        "tags": [
+          "ortak kelimeler",
+          "ses dönüşümü",
+          "kiril yazımı",
+          "marker"
+        ]
+      }
+    },
+    {
+      "op": "add_lesson",
+      "lesson": {
+        "id": "lesson-003-cogul-ve-ortak-kelimeler",
+        "title_tr": "Ortak Kelimelerle İlk Çoğul Kuralları",
+        "level": "A1",
+        "order": 3,
+        "path": "/data/lessons/lesson-003-cogul-ve-ortak-kelimeler.json",
+        "exercise_path": "/data/exercises/exercises-003.json",
+        "tags": [
+          "çoğul",
+          "ortak kelimeler",
+          "gramatik rod",
+          "brojna forma"
+        ]
+      }
+    },
+    {
+      "op": "add_lesson",
+      "lesson": {
+        "id": "lesson-004-tanisma-ve-selamlasma",
+        "title_tr": "Tanışma, Hitaplar ve Selamlaşma",
+        "level": "A1",
+        "order": 4,
+        "path": "/data/lessons/lesson-004-tanisma-ve-selamlasma.json",
+        "exercise_path": "/data/exercises/exercises-004.json",
+        "tags": [
+          "tanışma",
+          "selamlaşma",
+          "hitap",
+          "diyalog",
+          "A1"
+        ]
+      }
+    }
+  ]
+}

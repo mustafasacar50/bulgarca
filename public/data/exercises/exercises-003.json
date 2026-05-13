@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-003-cogul-ve-ortak-kelimeler",
+  "exercise_set_id": "exercises-003",
+  "title_tr": "Çoğul alıştırmaları",
+  "items": [
+    {
+      "id": "ex003_001",
+      "type": "fill_blank",
+      "prompt_tr": "анархия kelimesinin çoğulu: ______",
+      "answer": "анархии",
+      "rule_id": "plural_ia_to_ii"
+    },
+    {
+      "id": "ex003_002",
+      "type": "fill_blank",
+      "prompt_tr": "амоняк kelimesinin çoğulu: ______",
+      "answer": "амоняци",
+      "rule_id": "plural_k_to_ci"
+    },
+    {
+      "id": "ex003_003",
+      "type": "fill_blank",
+      "prompt_tr": "зоолог kelimesinin çoğulu: ______",
+      "answer": "зоолози",
+      "rule_id": "plural_g_to_zi"
+    }
+  ]
+}

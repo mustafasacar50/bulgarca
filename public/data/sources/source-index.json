@@ -1,12 +1,38 @@
 [
   {
-    "id": "course-docs",
-    "title": "Kurs Dökümanları",
+    "id": "src-a1-v-1-2",
+    "title": "A1-V-1-2 .pdf",
+    "description": "Alfabe, fonetik özellikler, çoğul kuralları, tanışma diyalogları, hitaplar, selamlaşma, zamirler, kazvam se ve sum çekimleri.",
     "files": [
-      "alfabe-ilk ders.pdf",
-      "zup-tan-k BG Ders.pdf",
-      "A1-V-1-2 .pdf",
+      "A1-V-1-2 .pdf"
+    ],
+    "page_count": 28
+  },
+  {
+    "id": "src-zup-tan-k-bg-ders",
+    "title": "zup-tan-k BG Ders.pdf",
+    "description": "Türkçe-Bulgarca ortak kelimelerde ses/harf dönüşüm kuralları ve örnekleri.",
+    "files": [
+      "zup-tan-k BG Ders.pdf"
+    ],
+    "page_count": 5
+  },
+  {
+    "id": "src-kucuk-sozluk",
+    "title": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+    "description": "750+ Türkçe-Bulgarca ortak kelime, gramatik rod, çoğul, brojna forma ve diğer özellikler için kaynak sözlük.",
+    "files": [
       "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf"
-    ]
+    ],
+    "page_count": 91
+  },
+  {
+    "id": "src-alfabe-ilk-ders",
+    "title": "alfabe-ilk ders.pdf",
+    "description": "Görsellerle harf kartları ve temel kelime eşleşmeleri.",
+    "files": [
+      "alfabe-ilk ders.pdf"
+    ],
+    "page_count": 18
   }
 ]

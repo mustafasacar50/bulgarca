@@ -1,5 +1,537 @@
 [
-  { "bg": "марш", "tr": "MARŞ" },
-  { "bg": "Здравей", "tr": "Merhaba" },
-  { "bg": "анархия", "tr": "anarşi" }
+  {
+    "entry_id": "bg_azbuka",
+    "bg": "азбука",
+    "tr": "alfabe",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": null,
+    "linked_rules": [
+      "alphabet_vowels"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_bebe",
+    "bg": "бебе",
+    "tr": "bebek",
+    "part_of_speech": "noun",
+    "gender": "ср.р.",
+    "plural": "бебета",
+    "linked_rules": [],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_vagon",
+    "bg": "вагон",
+    "tr": "vagon",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "вагони",
+    "linked_rules": [],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_raka",
+    "bg": "ръка",
+    "tr": "el/kol",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "ръце",
+    "linked_rules": [
+      "alphabet_vowels"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_yutiya",
+    "bg": "ютия",
+    "tr": "ütü",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "ютии",
+    "linked_rules": [
+      "alphabet_yu_y_plus_u"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_yabalka",
+    "bg": "ябълка",
+    "tr": "elma",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "ябълки",
+    "linked_rules": [
+      "alphabet_ya_y_plus_a"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "tr_duş_bg_dush",
+    "bg": "душ",
+    "tr": "duş",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "душове",
+    "linked_rules": [
+      "phon_tr_sh_to_bg_sh"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "tr_afis_bg_afish",
+    "bg": "афиш",
+    "tr": "afiş",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "афиши",
+    "linked_rules": [
+      "phon_tr_sh_to_bg_sh"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "tr_masaj_bg_masazh",
+    "bg": "масаж",
+    "tr": "masaj",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "масажи",
+    "linked_rules": [
+      "phon_tr_j_to_bg_zh"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "tr_morfoloji_bg_morfologia",
+    "bg": "морфология",
+    "tr": "morfoloji",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "морфологии",
+    "linked_rules": [
+      "phon_tr_ji_to_bg_gia",
+      "plural_ia_to_ii"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "tr_dekorasyon_bg_dekoratsia",
+    "bg": "декорация",
+    "tr": "dekorasyon",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "декорации",
+    "linked_rules": [
+      "phon_tr_yon_to_bg_cia"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "tr_humanizm_bg_humanizum",
+    "bg": "хуманизъм",
+    "tr": "hümanizm",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "хуманизми",
+    "linked_rules": [
+      "phon_tr_izm_to_bg_izum"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "tr_otobus_bg_avtobus",
+    "bg": "автобус",
+    "tr": "otobüs",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "автобуси",
+    "linked_rules": [
+      "phon_tr_oto_to_bg_avto"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "tr_mikrop_bg_mikrob",
+    "bg": "микроб",
+    "tr": "mikrop",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "микроби",
+    "linked_rules": [
+      "phon_tr_p_to_bg_b"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_anarhiya",
+    "bg": "анархия",
+    "tr": "anarşi",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "анархии",
+    "linked_rules": [
+      "plural_ia_to_ii"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_anatomiya",
+    "bg": "анатомия",
+    "tr": "anatomi",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "анатомии",
+    "linked_rules": [
+      "plural_ia_to_ii"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_entsiklopediya",
+    "bg": "енциклопедия",
+    "tr": "ansiklopedi",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "енциклопедии",
+    "linked_rules": [
+      "plural_ia_to_ii"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_amonyak",
+    "bg": "амоняк",
+    "tr": "amonyak",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "амоняци",
+    "linked_rules": [
+      "plural_k_to_ci"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_analitik",
+    "bg": "аналитик",
+    "tr": "analitik/analist",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "аналитици",
+    "linked_rules": [
+      "plural_k_to_ci"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_zoolog",
+    "bg": "зоолог",
+    "tr": "zoolog",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "зоолози",
+    "linked_rules": [
+      "plural_g_to_zi"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_kak_se_kazvate",
+    "bg": "Как се казвате?",
+    "tr": "Adınız nedir?",
+    "part_of_speech": "phrase",
+    "gender": null,
+    "plural": null,
+    "linked_rules": [
+      "verb_kazvam_se_present"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_kazvam_se",
+    "bg": "Казвам се...",
+    "tr": "Adım...",
+    "part_of_speech": "phrase",
+    "gender": null,
+    "plural": null,
+    "linked_rules": [
+      "verb_kazvam_se_present"
+    ],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_dobar_den",
+    "bg": "Добър ден!",
+    "tr": "İyi günler!",
+    "part_of_speech": "phrase",
+    "gender": null,
+    "plural": null,
+    "linked_rules": [],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_zdraveyte",
+    "bg": "Здравейте!",
+    "tr": "Merhaba!",
+    "part_of_speech": "phrase",
+    "gender": null,
+    "plural": null,
+    "linked_rules": [],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_dovizhdane",
+    "bg": "Довиждане!",
+    "tr": "Hoşça kalın / görüşürüz",
+    "part_of_speech": "phrase",
+    "gender": null,
+    "plural": null,
+    "linked_rules": [],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  },
+  {
+    "entry_id": "bg_priyatno_mi_e",
+    "bg": "Приятно ми е.",
+    "tr": "Memnun oldum.",
+    "part_of_speech": "phrase",
+    "gender": null,
+    "plural": null,
+    "linked_rules": [],
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "page_range": [
+          1,
+          28
+        ]
+      }
+    ],
+    "notes_tr": "Başlangıç seed sözlük girdisi."
+  }
 ]

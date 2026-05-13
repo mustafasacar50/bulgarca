@@ -1,0 +1,62 @@
+{
+  "patch_type": "source_index_patch",
+  "schema_version": "1.0",
+  "created_at": "2026-05-13T20:40:17.290691+00:00",
+  "operations": [
+    {
+      "op": "upsert_source",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "file_name": "A1-V-1-2 .pdf",
+        "type": "pdf",
+        "page_count": 28,
+        "content_summary_tr": "Alfabe, fonetik özellikler, çoğul kuralları, tanışma diyalogları, hitaplar, selamlaşma, zamirler, kazvam se ve sum çekimleri.",
+        "used_in_lessons": [
+          "lesson-001-alfabe",
+          "lesson-003-cogul-ve-ortak-kelimeler",
+          "lesson-004-tanisma-ve-selamlasma"
+        ]
+      }
+    },
+    {
+      "op": "upsert_source",
+      "source": {
+        "source_id": "src-zup-tan-k-bg-ders",
+        "file_name": "zup-tan-k BG Ders.pdf",
+        "type": "pdf",
+        "page_count": 5,
+        "content_summary_tr": "Türkçe-Bulgarca ortak kelimelerde ses/harf dönüşüm kuralları ve örnekleri.",
+        "used_in_lessons": [
+          "lesson-002-ses-harf-donusumleri"
+        ]
+      }
+    },
+    {
+      "op": "upsert_source",
+      "source": {
+        "source_id": "src-kucuk-sozluk",
+        "file_name": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
+        "type": "pdf",
+        "page_count": 91,
+        "content_summary_tr": "750+ Türkçe-Bulgarca ortak kelime, gramatik rod, çoğul, brojna forma ve diğer özellikler için kaynak sözlük.",
+        "used_in_lessons": [
+          "lesson-003-cogul-ve-ortak-kelimeler",
+          "glossary"
+        ]
+      }
+    },
+    {
+      "op": "upsert_source",
+      "source": {
+        "source_id": "src-alfabe-ilk-ders",
+        "file_name": "alfabe-ilk ders.pdf",
+        "type": "pdf_images",
+        "page_count": 18,
+        "content_summary_tr": "Görsellerle harf kartları ve temel kelime eşleşmeleri.",
+        "used_in_lessons": [
+          "lesson-001-alfabe"
+        ]
+      }
+    }
+  ]
+}

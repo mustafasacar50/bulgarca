@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-003-cogul-ve-ortak-kelimeler",
+  "title_tr": "Ortak Kelimelerle İlk Çoğul Kuralları",
+  "level": "A1",
+  "order": 3,
+  "estimated_minutes": 40,
+  "tags": [
+    "çoğul",
+    "ortak kelimeler",
+    "gramatik rod",
+    "brojna forma"
+  ],
+  "source_refs": [
+    {
+      "source_id": "src-a1-v-1-2",
+      "pages": [
+        13,
+        14
+      ]
+    },
+    {
+      "source_id": "src-kucuk-sozluk",
+      "pages": [
+        23,
+        27,
+        91
+      ]
+    }
+  ],
+  "learning_goals": [
+    "Bulgarcada çoğulun kelime sonuna göre değişebildiğini fark etmek.",
+    "-ия → -ии, -к → -ци, -г → -зи kurallarını örneklerle tanımak."
+  ],
+  "sections": [
+    {
+      "section_id": "plural-ia",
+      "title_tr": "-ия ile biten kelimeler: -ии",
+      "blocks": [
+        {
+          "type": "rule_focus",
+          "rule_id": "plural_ia_to_ii",
+          "display": "-ия → -ии",
+          "examples": [
+            {
+              "singular": "анархия",
+              "plural": "анархии",
+              "tr": "anarşi"
+            },
+            {
+              "singular": "анатомия",
+              "plural": "анатомии",
+              "tr": "anatomi"
+            },
+            {
+              "singular": "енциклопедия",
+              "plural": "енциклопедии",
+              "tr": "ansiklopedi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "plural-k",
+      "title_tr": "-к ile biten kelimeler: -ци",
+      "blocks": [
+        {
+          "type": "rule_focus",
+          "rule_id": "plural_k_to_ci",
+          "display": "-к → -ци",
+          "examples": [
+            {
+              "singular": "амоняк",
+              "plural": "амоняци",
+              "tr": "amonyak"
+            },
+            {
+              "singular": "аналитик",
+              "plural": "аналитици",
+              "tr": "analitik/analist"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "plural-g",
+      "title_tr": "-г ile biten kelimeler: -зи",
+      "blocks": [
+        {
+          "type": "rule_focus",
+          "rule_id": "plural_g_to_zi",
+          "display": "-г → -зи",
+          "examples": [
+            {
+              "singular": "монолог",
+              "plural": "монолози",
+              "tr": "monolog"
+            },
+            {
+              "singular": "зоолог",
+              "plural": "зоолози",
+              "tr": "zoolog"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "linked_rules": [
+    "plural_ia_to_ii",
+    "plural_k_to_ci",
+    "plural_g_to_zi"
+  ]
+}

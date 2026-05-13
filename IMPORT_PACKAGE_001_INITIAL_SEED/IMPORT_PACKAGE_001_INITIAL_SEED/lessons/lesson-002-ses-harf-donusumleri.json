@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-002-ses-harf-donusumleri",
+  "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri",
+  "level": "A1",
+  "order": 2,
+  "estimated_minutes": 45,
+  "tags": [
+    "ortak kelimeler",
+    "ses dönüşümü",
+    "kiril yazımı",
+    "marker"
+  ],
+  "source_refs": [
+    {
+      "source_id": "src-zup-tan-k-bg-ders",
+      "pages": [
+        1,
+        5
+      ]
+    },
+    {
+      "source_id": "src-kucuk-sozluk",
+      "pages": [
+        16,
+        19
+      ]
+    }
+  ],
+  "learning_goals": [
+    "Türkçe bilen biri için ortak kelimelerdeki düzenli ses dönüşümlerini fark etmek.",
+    "Kiril yazımında Ş, J, Ç, Ö, Ü ve -syon/-izm gibi yapıları tanımak."
+  ],
+  "sections": [
+    {
+      "section_id": "intro",
+      "title_tr": "Neden ortak kelimelerle başlıyoruz?",
+      "blocks": [
+        {
+          "type": "explanation",
+          "text_tr": "Türkçe ile Bulgarca arasında çok sayıda ortak veya benzer kelime vardır. Bu kelimeler Kiril yazısını ve ses dönüşümlerini öğrenmek için hızlı bir giriş sağlar."
+        }
+      ]
+    },
+    {
+      "section_id": "core-transformations",
+      "title_tr": "Temel dönüşüm kuralları",
+      "blocks": [
+        {
+          "type": "rule_table",
+          "items": [
+            {
+              "rule_id": "phon_tr_sh_to_bg_sh",
+              "display": "Ş → Ш",
+              "explanation_tr": "Türkçedeki ş sesi Bulgarcada ш ile yazılır.",
+              "examples": [
+                {
+                  "tr": "DUŞ",
+                  "bg": "душ"
+                },
+                {
+                  "tr": "AFİŞ",
+                  "bg": "афиш"
+                },
+                {
+                  "tr": "MARŞ",
+                  "bg": "марш"
+                },
+                {
+                  "tr": "GİŞE",
+                  "bg": "гише"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_j_to_bg_zh",
+              "display": "J → Ж",
+              "explanation_tr": "Türkçedeki j sesi çoğu ortak kelimede Bulgarcada ж olur.",
+              "examples": [
+                {
+                  "tr": "AJUR",
+                  "bg": "ажур"
+                },
+                {
+                  "tr": "STAJ",
+                  "bg": "стаж"
+                },
+                {
+                  "tr": "MASAJ",
+                  "bg": "масаж"
+                },
+                {
+                  "tr": "KOLEJ",
+                  "bg": "колеж"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_ji_to_bg_gia",
+              "display": "-Jİ → -ГИ(Я)",
+              "explanation_tr": "Türkçedeki -loji/-ji yapıları Bulgarcada çoğunlukla -логия/-гия ile görünür.",
+              "examples": [
+                {
+                  "tr": "MORFOLOJİ",
+                  "bg": "морфология"
+                },
+                {
+                  "tr": "STRATEJİ",
+                  "bg": "стратегия"
+                },
+                {
+                  "tr": "ZOOLOJİ",
+                  "bg": "зоология"
+                },
+                {
+                  "tr": "ENERJİ",
+                  "bg": "енергия"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_c_to_bg_ch",
+              "display": "Ç → Ч",
+              "explanation_tr": "Türkçedeki ç sesi birçok ortak kelimede Bulgarcada ч ile yazılır.",
+              "examples": [
+                {
+                  "tr": "SANDVİÇ",
+                  "bg": "сандвич"
+                },
+                {
+                  "tr": "ÇORAP",
+                  "bg": "чорап"
+                },
+                {
+                  "tr": "ÇORBA",
+                  "bg": "чорба"
+                },
+                {
+                  "tr": "ÇİROZ",
+                  "bg": "чироз"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_c_to_bg_ts",
+              "display": "Ç → Ц",
+              "explanation_tr": "Bazı kelimelerde Türkçedeki ç karşılığı Bulgarcada ц olabilir.",
+              "examples": [
+                {
+                  "tr": "DOÇENT",
+                  "bg": "доцент"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_o_umlaut_to_bg_yo",
+              "display": "Ö → ЬО",
+              "explanation_tr": "Bazı kelimelerde ö sesi yumuşatma işareti + о ile yazılır.",
+              "examples": [
+                {
+                  "tr": "GÖN",
+                  "bg": "гьон"
+                },
+                {
+                  "tr": "DUBLÖR",
+                  "bg": "дубльор"
+                },
+                {
+                  "tr": "KLASÖR",
+                  "bg": "класьор"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_o_umlaut_to_bg_o",
+              "display": "Ö → О",
+              "explanation_tr": "Bazı ortak kelimelerde ö doğrudan о ile karşılanır.",
+              "examples": [
+                {
+                  "tr": "DEKORATÖR",
+                  "bg": "декоратор"
+                },
+                {
+                  "tr": "DİREKTÖR",
+                  "bg": "директор"
+                },
+                {
+                  "tr": "PROFESÖR",
+                  "bg": "професор"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_u_umlaut_to_bg_yu",
+              "display": "Ü → Ю",
+              "explanation_tr": "Bazı kelimelerde ü sesi Bulgarcada ю olur.",
+              "examples": [
+                {
+                  "tr": "MENÜ",
+                  "bg": "меню"
+                },
+                {
+                  "tr": "BÜRO",
+                  "bg": "бюро"
+                },
+                {
+                  "tr": "BÜST",
+                  "bg": "бюст"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_u_umlaut_to_bg_u",
+              "display": "Ü → У",
+              "explanation_tr": "Bazı kelimelerde ü sesi Bulgarcada у olur.",
+              "examples": [
+                {
+                  "tr": "ALBÜM",
+                  "bg": "албум"
+                },
+                {
+                  "tr": "LÜKS",
+                  "bg": "лукс"
+                },
+                {
+                  "tr": "KAPSÜL",
+                  "bg": "капсула"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_yon_to_bg_cia",
+              "display": "S(YON) → Ц(ИЯ)",
+              "explanation_tr": "Türkçedeki -syon/-asyon yapıları Bulgarcada sıklıkla -ция olur.",
+              "examples": [
+                {
+                  "tr": "DEKORASYON",
+                  "bg": "декорация"
+                },
+                {
+                  "tr": "DELEGASYON",
+                  "bg": "делегация"
+                },
+                {
+                  "tr": "NAVİGASYON",
+                  "bg": "навигация"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_izm_to_bg_izum",
+              "display": "-İZM → -ИЗЪМ",
+              "explanation_tr": "Türkçedeki -izm sonu Bulgarcada -изъм olarak görünür.",
+              "examples": [
+                {
+                  "tr": "ATEİZM",
+                  "bg": "атеизъм"
+                },
+                {
+                  "tr": "BUDİZM",
+                  "bg": "будизъм"
+                },
+                {
+                  "tr": "HÜMANİZM",
+                  "bg": "хуманизъм"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_oto_to_bg_avto",
+              "display": "OTO- → АВТО-",
+              "explanation_tr": "Türkçedeki oto- başlangıcı Bulgarcada авто- olur.",
+              "examples": [
+                {
+                  "tr": "OTOBÜS",
+                  "bg": "автобус"
+                },
+                {
+                  "tr": "OTOMAT",
+                  "bg": "автомат"
+                },
+                {
+                  "tr": "OTOBİYOGRAFİ",
+                  "bg": "автобиография"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            },
+            {
+              "rule_id": "phon_tr_p_to_bg_b",
+              "display": "P → Б",
+              "explanation_tr": "Bazı ortak kelimelerde Türkçedeki p Bulgarcada б olur.",
+              "examples": [
+                {
+                  "tr": "MİKROP",
+                  "bg": "микроб"
+                },
+                {
+                  "tr": "PORSUK",
+                  "bg": "борсук"
+                },
+                {
+                  "tr": "POTİNKA",
+                  "bg": "ботинка"
+                }
+              ],
+              "marker_strategy": "source_and_target_segments",
+              "source": {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "page_range": [
+                  1,
+                  5
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "linked_rules": [
+    "phon_tr_sh_to_bg_sh",
+    "phon_tr_j_to_bg_zh",
+    "phon_tr_ji_to_bg_gia",
+    "phon_tr_c_to_bg_ch",
+    "phon_tr_c_to_bg_ts",
+    "phon_tr_o_umlaut_to_bg_yo",
+    "phon_tr_o_umlaut_to_bg_o",
+    "phon_tr_u_umlaut_to_bg_yu",
+    "phon_tr_u_umlaut_to_bg_u",
+    "phon_tr_yon_to_bg_cia",
+    "phon_tr_izm_to_bg_izum",
+    "phon_tr_oto_to_bg_avto",
+    "phon_tr_p_to_bg_b"
+  ]
+}

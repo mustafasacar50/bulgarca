@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-004-tanisma-ve-selamlasma",
+  "title_tr": "Tanışma, Hitaplar ve Selamlaşma",
+  "level": "A1",
+  "order": 4,
+  "estimated_minutes": 45,
+  "tags": [
+    "tanışma",
+    "selamlaşma",
+    "hitap",
+    "diyalog",
+    "A1"
+  ],
+  "source_refs": [
+    {
+      "source_id": "src-a1-v-1-2",
+      "pages": [
+        15,
+        23
+      ]
+    }
+  ],
+  "learning_goals": [
+    "Как се казвате? ve Казвам се... kalıbını anlamak.",
+    "Добър ден, Добро утро, Добър вечер gibi selamları kullanmak."
+  ],
+  "sections": [
+    {
+      "section_id": "dialogue-basic",
+      "title_tr": "Temel tanışma diyaloğu",
+      "blocks": [
+        {
+          "type": "dialogue",
+          "lines": [
+            {
+              "speaker": "A",
+              "bg": "Добър ден!",
+              "tr": "İyi günler!"
+            },
+            {
+              "speaker": "B",
+              "bg": "Добър ден!",
+              "tr": "İyi günler!"
+            },
+            {
+              "speaker": "A",
+              "bg": "Как се казвате?",
+              "tr": "Adınız nedir?"
+            },
+            {
+              "speaker": "B",
+              "bg": "Аз се казвам Симеон Димитров.",
+              "tr": "Benim adım Simeon Dimitrov."
+            },
+            {
+              "speaker": "A",
+              "bg": "Приятно ми е.",
+              "tr": "Memnun oldum."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "key-phrases",
+      "title_tr": "Ana kalıplar",
+      "blocks": [
+        {
+          "type": "phrase_table",
+          "items": [
+            {
+              "bg": "Как се казвате?",
+              "tr": "Adınız nedir?",
+              "note_tr": "Resmî/kibar kullanım."
+            },
+            {
+              "bg": "Как се казваш?",
+              "tr": "Adın ne?",
+              "note_tr": "Samimi kullanım."
+            },
+            {
+              "bg": "Казвам се...",
+              "tr": "Adım...",
+              "note_tr": "Kendini tanıtma kalıbı."
+            },
+            {
+              "bg": "Приятно ми е.",
+              "tr": "Memnun oldum.",
+              "note_tr": "Tanışma sonrası."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "linked_rules": [
+    "verb_kazvam_se_present"
+  ]
+}

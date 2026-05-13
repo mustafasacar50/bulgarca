@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-004-tanisma-ve-selamlasma",
+  "exercise_set_id": "exercises-004",
+  "title_tr": "Tanışma alıştırmaları",
+  "items": [
+    {
+      "id": "ex004_001",
+      "type": "multiple_choice",
+      "prompt_tr": "Как се казвате? ne demektir?",
+      "choices": [
+        "Adınız nedir?",
+        "Nasılsınız?",
+        "Nerelisiniz?",
+        "Görüşürüz."
+      ],
+      "answer": "Adınız nedir?"
+    },
+    {
+      "id": "ex004_002",
+      "type": "fill_blank",
+      "prompt_tr": "Benim adım Mustafa: Аз се ______ Мустафа.",
+      "answer": "казвам",
+      "rule_id": "verb_kazvam_se_present"
+    }
+  ]
+}
