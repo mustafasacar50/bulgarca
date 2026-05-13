@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "lessons": [
     {
-      "id": "lesson-001-alfabe",
-      "title_tr": "Bulgar Alfabesi: Basılı + El Yazısı + Örnekler",
+      "id": "lesson-006-kucuk-sozluk-ortak-kelimeler",
+      "title_tr": "Türkçe-Bulgarca Ortak Kelimeler Sözlüğü",
       "summary_tr": "30 harf, basılı/el yazısı biçimleri ve zengin örnek kelimeler.",
-      "path": "/data/lessons/lesson-001-alfabe.json",
-      "exercise_path": "/data/exercises/exercises-001.json",
-      "order": 1,
-      "level": "A1"
+      "path": "/data/lessons/lesson-006-kucuk-sozluk-ortak-kelimeler.json",
+      "exercise_path": "/data/exercises/exercises-006.json",
+      "order": 6,
+      "level": "A1",
+      "description_tr": "Kaynak sözlükten çıkarılan geniş ortak kelime havuzu."
     },
     {
       "id": "lesson-002-ses-harf-donusumleri",
