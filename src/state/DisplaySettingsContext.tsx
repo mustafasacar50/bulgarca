@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { storage } from '../engine/storage';
 import { loadUserDataFile, saveUserDataFile } from '../engine/githubSync';
 import { GitHubConfig } from '../types/sync';
@@ -51,8 +51,9 @@ export function DisplaySettingsProvider({ children }: { children: React.ReactNod
     return saved ? JSON.parse(saved) : defaultSettings;
   });
 
-  const [isLoaded, setIsLoaded] = React.useState(false);
-  const remoteSettingsRef = React.useRef<string>("");
+  const [isLoaded, setIsLoaded] = useState(false);
+  const remoteSettingsRef = useRef<string>("");
+  const isSavingRef = useRef(false);
 
   // Sync with GitHub on mount
   useEffect(() => {
@@ -74,7 +75,6 @@ export function DisplaySettingsProvider({ children }: { children: React.ReactNod
             setSettings(remoteSettings);
             localStorage.setItem('displaySettings', settingsStr);
           } else {
-            // If no remote file, current local is the "remote" candidate
             remoteSettingsRef.current = JSON.stringify(settings);
           }
         } catch (e) {
@@ -92,7 +92,7 @@ export function DisplaySettingsProvider({ children }: { children: React.ReactNod
     
     // Only save to GitHub if we have finished the initial load/sync
     // and the settings have actually changed from what we last loaded/saved
-    if (!isLoaded) return;
+    if (!isLoaded || isSavingRef.current) return;
     if (settingsStr === remoteSettingsRef.current) return;
 
     const token = storage.get<string>('github_token') || storage.get<string>('github_token', true);
@@ -104,16 +104,18 @@ export function DisplaySettingsProvider({ children }: { children: React.ReactNod
         branch: 'main' 
       };
       
-      const timer = setTimeout(() => {
-        saveUserDataFile(config, 'lesson-state.json', settings)
-          .then(() => {
-            remoteSettingsRef.current = JSON.stringify(settings);
-          })
-          .catch(err => {
-            if (!err.message?.includes('409')) {
-              console.error('Failed to save settings to GitHub:', err);
-            }
-          });
+      const timer = setTimeout(async () => {
+        isSavingRef.current = true;
+        try {
+          await saveUserDataFile(config, 'lesson-state.json', settings);
+          remoteSettingsRef.current = JSON.stringify(settings);
+        } catch (err: any) {
+          if (!err.message?.includes('409') && !err.message?.includes('conflict')) {
+            console.error('Failed to save settings to GitHub:', err);
+          }
+        } finally {
+          isSavingRef.current = false;
+        }
       }, 2000);
 
       return () => clearTimeout(timer);

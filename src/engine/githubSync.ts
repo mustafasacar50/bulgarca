@@ -80,16 +80,30 @@ export async function putGithubFile({
 
 /**
  * Higher level function to save JSON content to GitHub
+ * Handles 409 conflicts by retrying once with a fresh SHA
  */
-export async function saveJsonToGithub<T>(config: GitHubConfig, path: string, content: T, message: string) {
+export async function saveJsonToGithub<T>(config: GitHubConfig, path: string, content: T, message: string, retryCount = 0): Promise<any> {
   const existing = await getGithubFile({ ...config, path });
-  return putGithubFile({
-    ...config,
-    path,
-    content,
-    sha: existing?.sha,
-    message,
-  });
+  
+  try {
+    return await putGithubFile({
+      ...config,
+      path,
+      content,
+      sha: existing?.sha,
+      message,
+    });
+  } catch (error: any) {
+    if (error.message.includes('409') || error.message.includes('conflict') || error.message.includes('match')) {
+      if (retryCount < 2) {
+        console.warn(`GitHub conflict detected for ${path}. Retrying (${retryCount + 1})...`);
+        // Wait a bit before retrying
+        await new Promise(resolve => setTimeout(resolve, 500 * (retryCount + 1)));
+        return saveJsonToGithub(config, path, content, message, retryCount + 1);
+      }
+    }
+    throw error;
+  }
 }
 
 /**
@@ -152,42 +166,50 @@ export async function applyImportBundleToGithub(
       // Merge lessons into manifest
       if (!content.lessons) content.lessons = [];
       const newLessons = patch.data.lessons || patch.data;
-      newLessons.forEach((newL: any) => {
-        const idx = content.lessons.findIndex((l: any) => l.id === newL.id || l.lesson_id === newL.lesson_id);
-        if (idx >= 0) content.lessons[idx] = { ...content.lessons[idx], ...newL };
-        else content.lessons.push(newL);
-      });
+      if (Array.isArray(newLessons)) {
+        newLessons.forEach((newL: any) => {
+          const idx = content.lessons.findIndex((l: any) => l.id === newL.id || l.lesson_id === newL.lesson_id);
+          if (idx >= 0) content.lessons[idx] = { ...content.lessons[idx], ...newL };
+          else content.lessons.push(newL);
+        });
+      }
     } else if (patch.operation === 'merge_by_entry_id') {
       // Merge glossary entries
       const entries = Array.isArray(content) ? content : (content.entries || []);
       const newEntries = patch.data.entries || patch.data;
-      newEntries.forEach((newE: any) => {
-        const idx = entries.findIndex((e: any) => e.entry_id === newE.entry_id);
-        if (idx >= 0) entries[idx] = { ...entries[idx], ...newE };
-        else entries.push(newE);
-      });
+      if (Array.isArray(newEntries)) {
+        newEntries.forEach((newE: any) => {
+          const idx = entries.findIndex((e: any) => e.entry_id === newE.entry_id);
+          if (idx >= 0) entries[idx] = { ...entries[idx], ...newE };
+          else entries.push(newE);
+        });
+      }
       if (!Array.isArray(content)) content.entries = entries;
       else content = entries;
     } else if (patch.operation === 'merge_by_rule_id') {
       // Merge rules
       const rules = Array.isArray(content) ? content : (content.rules || []);
       const newRules = patch.data.rules || patch.data;
-      newRules.forEach((newR: any) => {
-        const idx = rules.findIndex((r: any) => r.rule_id === newR.rule_id);
-        if (idx >= 0) rules[idx] = { ...rules[idx], ...newR };
-        else rules.push(newR);
-      });
+      if (Array.isArray(newRules)) {
+        newRules.forEach((newR: any) => {
+          const idx = rules.findIndex((r: any) => r.rule_id === newR.rule_id);
+          if (idx >= 0) rules[idx] = { ...rules[idx], ...newR };
+          else rules.push(newR);
+        });
+      }
       if (!Array.isArray(content)) content.rules = rules;
       else content = rules;
     } else if (patch.operation === 'merge_sources') {
       // Merge sources
       const sources = Array.isArray(content) ? content : (content.sources || []);
       const newSources = patch.data.sources || patch.data;
-      newSources.forEach((newS: any) => {
-        const idx = sources.findIndex((s: any) => s.source_id === newS.source_id);
-        if (idx >= 0) sources[idx] = { ...sources[idx], ...newS };
-        else sources.push(newS);
-      });
+      if (Array.isArray(newSources)) {
+        newSources.forEach((newS: any) => {
+          const idx = sources.findIndex((s: any) => s.source_id === newS.source_id);
+          if (idx >= 0) sources[idx] = { ...sources[idx], ...newS };
+          else sources.push(newS);
+        });
+      }
       if (!Array.isArray(content)) content.sources = sources;
       else content = sources;
     }
