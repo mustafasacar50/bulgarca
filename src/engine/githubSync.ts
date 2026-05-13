@@ -124,3 +124,76 @@ export async function loadUserDataFile<T>(config: GitHubConfig, fileName: string
 export async function saveUserDataFile<T>(config: GitHubConfig, fileName: string, data: T) {
   return saveJsonToGithub(config, `users/mustafa/${fileName}`, data, `Update ${fileName}`);
 }
+
+/**
+ * Applies an import bundle to the content repository
+ */
+export async function applyImportBundleToGithub(
+  config: GitHubConfig,
+  bundle: any,
+  onProgress?: (msg: string) => void
+) {
+  const { files = [], patches = [], package_id, commit_message } = bundle;
+  const msg = commit_message || `Import BULGARCA content package: ${package_id}`;
+
+  // 1. Process regular files
+  for (const file of files) {
+    if (onProgress) onProgress(`Yükleniyor: ${file.path}`);
+    await saveJsonToGithub(config, file.path, file.content, msg);
+  }
+
+  // 2. Process patches
+  for (const patch of patches) {
+    if (onProgress) onProgress(`Yamalanıyor: ${patch.target_path}`);
+    const existing = await getGithubFile({ ...config, path: patch.target_path });
+    let content = existing?.content || (patch.operation === 'merge_by_entry_id' || patch.operation === 'merge_by_rule_id' || patch.operation === 'merge_sources' ? [] : {});
+
+    if (patch.operation === 'merge_manifest_lessons') {
+      // Merge lessons into manifest
+      if (!content.lessons) content.lessons = [];
+      const newLessons = patch.data.lessons || patch.data;
+      newLessons.forEach((newL: any) => {
+        const idx = content.lessons.findIndex((l: any) => l.id === newL.id || l.lesson_id === newL.lesson_id);
+        if (idx >= 0) content.lessons[idx] = { ...content.lessons[idx], ...newL };
+        else content.lessons.push(newL);
+      });
+    } else if (patch.operation === 'merge_by_entry_id') {
+      // Merge glossary entries
+      const entries = Array.isArray(content) ? content : (content.entries || []);
+      const newEntries = patch.data.entries || patch.data;
+      newEntries.forEach((newE: any) => {
+        const idx = entries.findIndex((e: any) => e.entry_id === newE.entry_id);
+        if (idx >= 0) entries[idx] = { ...entries[idx], ...newE };
+        else entries.push(newE);
+      });
+      if (!Array.isArray(content)) content.entries = entries;
+      else content = entries;
+    } else if (patch.operation === 'merge_by_rule_id') {
+      // Merge rules
+      const rules = Array.isArray(content) ? content : (content.rules || []);
+      const newRules = patch.data.rules || patch.data;
+      newRules.forEach((newR: any) => {
+        const idx = rules.findIndex((r: any) => r.rule_id === newR.rule_id);
+        if (idx >= 0) rules[idx] = { ...rules[idx], ...newR };
+        else rules.push(newR);
+      });
+      if (!Array.isArray(content)) content.rules = rules;
+      else content = rules;
+    } else if (patch.operation === 'merge_sources') {
+      // Merge sources
+      const sources = Array.isArray(content) ? content : (content.sources || []);
+      const newSources = patch.data.sources || patch.data;
+      newSources.forEach((newS: any) => {
+        const idx = sources.findIndex((s: any) => s.source_id === newS.source_id);
+        if (idx >= 0) sources[idx] = { ...sources[idx], ...newS };
+        else sources.push(newS);
+      });
+      if (!Array.isArray(content)) content.sources = sources;
+      else content = sources;
+    }
+
+    await saveJsonToGithub(config, patch.target_path, content, msg);
+  }
+
+  return { success: true, package_id };
+}
