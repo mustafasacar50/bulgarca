@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "default_settings": {
+    "scriptMode": "print",
+    "letterCaseMode": "normal",
+    "languageMode": "bg_hover_tr",
+    "markerMode": "strong"
+  },
+  "available_settings": {
+    "scriptMode": [
+      {
+        "value": "print",
+        "label_tr": "Basılı"
+      },
+      {
+        "value": "handwriting",
+        "label_tr": "El yazısı"
+      }
+    ],
+    "letterCaseMode": [
+      {
+        "value": "normal",
+        "label_tr": "Normal"
+      },
+      {
+        "value": "uppercase",
+        "label_tr": "BÜYÜK HARF"
+      },
+      {
+        "value": "lowercase",
+        "label_tr": "küçük harf"
+      },
+      {
+        "value": "titlecase",
+        "label_tr": "Kelime İlk Harf Büyük"
+      },
+      {
+        "value": "sentencecase",
+        "label_tr": "Cümle İlk Harf Büyük"
+      }
+    ],
+    "languageMode": [
+      {
+        "value": "bg_hover_tr",
+        "label_tr": "Bulgarca göster, Türkçe hover"
+      },
+      {
+        "value": "tr_hover_bg",
+        "label_tr": "Türkçe göster, Bulgarca hover"
+      },
+      {
+        "value": "bg_tr",
+        "label_tr": "Bulgarca + Türkçe"
+      },
+      {
+        "value": "quiz_hidden",
+        "label_tr": "Quiz / gizli mod"
+      }
+    ],
+    "markerMode": [
+      {
+        "value": "off",
+        "label_tr": "Kapalı"
+      },
+      {
+        "value": "subtle",
+        "label_tr": "Sade"
+      },
+      {
+        "value": "strong",
+        "label_tr": "Güçlü"
+      }
+    ]
+  },
+  "storage_key": "bulgarca.displaySettings.v1",
+  "project_rule_tr": "Bu görünüm ayarları tüm derslerde, sağ panelde, tablolarda, örneklerde, alıştırmalarda ve hover sisteminde ortak uygulanmalıdır."
+}
