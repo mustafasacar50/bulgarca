@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-007-selamlasma-hitaplar-sosyal-ifadeler",
+  "exercise_set_id": "exercises-007",
+  "title_tr": "Selamlaşma ve sosyal ifade alıştırmaları",
+  "items": [
+    {
+      "exercise_id": "ex007-001",
+      "type": "multiple_choice",
+      "prompt_tr": "Saat 08.00 için en uygun selamlaşma hangisi?",
+      "choices": [
+        "Добро утро!",
+        "Добър вечер!",
+        "Лека нощ!",
+        "Сбогом!"
+      ],
+      "answer": "Добро утро!"
+    },
+    {
+      "exercise_id": "ex007-002",
+      "type": "multiple_choice",
+      "prompt_tr": "Saat 14.00 için en uygun ifade hangisi?",
+      "choices": [
+        "Добър ден!",
+        "Добро утро!",
+        "Лека нощ!",
+        "Чао!"
+      ],
+      "answer": "Добър ден!"
+    },
+    {
+      "exercise_id": "ex007-003",
+      "type": "multiple_choice",
+      "prompt_tr": "'Affedersiniz!' resmî biçimi hangisi?",
+      "choices": [
+        "Извинете!",
+        "Извинявай!",
+        "Здрасти!",
+        "Няма нищо!"
+      ],
+      "answer": "Извинете!"
+    },
+    {
+      "exercise_id": "ex007-004",
+      "type": "matching",
+      "prompt_tr": "İfadeleri eşleştir.",
+      "pairs": [
+        {
+          "left": "Благодаря!",
+          "right": "Teşekkür ederim!"
+        },
+        {
+          "left": "Няма защо!",
+          "right": "Bir şey değil!"
+        },
+        {
+          "left": "Довиждане!",
+          "right": "Görüşürüz!"
+        },
+        {
+          "left": "Добър път!",
+          "right": "İyi yolculuklar!"
+        }
+      ]
+    },
+    {
+      "exercise_id": "ex007-005",
+      "type": "multiple_choice",
+      "prompt_tr": "Kalıcı ayrılıkta hangi ifade kullanılır?",
+      "choices": [
+        "Сбогом!",
+        "Добро утро!",
+        "Моля Ви!",
+        "Успех!"
+      ],
+      "answer": "Сбогом!"
+    },
+    {
+      "exercise_id": "ex007-006",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Много ___ благодаря! (sana çok teşekkür ederim)",
+      "answer": "ти",
+      "accepted_answers": [
+        "ти"
+      ]
+    },
+    {
+      "exercise_id": "ex007-007",
+      "type": "dialogue_order",
+      "prompt_tr": "Tanışma diyalogunu sırala.",
+      "lines": [
+        "Добър ден!",
+        "Аз се казвам Симеон Димитров.",
+        "А Вие как се казвате?",
+        "Беше ми приятно да се запозная с вас."
+      ],
+      "answer_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "exercise_id": "ex007-008",
+      "type": "free_write",
+      "prompt_tr": "Bir kişiye resmî şekilde teşekkür edip vedalaş.",
+      "model_answer_bg": "Много Ви благодаря! Довиждане!"
+    }
+  ]
+}
