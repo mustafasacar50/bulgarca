@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.1",
+  "lesson_id": "lesson-009-a1-diyalog-kak-se-kazvate",
+  "exercise_set_id": "exercises-009-a1-dialogue-kak-se-kazvate",
+  "title_tr": "Как се казвате? Diyalog Alıştırmaları",
+  "items": [
+    {
+      "exercise_id": "ex-009-001",
+      "type": "multiple_choice",
+      "prompt_tr": "'Adınız ne?' ifadesinin resmî Bulgarca karşılığı hangisidir?",
+      "choices": [
+        "Как се казвате?",
+        "Какво е това?",
+        "Къде сте?",
+        "Добър път!"
+      ],
+      "answer": "Как се казвате?",
+      "explanation_tr": "Resmî/saygılı ad sorma kalıbı 'Как се казвате?' şeklindedir.",
+      "rule_refs": [
+        "bg-kak-se-kazvate"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          21
+        ]
+      }
+    },
+    {
+      "exercise_id": "ex-009-002",
+      "type": "multiple_choice",
+      "prompt_tr": "'Adım Marta' cümlesi hangisidir?",
+      "choices": [
+        "Аз се казвам Марта.",
+        "Това е Марта.",
+        "Вие сте Марта.",
+        "Моля, Марта."
+      ],
+      "answer": "Аз се казвам Марта.",
+      "explanation_tr": "Kendini tanıtmak için 'Аз се казвам...' kullanılır.",
+      "rule_refs": [
+        "bg-kazvam-se-name"
+      ]
+    },
+    {
+      "exercise_id": "ex-009-003",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Аз ___ казвам Симеон Димитров.",
+      "answer": "се",
+      "acceptable_answers": [
+        "се"
+      ],
+      "explanation_tr": "казвам се kalıbında dönüşlü parça 'се' kullanılır.",
+      "rule_refs": [
+        "bg-kazvam-se-name"
+      ]
+    },
+    {
+      "exercise_id": "ex-009-004",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Извинете, не чух добре. Бихте ___ повторили?",
+      "answer": "ли",
+      "acceptable_answers": [
+        "ли"
+      ],
+      "explanation_tr": "Бихте ли...? nazik rica kalıbıdır.",
+      "rule_refs": [
+        "bg-polite-bihte-li"
+      ]
+    },
+    {
+      "exercise_id": "ex-009-005",
+      "type": "match_pairs",
+      "prompt_tr": "Kalıpları Türkçe anlamlarıyla eşleştir.",
+      "pairs": [
+        {
+          "left": "Приятно ми е.",
+          "right": "Memnun oldum."
+        },
+        {
+          "left": "Няма защо!",
+          "right": "Bir şey değil!"
+        },
+        {
+          "left": "Запознайте се!",
+          "right": "Tanışın lütfen!"
+        },
+        {
+          "left": "Вашето име, моля?",
+          "right": "Adınız, lütfen?"
+        }
+      ],
+      "explanation_tr": "Bu kalıplar kaynak diyalogda sık geçer."
+    },
+    {
+      "exercise_id": "ex-009-006",
+      "type": "dialogue_order",
+      "prompt_tr": "Diyalog satırlarını doğru sıraya koy.",
+      "lines": [
+        "Добър ден!",
+        "Казвам се Станка Донева.",
+        "А Вие как се казвате?",
+        "Аз се казвам Симеон Димитров."
+      ],
+      "answer": [
+        "Добър ден!",
+        "Казвам се Станка Донева.",
+        "А Вие как се казвате?",
+        "Аз се казвам Симеон Димитров."
+      ],
+      "explanation_tr": "Önce selamlaşma, sonra kendini tanıtma ve ad sorma gelir."
+    },
+    {
+      "exercise_id": "ex-009-007",
+      "type": "true_false",
+      "prompt_tr": "'Вие' resmî/saygılı 'siz' olarak kullanılabilir.",
+      "answer": true,
+      "explanation_tr": "Evet. Tanışma diyaloglarında 'Вие' resmî/saygılı biçimde kullanılır.",
+      "rule_refs": [
+        "bg-formal-vie"
+      ]
+    },
+    {
+      "exercise_id": "ex-009-008",
+      "type": "true_false",
+      "prompt_tr": "'Как се казваш?' resmî/saygılı ad sorma biçimidir.",
+      "answer": false,
+      "explanation_tr": "Hayır. 'Как се казваш?' samimi biçimdir. Resmî biçim 'Как се казвате?' olur.",
+      "rule_refs": [
+        "bg-kak-se-kazvate"
+      ]
+    },
+    {
+      "exercise_id": "ex-009-009",
+      "type": "multiple_choice",
+      "prompt_tr": "'Tekrar eder misiniz?' için en uygun Bulgarca hangisi?",
+      "choices": [
+        "Бихте ли повторили?",
+        "Ще чакам.",
+        "Това е приятелката ми.",
+        "Няма защо."
+      ],
+      "answer": "Бихте ли повторили?",
+      "explanation_tr": "Nazik tekrar isteme kalıbıdır.",
+      "rule_refs": [
+        "bg-polite-bihte-li"
+      ]
+    },
+    {
+      "exercise_id": "ex-009-010",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Това ___ приятелката ми.",
+      "answer": "е",
+      "acceptable_answers": [
+        "е"
+      ],
+      "explanation_tr": "Това е... = Bu ... demektir.",
+      "rule_refs": [
+        "bg-tova-e"
+      ]
+    },
+    {
+      "exercise_id": "ex-009-011",
+      "type": "write_bg",
+      "prompt_tr": "'Benim adım Mustafa.' cümlesini Bulgarca yaz.",
+      "answer": "Аз се казвам Мустафа.",
+      "acceptable_answers": [
+        "Аз се казвам Мустафа.",
+        "Казвам се Мустафа."
+      ],
+      "explanation_tr": "Kendini tanıtmak için iki biçim de uygundur.",
+      "rule_refs": [
+        "bg-kazvam-se-name"
+      ]
+    },
+    {
+      "exercise_id": "ex-009-012",
+      "type": "write_bg",
+      "prompt_tr": "'Affedersiniz, iyi duymadım.' cümlesini Bulgarca yaz.",
+      "answer": "Извинете, не чух добре.",
+      "acceptable_answers": [
+        "Извинете, не чух добре."
+      ],
+      "explanation_tr": "Kaynak diyalogda aynen geçer."
+    },
+    {
+      "exercise_id": "ex-009-013",
+      "type": "choose_rule",
+      "prompt_tr": "'Вие ли сте Елка Боянова?' cümlesinde hangi soru yapısı var?",
+      "choices": [
+        "ли ile evet/hayır sorusu",
+        "-ия → -ии çoğul kuralı",
+        "Ş → Ш ses dönüşümü",
+        "∅ → Х başlangıç sesi"
+      ],
+      "answer": "ли ile evet/hayır sorusu",
+      "rule_refs": [
+        "bg-li-question"
+      ],
+      "explanation_tr": "ли parçacığı burada 'mısınız?' anlamı verir."
+    },
+    {
+      "exercise_id": "ex-009-014",
+      "type": "dialogue_order",
+      "prompt_tr": "Tanışma kapanışını doğru sıraya koy.",
+      "lines": [
+        "Приятно ми е!",
+        "На мен също.",
+        "Радвам се, че се запознахме!"
+      ],
+      "answer": [
+        "Приятно ми е!",
+        "На мен също.",
+        "Радвам се, че се запознахме!"
+      ],
+      "explanation_tr": "Memnuniyet bildirimi karşılıklı cevapla devam eder."
+    },
+    {
+      "exercise_id": "ex-009-015",
+      "type": "self_introduction",
+      "prompt_tr": "Kendini 3 cümleyle Bulgarca tanıt: adını söyle, mesleğini/rolünü söyle, karşıdakinin adını sor.",
+      "model_answer_bg": "Казвам се Мустафа. Аз съм лекар. А Вие как се казвате?",
+      "model_answer_tr": "Adım Mustafa. Ben doktorum. Peki sizin adınız ne?",
+      "rule_refs": [
+        "bg-kazvam-se-name",
+        "bg-az-sum-identity",
+        "bg-kak-se-kazvate"
+      ]
+    },
+    {
+      "exercise_id": "ex-009-016",
+      "type": "match_pairs",
+      "prompt_tr": "Resmî ve samimi biçimleri eşleştir.",
+      "pairs": [
+        {
+          "left": "Как се казвате?",
+          "right": "Как се казваш?"
+        },
+        {
+          "left": "Моля Ви!",
+          "right": "Моля те!"
+        },
+        {
+          "left": "Извинете!",
+          "right": "Извинявай!"
+        },
+        {
+          "left": "Запознайте се!",
+          "right": "Запознай се!"
+        }
+      ],
+      "explanation_tr": "Вие/-те biçimleri daha resmîdir; ти/samimi biçimler yakın kişilerde kullanılır."
+    }
+  ]
+}
