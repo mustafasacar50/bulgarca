@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-002-ses-harf-donusumleri",
+  "exercise_set_id": "exercises-002-full-pattern-rules",
+  "title_tr": "Ses ve Harf Dönüşümleri — Tam Kural Pekiştirme",
+  "items": [
+    {
+      "exercise_id": "ex-002-full-001",
+      "type": "choose_rule",
+      "prompt_tr": "KAMELYA → Камелия örneğinde hangi dönüşüm markerlanmalıdır?",
+      "choices": [
+        "YA → ИЯ",
+        "Ş → Ш",
+        "P → Б",
+        "OTO → АВТО"
+      ],
+      "answer": "YA → ИЯ",
+      "explanation_tr": "KAMELYA kelimesindeki YA parçası Bulgarcada ия olur.",
+      "rule_refs": [
+        "cog-tr-ya-to-bg-iya"
+      ]
+    },
+    {
+      "exercise_id": "ex-002-full-002",
+      "type": "choose_rule",
+      "prompt_tr": "DEKORASYON → декорация örneğinde hangi dönüşüm var?",
+      "choices": [
+        "S(YON) → Ц(ИЯ)",
+        "J → Ж",
+        "Ü → Ю",
+        "P → Б"
+      ],
+      "answer": "S(YON) → Ц(ИЯ)",
+      "explanation_tr": "Türkçedeki -syon parçası Bulgarcada -ция olur.",
+      "rule_refs": [
+        "cog-tr-syon-to-bg-tsiya"
+      ]
+    },
+    {
+      "exercise_id": "ex-002-full-003",
+      "type": "choose_rule",
+      "prompt_tr": "OTOBÜS → автобус örneğinde hangi başlangıç dönüşümü var?",
+      "choices": [
+        "OTO- → АВТО-",
+        "YA → Я",
+        "Ç → Ч",
+        "Ö → О"
+      ],
+      "answer": "OTO- → АВТО-",
+      "explanation_tr": "Türkçedeki oto- kökü Bulgarcada авто- olarak yazılır.",
+      "rule_refs": [
+        "cog-tr-oto-to-bg-avto"
+      ]
+    }
+  ]
+}
