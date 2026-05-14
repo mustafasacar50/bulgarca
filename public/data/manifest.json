@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "lessons": [
     {
-      "id": "lesson-006-kucuk-sozluk-ortak-kelimeler",
-      "title_tr": "Türkçe-Bulgarca Ortak Kelimeler Sözlüğü",
-      "summary_tr": "30 harf, basılı/el yazısı biçimleri ve zengin örnek kelimeler.",
-      "path": "/data/lessons/lesson-006-kucuk-sozluk-ortak-kelimeler.json",
-      "exercise_path": "/data/exercises/exercises-006.json",
-      "order": 6,
-      "level": "A1",
-      "description_tr": "Kaynak sözlükten çıkarılan geniş ortak kelime havuzu."
+      "id": "lesson-001-alfabe",
+      "title_tr": "Bulgar Alfabesi ve Temel Sesler",
+      "summary_tr": "30 harf, basılı/el yazısı biçimleri ve okunuş temelleri.",
+      "path": "/data/lessons/lesson-001-alfabe.json",
+      "exercise_path": "/data/exercises/exercises-001.json",
+      "order": 1,
+      "level": "A1"
     },
     {
       "id": "lesson-002-ses-harf-donusumleri",
@@ -41,33 +40,40 @@
     },
     {
       "id": "lesson-005-zamirler-kazvam-se-sum-li",
-      "lesson_id": "lesson-005-zamirler-kazvam-se-sum-li",
       "title_tr": "Şahıs Zamirleri, казвам се, съм ve ли Soruları",
-      "level": "A1",
-      "order": 5,
+      "summary_tr": "Kendini tanıtma, olmak fiili ve li soru yapısı.",
       "path": "/data/lessons/lesson-005-zamirler-kazvam-se-sum-li.json",
       "exercise_path": "/data/exercises/exercises-005.json",
-      "description_tr": "Kendini tanıtma, olmak fiili ve li soru yapısı."
+      "order": 5,
+      "level": "A1"
+    },
+    {
+      "id": "lesson-006-kucuk-sozluk-ortak-kelimeler",
+      "title_tr": "Türkçe-Bulgarca Ortak Kelimeler Sözlüğü",
+      "summary_tr": "30 harf, basılı/el yazısı biçimleri ve zengin örnek kelimeler.",
+      "path": "/data/lessons/lesson-006-kucuk-sozluk-ortak-kelimeler.json",
+      "exercise_path": "/data/exercises/exercises-006.json",
+      "order": 6,
+      "level": "A1",
+      "description_tr": "Kaynak sözlükten çıkarılan geniş ortak kelime havuzu."
     },
     {
       "id": "lesson-007-selamlasma-hitaplar-sosyal-ifadeler",
-      "lesson_id": "lesson-007-selamlasma-hitaplar-sosyal-ifadeler",
       "title_tr": "Selamlaşma, Hitaplar ve Günlük Sosyal İfadeler",
-      "level": "A1",
-      "order": 7,
+      "summary_tr": "Günün saatine göre selamlaşma, teşekkür, özür, iyi dilek ve resmî/samimi biçimler.",
       "path": "/data/lessons/lesson-007-selamlasma-hitaplar-sosyal-ifadeler.json",
       "exercise_path": "/data/exercises/exercises-007.json",
-      "description_tr": "Günün saatine göre selamlaşma, teşekkür, özür, iyi dilek ve resmî/samimi biçimler."
+      "order": 7,
+      "level": "A1"
     },
     {
       "id": "lesson-008-ozel-sesler-heceleme-yazma",
-      "lesson_id": "lesson-008-ozel-sesler-heceleme-yazma",
       "title_tr": "Özel Sesler, Heceleme ve Yazma Pratiği",
-      "level": "A1",
-      "order": 8,
+      "summary_tr": "Ю, Я, Щ, Й, ьо, дж, дз, heceleme ve el yazısı pratiği.",
       "path": "/data/lessons/lesson-008-ozel-sesler-heceleme-yazma.json",
       "exercise_path": "/data/exercises/exercises-008.json",
-      "description_tr": "Ю, Я, Щ, Й, ьо, дж, дз, heceleme ve el yazısı pratiği."
+      "order": 8,
+      "level": "A1"
     }
   ],
   "rules": [
@@ -75,11 +81,17 @@
       "id": "alphabet-rules",
       "title": "Alfabe Kuralları",
       "filePath": "/data/rules/alphabet-rules.json"
+    },
+    {
+      "id": "grammar-rules-a1-core",
+      "title": "A1 Temel Gramer Kuralları",
+      "filePath": "/data/rules/grammar-rules-a1-core.json"
     }
   ],
   "glossaries": [
     "/data/glossary/bg-tr-glossary.json",
-    "/data/glossary/kucuk-sozluk-cognates.full.json"
+    "/data/glossary/kucuk-sozluk-cognates.full.json",
+    "/data/glossary/a1-core-phrases.json"
   ],
   "sources": "/data/sources/source-index.json"
 }
