@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.1",
+  "lesson_id": "lesson-016-kucuk-sozluk-a-z-tam-calisma",
+  "title_tr": "Türkçe-Bulgarca Ortak Kelimeler: A-Z Tam Çalışma",
+  "level": "A1",
+  "order": 16,
+  "estimated_minutes": 120,
+  "tags": [
+    "sozluk",
+    "arama",
+    "ortak-kelimeler",
+    "a-z"
+  ],
+  "source_refs": [
+    {
+      "source_id": "src-kucuk-sozluk-full-text",
+      "pages": [23, 91],
+      "note": "A-Z ortak kelime tabloları."
+    }
+  ],
+  "learning_goals": [
+    "Sözlükteki tüm çıkarılmış kelimeleri arayabilmek.",
+    "Her kelimeyi kaynak sayfası ve kural referansıyla görebilmek.",
+    "Aynı kurala uyan kelimeleri sağ panelden listeleyebilmek.",
+    "Zor kelimeleri tekrar kuyruğuna eklemek."
+  ],
+  "ui_hints": {
+    "default_language_mode": "bg_hover_tr",
+    "default_marker_mode": "strong",
+    "supports_right_panel": true,
+    "supports_search": true,
+    "supports_glossary_table": true
+  },
+  "sections": [
+    {
+      "section_id": "l016-s02",
+      "type": "glossary_table",
+      "glossary_file_path": "/data/glossary/kucuk-sozluk-cognates.full.v3.json"
+    },
+    {
+      "section_id": "bdk_reverse_list",
+      "type": "glossary_table",
+      "title_tr": "Bulgarcadan Türkçeye Ters Yazılış (BDK s. 342-347)",
+      "description_tr": "Kaynakta (BDK) yer alan Bulgarcadan Türkçeye doğrudan eşleşen ortak kelimeler listesi.",
+      "glossary_file_path": "/data/glossary/bdk-common-words.json"
+    }
+  ],
+  "exercise_path": "/data/exercises/exercises-016-kucuk-sozluk-a-z-tam-calisma.json"
+}

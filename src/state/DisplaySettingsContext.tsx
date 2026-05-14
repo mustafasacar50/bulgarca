@@ -27,6 +27,7 @@ export interface DisplaySettings {
   markerMode: MarkerMode;
   showTransliteration: boolean;
   showPronunciation: boolean;
+  isReversed: boolean;
 }
 
 const defaultSettings: DisplaySettings = {
@@ -35,7 +36,8 @@ const defaultSettings: DisplaySettings = {
   languageMode: "bg_hover_tr",
   markerMode: "strong",
   showTransliteration: true,
-  showPronunciation: true
+  showPronunciation: true,
+  isReversed: false
 };
 
 interface DisplaySettingsContextType {

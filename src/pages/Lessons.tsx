@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { LessonMeta } from '../types/lesson';
 import { Search, BookOpen } from 'lucide-react';
+import { useDisplaySettings } from '../state/DisplaySettingsContext';
 
 interface LessonsProps {
   onSelectLesson: (id: string) => void;
@@ -9,6 +10,8 @@ interface LessonsProps {
 export function Lessons({ onSelectLesson }: LessonsProps) {
   const [lessons, setLessons] = useState<LessonMeta[]>([]);
   const [search, setSearch] = useState('');
+  const { settings } = useDisplaySettings();
+  const isRev = settings.isReversed;
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/manifest.json`)
@@ -21,22 +24,28 @@ export function Lessons({ onSelectLesson }: LessonsProps) {
 
   const filteredLessons = lessons.filter(l => 
     l.title_tr.toLowerCase().includes(search.toLowerCase()) || 
-    (l.summary_tr || '').toLowerCase().includes(search.toLowerCase())
+    (l.summary_tr || '').toLowerCase().includes(search.toLowerCase()) ||
+    ((l as any).title_bg || '').toLowerCase().includes(search.toLowerCase())
   );
+
+  const lt = (lesson: any, field: string = 'title') => {
+    if (isRev) return lesson[`${field}_bg`] || lesson[`${field}_tr`] || '';
+    return lesson[`${field}_tr`] || '';
+  };
 
   return (
     <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900">Tüm Dersler</h1>
-          <p className="text-slate-500 text-sm">Seviyene uygun dersleri buradan bulabilirsin.</p>
+          <h1 className="text-2xl font-bold text-slate-900">{isRev ? 'Всички уроци' : 'Tüm Dersler'}</h1>
+          <p className="text-slate-500 text-sm">{isRev ? 'Намерете подходящите уроци за вашето ниво.' : 'Seviyene uygun dersleri buradan bulabilirsin.'}</p>
         </div>
         
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
           <input 
             type="text" 
-            placeholder="Ders ara..." 
+            placeholder={isRev ? "Търси урок..." : "Ders ara..."} 
             className="pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 w-full md:w-64"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -44,26 +53,61 @@ export function Lessons({ onSelectLesson }: LessonsProps) {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {filteredLessons.map((lesson) => (
-          <div 
-            key={lesson.id} 
-            className="card p-6 cursor-pointer hover:border-primary-200 hover:shadow-md transition-all group"
-            onClick={() => onSelectLesson(lesson.id)}
-          >
-            <div className="flex items-start justify-between mb-4">
-              <div className="w-10 h-10 bg-slate-50 text-slate-400 group-hover:bg-primary-50 group-hover:text-primary-600 rounded-lg flex items-center justify-center transition-colors">
-                <BookOpen size={20} />
+      <div className="space-y-8">
+        {Object.entries(
+          filteredLessons.reduce((acc: Record<number, LessonMeta[]>, lesson) => {
+            const week = lesson.week || 99;
+            if (!acc[week]) acc[week] = [];
+            acc[week].push(lesson);
+            return acc;
+          }, {})
+        ).sort(([a], [b]) => Number(a) - Number(b)).map(([weekStr, weekLessons]) => {
+          const week = Number(weekStr);
+          return (
+            <div key={week} className="space-y-4">
+              <h2 className="text-sm font-black text-slate-400 uppercase tracking-widest pl-2">
+                {week === 99 
+                  ? (isRev ? 'Източници и инструменти' : 'Kaynaklar & Araçlar') 
+                  : (isRev ? `${week}. СЕДМИЦА` : `${week}. HAFTA`)
+                }
+              </h2>
+              <div className="space-y-3">
+                {weekLessons.map((lesson) => (
+                  <div 
+                    key={lesson.id} 
+                    className="bg-white border border-slate-200 p-4 rounded-2xl cursor-pointer hover:border-primary-300 hover:shadow-md transition-all group flex items-center justify-between gap-4"
+                    onClick={() => onSelectLesson(lesson.id)}
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className={`shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${
+                        lesson.isDictionary 
+                        ? 'bg-rose-50 text-rose-500 group-hover:bg-rose-100 group-hover:text-rose-600' 
+                        : 'bg-primary-50 text-primary-500 group-hover:bg-primary-100 group-hover:text-primary-600'
+                      }`}>
+                        <BookOpen size={24} />
+                      </div>
+                      <div className="flex flex-col">
+                        <div className="flex items-center gap-2 mb-0.5">
+                          {lesson.isDictionary ? (
+                            <span className="text-[10px] font-black text-rose-500 bg-rose-50 px-2 py-0.5 rounded uppercase tracking-tighter">{isRev ? 'РЕЧНИК' : 'SÖZLÜK'}</span>
+                          ) : (
+                            <span className="text-[10px] font-black text-primary-500 bg-primary-50 px-2 py-0.5 rounded uppercase tracking-tighter">{isRev ? `УРОК ${lesson.order || '?'}` : `DERS ${lesson.order || '?'}`}</span>
+                          )}
+                        </div>
+                        <h3 className="font-bold text-slate-800 text-base line-clamp-1">{lt(lesson)}</h3>
+                      </div>
+                    </div>
+                    
+                    <div className="hidden md:flex items-center gap-4">
+                      <p className="text-sm text-slate-500 line-clamp-1 max-w-sm">{lt(lesson, 'summary') || (isRev ? 'Няма описание за този урок.' : 'Bu ders için açıklama bulunmuyor.')}</p>
+                      <span className="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded uppercase tracking-wider shrink-0">{lesson.level}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <span className="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded uppercase tracking-wider">{lesson.level}</span>
             </div>
-            <div className="flex items-baseline gap-2 mb-1">
-              <span className="text-[10px] font-black text-primary-500 uppercase tracking-tighter">DERS {lesson.order || '?'}</span>
-              <h3 className="font-bold text-slate-800">{lesson.title_tr}</h3>
-            </div>
-            <p className="text-sm text-slate-500 line-clamp-2">{lesson.summary_tr || 'Bu ders için açıklama bulunmuyor.'}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

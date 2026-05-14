@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.1",
+  "lesson_id": "lesson-010-personal-pronouns",
+  "title_tr": "Şahıs Zamirleri ve Temel Fiiller",
+  "subtitle_tr": "Ben, Sen, O ve Olmak Fiili",
+  "level": "A1",
+  "order": 10,
+  "estimated_minutes": 45,
+  "tags": [
+    "zamir",
+    "съм",
+    "gramer",
+    "a1"
+  ],
+  "sections": [
+    {
+      "section_id": "l010-s01",
+      "type": "grammar_table",
+      "title_tr": "Şahıs Zamirleri (Лични местоимения)",
+      "headers": [
+        "Şahıs",
+        "Bulgarca (Yalın Hali)",
+        "Türkçe Anlamı"
+      ],
+      "rows": [
+        [
+          "1. Tekil",
+          "Аз",
+          "Ben"
+        ],
+        [
+          "2. Tekil",
+          "Ти",
+          "Sen"
+        ],
+        [
+          "3. Tekil (Eril)",
+          "Той",
+          "O (Erkek)"
+        ],
+        [
+          "3. Tekil (Dişil)",
+          "Тя",
+          "O (Kadın)"
+        ],
+        [
+          "3. Tekil (Nötr)",
+          "То",
+          "O (Nötr)"
+        ],
+        [
+          "1. Çoğul",
+          "Ние",
+          "Biz"
+        ],
+        [
+          "2. Çoğul",
+          "Вие",
+          "Siz (veya Resmî Siz)"
+        ],
+        [
+          "3. Çoğul",
+          "Те",
+          "Onlar"
+        ]
+      ]
+    },
+    {
+      "section_id": "l010-s02",
+      "type": "grammar_table",
+      "title_tr": "'Съм' (Olmak) Fiili Geniş Zaman Çekimi",
+      "headers": [
+        "Zamir",
+        "Съм (Olmak)",
+        "Örnek"
+      ],
+      "rows": [
+        [
+          "Аз",
+          "съм",
+          "Аз съм студент."
+        ],
+        [
+          "Ти",
+          "си",
+          "Ти си студент."
+        ],
+        [
+          "Той / Тя / То",
+          "е",
+          "Той е студент."
+        ],
+        [
+          "Ние",
+          "сме",
+          "Ние сме студенти."
+        ],
+        [
+          "Вие",
+          "сте",
+          "Вие сте студенти."
+        ],
+        [
+          "Те",
+          "са",
+          "Те са студенти."
+        ]
+      ]
+    },
+    {
+      "section_id": "l010-s03",
+      "type": "writing_practice",
+      "title_tr": "Boşluk Doldurma: Soru Edatı 'ли'",
+      "items": [
+        {
+          "bg": "Студент ли си",
+          "tr": "Öğrenci misin?"
+        },
+        {
+          "bg": "Преподавател ли сте",
+          "tr": "Öğretmen misiniz?"
+        },
+        {
+          "bg": "Ти спортист ли си",
+          "tr": "Sen sporcu musun?"
+        }
+      ]
+    }
+  ]
+}

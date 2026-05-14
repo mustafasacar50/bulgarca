@@ -1,1 +1,0 @@
-"# SCAN 010 — ASETİLEN marker audit\n\nBulgu: ASETİLEN → Ацетилен örneğinde uygulama A/E gibi geniş vowel kurallarını markerlamış. Kaynakta bu örnek S (YON) → Ц (ИЯ) grubundadır. Doğru marker S → ц olmalıdır.\n\nİlgili kaynaklar:\n- zup-tan-k BG Ders.pdf, s. 3\n- kucuk-sozlukWORD-yeil, s. 31\n"

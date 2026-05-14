@@ -41,6 +41,119 @@
       ]
     },
     {
+      "id": "contextual_examples",
+      "type": "annotated_sentence_examples",
+      "title_tr": "Bağlamda Uygulama: Zengin Ortak Kelime Örnekleri",
+      "description_tr": "Sözlükteki kelimeler tek başlarına cansızdır. Aşağıda, kaynak sözlükte yer alan kelimelerin gerçek kullanım örneklerini, eril/dişil durumlarını (rod), çoğul yapılarını ve gramer kurallarını görebilirsiniz.",
+      "sentences": [
+        {
+          "bg": "Твоят адрес нов ли е? – Да, живея на нов адрес.",
+          "tr": "Senin adresin yeni mi? - Evet, yeni bir adreste yaşıyorum.",
+          "analysis": "Адрес (Adres): Eril (м.р.) bir kelimedir. Çoğulu 'адреси' şeklindedir. Soru sorarken 'нов' (eril 'yeni') sıfatı ile kullanılmıştır."
+        },
+        {
+          "bg": "Моят автомобил е много бърз, но тези автомобили са по-бързи.",
+          "tr": "Benim otomobilim çok hızlı, ama bu otomobiller daha hızlı.",
+          "analysis": "Автомобил (Otomobil): Eril (м.р.) kelime. Çoğulu '-и' eki alarak 'автомобили' olur. Türkçe 'oto-' öneki Bulgarcada her zaman 'авто-' (avto-) şeklinde dönüşür (örn: автопарк, автобус)."
+        },
+        {
+          "bg": "Тя е много активна студентка в университета.",
+          "tr": "O, üniversitede çok aktif bir kız öğrencidir.",
+          "analysis": "Активен (Aktif): Sıfattır. Kadın cinsi (dişil) için '-а' eki alarak 'активна' olur. Ortak sıfatların sonuna '-a' veya '-o' getirilerek eril/dişil/nötr uyumu yapılır."
+        },
+        {
+          "bg": "Къде е банката? – Банките са затворени днес.",
+          "tr": "Banka nerede? - Bankalar bugün kapalı.",
+          "analysis": "Банка (Banka): 'a' harfiyle bittiği için Dişil (ж.р.) bir isimdir. Çoğulu 'банки' olur. 'Банката' formunda '-та' eki belirli artikeli (the) temsil eder."
+        },
+        {
+          "bg": "Искам една студена бира, моля.",
+          "tr": "Bir tane soğuk bira istiyorum, lütfen.",
+          "analysis": "Бира (Bira): Dişil (ж.р.). İstemek fiili (искам) ve 'bir' sayısının dişil hali (една) ile bağlam içinde kullanılmıştır."
+        },
+        {
+          "bg": "Къде е банята? Искам да взема душ.",
+          "tr": "Banyo nerede? Duş almak istiyorum.",
+          "analysis": "Баня (Banyo): Dişil (ж.р.). Çoğulu 'бани'. Bulgarcada banyo kelimesi hem oda hem de yıkanma eylemi için kullanılır."
+        },
+        {
+          "bg": "Тази боя е за стените в хола.",
+          "tr": "Bu boya oturma odasındaki duvarlar içindir.",
+          "analysis": "Боя (Boya): Dişil. Çoğulu 'бои'. Türkçe kökenli bir kelimedir ve her iki dilde de aynı anlamda kullanılır."
+        },
+        {
+          "bg": "Новият бюджет на фирмата е много голям.",
+          "tr": "Şirketin yeni bütçesi çok büyük.",
+          "analysis": "Бюджет (Bütçe): Eril (м.р.). Çoğulu 'бюджети'. Fransızca kökenli ortak bir kelimedir."
+        },
+        {
+          "bg": "Обичам да слушам джаз вечер.",
+          "tr": "Akşamları caz dinlemeyi severim.",
+          "analysis": "Джаз (Caz): Eril. Bulgarcada Türkçe 'C' sesi 'Дж' harf grubu ile karşılanır (örn: джудже - cüce, джамия - cami)."
+        },
+        {
+          "bg": "Географията е много интересна наука.",
+          "tr": "Coğrafya çok ilginç bir bilimdir.",
+          "analysis": "География (Coğrafya): Dişil. Yunanca kökenli kelimelerde Türkçe 'C' sesi bazen Bulgarcada 'Г' (G) olarak karşımıza çıkar."
+        },
+        {
+          "bg": "Този филм има много добър сценарий.",
+          "tr": "Bu filmin çok iyi bir senaryosu var.",
+          "analysis": "Сценарий (Senaryo): Eril. Sonu '-ий' ile biten kelimelerin çoğulu '-ии' olur: 'сценарии'."
+        },
+        {
+          "bg": "Енергията е важна за нашето тяло.",
+          "tr": "Enerji vücudumuz için önemlidir.",
+          "analysis": "Енергия (Enerji): Dişil. Çoğulu 'енергии'. Sonundaki '-ия' takısı dişil olduğunun en büyük göstergesidir."
+        },
+        {
+          "bg": "Студентите учат в този факултет.",
+          "tr": "Öğrenciler bu fakültede okuyorlar.",
+          "analysis": "Факултет (Fakülte): Eril. Çoğulu 'факултети'. Birçok eğitim terimi (örn: университет, институт) eril cinstedir."
+        },
+        {
+          "bg": "Това е нов модел телевизор.",
+          "tr": "Bu yeni model bir televizyondur.",
+          "analysis": "Модел (Model): Eril. Çoğulu 'модели'. Sonu ünsüzle biten yabancı kökenli kelimelerin %99'u erildir."
+        },
+        {
+          "bg": "Внимавайте, има опасен микроб.",
+          "tr": "Dikkat edin, tehlikeli bir mikrop var.",
+          "analysis": "Микроб (Mikrop): Eril. P → Б Dönüşümü: Kelime sonundaki sert P sesi Bulgarcada yumuşayarak Б (B) harfine döner. (Kaynak: Zup-tank PDF s.5)"
+        },
+        {
+          "bg": "Един стар катър носи багажа.",
+          "tr": "Yaşlı bir katır bagajı taşıyor.",
+          "analysis": "Катър (Katır): Eril. I → Ъ Dönüşümü: Türkçedeki 'ı' sesi Bulgarcada Ъ (er-golyam) harfi ile yazılır. (Kaynak: Zup-tank PDF s.4)"
+        },
+        {
+          "bg": "Този хотел е много близо до центъра.",
+          "tr": "Bu otel merkeze çok yakın.",
+          "analysis": "Хотел (Otel): Eril. ∅ → Х Türemesi: Bazı kelimelerin başında Türkçede olmayan bir H sesi belirir. (Kaynak: Zup-tank PDF s.3)"
+        },
+        {
+          "bg": "Тя купи нови ботинки за зимата.",
+          "tr": "Kış için yeni botlar/potinler aldı.",
+          "analysis": "Ботинка (Potin): Dişil. P → Б Dönüşümü görülür. Ayrıca Bulgarcada 'bot' anlamında 'ботуш' (botuş) da kullanılır. (Kaynak: Zup-tank PDF s.5)"
+        },
+        {
+          "bg": "Новата тарифа е по-скъпа.",
+          "tr": "Yeni tarife daha pahalı.",
+          "analysis": "Тарифа (Tarife): Dişil. E → A Dönüşümü: Türkçedeki son 'e' sesi Bulgarcada dişil takısı olan 'a' harfine döner. (Kaynak: Zup-tank PDF s.5)"
+        },
+        {
+          "bg": "Това е голям гараж за два автобуса.",
+          "tr": "Bu, iki otobüslük büyük bir garajdır.",
+          "analysis": "Гараж (Garaj): Eril. Fransızcadan her iki dile ortak geçmiştir. Bulgarcada j sesi 'ж' harfi ile yazılır."
+        },
+        {
+          "bg": "Студентите имат изпит по биология утре.",
+          "tr": "Öğrencilerin yarın biyoloji sınavı var.",
+          "analysis": "Биология (Biyoloji): Dişil. Türkçedeki '-loji' ile biten bilim adları Bulgarcada genellikle '-логия' (logiya) şeklinde sonlanır (örn: астрология, психология)."
+        }
+      ]
+    },
+    {
       "id": "sozluk_a",
       "type": "glossary_table",
       "title_tr": "A harfiyle başlayan ortak kelimeler",
@@ -7107,6 +7220,39 @@
             "file": "kucuk-sozlukWORD-yeil (Otomatik olarak kaydedildi).pdf",
             "page": 91
           }
+        }
+      ]
+    },
+    {
+      "section_id": "zup_tank_scientific_terms",
+      "type": "annotated_sentence_examples",
+      "title_tr": "Bilimsel ve Uluslararası Ortak Kelimeler (Zup-Tank)",
+      "description_tr": "Batı dillerinden her iki dile de geçmiş bazı bilimsel ve teknik terimlerdeki özel dönüşümler.",
+      "sentences": [
+        {
+          "bg": "Това е неутрон в атома.",
+          "tr": "Bu atomdaki bir nötrondur.",
+          "analysis": "Ö → ЕУ Dönüşümü: Bazı bilimsel terimlerde Türkçedeki Ö sesi Bulgarcada 'ЕУ' (eu) olarak karşımıza çıkar. 'Nötron' -> 'неутрон'. (Kaynak: Zup-tank PDF s.2)"
+        },
+        {
+          "bg": "Той е добър невролог.",
+          "tr": "O iyi bir nörologdur.",
+          "analysis": "Ö → ЕВ Dönüşümü: Tıp terimlerinde Ö sesi bazen 'ЕВ' (ev) olur. 'Nörolog' -> 'невролог'. (Kaynak: Zup-tank PDF s.2)"
+        },
+        {
+          "bg": "Тази декорация е много модерна.",
+          "tr": "Bu dekorasyon çok moderndir.",
+          "analysis": "S (YON) → Ц (ИЯ) Dönüşümü: Türkçedeki '-syon' eki Bulgarcada '-ция' (tsiya) olur. 'Dekorasyon' -> 'декорация'. (Kaynak: Zup-tank PDF s.3)"
+        },
+        {
+          "bg": "Цигарите са вредни за здравето.",
+          "tr": "Sigaralar sağlık için zararlıdır.",
+          "analysis": "S → Ц Dönüşümü: Türkçedeki 'S' sesi bazı ortak kelimelerin başında 'Ц' (ts) olur. 'Sigara' -> 'цигара'. (Kaynak: Zup-tank PDF s.3)"
+        },
+        {
+          "bg": "Атеизъм е философско течение.",
+          "tr": "Ateizm felsefi bir akımdır.",
+          "analysis": "-İZM → -ИЗЪМ Dönüşümü: Türkçedeki '-izm' sonu Bulgarcada '-изъм' (izam) şeklinde yazılır. (Kaynak: Zup-tank PDF s.4)"
         }
       ]
     }

@@ -9,53 +9,20 @@
       "path": "/data/lessons/lesson-001-alfabe.json",
       "exercise_path": "/data/exercises/exercises-001.json",
       "order": 1,
-      "level": "A1"
+      "level": "A1",
+      "week": 1,
+      "title_bg": "Българската азбука и основни звуци"
     },
     {
       "id": "lesson-002-ses-harf-donusumleri",
-      "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri: Genişletilmiş",
-      "summary_tr": "Ş→Ш, J→Ж, Ö/Ü dönüşümleri ve çok sayıda örnek kelime.",
+      "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri: Tam Kural Seti",
+      "summary_tr": "Ş→Ш, J→Ж, Ö/Ü dönüşümleri ve 36 farklı ses/harf değişim kuralı.",
       "path": "/data/lessons/lesson-002-ses-harf-donusumleri.json",
-      "exercise_path": "/data/exercises/exercises-002.json",
+      "exercise_path": "/data/exercises/exercises-002-full-pattern-rules.json",
       "order": 2,
-      "level": "A1"
-    },
-    {
-      "id": "lesson-003-cogul-ve-ortak-kelimeler",
-      "title_tr": "Ortak Kelimelerle İlk Çoğul Kuralları: Örnekli",
-      "summary_tr": "-ия→-ии, -к→-ци, -г→-зи kuralları örnekli tablo ile.",
-      "path": "/data/lessons/lesson-003-cogul-ve-ortak-kelimeler.json",
-      "exercise_path": "/data/exercises/exercises-003.json",
-      "order": 3,
-      "level": "A1"
-    },
-    {
-      "id": "lesson-004-tanisma-ve-selamlasma",
-      "title_tr": "Tanışma, Hitaplar ve Selamlaşma",
-      "summary_tr": "Merhaba, nasılsın, adın ne, kendini tanıtma ve kısa diyaloglar.",
-      "path": "/data/lessons/lesson-004-tanisma-ve-selamlasma.json",
-      "exercise_path": "/data/exercises/exercises-004.json",
-      "order": 4,
-      "level": "A1"
-    },
-    {
-      "id": "lesson-005-zamirler-kazvam-se-sum-li",
-      "title_tr": "Şahıs Zamirleri, казвам се, съм ve ли Soruları",
-      "summary_tr": "Kendini tanıtma, olmak fiili ve li soru yapısı.",
-      "path": "/data/lessons/lesson-005-zamirler-kazvam-se-sum-li.json",
-      "exercise_path": "/data/exercises/exercises-005.json",
-      "order": 5,
-      "level": "A1"
-    },
-    {
-      "id": "lesson-006-kucuk-sozluk-ortak-kelimeler",
-      "title_tr": "Türkçe-Bulgarca Ortak Kelimeler Sözlüğü",
-      "summary_tr": "30 harf, basılı/el yazısı biçimleri ve zengin örnek kelimeler.",
-      "path": "/data/lessons/lesson-006-kucuk-sozluk-ortak-kelimeler.json",
-      "exercise_path": "/data/exercises/exercises-006.json",
-      "order": 6,
       "level": "A1",
-      "description_tr": "Kaynak sözlükten çıkarılan geniş ortak kelime havuzu."
+      "week": 1,
+      "title_bg": "Звукови и буквени преобразувания"
     },
     {
       "id": "lesson-007-selamlasma-hitaplar-sosyal-ifadeler",
@@ -63,31 +30,32 @@
       "summary_tr": "Günün saatine göre selamlaşma, teşekkür, özür, iyi dilek ve resmî/samimi biçimler.",
       "path": "/data/lessons/lesson-007-selamlasma-hitaplar-sosyal-ifadeler.json",
       "exercise_path": "/data/exercises/exercises-007.json",
-      "order": 7,
-      "level": "A1"
-    },
-    {
-      "id": "lesson-008-ozel-sesler-heceleme-yazma",
-      "title_tr": "Özel Sesler, Heceleme ve Yazma Pratiği",
-      "summary_tr": "Ю, Я, Щ, Й, ьо, дж, дз, heceleme ve el yazısı pratiği.",
-      "path": "/data/lessons/lesson-008-ozel-sesler-heceleme-yazma.json",
-      "exercise_path": "/data/exercises/exercises-008.json",
-      "order": 8,
-      "level": "A1"
-    },
-    {
-      "lesson_id": "lesson-009-a1-diyalog-kak-se-kazvate",
-      "title_tr": "Diyalog Dersi: Как се казвате?",
+      "order": 3,
       "level": "A1",
-      "order": 9,
-      "path": "/data/lessons/lesson-009-a1-diyalog-kak-se-kazvate.json",
-      "exercise_path": "/data/exercises/exercises-009-a1-dialogue-kak-se-kazvate.json",
-      "status": "active",
-      "tags": [
-        "diyalog",
-        "tanisma",
-        "kazvam-se"
-      ]
+      "week": 2,
+      "title_bg": "Поздрави, обръщения и диалог за запознаване"
+    },
+    {
+      "id": "lesson-005-zamirler-kazvam-se-sum-li",
+      "title_tr": "Şahıs Zamirleri, казвам се, съм ve ли Soruları",
+      "summary_tr": "Kendini tanıtma, olmak fiili ve li soru yapısı.",
+      "path": "/data/lessons/lesson-005-zamirler-kazvam-se-sum-li.json",
+      "exercise_path": "/data/exercises/exercises-005.json",
+      "order": 4,
+      "level": "A1",
+      "week": 2,
+      "title_bg": "Лични местоимения, казвам се, съм и ли"
+    },
+    {
+      "id": "lesson-016-kucuk-sozluk-a-z-tam-calisma",
+      "title_tr": "Küçük Sözlük (A-Z)",
+      "level": "A1",
+      "order": 99,
+      "path": "/data/lessons/lesson-016-kucuk-sozluk-a-z-tam-calisma.json",
+      "exercise_path": "/data/exercises/exercises-016-kucuk-sozluk-a-z-tam-calisma.json",
+      "summary_tr": "650+ ortak kelime, ses dönüşüm kuralları ve bağlamsal örneklerle tam sözlük çalışması.",
+      "isDictionary": true,
+      "week": 99
     }
   ],
   "rules": [
@@ -100,12 +68,36 @@
       "id": "grammar-rules-a1-core",
       "title": "A1 Temel Gramer Kuralları",
       "filePath": "/data/rules/grammar-rules-a1-core.json"
+    },
+    {
+      "id": "cognate-pattern-rules",
+      "title": "Ortak Kelime Dönüşüm Kuralları (Full Set)",
+      "filePath": "/data/rules/cognate-pattern-rules.full.json"
+    },
+    {
+      "id": "grammar-rules-a1-dialogue",
+      "title": "Ek Dilbilgisi Kuralları",
+      "filePath": "/data/rules/grammar-rules-a1-dialogue.json"
+    },
+    {
+      "id": "kucuk-sozluk-methodology-rules",
+      "title": "Ek Dilbilgisi Kuralları",
+      "filePath": "/data/rules/kucuk-sozluk-methodology-rules.json"
+    },
+    {
+      "id": "zup-tank-rules",
+      "title": "Zup-Tank Ses/Harf Dönüşümleri",
+      "filePath": "/data/rules/zup-tank-transformation-rules.json"
     }
   ],
   "glossaries": [
     "/data/glossary/bg-tr-glossary.json",
     "/data/glossary/kucuk-sozluk-cognates.full.json",
-    "/data/glossary/a1-core-phrases.json"
+    "/data/glossary/a1-core-phrases.json",
+    "/data/glossary/a1-dialogue-phrases.json",
+    "/data/glossary/kucuk-sozluk-cognates.full.v3.json",
+    "/data/glossary/bdk-common-words.json",
+    "/data/glossary/sentence-bank.json"
   ],
   "sources": "/data/sources/source-index.json"
 }

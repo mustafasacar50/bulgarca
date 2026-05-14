@@ -13,6 +13,7 @@ export interface GlossaryEntry {
 
 interface GlossaryContextType {
   lookup: (bgText: string) => GlossaryEntry | null;
+  entries: GlossaryEntry[];
   isLoading: boolean;
 }
 
@@ -61,8 +62,10 @@ export function GlossaryProvider({ children }: { children: React.ReactNode }) {
     return glossary[bgText.toLowerCase()] || null;
   };
 
+  const entriesArray = React.useMemo(() => Object.values(glossary), [glossary]);
+  
   return (
-    <GlossaryContext.Provider value={{ lookup, isLoading }}>
+    <GlossaryContext.Provider value={{ lookup, entries: entriesArray, isLoading }}>
       {children}
     </GlossaryContext.Provider>
   );

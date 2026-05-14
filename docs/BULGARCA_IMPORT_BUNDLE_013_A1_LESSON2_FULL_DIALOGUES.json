@@ -1,0 +1,2010 @@
+{
+  "bundle_type": "bulgarca_import_bundle",
+  "package_type": "bulgarca_import_bundle",
+  "schema_version": "1.0",
+  "bundle_id": "IMPORT_BUNDLE_013_A1_LESSON2_FULL_DIALOGUES",
+  "package_id": "IMPORT_PACKAGE_013_A1_LESSON2_FULL_DIALOGUES",
+  "created_at": "2026-05-14T11:28:48.736421Z",
+  "commit_message": "Import full A1 lesson 2 dialogue practice",
+  "summary_tr": "A1-V-1-2 PDF'indeki Ders 2 'Как се казвате?' uzun diyaloglarını tam ders, kalıp kartları, gramer kuralları ve quizlerle ekler.",
+  "files": [
+    {
+      "path": "public/data/lessons/lesson-009-a1-diyalog-kak-se-kazvate.json",
+      "operation": "upsert",
+      "content": {
+        "schema_version": "1.1",
+        "lesson_id": "lesson-009-a1-diyalog-kak-se-kazvate",
+        "title_tr": "Diyalog Dersi: Как се казвате?",
+        "subtitle_tr": "Tanışma, ad sorma, kendini takdim etme ve nazik tekrar isteme",
+        "level": "A1",
+        "order": 9,
+        "estimated_minutes": 75,
+        "tags": [
+          "diyalog",
+          "tanisma",
+          "kazvam-se",
+          "sosyal-ifade",
+          "register",
+          "a1"
+        ],
+        "source_refs": [
+          {
+            "source_id": "src-a1-v-1-2",
+            "pages": [
+              15,
+              16,
+              20,
+              21
+            ],
+            "note": "Урок № 2 Как се казвате?, tanışma diyalogları ve anahtar ifadeler."
+          }
+        ],
+        "learning_goals": [
+          "Uzun tanışma diyaloglarını parçalara ayırarak anlamak.",
+          "Как се казвате?, Казвам се..., Аз съм... kalıplarını aktif kullanmak.",
+          "Resmî Вие ve samimi ти farkını tanımak.",
+          "Nazik tekrar isteme kalıbı Бихте ли повторили? yapısını öğrenmek.",
+          "Diyalog sıralama ve rol canlandırma ile kendini tanıtmak."
+        ],
+        "ui_hints": {
+          "default_language_mode": "bg_hover_tr",
+          "default_marker_mode": "strong",
+          "supports_right_panel": true,
+          "recommended_layout": "dialogue_reader"
+        },
+        "sections": [
+          {
+            "section_id": "l009-s01",
+            "type": "text",
+            "title_tr": "Bu ders neden ayrı olmalı?",
+            "body_tr": "Kaynak PDF’deki 2. ders yalnızca kelime listesi değil; gerçek tanışma sahneleri, resmî/samimi kullanım farkları, ad sorma ve tekrar isteme kalıpları içeriyor. Bu yüzden ayrı bir diyalog dersi olarak işlenmelidir.",
+            "source_refs": [
+              {
+                "source_id": "src-a1-v-1-2",
+                "pages": [
+                  15,
+                  16
+                ],
+                "note": "Üç tanışma diyaloğu."
+              }
+            ]
+          },
+          {
+            "section_id": "l009-s02",
+            "type": "phrase_cards",
+            "title_tr": "Diyalogdan çıkarılan çekirdek kalıplar",
+            "description_tr": "Varsayılan görünüm Bulgarca + Türkçe hover. Her karta tıklayınca sağ panelde kullanım ve örnekler açılmalı.",
+            "cards": [
+              {
+                "bg": "Как се казвате?",
+                "tr": "Adınız ne? / İsminiz ne?",
+                "usage_tr": "Resmî/saygılı ad sorma.",
+                "rule_refs": [
+                  "bg-kak-se-kazvate",
+                  "bg-formal-vie"
+                ]
+              },
+              {
+                "bg": "Как се казваш?",
+                "tr": "Adın ne?",
+                "usage_tr": "Samimi ad sorma.",
+                "rule_refs": [
+                  "bg-kak-se-kazvate"
+                ]
+              },
+              {
+                "bg": "Казвам се...",
+                "tr": "Adım...",
+                "usage_tr": "Kendini tanıtmanın en temel kalıbı.",
+                "rule_refs": [
+                  "bg-kazvam-se-name"
+                ]
+              },
+              {
+                "bg": "Аз се казвам...",
+                "tr": "Benim adım...",
+                "usage_tr": "Vurgulu kendini tanıtma.",
+                "rule_refs": [
+                  "bg-kazvam-se-name"
+                ]
+              },
+              {
+                "bg": "Аз съм...",
+                "tr": "Ben... / Ben ...-im.",
+                "usage_tr": "Kimlik, meslek veya isim söylemek için.",
+                "rule_refs": [
+                  "bg-az-sum-identity"
+                ]
+              },
+              {
+                "bg": "А Вие кой сте?",
+                "tr": "Peki siz kimsiniz?",
+                "usage_tr": "Resmî/saygılı kişiyi sorma.",
+                "rule_refs": [
+                  "bg-koy-ste",
+                  "bg-formal-vie"
+                ]
+              },
+              {
+                "bg": "Вашето име, моля?",
+                "tr": "Adınız, lütfen?",
+                "usage_tr": "Kısa ve resmî ad isteme.",
+                "rule_refs": [
+                  "bg-polite-name-request"
+                ]
+              },
+              {
+                "bg": "Името Ви, моля?",
+                "tr": "Adınız, lütfen?",
+                "usage_tr": "Вашето име ile yakın anlamlı.",
+                "rule_refs": [
+                  "bg-polite-name-request"
+                ]
+              },
+              {
+                "bg": "Бихте ли повторили?",
+                "tr": "Tekrar eder misiniz?",
+                "usage_tr": "Nazik rica kalıbı.",
+                "rule_refs": [
+                  "bg-polite-bihte-li"
+                ]
+              },
+              {
+                "bg": "Бихте ли повторили името си?",
+                "tr": "Adınızı tekrar eder misiniz?",
+                "usage_tr": "Adı iyi duymayınca kullanılır.",
+                "rule_refs": [
+                  "bg-polite-bihte-li"
+                ]
+              },
+              {
+                "bg": "Приятно ми е.",
+                "tr": "Memnun oldum.",
+                "usage_tr": "Tanışmada en önemli kalıplardan biri.",
+                "rule_refs": [
+                  "bg-priyatno-mi-e"
+                ]
+              },
+              {
+                "bg": "На мен също.",
+                "tr": "Ben de.",
+                "usage_tr": "Karşılıklı memnuniyet cevabı.",
+                "rule_refs": [
+                  "bg-na-men-sashto"
+                ]
+              },
+              {
+                "bg": "Радвам се, че се запознахме.",
+                "tr": "Tanıştığımıza sevindim.",
+                "usage_tr": "Tanışma sonrası olumlu kapanış.",
+                "rule_refs": [
+                  "bg-radvam-se"
+                ]
+              },
+              {
+                "bg": "Запознайте се!",
+                "tr": "Tanışın lütfen!",
+                "usage_tr": "Resmî veya çoğul hitap.",
+                "rule_refs": [
+                  "bg-zapoznayte-se"
+                ]
+              },
+              {
+                "bg": "Запознай се!",
+                "tr": "Tanış!",
+                "usage_tr": "Samimi tekil hitap.",
+                "rule_refs": [
+                  "bg-zapoznay-se"
+                ]
+              },
+              {
+                "bg": "Това е...",
+                "tr": "Bu... / Bu kişi...",
+                "usage_tr": "Birini tanıtırken.",
+                "rule_refs": [
+                  "bg-tova-e"
+                ]
+              },
+              {
+                "bg": "Моя колежка",
+                "tr": "Benim kadın meslektaşım",
+                "usage_tr": "Kadın meslektaş için; kaynakta 'А това е моя колежка'."
+              },
+              {
+                "bg": "Нашият екскурзовод",
+                "tr": "Bizim rehberimiz",
+                "usage_tr": "Belirli erkek rehber için членli biçim: нашият."
+              },
+              {
+                "bg": "Ще се обадя.",
+                "tr": "Arayacağım.",
+                "usage_tr": "Ще ile gelecek zaman başlangıç örneği.",
+                "rule_refs": [
+                  "bg-shte-future"
+                ]
+              },
+              {
+                "bg": "Няма защо!",
+                "tr": "Bir şey değil!",
+                "usage_tr": "Teşekküre cevap."
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-a1-v-1-2",
+                "pages": [
+                  15,
+                  16,
+                  20,
+                  21
+                ],
+                "note": "Tanışma ve kendini tanıtma kalıpları."
+              }
+            ]
+          },
+          {
+            "section_id": "l009-s03",
+            "type": "dialogue_scenes",
+            "title_tr": "Kaynak diyaloglar — parça parça oku",
+            "description_tr": "Her sahne rol/konuşmacı bazlı ayrıldı. Satıra tıklayınca sağ panelde kelime, kural ve kullanım açıklaması görünmeli.",
+            "scenes": [
+              {
+                "scene_id": "scene-001-class-introduction",
+                "title_tr": "Sınıfta tanışma: öğretmen ve öğrenciler",
+                "source_refs": [
+                  {
+                    "source_id": "src-a1-v-1-2",
+                    "pages": [
+                      15
+                    ],
+                    "note": "Урок № 2: Как се казвате? — Представяне и запознанство, ilk diyalog."
+                  }
+                ],
+                "lines": [
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "Добър ден!",
+                    "tr": "İyi günler!",
+                    "notes_tr": "Gündüz kullanılan resmî/nötr selamlaşma."
+                  },
+                  {
+                    "speaker": "Студенти",
+                    "bg": "Добър ден!",
+                    "tr": "İyi günler!"
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "Аз съм вашата преподавателка по български език.",
+                    "tr": "Ben sizin Bulgarca öğretmeninizim.",
+                    "rule_refs": [
+                      "bg-az-sum-identity"
+                    ]
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "Казвам се Станка Донева.",
+                    "tr": "Adım Stanka Doneva.",
+                    "rule_refs": [
+                      "bg-kazvam-se-name"
+                    ]
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "А Вие как се казвате?",
+                    "tr": "Peki sizin adınız ne?",
+                    "rule_refs": [
+                      "bg-formal-vie",
+                      "bg-kak-se-kazvate"
+                    ]
+                  },
+                  {
+                    "speaker": "Студент",
+                    "bg": "Аз се казвам Симеон Димитров.",
+                    "tr": "Benim adım Simeon Dimitrov.",
+                    "rule_refs": [
+                      "bg-kazvam-se-name"
+                    ]
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "Благодаря! А Вие кой сте?",
+                    "tr": "Teşekkürler! Peki siz kimsiniz?",
+                    "rule_refs": [
+                      "bg-koy-ste"
+                    ]
+                  },
+                  {
+                    "speaker": "Студент",
+                    "bg": "Аз съм Димитър Петров.",
+                    "tr": "Ben Dimitır Petrov’um.",
+                    "rule_refs": [
+                      "bg-az-sum-identity"
+                    ]
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "А Вие, колежке, как се казвате?",
+                    "tr": "Peki siz, meslektaşım, adınız ne?",
+                    "rule_refs": [
+                      "bg-address-vocative",
+                      "bg-kak-se-kazvate"
+                    ]
+                  },
+                  {
+                    "speaker": "Студентка",
+                    "bg": "Донка Асенова.",
+                    "tr": "Donka Asenova."
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "Вашето име, моля?",
+                    "tr": "Adınız, lütfen?",
+                    "rule_refs": [
+                      "bg-polite-name-request"
+                    ]
+                  },
+                  {
+                    "speaker": "Студент",
+                    "bg": "Румен Василев.",
+                    "tr": "Rumen Vasilev."
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "Извинете, не чух добре. Бихте ли повторили?",
+                    "tr": "Affedersiniz, iyi duymadım. Tekrar eder misiniz?",
+                    "rule_refs": [
+                      "bg-polite-bihte-li"
+                    ]
+                  },
+                  {
+                    "speaker": "Студент",
+                    "bg": "Да. Румен Василев.",
+                    "tr": "Evet. Rumen Vasilev."
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "С Вас вече се познаваме. Вие сте Елена Иванова, нали?",
+                    "tr": "Sizinle zaten tanışıyoruz. Siz Elena Ivanova’sınız, değil mi?",
+                    "rule_refs": [
+                      "bg-formal-vie",
+                      "bg-nali-confirmation"
+                    ]
+                  },
+                  {
+                    "speaker": "Студентка",
+                    "bg": "Да. Аз съм Елена Иванова.",
+                    "tr": "Evet. Ben Elena Ivanova’yım.",
+                    "rule_refs": [
+                      "bg-az-sum-identity"
+                    ]
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "А госпожицата с Вас коя е?",
+                    "tr": "Peki yanınızdaki genç hanım kim?",
+                    "rule_refs": [
+                      "bg-koy-koya-koe"
+                    ]
+                  },
+                  {
+                    "speaker": "Студентка",
+                    "bg": "Това е приятелката ми. Тя се казва Боряна Тодорова.",
+                    "tr": "Bu benim arkadaşım. Onun adı Boryana Todorova.",
+                    "rule_refs": [
+                      "bg-tova-e",
+                      "bg-kazvam-se-name"
+                    ]
+                  },
+                  {
+                    "speaker": "Преподавателка",
+                    "bg": "Беше ми приятно да се запозная с вас. А сега да започнем работа.",
+                    "tr": "Sizinle tanışmak benim için güzeldi. Şimdi çalışmaya başlayalım.",
+                    "rule_refs": [
+                      "bg-priyatno-mi-e"
+                    ]
+                  },
+                  {
+                    "speaker": "Студенти",
+                    "bg": "Ние също се радваме, че се запознахме с Вас!",
+                    "tr": "Biz de sizinle tanıştığımıza sevindik!",
+                    "rule_refs": [
+                      "bg-nie-sashto"
+                    ]
+                  }
+                ]
+              },
+              {
+                "scene_id": "scene-002-meeting-through-friend",
+                "title_tr": "Arkadaş üzerinden tanışma ve telefon bırakma",
+                "source_refs": [
+                  {
+                    "source_id": "src-a1-v-1-2",
+                    "pages": [
+                      15
+                    ],
+                    "note": "Урок № 2 ikinci diyalog: Елка Боянова, Росица Милева, телефон."
+                  }
+                ],
+                "lines": [
+                  {
+                    "speaker": "A",
+                    "bg": "Извинете, Вие ли сте Елка Боянова?",
+                    "tr": "Affedersiniz, siz Elka Boyanova mısınız?",
+                    "rule_refs": [
+                      "bg-li-question",
+                      "bg-formal-vie"
+                    ]
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "Да. А Вие сигурно сте приятелката на Галя?",
+                    "tr": "Evet. Siz de herhâlde Galya’nın arkadaşısınız?",
+                    "rule_refs": [
+                      "bg-formal-vie"
+                    ]
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Да. Приятно ми е, Росица Милева.",
+                    "tr": "Evet. Memnun oldum, Rositsa Mileva.",
+                    "rule_refs": [
+                      "bg-priyatno-mi-e"
+                    ]
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "На мен също ми е приятно.",
+                    "tr": "Ben de memnun oldum.",
+                    "rule_refs": [
+                      "bg-na-men-sashto"
+                    ]
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "А това е моя колежка. Запознайте се!",
+                    "tr": "Bu da benim meslektaşım. Tanışın lütfen!",
+                    "rule_refs": [
+                      "bg-tova-e",
+                      "bg-zapoznayte-se"
+                    ]
+                  },
+                  {
+                    "speaker": "C",
+                    "bg": "Приятно ми е, Стоянова.",
+                    "tr": "Memnun oldum, Stoyanova."
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "Боянова. Радвам се, че се запознахме.",
+                    "tr": "Boyanova. Tanıştığımıza sevindim.",
+                    "rule_refs": [
+                      "bg-radvam-se"
+                    ]
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "Надявам се, че скоро пак ще се видим.",
+                    "tr": "Umarım yakında yine görüşürüz.",
+                    "rule_refs": [
+                      "bg-shte-future"
+                    ]
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "Запишете, ако обичате, моя телефон: 25-34-28.",
+                    "tr": "Lütfen telefonumu yazın: 25-34-28.",
+                    "rule_refs": [
+                      "bg-ako-obichate"
+                    ]
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Благодаря! Довиждане!",
+                    "tr": "Teşekkürler! Görüşmek üzere!"
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "Довиждане! Ще чакам да се обадите.",
+                    "tr": "Görüşmek üzere! Aramanızı bekleyeceğim.",
+                    "rule_refs": [
+                      "bg-shte-future"
+                    ]
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Да, непременно ще се обадя.",
+                    "tr": "Evet, mutlaka arayacağım.",
+                    "rule_refs": [
+                      "bg-shte-future"
+                    ]
+                  }
+                ]
+              },
+              {
+                "scene_id": "scene-003-formal-self-presentation",
+                "title_tr": "Resmî kendini takdim etme ve üçüncü kişiyi tanıtma",
+                "source_refs": [
+                  {
+                    "source_id": "src-a1-v-1-2",
+                    "pages": [
+                      15,
+                      16
+                    ],
+                    "note": "Урок № 2 üçüncü diyalog: izin isteme, kendini tanıtma, rehber ve şoför tanıtımı."
+                  }
+                ],
+                "lines": [
+                  {
+                    "speaker": "A",
+                    "bg": "Извинете, искам да се запозная с Вас.",
+                    "tr": "Affedersiniz, sizinle tanışmak istiyorum.",
+                    "rule_refs": [
+                      "bg-iskam-da"
+                    ]
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Ще разрешите ли да Ви се представя?",
+                    "tr": "Kendimi size takdim etmeme izin verir misiniz?",
+                    "rule_refs": [
+                      "bg-shte-li-polite"
+                    ]
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Аз се казвам Радой Антонов. А Вие как се казвате?",
+                    "tr": "Benim adım Radoy Antonov. Peki sizin adınız ne?",
+                    "rule_refs": [
+                      "bg-kazvam-se-name",
+                      "bg-kak-se-kazvate"
+                    ]
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "Аз се казвам Марта.",
+                    "tr": "Benim adım Marta.",
+                    "rule_refs": [
+                      "bg-kazvam-se-name"
+                    ]
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Приятно ми е да се запозная с Вас!",
+                    "tr": "Sizinle tanıştığıma memnun oldum!",
+                    "rule_refs": [
+                      "bg-priyatno-mi-e"
+                    ]
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "На мен също.",
+                    "tr": "Ben de."
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "А това е Ирина. Ирина, запознай се, това е нашият екскурзовод.",
+                    "tr": "Bu da İrina. İrina, tanış; bu bizim rehberimiz.",
+                    "rule_refs": [
+                      "bg-tova-e",
+                      "bg-zapoznay-se"
+                    ]
+                  },
+                  {
+                    "speaker": "Ирина",
+                    "bg": "Приятно ми е!",
+                    "tr": "Memnun oldum!"
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Извинете, не чух добре, бихте ли повторили името си?",
+                    "tr": "Affedersiniz, iyi duymadım; adınızı tekrar eder misiniz?",
+                    "rule_refs": [
+                      "bg-polite-bihte-li"
+                    ]
+                  },
+                  {
+                    "speaker": "Ирина",
+                    "bg": "Ирина Василева.",
+                    "tr": "İrina Vasileva."
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Радвам се, че се запознахме!",
+                    "tr": "Tanıştığımıza sevindim!",
+                    "rule_refs": [
+                      "bg-radvam-se"
+                    ]
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Извинете, а шофьорът как се казва?",
+                    "tr": "Affedersiniz, peki şoförün adı ne?",
+                    "rule_refs": [
+                      "bg-kak-se-kazva-third-person"
+                    ]
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "Той се казва Димитър Иванов. Запознайте се, моля.",
+                    "tr": "Onun adı Dimitır Ivanov. Lütfen tanışın.",
+                    "rule_refs": [
+                      "bg-kazvam-se-name",
+                      "bg-zapoznayte-se"
+                    ]
+                  },
+                  {
+                    "speaker": "A",
+                    "bg": "Благодаря Ви! Много сте любезна!",
+                    "tr": "Teşekkür ederim! Çok naziksiniz!",
+                    "rule_refs": [
+                      "bg-formal-vie"
+                    ]
+                  },
+                  {
+                    "speaker": "B",
+                    "bg": "Няма защо!",
+                    "tr": "Bir şey değil!"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "section_id": "l009-s04",
+            "type": "rule_cards",
+            "title_tr": "Diyalog içindeki ana gramer/kullanım kuralları",
+            "rules": [
+              {
+                "rule_id": "bg-kak-se-kazvate",
+                "title_tr": "Как се казвате? — Adınız ne?",
+                "summary_tr": "Resmî durumda 'Как се казвате?' kullanılır. Samimi biçimi 'Как се казваш?' olur.",
+                "examples": [
+                  {
+                    "bg": "А Вие как се казвате?",
+                    "tr": "Peki sizin adınız ne?"
+                  },
+                  {
+                    "bg": "Как се казваш?",
+                    "tr": "Adın ne?"
+                  }
+                ]
+              },
+              {
+                "rule_id": "bg-kazvam-se-name",
+                "title_tr": "Казвам се... — Adım...",
+                "summary_tr": "Казвам се kelime kelime 'kendime ... denir' gibi düşünülebilir; Türkçede doğal karşılığı 'Adım ...' olur.",
+                "examples": [
+                  {
+                    "bg": "Казвам се Станка Донева.",
+                    "tr": "Adım Stanka Doneva."
+                  },
+                  {
+                    "bg": "Той се казва Димитър Иванов.",
+                    "tr": "Onun adı Dimitır Ivanov."
+                  }
+                ]
+              },
+              {
+                "rule_id": "bg-az-sum-identity",
+                "title_tr": "Аз съм... — Ben ...-im",
+                "summary_tr": "съм Bulgarcada 'olmak' fiilinin 1. tekil biçimidir. İsim, meslek veya milliyet söylemek için kullanılır.",
+                "examples": [
+                  {
+                    "bg": "Аз съм Димитър Петров.",
+                    "tr": "Ben Dimitır Petrov’um."
+                  },
+                  {
+                    "bg": "Аз съм преподавателка.",
+                    "tr": "Ben öğretmenim."
+                  }
+                ]
+              },
+              {
+                "rule_id": "bg-formal-vie",
+                "title_tr": "Вие — resmî/saygılı 'siz'",
+                "summary_tr": "Вие hem çoğul 'siz' hem de saygılı/resmî tekil 'siz' olarak kullanılır.",
+                "examples": [
+                  {
+                    "bg": "А Вие как се казвате?",
+                    "tr": "Peki sizin adınız ne?"
+                  },
+                  {
+                    "bg": "Благодаря Ви!",
+                    "tr": "Size teşekkür ederim!"
+                  }
+                ]
+              },
+              {
+                "rule_id": "bg-polite-bihte-li",
+                "title_tr": "Бихте ли...? — nazik rica",
+                "summary_tr": "Бихте ли... kalıbı Türkçede '... eder misiniz?' gibi nazik bir ricaya karşılık gelir.",
+                "examples": [
+                  {
+                    "bg": "Бихте ли повторили?",
+                    "tr": "Tekrar eder misiniz?"
+                  },
+                  {
+                    "bg": "Бихте ли казали името си?",
+                    "tr": "Adınızı söyler misiniz?"
+                  }
+                ]
+              },
+              {
+                "rule_id": "bg-li-question",
+                "title_tr": "ли ile evet/hayır sorusu",
+                "summary_tr": "ли cümlede evet/hayır sorusu kurmaya yardım eder. Vurgulanan öğeden sonra gelir.",
+                "examples": [
+                  {
+                    "bg": "Вие ли сте Елка Боянова?",
+                    "tr": "Siz Elka Boyanova mısınız?"
+                  },
+                  {
+                    "bg": "Студент ли си?",
+                    "tr": "Öğrenci misin?"
+                  }
+                ]
+              },
+              {
+                "rule_id": "bg-tova-e",
+                "title_tr": "Това е... — Bu...",
+                "summary_tr": "Това е... kalıbı bir kişi veya nesneyi tanıtırken kullanılır.",
+                "examples": [
+                  {
+                    "bg": "Това е приятелката ми.",
+                    "tr": "Bu benim arkadaşım."
+                  },
+                  {
+                    "bg": "Това е нашият екскурзовод.",
+                    "tr": "Bu bizim rehberimiz."
+                  }
+                ]
+              },
+              {
+                "rule_id": "bg-priyatno-mi-e",
+                "title_tr": "Приятно ми е — Memnun oldum",
+                "summary_tr": "Tanışırken kullanılan temel nezaket kalıbıdır.",
+                "examples": [
+                  {
+                    "bg": "Приятно ми е!",
+                    "tr": "Memnun oldum!"
+                  },
+                  {
+                    "bg": "На мен също ми е приятно.",
+                    "tr": "Ben de memnun oldum."
+                  }
+                ]
+              },
+              {
+                "rule_id": "bg-shte-future",
+                "title_tr": "ще — gelecek zaman başlangıcı",
+                "summary_tr": "ще Bulgarcada gelecek zaman kurarken kullanılır. Bu derste sadece tanıma düzeyinde geçer.",
+                "examples": [
+                  {
+                    "bg": "Ще чакам.",
+                    "tr": "Bekleyeceğim."
+                  },
+                  {
+                    "bg": "Ще се обадя.",
+                    "tr": "Arayacağım."
+                  }
+                ]
+              },
+              {
+                "rule_id": "bg-nali-confirmation",
+                "title_tr": "нали? — değil mi?",
+                "summary_tr": "нали konuşmada 'değil mi?' gibi onay istemek için kullanılır.",
+                "examples": [
+                  {
+                    "bg": "Вие сте Елена Иванова, нали?",
+                    "tr": "Siz Elena Ivanova’sınız, değil mi?"
+                  }
+                ]
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-a1-v-1-2",
+                "pages": [
+                  15,
+                  16,
+                  20,
+                  21
+                ],
+                "note": "Diyalog ve tanışma ifadeleri üzerinden çıkarılan kurallar."
+              }
+            ]
+          },
+          {
+            "section_id": "l009-s05",
+            "type": "dialogue_practice",
+            "title_tr": "Rol çalışması",
+            "description_tr": "Uygulama bu bölümü role-play kartları veya yazma pratiği olarak gösterebilir.",
+            "tasks": [
+              {
+                "task_id": "role-001",
+                "prompt_tr": "Öğretmen rolünde kendini tanıt ve karşıdakinin adını sor.",
+                "model_bg": "Аз съм вашият преподавател по български език. Казвам се ... А Вие как се казвате?",
+                "model_tr": "Ben sizin Bulgarca öğretmeninizim. Adım ... Peki sizin adınız ne?"
+              },
+              {
+                "task_id": "role-002",
+                "prompt_tr": "Birinin adını iyi duymadığını söyle ve tekrar iste.",
+                "model_bg": "Извинете, не чух добре. Бихте ли повторили името си?",
+                "model_tr": "Affedersiniz, iyi duymadım. Adınızı tekrar eder misiniz?"
+              },
+              {
+                "task_id": "role-003",
+                "prompt_tr": "Yanındaki kişiyi tanıt.",
+                "model_bg": "Това е моята приятелка. Тя се казва ...",
+                "model_tr": "Bu benim arkadaşım. Onun adı ..."
+              }
+            ]
+          },
+          {
+            "section_id": "l009-s06",
+            "type": "exercise_preview",
+            "title_tr": "Mini test ve diyalog sıralama",
+            "exercise_set_id": "exercises-009-a1-dialogue-kak-se-kazvate",
+            "description_tr": "Bu derse bağlı alıştırmalarda diyalog sıralama, boşluk doldurma, eşleştirme ve kendini tanıtma yazısı bulunur."
+          }
+        ],
+        "linked_rules": [
+          "bg-kak-se-kazvate",
+          "bg-kazvam-se-name",
+          "bg-az-sum-identity",
+          "bg-formal-vie",
+          "bg-polite-bihte-li",
+          "bg-li-question",
+          "bg-tova-e",
+          "bg-priyatno-mi-e",
+          "bg-shte-future",
+          "bg-nali-confirmation"
+        ],
+        "linked_entries": [
+          "phrase-a1-dialogue-001",
+          "phrase-a1-dialogue-002",
+          "phrase-a1-dialogue-003",
+          "phrase-a1-dialogue-004",
+          "phrase-a1-dialogue-005",
+          "phrase-a1-dialogue-006",
+          "phrase-a1-dialogue-007",
+          "phrase-a1-dialogue-008",
+          "phrase-a1-dialogue-009",
+          "phrase-a1-dialogue-010",
+          "phrase-a1-dialogue-011",
+          "phrase-a1-dialogue-012",
+          "phrase-a1-dialogue-013",
+          "phrase-a1-dialogue-014",
+          "phrase-a1-dialogue-015",
+          "phrase-a1-dialogue-016",
+          "phrase-a1-dialogue-017",
+          "phrase-a1-dialogue-018",
+          "phrase-a1-dialogue-019",
+          "phrase-a1-dialogue-020"
+        ]
+      }
+    },
+    {
+      "path": "public/data/exercises/exercises-009-a1-dialogue-kak-se-kazvate.json",
+      "operation": "upsert",
+      "content": {
+        "schema_version": "1.1",
+        "lesson_id": "lesson-009-a1-diyalog-kak-se-kazvate",
+        "exercise_set_id": "exercises-009-a1-dialogue-kak-se-kazvate",
+        "title_tr": "Как се казвате? Diyalog Alıştırmaları",
+        "items": [
+          {
+            "exercise_id": "ex-009-001",
+            "type": "multiple_choice",
+            "prompt_tr": "'Adınız ne?' ifadesinin resmî Bulgarca karşılığı hangisidir?",
+            "choices": [
+              "Как се казвате?",
+              "Какво е това?",
+              "Къде сте?",
+              "Добър път!"
+            ],
+            "answer": "Как се казвате?",
+            "explanation_tr": "Resmî/saygılı ad sorma kalıbı 'Как се казвате?' şeklindedir.",
+            "rule_refs": [
+              "bg-kak-se-kazvate"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                21
+              ]
+            }
+          },
+          {
+            "exercise_id": "ex-009-002",
+            "type": "multiple_choice",
+            "prompt_tr": "'Adım Marta' cümlesi hangisidir?",
+            "choices": [
+              "Аз се казвам Марта.",
+              "Това е Марта.",
+              "Вие сте Марта.",
+              "Моля, Марта."
+            ],
+            "answer": "Аз се казвам Марта.",
+            "explanation_tr": "Kendini tanıtmak için 'Аз се казвам...' kullanılır.",
+            "rule_refs": [
+              "bg-kazvam-se-name"
+            ]
+          },
+          {
+            "exercise_id": "ex-009-003",
+            "type": "fill_blank",
+            "prompt_tr": "Boşluğu doldur: Аз ___ казвам Симеон Димитров.",
+            "answer": "се",
+            "acceptable_answers": [
+              "се"
+            ],
+            "explanation_tr": "казвам се kalıbında dönüşlü parça 'се' kullanılır.",
+            "rule_refs": [
+              "bg-kazvam-se-name"
+            ]
+          },
+          {
+            "exercise_id": "ex-009-004",
+            "type": "fill_blank",
+            "prompt_tr": "Boşluğu doldur: Извинете, не чух добре. Бихте ___ повторили?",
+            "answer": "ли",
+            "acceptable_answers": [
+              "ли"
+            ],
+            "explanation_tr": "Бихте ли...? nazik rica kalıbıdır.",
+            "rule_refs": [
+              "bg-polite-bihte-li"
+            ]
+          },
+          {
+            "exercise_id": "ex-009-005",
+            "type": "match_pairs",
+            "prompt_tr": "Kalıpları Türkçe anlamlarıyla eşleştir.",
+            "pairs": [
+              {
+                "left": "Приятно ми е.",
+                "right": "Memnun oldum."
+              },
+              {
+                "left": "Няма защо!",
+                "right": "Bir şey değil!"
+              },
+              {
+                "left": "Запознайте се!",
+                "right": "Tanışın lütfen!"
+              },
+              {
+                "left": "Вашето име, моля?",
+                "right": "Adınız, lütfen?"
+              }
+            ],
+            "explanation_tr": "Bu kalıplar kaynak diyalogda sık geçer."
+          },
+          {
+            "exercise_id": "ex-009-006",
+            "type": "dialogue_order",
+            "prompt_tr": "Diyalog satırlarını doğru sıraya koy.",
+            "lines": [
+              "Добър ден!",
+              "Казвам се Станка Донева.",
+              "А Вие как се казвате?",
+              "Аз се казвам Симеон Димитров."
+            ],
+            "answer": [
+              "Добър ден!",
+              "Казвам се Станка Донева.",
+              "А Вие как се казвате?",
+              "Аз се казвам Симеон Димитров."
+            ],
+            "explanation_tr": "Önce selamlaşma, sonra kendini tanıtma ve ad sorma gelir."
+          },
+          {
+            "exercise_id": "ex-009-007",
+            "type": "true_false",
+            "prompt_tr": "'Вие' resmî/saygılı 'siz' olarak kullanılabilir.",
+            "answer": true,
+            "explanation_tr": "Evet. Tanışma diyaloglarında 'Вие' resmî/saygılı biçimde kullanılır.",
+            "rule_refs": [
+              "bg-formal-vie"
+            ]
+          },
+          {
+            "exercise_id": "ex-009-008",
+            "type": "true_false",
+            "prompt_tr": "'Как се казваш?' resmî/saygılı ad sorma biçimidir.",
+            "answer": false,
+            "explanation_tr": "Hayır. 'Как се казваш?' samimi biçimdir. Resmî biçim 'Как се казвате?' olur.",
+            "rule_refs": [
+              "bg-kak-se-kazvate"
+            ]
+          },
+          {
+            "exercise_id": "ex-009-009",
+            "type": "multiple_choice",
+            "prompt_tr": "'Tekrar eder misiniz?' için en uygun Bulgarca hangisi?",
+            "choices": [
+              "Бихте ли повторили?",
+              "Ще чакам.",
+              "Това е приятелката ми.",
+              "Няма защо."
+            ],
+            "answer": "Бихте ли повторили?",
+            "explanation_tr": "Nazik tekrar isteme kalıbıdır.",
+            "rule_refs": [
+              "bg-polite-bihte-li"
+            ]
+          },
+          {
+            "exercise_id": "ex-009-010",
+            "type": "fill_blank",
+            "prompt_tr": "Boşluğu doldur: Това ___ приятелката ми.",
+            "answer": "е",
+            "acceptable_answers": [
+              "е"
+            ],
+            "explanation_tr": "Това е... = Bu ... demektir.",
+            "rule_refs": [
+              "bg-tova-e"
+            ]
+          },
+          {
+            "exercise_id": "ex-009-011",
+            "type": "write_bg",
+            "prompt_tr": "'Benim adım Mustafa.' cümlesini Bulgarca yaz.",
+            "answer": "Аз се казвам Мустафа.",
+            "acceptable_answers": [
+              "Аз се казвам Мустафа.",
+              "Казвам се Мустафа."
+            ],
+            "explanation_tr": "Kendini tanıtmak için iki biçim de uygundur.",
+            "rule_refs": [
+              "bg-kazvam-se-name"
+            ]
+          },
+          {
+            "exercise_id": "ex-009-012",
+            "type": "write_bg",
+            "prompt_tr": "'Affedersiniz, iyi duymadım.' cümlesini Bulgarca yaz.",
+            "answer": "Извинете, не чух добре.",
+            "acceptable_answers": [
+              "Извинете, не чух добре."
+            ],
+            "explanation_tr": "Kaynak diyalogda aynen geçer."
+          },
+          {
+            "exercise_id": "ex-009-013",
+            "type": "choose_rule",
+            "prompt_tr": "'Вие ли сте Елка Боянова?' cümlesinde hangi soru yapısı var?",
+            "choices": [
+              "ли ile evet/hayır sorusu",
+              "-ия → -ии çoğul kuralı",
+              "Ş → Ш ses dönüşümü",
+              "∅ → Х başlangıç sesi"
+            ],
+            "answer": "ли ile evet/hayır sorusu",
+            "rule_refs": [
+              "bg-li-question"
+            ],
+            "explanation_tr": "ли parçacığı burada 'mısınız?' anlamı verir."
+          },
+          {
+            "exercise_id": "ex-009-014",
+            "type": "dialogue_order",
+            "prompt_tr": "Tanışma kapanışını doğru sıraya koy.",
+            "lines": [
+              "Приятно ми е!",
+              "На мен също.",
+              "Радвам се, че се запознахме!"
+            ],
+            "answer": [
+              "Приятно ми е!",
+              "На мен също.",
+              "Радвам се, че се запознахме!"
+            ],
+            "explanation_tr": "Memnuniyet bildirimi karşılıklı cevapla devam eder."
+          },
+          {
+            "exercise_id": "ex-009-015",
+            "type": "self_introduction",
+            "prompt_tr": "Kendini 3 cümleyle Bulgarca tanıt: adını söyle, mesleğini/rolünü söyle, karşıdakinin adını sor.",
+            "model_answer_bg": "Казвам се Мустафа. Аз съм лекар. А Вие как се казвате?",
+            "model_answer_tr": "Adım Mustafa. Ben doktorum. Peki sizin adınız ne?",
+            "rule_refs": [
+              "bg-kazvam-se-name",
+              "bg-az-sum-identity",
+              "bg-kak-se-kazvate"
+            ]
+          },
+          {
+            "exercise_id": "ex-009-016",
+            "type": "match_pairs",
+            "prompt_tr": "Resmî ve samimi biçimleri eşleştir.",
+            "pairs": [
+              {
+                "left": "Как се казвате?",
+                "right": "Как се казваш?"
+              },
+              {
+                "left": "Моля Ви!",
+                "right": "Моля те!"
+              },
+              {
+                "left": "Извинете!",
+                "right": "Извинявай!"
+              },
+              {
+                "left": "Запознайте се!",
+                "right": "Запознай се!"
+              }
+            ],
+            "explanation_tr": "Вие/-те biçimleri daha resmîdir; ти/samimi biçimler yakın kişilerde kullanılır."
+          }
+        ]
+      }
+    },
+    {
+      "path": "public/data/rules/grammar-rules-a1-dialogue.json",
+      "operation": "upsert",
+      "content": {
+        "schema_version": "1.1",
+        "rules": [
+          {
+            "rule_id": "bg-kak-se-kazvate",
+            "category": "grammar_rule",
+            "title_tr": "Как се казвате? — Adınız ne?",
+            "short_tr": "Ad sorma kalıbı",
+            "description_tr": "Resmî durumda 'Как се казвате?' kullanılır. Samimi biçimi 'Как се казваш?' olur.",
+            "marker": {
+              "color_key": "purple",
+              "highlight_target": "казвате"
+            },
+            "tooltip_tr": "Ad sorma kalıbı: Как се казвате?",
+            "panel_tr": {
+              "summary": "Tanışma diyaloglarının ana sorusudur.",
+              "details": [
+                "Вие ile resmî konuşmada -те biçimi görülür.",
+                "Senli konuşmada 'Как се казваш?' kullanılır."
+              ],
+              "examples": [
+                {
+                  "bg": "А Вие как се казвате?",
+                  "tr": "Peki sizin adınız ne?"
+                },
+                {
+                  "bg": "Как се казваш?",
+                  "tr": "Adın ne?"
+                }
+              ]
+            }
+          },
+          {
+            "rule_id": "bg-kazvam-se-name",
+            "category": "grammar_rule",
+            "title_tr": "Казвам се... — Adım...",
+            "short_tr": "Kendini tanıtma",
+            "description_tr": "Казвам се kelime kelime 'kendime ... denir' gibi düşünülebilir; Türkçede doğal karşılığı 'Adım ...' olur.",
+            "marker": {
+              "color_key": "purple",
+              "highlight_target": "Казвам се"
+            },
+            "tooltip_tr": "Adını söyleme kalıbı.",
+            "panel_tr": {
+              "summary": "Kendini tanıtmak için en temel kalıptır.",
+              "details": [
+                "Аз се казвам... biçimi vurgulu kullanılır.",
+                "Üçüncü kişi için: Той/Тя се казва..."
+              ],
+              "examples": [
+                {
+                  "bg": "Казвам се Станка Донева.",
+                  "tr": "Adım Stanka Doneva."
+                },
+                {
+                  "bg": "Той се казва Димитър Иванов.",
+                  "tr": "Onun adı Dimitır Ivanov."
+                }
+              ]
+            }
+          },
+          {
+            "rule_id": "bg-az-sum-identity",
+            "category": "grammar_rule",
+            "title_tr": "Аз съм... — Ben ...-im",
+            "short_tr": "съм ile kimlik söyleme",
+            "description_tr": "съм Bulgarcada 'olmak' fiilinin 1. tekil biçimidir. İsim, meslek veya milliyet söylemek için kullanılır.",
+            "marker": {
+              "color_key": "purple",
+              "highlight_target": "съм"
+            },
+            "tooltip_tr": "Ben ...-im yapısı.",
+            "panel_tr": {
+              "summary": "Kimlik ve meslek söylemede temel yapı.",
+              "details": [
+                "Аз съм Димитър Петров = Ben Dimitır Petrov’um.",
+                "Аз съм студент = Ben öğrenciyim."
+              ],
+              "examples": [
+                {
+                  "bg": "Аз съм Димитър Петров.",
+                  "tr": "Ben Dimitır Petrov’um."
+                },
+                {
+                  "bg": "Аз съм преподавателка.",
+                  "tr": "Ben öğretmenim."
+                }
+              ]
+            }
+          },
+          {
+            "rule_id": "bg-formal-vie",
+            "category": "grammar_rule",
+            "title_tr": "Вие — resmî/saygılı 'siz'",
+            "short_tr": "Resmî siz kullanımı",
+            "description_tr": "Вие hem çoğul 'siz' hem de saygılı/resmî tekil 'siz' olarak kullanılır.",
+            "marker": {
+              "color_key": "amber",
+              "highlight_target": "Вие"
+            },
+            "tooltip_tr": "Resmî/saygılı siz.",
+            "panel_tr": {
+              "summary": "Tanışma diyaloglarında çok sık geçer.",
+              "details": [
+                "Resmî konuşmada 'Вие' büyük harfle de yazılabilir.",
+                "Samimi konuşmada 'ти' kullanılır."
+              ],
+              "examples": [
+                {
+                  "bg": "А Вие как се казвате?",
+                  "tr": "Peki sizin adınız ne?"
+                },
+                {
+                  "bg": "Благодаря Ви!",
+                  "tr": "Size teşekkür ederim!"
+                }
+              ]
+            }
+          },
+          {
+            "rule_id": "bg-polite-bihte-li",
+            "category": "grammar_rule",
+            "title_tr": "Бихте ли...? — nazik rica",
+            "short_tr": "Nazik soru/rica",
+            "description_tr": "Бихте ли... kalıbı Türkçede '... eder misiniz?' gibi nazik bir ricaya karşılık gelir.",
+            "marker": {
+              "color_key": "purple",
+              "highlight_target": "Бихте ли"
+            },
+            "tooltip_tr": "Nazik rica: ... eder misiniz?",
+            "panel_tr": {
+              "summary": "Adı tekrar ettirmek veya ricada bulunmak için kullanışlıdır.",
+              "examples": [
+                {
+                  "bg": "Бихте ли повторили?",
+                  "tr": "Tekrar eder misiniz?"
+                },
+                {
+                  "bg": "Бихте ли казали името си?",
+                  "tr": "Adınızı söyler misiniz?"
+                }
+              ]
+            }
+          },
+          {
+            "rule_id": "bg-li-question",
+            "category": "grammar_rule",
+            "title_tr": "ли ile evet/hayır sorusu",
+            "short_tr": "ли soru parçacığı",
+            "description_tr": "ли cümlede evet/hayır sorusu kurmaya yardım eder. Vurgulanan öğeden sonra gelir.",
+            "marker": {
+              "color_key": "purple",
+              "highlight_target": "ли"
+            },
+            "tooltip_tr": "Evet/hayır sorusu yapar.",
+            "panel_tr": {
+              "summary": "Tanışma diyalogunda 'Вие ли сте...?' biçimi geçer.",
+              "examples": [
+                {
+                  "bg": "Вие ли сте Елка Боянова?",
+                  "tr": "Siz Elka Boyanova mısınız?"
+                },
+                {
+                  "bg": "Студент ли си?",
+                  "tr": "Öğrenci misin?"
+                }
+              ]
+            }
+          },
+          {
+            "rule_id": "bg-tova-e",
+            "category": "grammar_rule",
+            "title_tr": "Това е... — Bu...",
+            "short_tr": "Birini/bir şeyi tanıtma",
+            "description_tr": "Това е... kalıbı bir kişi veya nesneyi tanıtırken kullanılır.",
+            "marker": {
+              "color_key": "purple",
+              "highlight_target": "Това е"
+            },
+            "tooltip_tr": "Bu ... demektir.",
+            "panel_tr": {
+              "summary": "Üçüncü kişiyi tanıtma kalıbı.",
+              "examples": [
+                {
+                  "bg": "Това е приятелката ми.",
+                  "tr": "Bu benim arkadaşım."
+                },
+                {
+                  "bg": "Това е нашият екскурзовод.",
+                  "tr": "Bu bizim rehberimiz."
+                }
+              ]
+            }
+          },
+          {
+            "rule_id": "bg-priyatno-mi-e",
+            "category": "phrase_rule",
+            "title_tr": "Приятно ми е — Memnun oldum",
+            "short_tr": "Tanışma cevabı",
+            "description_tr": "Tanışırken kullanılan temel nezaket kalıbıdır.",
+            "marker": {
+              "color_key": "green",
+              "highlight_target": "Приятно ми е"
+            },
+            "tooltip_tr": "Memnun oldum.",
+            "panel_tr": {
+              "summary": "Tanışma anında ve karşılıklı cevapta kullanılır.",
+              "examples": [
+                {
+                  "bg": "Приятно ми е!",
+                  "tr": "Memnun oldum!"
+                },
+                {
+                  "bg": "На мен също ми е приятно.",
+                  "tr": "Ben de memnun oldum."
+                }
+              ]
+            }
+          },
+          {
+            "rule_id": "bg-shte-future",
+            "category": "grammar_rule",
+            "title_tr": "ще — gelecek zaman başlangıcı",
+            "short_tr": "Gelecek zaman ipucu",
+            "description_tr": "ще Bulgarcada gelecek zaman kurarken kullanılır. Bu derste sadece tanıma düzeyinde geçer.",
+            "marker": {
+              "color_key": "purple",
+              "highlight_target": "ще"
+            },
+            "tooltip_tr": "Gelecek zaman işareti.",
+            "panel_tr": {
+              "summary": "İleri derslerde ayrıntılı işlenecek.",
+              "examples": [
+                {
+                  "bg": "Ще чакам.",
+                  "tr": "Bekleyeceğim."
+                },
+                {
+                  "bg": "Ще се обадя.",
+                  "tr": "Arayacağım."
+                }
+              ]
+            }
+          },
+          {
+            "rule_id": "bg-nali-confirmation",
+            "category": "grammar_rule",
+            "title_tr": "нали? — değil mi?",
+            "short_tr": "Onay isteme",
+            "description_tr": "нали konuşmada 'değil mi?' gibi onay istemek için kullanılır.",
+            "marker": {
+              "color_key": "purple",
+              "highlight_target": "нали"
+            },
+            "tooltip_tr": "değil mi? / öyle değil mi?",
+            "panel_tr": {
+              "summary": "Cümle sonunda onay ister.",
+              "examples": [
+                {
+                  "bg": "Вие сте Елена Иванова, нали?",
+                  "tr": "Siz Elena Ivanova’sınız, değil mi?"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "public/data/glossary/a1-dialogue-phrases.json",
+      "operation": "upsert",
+      "content": {
+        "schema_version": "1.1",
+        "entries": [
+          {
+            "entry_id": "phrase-a1-dialogue-001",
+            "bg": "Как се казвате?",
+            "tr": "Adınız ne? / İsminiz ne?",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Adınız ne? / İsminiz ne?",
+            "usage_tr": "Resmî/saygılı ad sorma.",
+            "rule_refs": [
+              "bg-kak-se-kazvate",
+              "bg-formal-vie"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-002",
+            "bg": "Как се казваш?",
+            "tr": "Adın ne?",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Adın ne?",
+            "usage_tr": "Samimi ad sorma.",
+            "rule_refs": [
+              "bg-kak-se-kazvate"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-003",
+            "bg": "Казвам се...",
+            "tr": "Adım...",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Adım...",
+            "usage_tr": "Kendini tanıtmanın en temel kalıbı.",
+            "rule_refs": [
+              "bg-kazvam-se-name"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-004",
+            "bg": "Аз се казвам...",
+            "tr": "Benim adım...",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Benim adım...",
+            "usage_tr": "Vurgulu kendini tanıtma.",
+            "rule_refs": [
+              "bg-kazvam-se-name"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-005",
+            "bg": "Аз съм...",
+            "tr": "Ben... / Ben ...-im.",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Ben... / Ben ...-im.",
+            "usage_tr": "Kimlik, meslek veya isim söylemek için.",
+            "rule_refs": [
+              "bg-az-sum-identity"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-006",
+            "bg": "А Вие кой сте?",
+            "tr": "Peki siz kimsiniz?",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Peki siz kimsiniz?",
+            "usage_tr": "Resmî/saygılı kişiyi sorma.",
+            "rule_refs": [
+              "bg-koy-ste",
+              "bg-formal-vie"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-007",
+            "bg": "Вашето име, моля?",
+            "tr": "Adınız, lütfen?",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Adınız, lütfen?",
+            "usage_tr": "Kısa ve resmî ad isteme.",
+            "rule_refs": [
+              "bg-polite-name-request"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-008",
+            "bg": "Името Ви, моля?",
+            "tr": "Adınız, lütfen?",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Adınız, lütfen?",
+            "usage_tr": "Вашето име ile yakın anlamlı.",
+            "rule_refs": [
+              "bg-polite-name-request"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-009",
+            "bg": "Бихте ли повторили?",
+            "tr": "Tekrar eder misiniz?",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Tekrar eder misiniz?",
+            "usage_tr": "Nazik rica kalıbı.",
+            "rule_refs": [
+              "bg-polite-bihte-li"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-010",
+            "bg": "Бихте ли повторили името си?",
+            "tr": "Adınızı tekrar eder misiniz?",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Adınızı tekrar eder misiniz?",
+            "usage_tr": "Adı iyi duymayınca kullanılır.",
+            "rule_refs": [
+              "bg-polite-bihte-li"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-011",
+            "bg": "Приятно ми е.",
+            "tr": "Memnun oldum.",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Memnun oldum.",
+            "usage_tr": "Tanışmada en önemli kalıplardan biri.",
+            "rule_refs": [
+              "bg-priyatno-mi-e"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-012",
+            "bg": "На мен също.",
+            "tr": "Ben de.",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Ben de.",
+            "usage_tr": "Karşılıklı memnuniyet cevabı.",
+            "rule_refs": [
+              "bg-na-men-sashto"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-013",
+            "bg": "Радвам се, че се запознахме.",
+            "tr": "Tanıştığımıza sevindim.",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Tanıştığımıza sevindim.",
+            "usage_tr": "Tanışma sonrası olumlu kapanış.",
+            "rule_refs": [
+              "bg-radvam-se"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-014",
+            "bg": "Запознайте се!",
+            "tr": "Tanışın lütfen!",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Tanışın lütfen!",
+            "usage_tr": "Resmî veya çoğul hitap.",
+            "rule_refs": [
+              "bg-zapoznayte-se"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-015",
+            "bg": "Запознай се!",
+            "tr": "Tanış!",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Tanış!",
+            "usage_tr": "Samimi tekil hitap.",
+            "rule_refs": [
+              "bg-zapoznay-se"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-016",
+            "bg": "Това е...",
+            "tr": "Bu... / Bu kişi...",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Bu... / Bu kişi...",
+            "usage_tr": "Birini tanıtırken.",
+            "rule_refs": [
+              "bg-tova-e"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-017",
+            "bg": "Моя колежка",
+            "tr": "Benim kadın meslektaşım",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Benim kadın meslektaşım",
+            "usage_tr": "Kadın meslektaş için; kaynakta 'А това е моя колежка'.",
+            "rule_refs": [],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-018",
+            "bg": "Нашият екскурзовод",
+            "tr": "Bizim rehberimiz",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Bizim rehberimiz",
+            "usage_tr": "Belirli erkek rehber için членli biçim: нашият.",
+            "rule_refs": [],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-019",
+            "bg": "Ще се обадя.",
+            "tr": "Arayacağım.",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Arayacağım.",
+            "usage_tr": "Ще ile gelecek zaman başlangıç örneği.",
+            "rule_refs": [
+              "bg-shte-future"
+            ],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          },
+          {
+            "entry_id": "phrase-a1-dialogue-020",
+            "bg": "Няма защо!",
+            "tr": "Bir şey değil!",
+            "type": "phrase",
+            "tags": [
+              "a1",
+              "dialogue",
+              "tanisma"
+            ],
+            "tooltip_tr": "Bir şey değil!",
+            "usage_tr": "Teşekküre cevap.",
+            "rule_refs": [],
+            "source": {
+              "source_id": "src-a1-v-1-2",
+              "pages": [
+                15,
+                16,
+                20,
+                21
+              ],
+              "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/patches/PATCH_013_FULL_A1_LESSON2_DIALOGUES.md",
+      "operation": "upsert",
+      "content": "# PATCH 013 — Full A1 Lesson 2 Dialogue Renderer and Practice\n\n## Amaç\n\nA1-V-1-2 PDF içindeki `Урок № 2. Как се казвате?` diyaloglarını sadece kısa kart değil, tam bir diyalog dersi olarak işler.\n\n## Yapılacaklar\n\n1. `lesson-009-a1-diyalog-kak-se-kazvate.json` dosyasını render et.\n2. `dialogue_scenes` section tipini destekle:\n   - sahne başlığı\n   - speaker\n   - bg/tr satır\n   - her satırda `LearningText` / `LangHover`\n   - tıklanınca sağ panel\n3. `dialogue_practice` section tipini destekle.\n4. `exercises-009-a1-dialogue-kak-se-kazvate.json` içindeki şu tipleri destekle veya mevcut renderer ile bağla:\n   - dialogue_order\n   - self_introduction\n   - match_pairs\n   - write_bg\n   - choose_rule\n5. Sağ panelde diyalog satırı için şu bilgiler gösterilsin:\n   - Bulgarca cümle\n   - Türkçe anlam\n   - bağlı kurallar\n   - kaynak sayfa\n   - aynı kalıbın diğer örnekleri\n6. `a1-dialogue-phrases.json` global hover fallback kaynaklarından biri olarak yüklensin.\n7. `grammar-rules-a1-dialogue.json` rule matcher tarafından yüklensin.\n8. Manifestte lesson-009 order 9 olarak görünsün.\n\n## Kalıcı kural\n\nBir PDF içinde uzun diyalog varsa tek kartla geçiştirilmeyecek. Diyaloglar sahnelere ayrılacak, her satır hover/panel destekli olacak ve mutlaka `dialogue_order` + `self_introduction` alıştırmaları üretilecek.\n\n## Test\n\n- Ders 009 listede görünmeli.\n- Kaynak diyalogdaki üç sahne ayrı ayrı görünmeli.\n- `Казвам се...`, `Как се казвате?`, `Бихте ли повторили?` tıklanınca doğru panel açılmalı.\n- Quiz bölümünde dialogue_order ve self_introduction çalışmalı.\n- `npm run build` hatasız çalışmalı.\n\n## Commit mesajı\n\nImport full A1 lesson 2 dialogue practice\n"
+    },
+    {
+      "path": "docs/reports/SCAN_013_A1_LESSON2_DIALOGUES.md",
+      "operation": "upsert",
+      "content": "# SCAN 013 — A1-V-1-2 Ders 2 Diyalog Taraması\n\n## Sonuç\n\nÖnceki paketlerde Ders 2 içeriği yalnızca kısmi olarak kullanılmıştı. `lesson-007` içinde kısa bir diyalog ve sosyal ifadeler vardı; fakat `Урок № 2. Как се казвате?` bölümündeki üç uzun tanışma sahnesi tam olarak dersleştirilmemişti.\n\n## Bu pakette işlenen kaynak blokları\n\n- Sayfa 15: `Урок № 2. Как се казвате?` — sınıf içi tanışma, öğretmen/öğrenci sahnesi.\n- Sayfa 15: arkadaş üzerinden tanışma, telefon bırakma ve kapanış.\n- Sayfa 15–16: resmî kendini takdim etme, İrina ve şoförü tanıtma.\n- Sayfa 20–21: `Как се казвате?`, `Името Ви, моля?`, `Бихте ли казали името си?`, `Моля, запознайте се...` gibi tanışma kalıpları.\n\n## Üretilen ders\n\n- `lesson-009-a1-diyalog-kak-se-kazvate.json`\n\n## Üretilen alıştırmalar\n\n- `exercises-009-a1-dialogue-kak-se-kazvate.json`\n- 16 alıştırma: çoktan seçmeli, boşluk doldurma, eşleştirme, diyalog sıralama, yazma ve kendini tanıtma.\n\n## Not\n\nBundan sonra PDF içinde uzun diyalog varsa mutlaka ayrı diyalog dersi veya mevcut ilgili derse tam sahne desteğiyle eklenmelidir.\n"
+    }
+  ],
+  "patches": [
+    {
+      "target_path": "public/data/manifest.json",
+      "operation": "merge_manifest_lessons",
+      "data": {
+        "lessons": [
+          {
+            "lesson_id": "lesson-009-a1-diyalog-kak-se-kazvate",
+            "title_tr": "Diyalog Dersi: Как се казвате?",
+            "level": "A1",
+            "order": 9,
+            "path": "/data/lessons/lesson-009-a1-diyalog-kak-se-kazvate.json",
+            "exercise_path": "/data/exercises/exercises-009-a1-dialogue-kak-se-kazvate.json",
+            "status": "active",
+            "tags": [
+              "diyalog",
+              "tanisma",
+              "kazvam-se"
+            ]
+          }
+        ],
+        "rule_files": [
+          "/data/rules/grammar-rules-a1-dialogue.json"
+        ],
+        "glossary_files": [
+          "/data/glossary/a1-dialogue-phrases.json"
+        ]
+      }
+    },
+    {
+      "target_path": "public/data/sources/source-index.json",
+      "operation": "merge_sources",
+      "data": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "file_name": "A1-V-1-2.pdf",
+          "type": "pdf",
+          "description_tr": "A1 düzeyi Bulgarca kurs dokümanı; Ders 2 tanışma diyalogları dahil.",
+          "page_count": 28,
+          "used_in": [
+            "lesson-001-alfabe",
+            "lesson-005-zamirler-kazvam-se-sum-li",
+            "lesson-007-selamlasma-hitaplar-sosyal-ifadeler",
+            "lesson-009-a1-diyalog-kak-se-kazvate"
+          ],
+          "covered_pages": [
+            15,
+            16,
+            20,
+            21
+          ]
+        }
+      ]
+    }
+  ],
+  "antigravity_after_import_prompt": "docs/patches/PATCH_013_FULL_A1_LESSON2_DIALOGUES.md dosyasını uygula. dialogue_scenes ve dialogue_practice section tiplerini destekle. exercises-009 içindeki dialogue_order ve self_introduction tiplerini çalışır hale getir. npm run build ile test et."
+}

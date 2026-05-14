@@ -15,7 +15,11 @@ export function HighlightedText({ text, rules, onRuleClick }: HighlightedTextPro
   let content: React.ReactNode = text;
   
   // Sort rules by pattern length descending to match longest patterns first
-  const sortedRules = [...rules].sort((a, b) => b.pattern.length - a.pattern.length);
+  const sortedRules = [...rules].sort((a, b) => {
+    const aLen = typeof a.pattern === 'string' ? a.pattern.length : (a.pattern as any).source_fragment?.length || 0;
+    const bLen = typeof b.pattern === 'string' ? b.pattern.length : (b.pattern as any).source_fragment?.length || 0;
+    return bLen - aLen;
+  });
   
   // For demonstration, we just wrap the whole text if it matches a specific rule
   // Real implementation would split the text and wrap parts.

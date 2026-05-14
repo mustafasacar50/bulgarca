@@ -1599,13 +1599,13 @@
         "highlight_target": "Ц(ИЯ)",
         "style": "pill"
       },
-      "tooltip_tr": "Türkçedeki s/syon dizileri birçok ortak kelimede Bulgarcada ц/ция biçimine döner.",
+      "tooltip_tr": "Türkçedeki s/syon dizileri birçok ortak kelimede Bulgarcada ц/ция biçimine döner. Ц harfi ts okunur.",
       "panel_tr": {
         "summary": "Türkçedeki s/syon dizileri birçok ortak kelimede Bulgarcada ц/ция biçimine döner.",
         "details": [
-          "Bu kural otomatik marker motorunda kullanılmalıdır.",
-          "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
-          "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+          "Bulgarcadaki ц harfi Türkçe kulağa ts gibi gelir.",
+          "ASETİLEN → ацетилен örneğinde olduğu gibi kelime içindeki S sesi Ц olur.",
+          "AKASYA → акация örneğinde olduğu gibi -sya sonu -ция olur."
         ],
         "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
       },
@@ -1618,10 +1618,6 @@
             "source_fragment": "Sİ",
             "target_text": "цигара",
             "target_fragment": "ци"
-          },
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 3
           }
         },
         {
@@ -1632,10 +1628,6 @@
             "source_fragment": "Sİ",
             "target_text": "дециграм",
             "target_fragment": "ци"
-          },
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 3
           }
         },
         {
@@ -1646,10 +1638,6 @@
             "source_fragment": "SYON",
             "target_text": "декорация",
             "target_fragment": "ция"
-          },
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 3
           }
         },
         {
@@ -1660,10 +1648,6 @@
             "source_fragment": "SYON",
             "target_text": "делегация",
             "target_fragment": "ция"
-          },
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 3
           }
         },
         {
@@ -1674,10 +1658,26 @@
             "source_fragment": "SYA",
             "target_text": "акация",
             "target_fragment": "ция"
-          },
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 3
+          }
+        },
+        {
+          "tr": "ASETİLEN",
+          "bg": "ацетилен",
+          "rule_marks": {
+            "source_text": "ASETİLEN",
+            "source_fragment": "S",
+            "target_text": "ацетилен",
+            "target_fragment": "ц"
+          }
+        },
+        {
+          "tr": "ASETON",
+          "bg": "ацетон",
+          "rule_marks": {
+            "source_text": "ASETON",
+            "source_fragment": "S",
+            "target_text": "ацетон",
+            "target_fragment": "ц"
           }
         },
         {
@@ -1688,10 +1688,6 @@
             "source_fragment": "SYON",
             "target_text": "навигация",
             "target_fragment": "ция"
-          },
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 3
           }
         },
         {
@@ -1702,10 +1698,16 @@
             "source_fragment": "Sİ",
             "target_text": "цирк",
             "target_fragment": "ци"
-          },
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 3
+          }
+        },
+        {
+          "tr": "SİVİL",
+          "bg": "цивилен",
+          "rule_marks": {
+            "source_text": "SİVİL",
+            "source_fragment": "Sİ",
+            "target_text": "цивилен",
+            "target_fragment": "ци"
           }
         }
       ],
@@ -2514,6 +2516,7 @@
       "title_tr": "Türkçedeki I bazı kelimelerde Ъ olur",
       "short_tr": "I → Ъ",
       "description_tr": "Türkçedeki ı/i/e/o gibi bazı sesler Bulgarcada ъ ile karşılanabilir; bu kural örnek bazlı çalışmalıdır.",
+      "auto_apply": false,
       "pattern": {
         "source_lang": "tr",
         "target_lang": "bg",
@@ -2611,6 +2614,7 @@
       "title_tr": "Türkçedeki I bazı kelimelerde У olur",
       "short_tr": "I → У",
       "description_tr": "Bazı kelimelerde ı sesi Bulgarcada у ile görünür.",
+      "auto_apply": false,
       "pattern": {
         "source_lang": "tr",
         "target_lang": "bg",
@@ -2666,6 +2670,7 @@
       "title_tr": "Türkçedeki bazı I/İ sesleri Bulgarcada düşebilir",
       "short_tr": "I/İ → ∅",
       "description_tr": "Bazı ortak kelimelerde Türkçedeki ara ses Bulgarca biçimde düşebilir.",
+      "auto_apply": false,
       "pattern": {
         "source_lang": "tr",
         "target_lang": "bg",
@@ -2721,6 +2726,7 @@
       "title_tr": "Türkçedeki I bazı kelimelerde А olur",
       "short_tr": "I → А",
       "description_tr": "Bazı kelimelerde Türkçedeki ı sesi Bulgarcada а olarak karşılanabilir.",
+      "auto_apply": false,
       "pattern": {
         "source_lang": "tr",
         "target_lang": "bg",
@@ -2873,6 +2879,7 @@
       "title_tr": "Türkçedeki E bazı kelimelerde А olur",
       "short_tr": "E → А",
       "description_tr": "Bazı ortak kelimelerde Türkçedeki e Bulgarcada а olarak görünür.",
+      "auto_apply": false,
       "pattern": {
         "source_lang": "tr",
         "target_lang": "bg",
@@ -2956,6 +2963,7 @@
       "title_tr": "Türkçedeki A bazı kelimelerde Е olur",
       "short_tr": "A → Е",
       "description_tr": "Bazı ortak kelimelerde Türkçedeki a Bulgarcada е ile yazılır.",
+      "auto_apply": false,
       "pattern": {
         "source_lang": "tr",
         "target_lang": "bg",
@@ -3025,6 +3033,7 @@
       "title_tr": "Türkçedeki A bazı kelimelerde О olur",
       "short_tr": "A → О",
       "description_tr": "Bazı ortak kelimelerde Türkçedeki a/o uyarlaması görülebilir; bu kural örnek bazlı çalışmalıdır.",
+      "auto_apply": false,
       "pattern": {
         "source_lang": "tr",
         "target_lang": "bg",

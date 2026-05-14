@@ -1,0 +1,2458 @@
+{
+  "schema_version": "1.1",
+  "source_id": "src-kucuk-sozluk-full-text",
+  "rules": [
+    {
+      "rule_id": "ks-graph-latin-to-cyril-cognates",
+      "category": "alphabet_strategy",
+      "title_tr": "Ortak kelimelerle Kiril alfabesine geçiş",
+      "short_tr": "Latin → Kiril köprüsü",
+      "description_tr": "Türkçe bilen öğrenci, ortak/benzer kelimeleri kullanarak Kiril harflerini daha hızlı tanır. Örnek: delta → делта, moda → мода, motor → мотор.",
+      "source_fragment": "",
+      "target_fragment": "",
+      "examples": [
+        {
+          "tr": "DELTA",
+          "bg": "делта"
+        },
+        {
+          "tr": "MODA",
+          "bg": "мода"
+        },
+        {
+          "tr": "MOTOR",
+          "bg": "мотор"
+        },
+        {
+          "tr": "MOTİF",
+          "bg": "мотив"
+        }
+      ],
+      "tooltip_tr": "Ortak kelimeler alfabe öğrenimini hızlandırır."
+    },
+    {
+      "rule_id": "ks-tr-sh-to-bg-sh",
+      "category": "phonetic_mapping",
+      "title_tr": "Ş → Ш",
+      "short_tr": "Ş sesi Bulgarcada ш olur",
+      "description_tr": "Türkçedeki ş sesi Bulgarcada ш harfiyle yazılır.",
+      "source_fragment": "Ş",
+      "target_fragment": "ш",
+      "examples": [
+        {
+          "tr": "AFİŞ",
+          "bg": "афиш"
+        },
+        {
+          "tr": "MARŞ",
+          "bg": "марш"
+        },
+        {
+          "tr": "DUŞ",
+          "bg": "душ"
+        },
+        {
+          "tr": "AFİŞ",
+          "bg": "Афиш",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 23
+          }
+        },
+        {
+          "tr": "ANTİFAŞİST",
+          "bg": "Антифашист",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 28
+          }
+        },
+        {
+          "tr": "ANTİFAŞİZM",
+          "bg": "Антифашизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 28
+          }
+        },
+        {
+          "tr": "AŞILAMA",
+          "bg": "Ашлама",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 31
+          }
+        },
+        {
+          "tr": "ATEŞE",
+          "bg": "Аташе",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 32
+          }
+        },
+        {
+          "tr": "DUŞ",
+          "bg": "Душ",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 47
+          }
+        },
+        {
+          "tr": "GİŞE",
+          "bg": "Гише",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 50
+          }
+        },
+        {
+          "tr": "MAREŞAL",
+          "bg": "Маршал",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 69
+          }
+        },
+        {
+          "tr": "MARŞ",
+          "bg": "Марш",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 69
+          }
+        },
+        {
+          "tr": "MUŞAMBA",
+          "bg": "Мушама",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 75
+          }
+        }
+      ],
+      "tooltip_tr": "Ş sesi Bulgarcada Ш/ш ile yazılır."
+    },
+    {
+      "rule_id": "ks-tr-j-to-bg-zh",
+      "category": "phonetic_mapping",
+      "title_tr": "J → Ж",
+      "short_tr": "J sesi Bulgarcada ж olur",
+      "description_tr": "Türkçedeki j sesi Bulgarcada ж harfiyle yazılır.",
+      "source_fragment": "J",
+      "target_fragment": "ж",
+      "examples": [
+        {
+          "tr": "AJUR",
+          "bg": "ажур"
+        },
+        {
+          "tr": "STAJ",
+          "bg": "стаж"
+        },
+        {
+          "tr": "MASAJ",
+          "bg": "масаж"
+        },
+        {
+          "tr": "AJUR",
+          "bg": "Ажур",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 23
+          }
+        },
+        {
+          "tr": "AMBALAJ",
+          "bg": "Амбалаж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 26
+          }
+        },
+        {
+          "tr": "BANDAJ",
+          "bg": "Бандаж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 33
+          }
+        },
+        {
+          "tr": "BARAJ",
+          "bg": "Бараж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 34
+          }
+        },
+        {
+          "tr": "BUJİ",
+          "bg": "Бижу",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 38
+          }
+        },
+        {
+          "tr": "BUJİTERİ",
+          "bg": "Бижутериен,",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 38
+          }
+        },
+        {
+          "tr": "DRENAJ",
+          "bg": "Дренаж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 46
+          }
+        },
+        {
+          "tr": "KABOTAJ",
+          "bg": "Каботаж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 57
+          }
+        },
+        {
+          "tr": "KAMUFLAJ",
+          "bg": "Камуфлаж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 58
+          }
+        },
+        {
+          "tr": "KOLEJ",
+          "bg": "Колеж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 63
+          }
+        },
+        {
+          "tr": "KORTEJ",
+          "bg": "Кортеж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 64
+          }
+        },
+        {
+          "tr": "MASAJ",
+          "bg": "Масаж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 69
+          }
+        },
+        {
+          "tr": "MONTAJ",
+          "bg": "Монтаж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 73
+          }
+        },
+        {
+          "tr": "PROJEKTÖR",
+          "bg": "Прожектор",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 79
+          }
+        },
+        {
+          "tr": "STAJ",
+          "bg": "Стаж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 85
+          }
+        },
+        {
+          "tr": "VOLTAJ",
+          "bg": "Волтаж",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 90
+          }
+        }
+      ],
+      "tooltip_tr": "J sesi Bulgarcada Ж/ж ile yazılır."
+    },
+    {
+      "rule_id": "ks-tr-c-to-bg-dzh",
+      "category": "phonetic_mapping",
+      "title_tr": "C → ДЖ",
+      "short_tr": "C sesi Bulgarcada дж olur",
+      "description_tr": "Türkçedeki c sesi bazı ortak kelimelerde Bulgarcada дж ile karşılanır.",
+      "source_fragment": "C",
+      "target_fragment": "дж",
+      "examples": [
+        {
+          "tr": "CAZ",
+          "bg": "джаз"
+        },
+        {
+          "tr": "CENTİLMEN",
+          "bg": "джентълмен"
+        },
+        {
+          "tr": "CÜCE",
+          "bg": "джудже"
+        },
+        {
+          "tr": "AZERBAYCAN",
+          "bg": "Азербайджан",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 33
+          }
+        },
+        {
+          "tr": "BETONCU",
+          "bg": "Бетонджия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 35
+          }
+        },
+        {
+          "tr": "CAZ",
+          "bg": "Джаз",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "CENTİLMEN",
+          "bg": "Джентълмен",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "CİRO",
+          "bg": "Джиро",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "CÜCE",
+          "bg": "Джудже",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        }
+      ],
+      "tooltip_tr": "Türkçedeki c sesi Bulgarcada çoğu zaman дж ile yazılır."
+    },
+    {
+      "rule_id": "ks-tr-ch-to-bg-ch",
+      "category": "phonetic_mapping",
+      "title_tr": "Ç → Ч",
+      "short_tr": "Ç sesi Bulgarcada ч olur",
+      "description_tr": "Türkçedeki ç sesi bazı kelimelerde Bulgarcada ч ile yazılır.",
+      "source_fragment": "Ç",
+      "target_fragment": "ч",
+      "examples": [
+        {
+          "tr": "ÇORBA",
+          "bg": "чорба"
+        },
+        {
+          "tr": "ÇORAP",
+          "bg": "чорап"
+        },
+        {
+          "tr": "ÇİROZ",
+          "bg": "чироз"
+        },
+        {
+          "tr": "ÇİROZ",
+          "bg": "Чироз",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "ÇORAP",
+          "bg": "Чорап",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "ÇORBA",
+          "bg": "Чорба",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "ÇUBUK",
+          "bg": "Чибук",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "ÇUHA",
+          "bg": "Чоха, сукно",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "KAUÇUK",
+          "bg": "Каучук",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 61
+          }
+        },
+        {
+          "tr": "SANDVİÇ",
+          "bg": "Сандвич",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 83
+          }
+        }
+      ],
+      "tooltip_tr": "Ç sesi bazı kelimelerde Ч/ч olur."
+    },
+    {
+      "rule_id": "ks-tr-ch-to-bg-ts",
+      "category": "phonetic_mapping",
+      "title_tr": "Ç / S → Ц",
+      "short_tr": "Ç veya S bazı kelimelerde ц olur",
+      "description_tr": "Bulgarcadaki ц sesi yaklaşık “ts” gibi okunur. Türkçedeki ç veya s bazı ortak kelimelerde ц ile karşılanabilir.",
+      "source_fragment": "Ç/S",
+      "target_fragment": "ц",
+      "examples": [
+        {
+          "tr": "ÇAR",
+          "bg": "цар"
+        },
+        {
+          "tr": "SİGARA",
+          "bg": "цигара"
+        },
+        {
+          "tr": "ASETİLEN",
+          "bg": "ацетилен"
+        },
+        {
+          "tr": "AKASYA",
+          "bg": "Акация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 23
+          }
+        },
+        {
+          "tr": "AKSİYON",
+          "bg": "Акцион",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 24
+          }
+        },
+        {
+          "tr": "ALİTERASYON",
+          "bg": "Алитерация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "ANSİKLOPEDİ",
+          "bg": "Енциклопедия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 27
+          }
+        },
+        {
+          "tr": "ASETİLEN",
+          "bg": "Ацетилен",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 31
+          }
+        },
+        {
+          "tr": "ASETON",
+          "bg": "Ацетон",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 31
+          }
+        },
+        {
+          "tr": "BÜROKRASİ",
+          "bg": "Бюрокрация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "ÇAR",
+          "bg": "Цар",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "ÇİMENTO",
+          "bg": "Цимент",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "ÇİNKO",
+          "bg": "Цинк",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "ÇİNKOGRAF",
+          "bg": "Цинкограф",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "ÇİNKOGRAFİ",
+          "bg": "Цинкография",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 40
+          }
+        },
+        {
+          "tr": "DEKORASYON",
+          "bg": "Декорация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 41
+          }
+        },
+        {
+          "tr": "DELEGASYON",
+          "bg": "Делегация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 41
+          }
+        },
+        {
+          "tr": "DESİGRAM",
+          "bg": "Дециграм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 42
+          }
+        },
+        {
+          "tr": "DESİLİTRE",
+          "bg": "Децилитър",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 43
+          }
+        },
+        {
+          "tr": "DETSİMETRE",
+          "bg": "Дециметър",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 43
+          }
+        },
+        {
+          "tr": "DOÇENT",
+          "bg": "Доцент",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 45
+          }
+        },
+        {
+          "tr": "ELEKTROSANTRAL",
+          "bg": "Електроцентрa-",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 48
+          }
+        },
+        {
+          "tr": "GLİSERİN",
+          "bg": "Глицерин",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 51
+          }
+        }
+      ],
+      "tooltip_tr": "Ц/ц sesi “ts” gibi okunur."
+    },
+    {
+      "rule_id": "ks-desi-to-detsi",
+      "category": "phonetic_mapping",
+      "title_tr": "desi- → деци-",
+      "short_tr": "desi ön eki Bulgarcada деци olur",
+      "description_tr": "Ölçü birimi önekindeki desi- Bulgarcada деци- şeklinde yazılır.",
+      "source_fragment": "DESİ",
+      "target_fragment": "деци",
+      "examples": [
+        {
+          "tr": "DESİGRAM",
+          "bg": "дециграм"
+        },
+        {
+          "tr": "DESİLİTRE",
+          "bg": "децилитър"
+        },
+        {
+          "tr": "DETSİMETRE",
+          "bg": "дециметър"
+        },
+        {
+          "tr": "DESİGRAM",
+          "bg": "Дециграм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 42
+          }
+        },
+        {
+          "tr": "DESİLİTRE",
+          "bg": "Децилитър",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 43
+          }
+        },
+        {
+          "tr": "DETSİMETRE",
+          "bg": "Дециметър",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 43
+          }
+        }
+      ],
+      "tooltip_tr": "desi- öneki Bulgarcada деци- olur."
+    },
+    {
+      "rule_id": "ks-syon-to-tsiya",
+      "category": "phonetic_mapping",
+      "title_tr": "-syon → -ция",
+      "short_tr": "-syon Bulgarcada -ция olur",
+      "description_tr": "Türkçedeki -syon eki birçok ortak kelimede Bulgarcada -ция biçimine dönüşür.",
+      "source_fragment": "SYON",
+      "target_fragment": "ция",
+      "examples": [
+        {
+          "tr": "DEKORASYON",
+          "bg": "декорация"
+        },
+        {
+          "tr": "DELEGASYON",
+          "bg": "делегация"
+        },
+        {
+          "tr": "NAVİGASYON",
+          "bg": "навигация"
+        },
+        {
+          "tr": "ALİTERASYON",
+          "bg": "Алитерация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "DEKORASYON",
+          "bg": "Декорация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 41
+          }
+        },
+        {
+          "tr": "DELEGASYON",
+          "bg": "Делегация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 41
+          }
+        },
+        {
+          "tr": "NAVİGASYON",
+          "bg": "Навигация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 75
+          }
+        },
+        {
+          "tr": "OBLİGASYON",
+          "bg": "Облигация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 76
+          }
+        },
+        {
+          "tr": "VEGETASYON",
+          "bg": "Вегетация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 88
+          }
+        }
+      ],
+      "tooltip_tr": "-syon eki Bulgarcada -ция olur."
+    },
+    {
+      "rule_id": "ks-final-i-to-tsiya",
+      "category": "phonetic_mapping",
+      "title_tr": "-i → -ция",
+      "short_tr": "Bazı -i sonları -ция olur",
+      "description_tr": "Bazı Türkçe ortak kelimelerde son -i biçimi Bulgarcada -ция ile karşılanır. Örnek: garanti → гаранция.",
+      "source_fragment": "İ/I",
+      "target_fragment": "ция",
+      "examples": [
+        {
+          "tr": "GARANTİ",
+          "bg": "гаранция"
+        },
+        {
+          "tr": "BÜROKRASİ",
+          "bg": "Бюрокрация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "DEZENFEKTE İŞLEMİ",
+          "bg": "Дезинфекция",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 43
+          }
+        }
+      ],
+      "tooltip_tr": "Bazı kelimelerde son -i, Bulgarcada -ция olur."
+    },
+    {
+      "rule_id": "ks-ji-to-giya",
+      "category": "phonetic_mapping",
+      "title_tr": "-ji/-loji → -гия",
+      "short_tr": "-ji eki Bulgarcada -гия olur",
+      "description_tr": "Türkçedeki -ji / -loji grubu Bulgarcada çoğunlukla -гия ile yazılır.",
+      "source_fragment": "Jİ/LOJİ",
+      "target_fragment": "гия",
+      "examples": [
+        {
+          "tr": "MORFOLOJİ",
+          "bg": "морфология"
+        },
+        {
+          "tr": "ANTOLOJİ",
+          "bg": "антология"
+        },
+        {
+          "tr": "BİYOLOJİ",
+          "bg": "биология"
+        },
+        {
+          "tr": "AGROBİYOLOJİ",
+          "bg": "Агробиология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 23
+          }
+        },
+        {
+          "tr": "ANTOLOGJİ",
+          "bg": "Антология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 29
+          }
+        },
+        {
+          "tr": "BİYOLOJİ",
+          "bg": "Биология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 36
+          }
+        },
+        {
+          "tr": "DEMAGOJİ",
+          "bg": "Демагогия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 42
+          }
+        },
+        {
+          "tr": "ENERJİ",
+          "bg": "Енергия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 49
+          }
+        },
+        {
+          "tr": "HİDROLOJİ",
+          "bg": "Хидрология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 54
+          }
+        },
+        {
+          "tr": "İDEOLOJİ",
+          "bg": "Идеология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 55
+          }
+        },
+        {
+          "tr": "KRONOLOJİ",
+          "bg": "Хронология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 65
+          }
+        },
+        {
+          "tr": "METEOROLOJİ",
+          "bg": "Метеорология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 71
+          }
+        },
+        {
+          "tr": "MORFOLOJİ",
+          "bg": "Морфология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 73
+          }
+        },
+        {
+          "tr": "NÖROLOJİ",
+          "bg": "Неврология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 76
+          }
+        },
+        {
+          "tr": "STRATEJİ",
+          "bg": "Стратегия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 85
+          }
+        },
+        {
+          "tr": "TAFTOLOJİ",
+          "bg": "Тавтология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 86
+          }
+        },
+        {
+          "tr": "ZOOLOJİ",
+          "bg": "Зоология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 91
+          }
+        }
+      ],
+      "tooltip_tr": "-ji / -loji Bulgarcada -гия olur."
+    },
+    {
+      "rule_id": "ks-umlaut-u-to-bg-u",
+      "category": "phonetic_mapping",
+      "title_tr": "Ü → У / Ю",
+      "short_tr": "Ü sesi Bulgarcada у veya ю olabilir",
+      "description_tr": "Türkçedeki ü sesi ortak kelimelerde Bulgarcada çoğu zaman у, bazı kelimelerde ю ile yazılır.",
+      "source_fragment": "Ü",
+      "target_fragment": "у/ю",
+      "examples": [
+        {
+          "tr": "MÜZE",
+          "bg": "музей"
+        },
+        {
+          "tr": "MÜZİK",
+          "bg": "музика"
+        },
+        {
+          "tr": "MENÜ",
+          "bg": "меню"
+        },
+        {
+          "tr": "AKTÜEL",
+          "bg": "Актуален, -лна, -о;-и",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 24
+          }
+        },
+        {
+          "tr": "AKÜMÜLATÖR",
+          "bg": "Акумулатор",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 24
+          }
+        },
+        {
+          "tr": "ALBÜM",
+          "bg": "Албум",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 24
+          }
+        },
+        {
+          "tr": "ALÜMİNYUM",
+          "bg": "Алуминий",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "BÜRO",
+          "bg": "Бюро",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 38
+          }
+        },
+        {
+          "tr": "BÜROKRASİ",
+          "bg": "Бюрокрация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "BÜROKRAT",
+          "bg": "Бюрократ",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "BÜST",
+          "bg": "Бюст",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "BÜTÇE",
+          "bg": "Бюджет",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "CÜCE",
+          "bg": "Джудже",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "DOKÜMAN",
+          "bg": "Документ",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 46
+          }
+        },
+        {
+          "tr": "DÜET",
+          "bg": "Дует",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 47
+          }
+        },
+        {
+          "tr": "DÜZİNE",
+          "bg": "Дузина",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 47
+          }
+        },
+        {
+          "tr": "ENTÜSİAZM",
+          "bg": "Ентусиазъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 49
+          }
+        },
+        {
+          "tr": "HÜMANİST",
+          "bg": "Хуманист",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 54
+          }
+        },
+        {
+          "tr": "HÜMANİZM",
+          "bg": "Хуманизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 55
+          }
+        },
+        {
+          "tr": "KAKTÜS",
+          "bg": "Кактус",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 57
+          }
+        },
+        {
+          "tr": "KAPSÜL",
+          "bg": "Капсула",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 59
+          }
+        },
+        {
+          "tr": "KARİKATÜR",
+          "bg": "Карикатура",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 60
+          }
+        },
+        {
+          "tr": "KULÜP",
+          "bg": "Клуб",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 62
+          }
+        }
+      ],
+      "tooltip_tr": "Ü sesi Bulgarcada у veya ю ile karşılanabilir."
+    },
+    {
+      "rule_id": "ks-o-to-u",
+      "category": "phonetic_mapping",
+      "title_tr": "O → У",
+      "short_tr": "Bazı o sesleri Bulgarcada у olur",
+      "description_tr": "Bazı ortak kelimelerde Türkçedeki o sesi Bulgarcada у olarak görünür.",
+      "source_fragment": "O",
+      "target_fragment": "у",
+      "examples": [
+        {
+          "tr": "VOLKAN",
+          "bg": "вулкан"
+        },
+        {
+          "tr": "TETANOS",
+          "bg": "тетанус"
+        },
+        {
+          "tr": "TETANOS",
+          "bg": "Тетанус",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 88
+          }
+        },
+        {
+          "tr": "VOLKAN",
+          "bg": "Вулкан",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 90
+          }
+        }
+      ],
+      "tooltip_tr": "Bazı o sesleri Bulgarcada у olur."
+    },
+    {
+      "rule_id": "ks-u-to-empty",
+      "category": "phonetic_mapping",
+      "title_tr": "U → ∅",
+      "short_tr": "Bazı u sesleri düşer",
+      "description_tr": "Bazı ortak kelimelerde Türkçedeki u sesi Bulgarca biçimde görünmeyebilir.",
+      "source_fragment": "U",
+      "target_fragment": "∅",
+      "examples": [
+        {
+          "tr": "KULÜP",
+          "bg": "клуб"
+        },
+        {
+          "tr": "KULÜP",
+          "bg": "Клуб",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 62
+          }
+        }
+      ],
+      "tooltip_tr": "Bu kelimede Türkçedeki u sesi Bulgarcada düşebilir."
+    },
+    {
+      "rule_id": "ks-oto-to-avto",
+      "category": "phonetic_mapping",
+      "title_tr": "oto- → авто-",
+      "short_tr": "oto ön eki авто olur",
+      "description_tr": "Türkçedeki oto- öneki Bulgarcada авто- olarak yazılır.",
+      "source_fragment": "OTO",
+      "target_fragment": "авто",
+      "examples": [
+        {
+          "tr": "OTOMOBİL",
+          "bg": "автомобил"
+        },
+        {
+          "tr": "OTOPARK",
+          "bg": "автопарк"
+        },
+        {
+          "tr": "OTOBÜS",
+          "bg": "автобус"
+        },
+        {
+          "tr": "OTOBİYOGRAFİ",
+          "bg": "Автобиография",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 77
+          }
+        },
+        {
+          "tr": "OTOBÜS",
+          "bg": "Автобус",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 77
+          }
+        },
+        {
+          "tr": "OTOMAT",
+          "bg": "Автомат",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 77
+          }
+        },
+        {
+          "tr": "OTOMATİK",
+          "bg": "Автоматичен, -чна,-о;-и",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 77
+          }
+        }
+      ],
+      "tooltip_tr": "oto- Bulgarcada авто- olur."
+    },
+    {
+      "rule_id": "ks-k-to-h",
+      "category": "phonetic_mapping",
+      "title_tr": "K → Х",
+      "short_tr": "Bazı k sesleri х olur",
+      "description_tr": "Bazı ortak kelimelerde Türkçedeki k, Bulgarcada х ile karşılanır.",
+      "source_fragment": "K",
+      "target_fragment": "х",
+      "examples": [
+        {
+          "tr": "ALMANAK",
+          "bg": "алманах"
+        },
+        {
+          "tr": "KİMYA",
+          "bg": "химия"
+        },
+        {
+          "tr": "KLOR",
+          "bg": "хлор"
+        },
+        {
+          "tr": "ALKOL",
+          "bg": "Алкохол",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "ALKOLIK",
+          "bg": "Алкохолик",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "ALKOLIZM",
+          "bg": "Алкохолизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "ALMANAK",
+          "bg": "Алманах",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "BİYOKİMYA",
+          "bg": "Биохимия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 35
+          }
+        },
+        {
+          "tr": "ELEKTROTEKNİK",
+          "bg": "Електротехник",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 48
+          }
+        },
+        {
+          "tr": "HEKTAR",
+          "bg": "Хектар",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 53
+          }
+        },
+        {
+          "tr": "HEKTOLİTRE",
+          "bg": "Хектолитър",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 53
+          }
+        },
+        {
+          "tr": "KAOS",
+          "bg": "Хаос",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 59
+          }
+        },
+        {
+          "tr": "KARAKTERİSTİK",
+          "bg": "Характеристика",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 60
+          }
+        },
+        {
+          "tr": "KİMYA",
+          "bg": "Химия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 61
+          }
+        },
+        {
+          "tr": "KLOR",
+          "bg": "Хлор",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 62
+          }
+        },
+        {
+          "tr": "KLOROFİL",
+          "bg": "Хлорофил",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 62
+          }
+        },
+        {
+          "tr": "KLOROFORM",
+          "bg": "Хлороформ",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 62
+          }
+        },
+        {
+          "tr": "KOLERA",
+          "bg": "Холера",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 63
+          }
+        },
+        {
+          "tr": "KOMUT",
+          "bg": "Хомот",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 63
+          }
+        },
+        {
+          "tr": "KORO",
+          "bg": "Хор",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 64
+          }
+        },
+        {
+          "tr": "KROM",
+          "bg": "Хром",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 65
+          }
+        },
+        {
+          "tr": "KRONİK",
+          "bg": "Хроника",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 65
+          }
+        },
+        {
+          "tr": "KRONOLOJİ",
+          "bg": "Хронология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 65
+          }
+        }
+      ],
+      "tooltip_tr": "Bazı k sesleri Bulgarcada Х/х olur."
+    },
+    {
+      "rule_id": "ks-initial-k-to-g",
+      "category": "phonetic_mapping",
+      "title_tr": "k- → г-",
+      "short_tr": "Bazı baştaki k, г olur",
+      "description_tr": "Bazı kelimelerde Türkçedeki baştaki k sesi Bulgarcada г ile karşılanır.",
+      "source_fragment": "K",
+      "target_fragment": "г",
+      "examples": [
+        {
+          "tr": "KARGA",
+          "bg": "гарга"
+        }
+      ],
+      "tooltip_tr": "Bazı baştaki k sesleri г olabilir."
+    },
+    {
+      "rule_id": "ks-empty-to-h",
+      "category": "phonetic_mapping",
+      "title_tr": "∅ → Х",
+      "short_tr": "Bulgarcada başa х eklenebilir",
+      "description_tr": "Türkçe biçimde olmayan bir h sesi Bulgarcada kelimenin başında х olarak belirebilir.",
+      "source_fragment": "∅",
+      "target_fragment": "х",
+      "examples": [
+        {
+          "tr": "AMBAR",
+          "bg": "хамбар"
+        },
+        {
+          "tr": "OTEL",
+          "bg": "хотел"
+        },
+        {
+          "tr": "ASTAR",
+          "bg": "хастар"
+        },
+        {
+          "tr": "AMBAR",
+          "bg": "Хамбар",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 26
+          }
+        },
+        {
+          "tr": "ASTAR",
+          "bg": "Хастар",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 31
+          }
+        },
+        {
+          "tr": "OTEL",
+          "bg": "Хотел",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 77
+          }
+        }
+      ],
+      "tooltip_tr": "Türkçe tarafta yok; Bulgarcada başta Х/х var."
+    },
+    {
+      "rule_id": "ks-h-to-f",
+      "category": "phonetic_mapping",
+      "title_tr": "H → Ф",
+      "short_tr": "Bazı h sesleri ф olur",
+      "description_tr": "Bazı ortak kelimelerde Türkçedeki h sesi Bulgarcada ф olarak yazılır.",
+      "source_fragment": "H",
+      "target_fragment": "ф",
+      "examples": [
+        {
+          "tr": "HURMA",
+          "bg": "фурма"
+        },
+        {
+          "tr": "HUNİ",
+          "bg": "фуния"
+        },
+        {
+          "tr": "HUNİ",
+          "bg": "Фуния",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 54
+          }
+        },
+        {
+          "tr": "HURMA",
+          "bg": "Фурма",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 54
+          }
+        }
+      ],
+      "tooltip_tr": "Bazı h sesleri Bulgarcada Ф/ф olur."
+    },
+    {
+      "rule_id": "ks-t-to-d",
+      "category": "phonetic_mapping",
+      "title_tr": "T → Д",
+      "short_tr": "Bazı t sesleri д olur",
+      "description_tr": "Bazı ortak kelimelerde Türkçedeki t sesi Bulgarcada д ile karşılanır.",
+      "source_fragment": "T",
+      "target_fragment": "д",
+      "examples": [
+        {
+          "tr": "LİMONATA",
+          "bg": "лимонада"
+        },
+        {
+          "tr": "ELEKTROT",
+          "bg": "електрод"
+        },
+        {
+          "tr": "DEDEKTİF",
+          "bg": "Детектив",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 41
+          }
+        },
+        {
+          "tr": "KADASTRO",
+          "bg": "Кадастър",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 57
+          }
+        },
+        {
+          "tr": "LİMONATA",
+          "bg": "Лимонада",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 67
+          }
+        }
+      ],
+      "tooltip_tr": "Bazı t sesleri Bulgarcada Д/д olur."
+    },
+    {
+      "rule_id": "ks-f-to-v",
+      "category": "phonetic_mapping",
+      "title_tr": "F → В",
+      "short_tr": "Bazı f sesleri в olur",
+      "description_tr": "Bazı ortak kelimelerde Türkçedeki f sesi Bulgarcada в ile karşılanır.",
+      "source_fragment": "F",
+      "target_fragment": "в",
+      "examples": [
+        {
+          "tr": "APERİTİF",
+          "bg": "аперитив"
+        },
+        {
+          "tr": "KOLEKTİF",
+          "bg": "колектив"
+        },
+        {
+          "tr": "LOKOMOTİF",
+          "bg": "локомотив"
+        },
+        {
+          "tr": "AGRESİF",
+          "bg": "Агресивен, -вна,-о; -и",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 23
+          }
+        },
+        {
+          "tr": "AKTİF",
+          "bg": "Активен, -вна, -о;-и",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 24
+          }
+        },
+        {
+          "tr": "ALTERNATİF",
+          "bg": "Алтернатива",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "APERİTİF",
+          "bg": "Аперитив",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 30
+          }
+        },
+        {
+          "tr": "DEDEKTİF",
+          "bg": "Детектив",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 41
+          }
+        },
+        {
+          "tr": "DİREKTİF",
+          "bg": "Директива",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 45
+          }
+        },
+        {
+          "tr": "KAFKASYA",
+          "bg": "Кавказ",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 57
+          }
+        },
+        {
+          "tr": "KOLEKTİF",
+          "bg": "Колектив",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 63
+          }
+        },
+        {
+          "tr": "LOKOMOTİF",
+          "bg": "Локомотив",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 67
+          }
+        },
+        {
+          "tr": "MOTİF",
+          "bg": "Мотив",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 74
+          }
+        },
+        {
+          "tr": "OBJEKTİF",
+          "bg": "Обектив",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 76
+          }
+        },
+        {
+          "tr": "OTOBİYOGRAFİ",
+          "bg": "Автобиография",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 77
+          }
+        },
+        {
+          "tr": "RADYOAKTİF",
+          "bg": "Радиокативност",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 80
+          }
+        },
+        {
+          "tr": "TAFTOLOJİ",
+          "bg": "Тавтология",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 86
+          }
+        },
+        {
+          "tr": "VOLFRAM",
+          "bg": "Волфрам",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 89
+          }
+        }
+      ],
+      "tooltip_tr": "Bazı f sesleri Bulgarcada В/в olur."
+    },
+    {
+      "rule_id": "ks-p-to-b",
+      "category": "phonetic_mapping",
+      "title_tr": "P → Б",
+      "short_tr": "Bazı p sesleri б olur",
+      "description_tr": "Bazı ortak kelimelerde Türkçedeki p sesi Bulgarcada б ile karşılanır.",
+      "source_fragment": "P",
+      "target_fragment": "б",
+      "examples": [
+        {
+          "tr": "MİKROP",
+          "bg": "микроб"
+        },
+        {
+          "tr": "KULÜP",
+          "bg": "Клуб",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 62
+          }
+        },
+        {
+          "tr": "MİKROP",
+          "bg": "Микроб",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 71
+          }
+        }
+      ],
+      "tooltip_tr": "Bazı p sesleri Bulgarcada Б/б olur."
+    },
+    {
+      "rule_id": "ks-izm-to-izum",
+      "category": "phonetic_mapping",
+      "title_tr": "-izm → -изъм",
+      "short_tr": "-izm Bulgarcada -изъм olur",
+      "description_tr": "Türkçedeki -izm eki Bulgarcada -изъм biçimindedir.",
+      "source_fragment": "İZM/IZM",
+      "target_fragment": "изъм",
+      "examples": [
+        {
+          "tr": "ATEİZM",
+          "bg": "атеизъм"
+        },
+        {
+          "tr": "BUDİZM",
+          "bg": "будизъм"
+        },
+        {
+          "tr": "EGOİZM",
+          "bg": "егоизъм"
+        },
+        {
+          "tr": "ALKOLIZM",
+          "bg": "Алкохолизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "ANARŞİZM",
+          "bg": "Анархизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 27
+          }
+        },
+        {
+          "tr": "ANTİFAŞİZM",
+          "bg": "Антифашизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 28
+          }
+        },
+        {
+          "tr": "ATEİZM",
+          "bg": "Атеизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 31
+          }
+        },
+        {
+          "tr": "DALTONİZM",
+          "bg": "Далтонизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 41
+          }
+        },
+        {
+          "tr": "DARVİNİZM",
+          "bg": "Дарвинизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 41
+          }
+        },
+        {
+          "tr": "DİNAMİZM",
+          "bg": "Динамизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 43
+          }
+        },
+        {
+          "tr": "DRAMATİZM",
+          "bg": "Драматизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 46
+          }
+        },
+        {
+          "tr": "EGOİZM",
+          "bg": "Егоизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 47
+          }
+        },
+        {
+          "tr": "EROTİZM",
+          "bg": "Еротизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 49
+          }
+        },
+        {
+          "tr": "HÜMANİZM",
+          "bg": "Хуманизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 55
+          }
+        },
+        {
+          "tr": "İDEALİZM",
+          "bg": "Идеализъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 55
+          }
+        },
+        {
+          "tr": "KAPİTALİZM",
+          "bg": "Капитализъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 59
+          }
+        },
+        {
+          "tr": "MANGETİZM",
+          "bg": "Магнетизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 68
+          }
+        },
+        {
+          "tr": "MARKSİZM",
+          "bg": "Марксизъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 69
+          }
+        },
+        {
+          "tr": "MİLİTARİZM",
+          "bg": "Милитаризъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 71
+          }
+        },
+        {
+          "tr": "VANDALİZM",
+          "bg": "Вандализъм",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 88
+          }
+        }
+      ],
+      "tooltip_tr": "-izm eki Bulgarcada -изъм olur."
+    },
+    {
+      "rule_id": "ks-ya-to-iya",
+      "category": "phonetic_mapping",
+      "title_tr": "YA → ИЯ",
+      "short_tr": "-ya çoğu kez -ия olur",
+      "description_tr": "Türkçedeki -ya sonu bazı ortak kelimelerde Bulgarcada -ия olur.",
+      "source_fragment": "YA",
+      "target_fragment": "ия",
+      "examples": [
+        {
+          "tr": "İTALYA",
+          "bg": "Италия"
+        },
+        {
+          "tr": "KAMELYA",
+          "bg": "Камелия"
+        },
+        {
+          "tr": "ASYA",
+          "bg": "Азия"
+        },
+        {
+          "tr": "AKASYA",
+          "bg": "Акация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 23
+          }
+        },
+        {
+          "tr": "ANGARYA",
+          "bg": "Ангария",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 27
+          }
+        },
+        {
+          "tr": "AVUSTRALYA",
+          "bg": "Австралия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 32
+          }
+        },
+        {
+          "tr": "AVUSTURYA",
+          "bg": "Австрия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 32
+          }
+        },
+        {
+          "tr": "BİBLİOGRAFYA",
+          "bg": "Библиография",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 35
+          }
+        },
+        {
+          "tr": "BİYOKİMYA",
+          "bg": "Биохимия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 35
+          }
+        },
+        {
+          "tr": "BREZİLYA",
+          "bg": "Бразилия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 37
+          }
+        },
+        {
+          "tr": "COĞRAFYA",
+          "bg": "География",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "İSPANYA",
+          "bg": "Испания",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 56
+          }
+        },
+        {
+          "tr": "KİMYA",
+          "bg": "Химия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 61
+          }
+        },
+        {
+          "tr": "LİTOGRAFYA",
+          "bg": "Литография",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 67
+          }
+        },
+        {
+          "tr": "MAKEDONYA",
+          "bg": "Македония",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 68
+          }
+        },
+        {
+          "tr": "MALARYA",
+          "bg": "Малария",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 68
+          }
+        },
+        {
+          "tr": "MUMYA",
+          "bg": "Мумия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 74
+          }
+        },
+        {
+          "tr": "ROMANYA",
+          "bg": "Румъния",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 82
+          }
+        },
+        {
+          "tr": "RUSYA",
+          "bg": "Русия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 82
+          }
+        },
+        {
+          "tr": "TENYA",
+          "bg": "Тения",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 87
+          }
+        }
+      ],
+      "tooltip_tr": "-ya sonu Bulgarcada -ия olabilir."
+    },
+    {
+      "rule_id": "ks-ya-to-ya",
+      "category": "phonetic_mapping",
+      "title_tr": "YA → Я",
+      "short_tr": "-ya bazen я olur",
+      "description_tr": "Bazı kısa ortak kelimelerde Türkçedeki -ya sonu Bulgarcada я harfiyle yazılır.",
+      "source_fragment": "YA",
+      "target_fragment": "я",
+      "examples": [
+        {
+          "tr": "BOYA",
+          "bg": "боя"
+        },
+        {
+          "tr": "MAYA",
+          "bg": "мая"
+        },
+        {
+          "tr": "SOYA",
+          "bg": "соя"
+        },
+        {
+          "tr": "AKASYA",
+          "bg": "Акация",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 23
+          }
+        },
+        {
+          "tr": "ANGARYA",
+          "bg": "Ангария",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 27
+          }
+        },
+        {
+          "tr": "ASYA",
+          "bg": "Азия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 31
+          }
+        },
+        {
+          "tr": "AVUSTRALYA",
+          "bg": "Австралия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 32
+          }
+        },
+        {
+          "tr": "AVUSTURYA",
+          "bg": "Австрия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 32
+          }
+        },
+        {
+          "tr": "BİBLİOGRAFYA",
+          "bg": "Библиография",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 35
+          }
+        },
+        {
+          "tr": "BİYOKİMYA",
+          "bg": "Биохимия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 35
+          }
+        },
+        {
+          "tr": "BOYA",
+          "bg": "Боя",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 37
+          }
+        },
+        {
+          "tr": "BREZİLYA",
+          "bg": "Бразилия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 37
+          }
+        },
+        {
+          "tr": "COĞRAFYA",
+          "bg": "География",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 39
+          }
+        },
+        {
+          "tr": "İSPANYA",
+          "bg": "Испания",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 56
+          }
+        },
+        {
+          "tr": "İTALYA",
+          "bg": "Италия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 56
+          }
+        },
+        {
+          "tr": "KAMELYA",
+          "bg": "Камелия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 58
+          }
+        },
+        {
+          "tr": "KİMYA",
+          "bg": "Химия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 61
+          }
+        },
+        {
+          "tr": "LİTOGRAFYA",
+          "bg": "Литография",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 67
+          }
+        },
+        {
+          "tr": "MAKEDONYA",
+          "bg": "Македония",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 68
+          }
+        },
+        {
+          "tr": "MALARYA",
+          "bg": "Малария",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 68
+          }
+        },
+        {
+          "tr": "MAYA",
+          "bg": "Мая",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 70
+          }
+        },
+        {
+          "tr": "MUMYA",
+          "bg": "Мумия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 74
+          }
+        },
+        {
+          "tr": "ROMANYA",
+          "bg": "Румъния",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 82
+          }
+        }
+      ],
+      "tooltip_tr": "-ya bazen tek я harfiyle karşılanır."
+    },
+    {
+      "rule_id": "ks-iy-to-y",
+      "category": "phonetic_mapping",
+      "title_tr": "(İ)Y → Й",
+      "short_tr": "y sesi й olabilir",
+      "description_tr": "Türkçedeki y sesi bazı ortak kelimelerde Bulgarcadaki й ile karşılanır.",
+      "source_fragment": "Y/İY",
+      "target_fragment": "й",
+      "examples": [
+        {
+          "tr": "İYON",
+          "bg": "йон"
+        },
+        {
+          "tr": "GAYDA",
+          "bg": "гайда"
+        },
+        {
+          "tr": "VOLEYBOL",
+          "bg": "волейбол"
+        },
+        {
+          "tr": "ALÜMİNYUM",
+          "bg": "Алуминий",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 25
+          }
+        },
+        {
+          "tr": "AY",
+          "bg": "Ай",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 32
+          }
+        },
+        {
+          "tr": "AZERBAYCAN",
+          "bg": "Азербайджан",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 33
+          }
+        },
+        {
+          "tr": "GAYDA",
+          "bg": "Гайда",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 50
+          }
+        },
+        {
+          "tr": "HAVYAR",
+          "bg": "Хайвер",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 53
+          }
+        },
+        {
+          "tr": "HAYDE",
+          "bg": "Хайде",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 53
+          }
+        },
+        {
+          "tr": "HAYTA",
+          "bg": "Хайта",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 53
+          }
+        },
+        {
+          "tr": "HEY",
+          "bg": "Хей",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 54
+          }
+        },
+        {
+          "tr": "İYON",
+          "bg": "Йон",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 56
+          }
+        },
+        {
+          "tr": "İYOT",
+          "bg": "Йод",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 56
+          }
+        },
+        {
+          "tr": "KALAY",
+          "bg": "Калай",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 58
+          }
+        },
+        {
+          "tr": "KAYISI",
+          "bg": "Кайсия",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 61
+          }
+        },
+        {
+          "tr": "TAYGA",
+          "bg": "Тайга",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 87
+          }
+        },
+        {
+          "tr": "VOLEYBOL",
+          "bg": "Волейбол",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 89
+          }
+        },
+        {
+          "tr": "VOLEYBOLCU",
+          "bg": "Волейболист",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 89
+          }
+        },
+        {
+          "tr": "VOYODA",
+          "bg": "Войвода",
+          "source": {
+            "source_id": "src-kucuk-sozluk-full-text",
+            "page": 90
+          }
+        }
+      ],
+      "tooltip_tr": "Y sesi Bulgarcada Й/й olabilir."
+    },
+    {
+      "rule_id": "ks-gender-category",
+      "category": "grammar_rule",
+      "title_tr": "Bulgarcada gramatik cinsiyet vardır",
+      "short_tr": "м.р. / ж.р. / ср.р.",
+      "description_tr": "Bulgarcada isimler erkek, kadın ve nötr gramer cinslerinden birine ait olabilir. Türkçe bilenler için bu ayrı bir öğrenme başlığıdır.",
+      "source_fragment": "",
+      "target_fragment": "",
+      "examples": [
+        {
+          "tr": "ANTEN",
+          "bg": "антена (ж.р.)"
+        },
+        {
+          "tr": "ALTERNATİF",
+          "bg": "алтернатива (ж.р.)"
+        }
+      ],
+      "tooltip_tr": "Bulgarcada isimlerde gramatik cinsiyet vardır."
+    },
+    {
+      "rule_id": "ks-plural-variety",
+      "category": "plural_rule",
+      "title_tr": "Çoğul biçimleri çeşitlidir",
+      "short_tr": "деца, морета, ключове...",
+      "description_tr": "Bulgarcada çoğul tek bir ekle sınırlı değildir: дете→деца, море→морета, ключ→ключове, стая→стаи, прозорец→прозорци gibi farklı kalıplar vardır.",
+      "source_fragment": "",
+      "target_fragment": "",
+      "examples": [
+        {
+          "bg": "дете → деца",
+          "tr": "çocuk → çocuklar"
+        },
+        {
+          "bg": "море → морета",
+          "tr": "deniz → denizler"
+        },
+        {
+          "bg": "ключ → ключове",
+          "tr": "anahtar → anahtarlar"
+        }
+      ],
+      "tooltip_tr": "Bulgarcada çoğul kalıpları çeşitlidir."
+    },
+    {
+      "rule_id": "ks-no-infinitive-da-form",
+      "category": "grammar_rule",
+      "title_tr": "Bulgarcada Türkçedeki gibi mastar yoktur",
+      "short_tr": "да + fiil",
+      "description_tr": "Türkçedeki almak/vermek gibi mastar yapısının yerine Bulgarcada да + fiil yapısı kullanılır: да пиша, да напиша.",
+      "source_fragment": "да",
+      "target_fragment": "",
+      "examples": [
+        {
+          "bg": "да пиша",
+          "tr": "yazmak"
+        },
+        {
+          "bg": "да напиша",
+          "tr": "yazmak / yazıp bitirmek"
+        }
+      ],
+      "tooltip_tr": "Mastar anlamı genellikle да + fiil ile verilir."
+    },
+    {
+      "rule_id": "ks-verb-aspect",
+      "category": "grammar_rule",
+      "title_tr": "Fiil türü/aspekt: süreç ve tamamlanma",
+      "short_tr": "рисувам / нарисувам",
+      "description_tr": "Bulgarcada fiiller eylemin sürüp sürmediğini veya tamamlanıp tamamlanmadığını gösterebilir: рисувам/нарисувам, пиша/напиша, чета/прочета.",
+      "source_fragment": "",
+      "target_fragment": "",
+      "examples": [
+        {
+          "bg": "рисувам / нарисувам",
+          "tr": "çiziyorum / çizip bitiriyorum"
+        },
+        {
+          "bg": "пиша / напиша",
+          "tr": "yazıyorum / yazıp bitiriyorum"
+        }
+      ],
+      "tooltip_tr": "Aspekt, eylemin süreç mi tamamlanmış mı olduğunu gösterir."
+    }
+  ]
+}

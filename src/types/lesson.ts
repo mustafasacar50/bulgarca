@@ -52,4 +52,6 @@ export interface LessonMeta {
   path: string;
   exercise_path?: string;
   order?: number;
+  week?: number;
+  isDictionary?: boolean;
 }

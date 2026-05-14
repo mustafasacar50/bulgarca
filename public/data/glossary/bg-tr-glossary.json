@@ -538,7 +538,7 @@
   },
   {
     "entry_id": "bg_priyatno_mi_e",
-    "bg": "Приятно ми е.",
+    "bg": "Приятно mi e.",
     "tr": "Memnun oldum.",
     "part_of_speech": "phrase",
     "gender": null,
@@ -579,6 +579,295 @@
     "tags": [
       "lesson-002",
       "lesson-003"
+    ]
+  },
+  {
+    "entry_id": "tr_asetilen_bg_atsetilen",
+    "bg": "Ацетилен",
+    "tr": "ASETİLEN",
+    "rule_refs": [
+      "cog-tr-syon-to-bg-tsiya"
+    ],
+    "rule_marks": [
+      {
+        "rule_id": "cog-tr-syon-to-bg-tsiya",
+        "source_text": "ASETİLEN",
+        "source_fragment": "S",
+        "target_text": "Ацетилен",
+        "target_fragment": "ц",
+        "tooltip_tr": "Bu ortak kelimede Türkçedeki S, Bulgarcada Ц/ц yani ts sesiyle yazılır."
+      }
+    ]
+  },
+  {
+    "entry_id": "tr_aseton_bg_atseton",
+    "bg": "Ацетон",
+    "tr": "ASETON",
+    "rule_refs": [
+      "cog-tr-syon-to-bg-tsiya"
+    ],
+    "rule_marks": [
+      {
+        "rule_id": "cog-tr-syon-to-bg-tsiya",
+        "source_text": "ASETON",
+        "source_fragment": "S",
+        "target_text": "Ацетон",
+        "target_fragment": "ц",
+        "tooltip_tr": "Bu ortak kelimede Türkçedeki S, Bulgarcada Ц/ц yani ts sesiyle yazılır."
+      }
+    ]
+  },
+  {
+    "entry_id": "word_gospozhitsa",
+    "bg": "госпожица",
+    "tr": "bekar kadın / hanımefendi (genç)",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "госпожици",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "word_gospozha",
+    "bg": "госпожа",
+    "tr": "evli/yaşlı kadın / hanımefendi",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "plural": "госпожи",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "word_gospodin",
+    "bg": "господин",
+    "tr": "bay / beyefendi",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "plural": "господа",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "word_kolega",
+    "bg": "колега",
+    "tr": "meslektaş (hem eril hem dişil)",
+    "part_of_speech": "noun",
+    "gender": "м.р./ж.р.",
+    "plural": "колеги",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "word_grazhdanin",
+    "bg": "гражданино",
+    "tr": "vatandaş (eril seslenme)",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "word_grazhdanko",
+    "bg": "гражданко",
+    "tr": "vatandaş (dişil seslenme)",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "word_grazhdani",
+    "bg": "граждани",
+    "tr": "vatandaşlar",
+    "part_of_speech": "noun",
+    "plural_only": true,
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_skapi_priyateli",
+    "bg": "Скъпи приятели",
+    "tr": "Sevgili dostlar",
+    "type": "phrase",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_uvazhaemi",
+    "bg": "Уважаеми",
+    "tr": "Saygıdeğer (eril/çoğul)",
+    "part_of_speech": "adj",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_uvazhaema",
+    "bg": "Уважаема",
+    "tr": "Saygıdeğer (dişil)",
+    "part_of_speech": "adj",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "word_chuzhdenets",
+    "bg": "чужденец",
+    "tr": "yabancı (eril)",
+    "part_of_speech": "noun",
+    "gender": "м.р.",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "word_chuzhdenka",
+    "bg": "чужденка",
+    "tr": "yabancı (dişil)",
+    "part_of_speech": "noun",
+    "gender": "ж.р.",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_chng",
+    "bg": "ЧНГ",
+    "tr": "Mutlu Yıllar (Честита нова година)",
+    "type": "phrase",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_chrd",
+    "bg": "ЧРД",
+    "tr": "Doğum Günün Kutlu Olsun (Честит рожден ден)",
+    "type": "phrase",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_chestita_baba_marta",
+    "bg": "Честита Баба Марта",
+    "tr": "Baba Marta Kutlu Olsun (1 Mart)",
+    "type": "phrase",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_da_vi_se_vrashta",
+    "bg": "Да Ви се връща",
+    "tr": "Darısı başınıza",
+    "type": "phrase",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_zdrasti",
+    "bg": "Здрасти",
+    "tr": "Selam (samimi)",
+    "type": "phrase",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_chao",
+    "bg": "Чао",
+    "tr": "Çao (samimi)",
+    "type": "phrase",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_moya",
+    "bg": "моя",
+    "tr": "benim (dişil)",
+    "part_of_speech": "pronoun",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
+    ]
+  },
+  {
+    "entry_id": "phrase_tvoy",
+    "bg": "твой",
+    "tr": "senin",
+    "part_of_speech": "pronoun",
+    "source_refs": [
+      {
+        "source_id": "src-a1-v-1-2",
+        "note": "Added from BDK pages 6-55"
+      }
     ]
   }
 ]

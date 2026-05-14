@@ -148,17 +148,17 @@
           "note_tr": "2. tekil kişi"
         },
         {
-          "bg": "той",
+          "bg": "[той]",
           "tr": "o",
           "note_tr": "eril"
         },
         {
-          "bg": "тя",
+          "bg": "т[я]",
           "tr": "o",
           "note_tr": "dişil"
         },
         {
-          "bg": "то",
+          "bg": "т[о]",
           "tr": "o",
           "note_tr": "orta cins"
         },
@@ -202,37 +202,37 @@
       "table_rows": [
         {
           "person": "1. tekil",
-          "bg": "Аз се казвам Мустафа.",
+          "bg": "Аз се казва[м] Мустафа.",
           "tr": "Benim adım Mustafa."
         },
         {
           "person": "2. tekil",
-          "bg": "Ти се казваш Емин.",
+          "bg": "Ти се казва[ш] Емин.",
           "tr": "Senin adın Emin."
         },
         {
           "person": "3. tekil",
-          "bg": "Той се казва Бюлент.",
+          "bg": "Той се казва[] Бюлент.",
           "tr": "Onun adı Bülent."
         },
         {
           "person": "3. tekil",
-          "bg": "Тя се казва Фери.",
+          "bg": "Тя се казва[] Фери.",
           "tr": "Onun adı Feri."
         },
         {
           "person": "1. çoğul",
-          "bg": "Ние се казваме Фери и Емин.",
+          "bg": "Ние се казва[ме] Фери и Емин.",
           "tr": "Bizim adımız Feri ve Emin."
         },
         {
           "person": "2. çoğul/resmî",
-          "bg": "Вие се казвате Станка Донева.",
+          "bg": "Вие се казва[те] Станка Донева.",
           "tr": "Sizin adınız Stanka Doneva."
         },
         {
           "person": "3. çoğul",
-          "bg": "Те се казват Фери и Емин.",
+          "bg": "Те се казва[т] Фери и Емин.",
           "tr": "Onların adı Feri ve Emin."
         }
       ],
@@ -261,37 +261,37 @@
       "table_rows": [
         {
           "person": "1. tekil",
-          "bg": "Аз съм студент.",
+          "bg": "Аз [съм] студент.",
           "tr": "Ben öğrenciyim."
         },
         {
           "person": "2. tekil",
-          "bg": "Ти си студент.",
+          "bg": "Ти [си] студент.",
           "tr": "Sen öğrencisin."
         },
         {
           "person": "3. tekil",
-          "bg": "Той е студент.",
+          "bg": "Той [е] студент.",
           "tr": "O öğrencidir."
         },
         {
           "person": "3. tekil",
-          "bg": "Тя е студентка.",
+          "bg": "Тя [е] студентка.",
           "tr": "O öğrencidir."
         },
         {
           "person": "1. çoğul",
-          "bg": "Ние сме студенти.",
+          "bg": "Ние [сме] студенти.",
           "tr": "Biz öğrenciyiz."
         },
         {
           "person": "2. çoğul/resmî",
-          "bg": "Вие сте преподавател.",
+          "bg": "Вие [сте] преподавател.",
           "tr": "Siz öğretmensiniz."
         },
         {
           "person": "3. çoğul",
-          "bg": "Те са студенти.",
+          "bg": "Те [са] студенти.",
           "tr": "Onlar öğrencidir."
         }
       ],
@@ -501,6 +501,127 @@
           "note": "Представете се."
         }
       ]
+    },
+    {
+      "section_id": "l005-s09",
+      "type": "dialogue_practice",
+      "title_tr": "Boşluk Doldurma ve Çeviri Alıştırmaları",
+      "description_tr": "Aşağıdaki cümlelerdeki boşlukları 'съм' fiilinin doğru formlarıyla veya uygun kelimelerle doldurmaya çalışın. Çözümü görmek için karta tıklayın.",
+      "items": [
+        {
+          "prompt_tr": "Boşluğu doldur: Аз ____ спортист. (Ben sporcuyum.)",
+          "model_bg": "Аз съм спортист.",
+          "model_tr": "Ben sporcuyum."
+        },
+        {
+          "prompt_tr": "Boşluğu doldur: Ти спортист ли ____ ? (Sen sporcu musun?)",
+          "model_bg": "Ти спортист ли си?",
+          "model_tr": "Sen sporcu musun?"
+        },
+        {
+          "prompt_tr": "Boşluğu doldur: Те ____ на кино. (Onlar sinemada.)",
+          "model_bg": "Те са на кино.",
+          "model_tr": "Onlar sinemada."
+        },
+        {
+          "prompt_tr": "Boşluğu doldur: Той ____ гладен. (O aç.)",
+          "model_bg": "Той е гладен.",
+          "model_tr": "O aç (eril)."
+        },
+        {
+          "prompt_tr": "Cevap ver: Студент ли си? (Hayır,...)",
+          "model_bg": "Не, не съм.",
+          "model_tr": "Hayır, değilim."
+        },
+        {
+          "prompt_tr": "Cevap ver: Преподавател ли сте? (Evet,...)",
+          "model_bg": "Да, преподавател съм.",
+          "model_tr": "Evet, öğretmenim."
+        },
+        {
+          "prompt_tr": "Paragrafı tamamla: Аз (kazvam se) Севил. (Benim adım Sevil.)",
+          "model_bg": "Аз се казвам Севил.",
+          "model_tr": "Benim adım Sevil."
+        },
+        {
+          "prompt_tr": "Paragrafı tamamla: Студентка (sum) в Тракийския университет... (Trakya üniversitesinde öğrenciyim...)",
+          "model_bg": "Студентка съм в Тракийския университет...",
+          "model_tr": "Trakya üniversitesinde öğrenciyim..."
+        },
+        {
+          "prompt_tr": "Paragrafı tamamla: Това (e) Бюлент. (Toy) също е (student). (Bu Bülent. O da öğrenci.)",
+          "model_bg": "Това е Бюлент. Той също е студент.",
+          "model_tr": "Bu Bülent. O da öğrenci."
+        }
+      ]
+    },
+    {
+      "section_id": "l005-s04-soru-zamirleri",
+      "type": "grammar_table",
+      "title_tr": "Soru Zamirleri (Въпросителни местоимения)",
+      "headers": [
+        "Anlam",
+        "Eril",
+        "Dişil",
+        "Orta",
+        "Çoğul"
+      ],
+      "rows": [
+        [
+          "Kim",
+          "кой (кого/кому)",
+          "ко[я]",
+          "ко[е]",
+          "ко[и]"
+        ],
+        [
+          "Hangi",
+          "кой / какво",
+          "ко[я]",
+          "ко[е]",
+          "ко[и]"
+        ],
+        [
+          "Nasıl",
+          "какъв",
+          "какв[а]",
+          "какв[о]",
+          "какв[и]"
+        ],
+        [
+          "Kimin",
+          "чий",
+          "чи[я]",
+          "чи[е]",
+          "чи[и]"
+        ],
+        [
+          "Kaç",
+          "-",
+          "-",
+          "колко",
+          "-"
+        ]
+      ]
+    },
+    {
+      "section_id": "l005-s05-writing-li",
+      "type": "writing_practice",
+      "title_tr": "Soru Kalıpları Pratiği ('ли' edatı ile)",
+      "items": [
+        {
+          "bg": "Студент ли си",
+          "tr": "Öğrenci misin?"
+        },
+        {
+          "bg": "Преподавател ли сте",
+          "tr": "Öğretmen misiniz?"
+        },
+        {
+          "bg": "Ти спортист ли си",
+          "tr": "Sen sporcu musun?"
+        }
+      ]
     }
   ],
   "linked_rules": [
@@ -519,5 +640,6 @@
     "word-bg-nie",
     "word-bg-vie",
     "word-bg-te"
-  ]
+  ],
+  "title_bg": "Лични местоимения, казвам се, съм и ли"
 }

@@ -1,1 +1,130 @@
-"# PATCH 010 — Marker doğruluğu: ASETİLEN ve S → Ц / ц (ts) düzeltmesi\n\n## Sorun\n\nSözlük arama ekranında `ASETİLEN → Ацетилен` örneğinde uygulama yanlış biçimde `A → а` ve/veya `E → е` gibi geniş ve önemsiz eşleşmeleri markerlıyor. Oysa kaynak PDF’de bu kelime `S (YON) → Ц (ИЯ)` grubu altında verilmiştir. Burada asıl öğrenme değeri taşıyan dönüşüm:\n\n```txt\nASETİLEN → Ацетилен\nS → Ц / ц\n```\n\nBulgarcadaki `ц` harfi Türkçe kulağa `ts` gibi gelir. Bu nedenle `Ацетилен` kelimesinde marker `ц` üzerinde olmalıdır. Türkçe görünüm modunda ise `ASETİLEN` içindeki `S` markerlanmalıdır.\n\n## Kaynak dayanağı\n\n- `zup-tan-k BG Ders.pdf`, sayfa 3: `S (YON) → Ц (ИЯ)` başlığı altında `ASETİLEN → ацетилен`, `ASETON → ацетон`, `SİRK → цирк`, `SİVİL → цивилен` örnekleri yer alır.\n- `kucuk-sozlukWORD-yeil`, sayfa 31: sözlükte `ASETİLEN → Ацетилен`, `ASETON → Ацетон` girdileri vardır.\n\n## Ana karar\n\nMarker motoru sadece yüzeysel harf benzerliğiyle marker üretmemeli. Öncelik şu sırada olmalıdır:\n\n1. `entry.rule_marks` içindeki explicit markerlar\n2. `rule.examples[].rule_marks` içindeki birebir kaynak örnekleri\n3. Özel/ayırt edici consonant ve cluster kuralları: `Ş→Ш`, `J→Ж`, `S→Ц`, `SYON→ЦИЯ`, `Ç→Ч/Ц`, `P→Б`, `OTO→АВТО` vb.\n4. Suffix / prefix kuralları\n5. Geniş vowel kuralları (`A→E`, `E→A`, `A→O`, `I/İ varyantları`) sadece birebir kaynak örneği varsa uygulanmalı; otomatik tüm kelimelere uygulanmamalı.\n\n## Yapılacaklar\n\n### 1. `cog-tr-syon-to-bg-tsiya` kuralını genişlet\n\n`public/data/rules/cognate-pattern-rules.full.json` içindeki `cog-tr-syon-to-bg-tsiya` kuralının örnekleri eksik. Aşağıdaki tüm örnekler eklenmeli:\n\n```txt\nSİGARA → цигара       Sİ → ци\nDESİGRAM → дециграм   Sİ → ци\nDEKORASYON → декорация SYON → ция\nDELEGASYON → делегация SYON → ция\nAKASYA → акация       SYA → ция\nASETİLEN → ацетилен   S → ц\nASETON → ацетон       S → ц\nNAVİGASYON → навигация SYON → ция\nSİRK → цирк           Sİ → ци\nSİVİL → цивилен       Sİ → ци\n```\n\n### 2. `ASETİLEN` için explicit glossary marker ekle\n\nSözlük kaydında şu alan desteklenmeli:\n\n```json\n{\n  \"tr\": \"ASETİLEN\",\n  \"bg\": \"Ацетилен\",\n  \"rule_refs\": [\"cog-tr-syon-to-bg-tsiya\"],\n  \"rule_marks\": [\n    {\n      \"rule_id\": \"cog-tr-syon-to-bg-tsiya\",\n      \"source_text\": \"ASETİLEN\",\n      \"source_fragment\": \"S\",\n      \"target_text\": \"Ацетилен\",\n      \"target_fragment\": \"ц\",\n      \"tooltip_tr\": \"Bu ortak kelimede Türkçedeki S, Bulgarcada Ц/ц yani ts sesiyle yazılır.\"\n    }\n  ]\n}\n```\n\nAynı mantık `ASETON → Ацетон` için de uygulanmalı.\n\n### 3. Yanlış geniş vowel markerlarını engelle\n\nŞu rule_id’ler otomatik tüm kelimelere uygulanmamalı:\n\n```txt\ncog-tr-e-to-bg-a\ncog-tr-a-to-bg-e\ncog-tr-a-to-bg-o\ncog-tr-i-variants\n```\n\nBu kurallara şu davranış eklenmeli:\n\n```json\n\"auto_apply\": false,\n\"apply_mode\": \"explicit_examples_only\"\n```\n\nBu kurallar yalnızca kendi `examples` listesindeki birebir örneklerde marker üretmeli. Örneğin `ASETİLEN` içinde `A` ve `E` markerlanmamalı.\n\n### 4. Marker motoru seçim skoru\n\n`findCognatePatternMatches(pair, rules)` içinde eşleşmelere skor ver:\n\n- explicit `rule_marks`: 100\n- exact example pair match: 90\n- consonant/cluster transform: 70\n- suffix/prefix transform: 60\n- broad vowel transform: 20 ve sadece explicit ise\n\nAynı harf aralığında daha düşük skor varsa atılsın.\n\n### 5. Sağ panelde yalnızca gerçekten markerlanan kural üstte gösterilsin\n\n`ASETİLEN` sağ panelinde üstte şu görünmeli:\n\n```txt\nS → Ц / ц\nTürkçedeki S bu kelimede Bulgarcada ц ile yazılır. Ц harfi ts gibi okunur.\n```\n\n`A → а` veya `E → е` gibi kimlik/benzerlik bilgileri “ilgili kural” olarak gösterilmemeli.\n\n## Test\n\n1. Sözlükte `asetilen` ara.\n2. Sonuçta `Ацетилен` görünmeli.\n3. Marker sadece `ц` üzerinde olmalı.\n4. Sağ panelde sadece `S → Ц / ц` kuralı görünmeli.\n5. `ASETON → Ацетон` için de aynı davranış olmalı.\n6. `DEKORASYON → декорация` için `SYON → ция` markerı korunmalı.\n7. `KAMELYA → Камелия` için `YA → ия` markerı korunmalı.\n8. `npm run build` hatasız çalışmalı.\n\n## Commit mesajı\n\n```txt\nFix cognate marker specificity for S to TS examples\n```\n"
+# PATCH 010 — Marker doğruluğu: ASETİLEN ve S → Ц / ц (ts) düzeltmesi
+
+## Sorun
+
+Sözlük arama ekranında `ASETİLEN → Ацетилен` örneğinde uygulama yanlış biçimde `A → а` ve/veya `E → е` gibi geniş ve önemsiz eşleşmeleri markerlıyor. Oysa kaynak PDF’de bu kelime `S (YON) → Ц (ИЯ)` grubu altında verilmiştir. Burada asıl öğrenme değeri taşıyan dönüşüm:
+
+```txt
+ASETİLEN → Ацетилен
+S → Ц / ц
+```
+
+Bulgarcadaki `ц` harfi Türkçe kulağa `ts` gibi gelir. Bu nedenle `Ацетилен` kelimesinde marker `ц` üzerinde olmalıdır. Türkçe görünüm modunda ise `ASETİLEN` içindeki `S` markerlanmalıdır.
+
+## Kaynak dayanağı
+
+- `zup-tan-k BG Ders.pdf`, sayfa 3: `S (YON) → Ц (ИЯ)` başlığı altında `ASETİLEN → ацетилен`, `ASETON → ацетон`, `SİRK → цирк`, `SİVİL → цивилен` örnekleri yer alır.
+- `kucuk-sozlukWORD-yeil`, sayfa 31: sözlükte `ASETİLEN → Ацетилен`, `ASETON → Ацетон` girdileri vardır.
+
+## Ana karar
+
+Marker motoru sadece yüzeysel harf benzerliğiyle marker üretmemeli. Öncelik şu sırada olmalıdır:
+
+1. `entry.rule_marks` içindeki explicit markerlar
+2. `rule.examples[].rule_marks` içindeki birebir kaynak örnekleri
+3. Özel/ayırt edici consonant ve cluster kuralları: `Ş→Ш`, `J→Ж`, `S→Ц`, `SYON→ЦИЯ`, `Ç→Ч/Ц`, `P→Б`, `OTO→АВТО` vb.
+4. Suffix / prefix kuralları
+5. Geniş vowel kuralları (`A→E`, `E→A`, `A→O`, `I/İ varyantları`) sadece birebir kaynak örneği varsa uygulanmalı; otomatik tüm kelimelere uygulanmamalı.
+
+## Yapılacaklar
+
+### 1. `cog-tr-syon-to-bg-tsiya` kuralını genişlet
+
+`public/data/rules/cognate-pattern-rules.full.json` içindeki `cog-tr-syon-to-bg-tsiya` kuralının örnekleri eksik. Aşağıdaki tüm örnekler eklenmeli:
+
+```txt
+SİGARA → цигара       Sİ → ци
+DESİGRAM → дециграм   Sİ → ци
+DEKORASYON → декорация SYON → ция
+DELEGASYON → делегация SYON → ция
+AKASYA → акация       SYA → ция
+ASETİLEN → ацетилен   S → ц
+ASETON → ацетон       S → ц
+NAVİGASYON → навигация SYON → ция
+SİRK → цирк           Sİ → ци
+SİVİL → цивилен       Sİ → ци
+```
+
+### 2. `ASETİLEN` için explicit glossary marker ekle
+
+Sözlük kaydında şu alan desteklenmeli:
+
+```json
+{
+  "tr": "ASETİLEN",
+  "bg": "Ацетилен",
+  "rule_refs": ["cog-tr-syon-to-bg-tsiya"],
+  "rule_marks": [
+    {
+      "rule_id": "cog-tr-syon-to-bg-tsiya",
+      "source_text": "ASETİLEN",
+      "source_fragment": "S",
+      "target_text": "Ацетилен",
+      "target_fragment": "ц",
+      "tooltip_tr": "Bu ortak kelimede Türkçedeki S, Bulgarcada Ц/ц yani ts sesiyle yazılır."
+    }
+  ]
+}
+```
+
+Aynı mantık `ASETON → Ацетон` için de uygulanmalı.
+
+### 3. Yanlış geniş vowel markerlarını engelle
+
+Şu rule_id’ler otomatik tüm kelimelere uygulanmamalı:
+
+```txt
+cog-tr-e-to-bg-a
+cog-tr-a-to-bg-e
+cog-tr-a-to-bg-o
+cog-tr-i-variants
+```
+
+Bu kurallara şu davranış eklenmeli:
+
+```json
+"auto_apply": false,
+"apply_mode": "explicit_examples_only"
+```
+
+Bu kurallar yalnızca kendi `examples` listesindeki birebir örneklerde marker üretmeli. Örneğin `ASETİLEN` içinde `A` ve `E` markerlanmamalı.
+
+### 4. Marker motoru seçim skoru
+
+`findCognatePatternMatches(pair, rules)` içinde eşleşmelere skor ver:
+
+- explicit `rule_marks`: 100
+- exact example pair match: 90
+- consonant/cluster transform: 70
+- suffix/prefix transform: 60
+- broad vowel transform: 20 ve sadece explicit ise
+
+Aynı harf aralığında daha düşük skor varsa atılsın.
+
+### 5. Sağ panelde yalnızca gerçekten markerlanan kural üstte gösterilsin
+
+`ASETİLEN` sağ panelinde üstte şu görünmeli:
+
+```txt
+S → Ц / ц
+Türkçedeki S bu kelimede Bulgarcada ц ile yazılır. Ц harfi ts gibi okunur.
+```
+
+`A → а` veya `E → е` gibi kimlik/benzerlik bilgileri “ilgili kural” olarak gösterilmemeli.
+
+## Test
+
+1. Sözlükte `asetilen` ara.
+2. Sonuçta `Ацетилен` görünmeli.
+3. Marker sadece `ц` üzerinde olmalı.
+4. Sağ panelde sadece `S → Ц / ц` kuralı görünmeli.
+5. `ASETON → Ацетон` için de aynı davranış olmalı.
+6. `DEKORASYON → декорация` için `SYON → ция` markerı korunmalı.
+7. `KAMELYA → Камелия` için `YA → ия` markerı korunmalı.
+8. `npm run build` hatasız çalışmalı.
+
+## Commit mesajı
+
+```txt
+Fix cognate marker specificity for S to TS examples
+```

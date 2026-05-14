@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "rules": [
+    {
+      "rule_id": "zup_sh_to_sh",
+      "title_tr": "Ş → Ш Dönüşümü",
+      "pattern_source": "Ş",
+      "pattern_target": "Ш",
+      "examples": [
+        { "tr": "DUŞ", "bg": "душ" },
+        { "tr": "AFİŞ", "bg": "афиш" },
+        { "tr": "MARŞ", "bg": "марш" },
+        { "tr": "GİŞE", "bg": "гише" }
+      ],
+      "tooltip_tr": "Türkçe Ş sesi Bulgarcada Ш harfi ile karşılanır.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 1 }
+    },
+    {
+      "rule_id": "zup_j_to_zh",
+      "title_tr": "J → Ж Dönüşümü",
+      "pattern_source": "J",
+      "pattern_target": "Ж",
+      "examples": [
+        { "tr": "AJUR", "bg": "ажур" },
+        { "tr": "STAJ", "bg": "стаж" },
+        { "tr": "MASAJ", "bg": "масаж" },
+        { "tr": "KOLEJ", "bg": "колеж" }
+      ],
+      "tooltip_tr": "Türkçe J sesi Bulgarcada Ж harfi ile karşılanır.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 1 }
+    },
+    {
+      "rule_id": "zup_ji_to_giya",
+      "title_tr": "-Jİ → -ГИ(Я) Dönüşümü",
+      "pattern_source": "-Jİ",
+      "pattern_target": "-ГИ(Я)",
+      "examples": [
+        { "tr": "MORFOLOJİ", "bg": "морфология" },
+        { "tr": "STRATEJİ", "bg": "стратегия" },
+        { "tr": "ENERJİ", "bg": "енергия" },
+        { "tr": "ANTOLOJİ", "bg": "антология" }
+      ],
+      "tooltip_tr": "Türkçedeki -ji sonu Bulgarcada -гия (giya) olur.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 1 }
+    },
+    {
+      "rule_id": "zup_ch_to_ch",
+      "title_tr": "Ç → Ч Dönüşümü",
+      "pattern_source": "Ç",
+      "pattern_target": "Ч",
+      "examples": [
+        { "tr": "SANDVİÇ", "bg": "сандвич" },
+        { "tr": "KAUÇUK", "bg": "каучук" },
+        { "tr": "ÇORAP", "bg": "чорап" },
+        { "tr": "ÇORBA", "bg": "чорба" }
+      ],
+      "tooltip_tr": "Türkçe Ç sesi Bulgarcada Ч harfi ile karşılanır.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 1 }
+    },
+    {
+      "rule_id": "zup_ch_to_ts",
+      "title_tr": "Ç → Ц Dönüşümü",
+      "pattern_source": "Ç",
+      "pattern_target": "Ц",
+      "examples": [
+        { "tr": "DOÇENT", "bg": "доцент" }
+      ],
+      "tooltip_tr": "Bazı ortak kelimelerde Ç sesi Bulgarcada Ц (ts) sesine döner.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 1 }
+    },
+    {
+      "rule_id": "zup_o_umlaut_to_yo",
+      "title_tr": "Ö → ЬО Dönüşümü",
+      "pattern_source": "Ö",
+      "pattern_target": "ЬО",
+      "examples": [
+        { "tr": "GÖN", "bg": "гьон" },
+        { "tr": "DUBLÖR", "bg": "дубльор" },
+        { "tr": "KLASÖR", "bg": "класьор" }
+      ],
+      "tooltip_tr": "Türkçedeki Ö sesi Bulgarcada ЬО (yumuşatma + o) ile gösterilebilir.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 1 }
+    },
+    {
+      "rule_id": "zup_o_umlaut_to_o",
+      "title_tr": "Ö → О Dönüşümü",
+      "pattern_source": "Ö",
+      "pattern_target": "О",
+      "examples": [
+        { "tr": "PROFESÖR", "bg": "професор" },
+        { "tr": "DİREKTÖR", "bg": "директор" },
+        { "tr": "MONİTÖR", "bg": "монитор" }
+      ],
+      "tooltip_tr": "Batı dillerinden geçen birçok ortak kelimede Ö sesi Bulgarcada sadece О olur.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 2 }
+    },
+    {
+      "rule_id": "zup_u_umlaut_to_yu",
+      "title_tr": "Ü → Ю Dönüşümü",
+      "pattern_source": "Ü",
+      "pattern_target": "Ю",
+      "examples": [
+        { "tr": "MENÜ", "bg": "меню" },
+        { "tr": "BÜRO", "bg": "бюро" },
+        { "tr": "BÜST", "bg": "бюст" }
+      ],
+      "tooltip_tr": "Türkçe Ü sesi Bulgarcada Ю (yu) harfi ile karşılanır.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 2 }
+    },
+    {
+      "rule_id": "zup_ya_to_iya",
+      "title_tr": "YA → ИЯ Dönüşümü",
+      "pattern_source": "YA",
+      "pattern_target": "ИЯ",
+      "examples": [
+        { "tr": "İTALYA", "bg": "Италия" },
+        { "tr": "ASYA", "bg": "Азия" },
+        { "tr": "İSPANYA", "bg": "Испания" }
+      ],
+      "tooltip_tr": "Yer ve bilim isimlerindeki -ya sonu Bulgarcada -ия (iya) olur.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 2 }
+    },
+    {
+      "rule_id": "zup_ya_to_ya",
+      "title_tr": "YA → Я Dönüşümü",
+      "pattern_source": "YA",
+      "pattern_target": "Я",
+      "examples": [
+        { "tr": "BOYA", "bg": "боя" },
+        { "tr": "MAYA", "bg": "мая" },
+        { "tr": "SOYA", "bg": "соя" }
+      ],
+      "tooltip_tr": "Bazı kelimelerde YA sesi doğrudan Я harfi ile yazılır.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 2 }
+    },
+    {
+      "rule_id": "zup_syon_to_tsiya",
+      "title_tr": "S (YON) → Ц (ИЯ) Dönüşümü",
+      "pattern_source": "-SYON",
+      "pattern_target": "-ЦИЯ",
+      "examples": [
+        { "tr": "DEKORASYON", "bg": "декорация" },
+        { "tr": "DELEGASYON", "bg": "делегация" },
+        { "tr": "NAVİGASYON", "bg": "навигация" }
+      ],
+      "tooltip_tr": "Türkçedeki -syon eki Bulgarcada -ция (tsiya) olur.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 3 }
+    },
+    {
+      "rule_id": "zup_t_to_d_f_to_v",
+      "title_tr": "T → Д / F → В Yumuşaması",
+      "pattern_source": "T/F",
+      "pattern_target": "Д/В",
+      "examples": [
+        { "tr": "APERİTİF", "bg": "аперитив" },
+        { "tr": "KOLEKTİF", "bg": "колектив" },
+        { "tr": "LİMONATA", "bg": "лимонада" },
+        { "tr": "İYOT", "bg": "йод" }
+      ],
+      "tooltip_tr": "Ortak kelimelerin sonundaki sert sessizler (T, F) Bulgarcada yumuşayabilir (Д, В).",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 3 }
+    },
+    {
+      "rule_id": "zup_k_to_h",
+      "title_tr": "K → Х Dönüşümü",
+      "pattern_source": "K",
+      "pattern_target": "Х",
+      "examples": [
+        { "tr": "ALMANAK", "bg": "алманах" },
+        { "tr": "KİMYA", "bg": "химия" },
+        { "tr": "MEKANİK", "bg": "механик" },
+        { "tr": "TEKNİK", "bg": "техник" }
+      ],
+      "tooltip_tr": "Türkçedeki K sesi bazı kelimelerde Bulgarcada Х (h) olur.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 3 }
+    },
+    {
+      "rule_id": "zup_izm_to_izam",
+      "title_tr": "-İZM → -ИЗЪМ Dönüşümü",
+      "pattern_source": "-İZM",
+      "pattern_target": "-ИЗЪМ",
+      "examples": [
+        { "tr": "ATEİZM", "bg": "атеизъм" },
+        { "tr": "HÜMANİZM", "bg": "хуманизъм" },
+        { "tr": "EGOİZM", "bg": "егоизъм" }
+      ],
+      "tooltip_tr": "Türkçedeki -izm sonu Bulgarcada -изъм (izam) şeklinde hecelenerek yazılır.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 4 }
+    },
+    {
+      "rule_id": "zup_i_to_er",
+      "title_tr": "I → Ъ Dönüşümü",
+      "pattern_source": "I",
+      "pattern_target": "Ъ",
+      "examples": [
+        { "tr": "KATIR", "bg": "катър" },
+        { "tr": "KAYISI", "bg": "кайсия" },
+        { "tr": "MANASTIR", "bg": "манастир" }
+      ],
+      "tooltip_tr": "Türkçedeki I sesi Bulgarcada Ъ (er) harfi ile karşılanır.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 4 }
+    },
+    {
+      "rule_id": "zup_oto_to_avto",
+      "title_tr": "OTO- → АВТО- Dönüşümü",
+      "pattern_source": "OTO-",
+      "pattern_target": "АВТО-",
+      "examples": [
+        { "tr": "OTOBÜS", "bg": "автобус" },
+        { "tr": "OTOMAT", "bg": "автомат" },
+        { "tr": "OTOMATİK", "bg": "автоматик" }
+      ],
+      "tooltip_tr": "Türkçedeki OTO- öneki Bulgarcada АВТО- (avto) olur.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 4 }
+    },
+    {
+      "rule_id": "zup_p_to_b",
+      "title_tr": "P → Б Dönüşümü",
+      "pattern_source": "P",
+      "pattern_target": "Б",
+      "examples": [
+        { "tr": "MİKROP", "bg": "микроб" },
+        { "tr": "PORSUK", "bg": "борсук" },
+        { "tr": "POTİNKA", "bg": "ботинка" }
+      ],
+      "tooltip_tr": "Bazı kelimelerde P sesi Bulgarcada Б sesine dönüşür.",
+      "source": { "file": "zup-tan-k BG Ders.pdf", "page": 5 }
+    }
+  ]
+}

@@ -6,89 +6,153 @@
       "category": "phonetic_mapping",
       "title_tr": "Türkçedeki YA bitişi Bulgarcada ИЯ olur",
       "short_tr": "YA → ИЯ",
-      "description_tr": "Türkçedeki -ya ile biten bazı ortak kelimeler Bulgarcada -ия ile yazılır. Bu özellikle ülke, bilim dalı ve ortak kökenli kelimelerde sık görülür.",
+      "description_tr": "Türkçedeki -ya ile biten bazı ortak kelimeler Bulgarcada -ия ile yazılır.",
       "pattern": {
         "source_lang": "tr",
         "target_lang": "bg",
         "source_fragment": "YA",
         "target_fragment": "ия",
-        "match_type": "suffix",
-        "position": "suffix"
+        "match_type": "suffix"
       },
-      "marker": {
-        "color_key": "blue",
-        "highlight_source": "YA",
-        "highlight_target": "ия",
-        "style": "background"
-      },
+      "marker": { "color_key": "blue" },
       "tooltip_tr": "YA → ИЯ: Türkçedeki -ya bitişi Bulgarcada -ия olur.",
-      "panel_tr": {
-        "summary": "Bu kural Türkçe-Bulgarca ortak kelimelerde çok kullanışlıdır.",
-        "details": [
-          "Türkçede -ya ile biten bazı kelimeler Bulgarcada -ия ile biter.",
-          "Kural birebir her kelimeye uygulanmaz; kaynakta verilen ortak kelimeler üzerinden öğrenilmelidir.",
-          "Marker açıkken Türkçedeki YA ve Bulgarcadaki ия parçaları renkli gösterilmelidir."
-        ],
-        "practice_hint": "Kelimenin sonunda -ya sesi duyduğunda Bulgarcada -ия olma ihtimalini kontrol et."
+      "examples": [{ "tr": "İTALYA", "bg": "Италия" }]
+    },
+    {
+      "rule_id": "tr-syon-to-bg-ciya",
+      "category": "phonetic_mapping",
+      "title_tr": "Türkçedeki SYON/Sİ bitişi Bulgarcada ЦИЯ olur",
+      "short_tr": "SYON/Sİ → ЦИЯ",
+      "description_tr": "Türkçedeki -syon veya -si ile biten (Latince kökenli) kelimeler Bulgarcada -ция ile biter.",
+      "pattern": {
+        "source_lang": "tr",
+        "target_lang": "bg",
+        "source_fragment": "SYON",
+        "target_fragment": "ция",
+        "match_type": "suffix"
       },
-      "examples": [
-        {
-          "tr": "İTALYA",
-          "bg": "Италия",
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 2
-          }
-        },
-        {
-          "tr": "KAMELYA",
-          "bg": "Камелия",
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 2
-          }
-        },
-        {
-          "tr": "LİTOGRAFYA",
-          "bg": "литография",
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 2
-          }
-        },
-        {
-          "tr": "TENYA",
-          "bg": "тения",
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 2
-          }
-        },
-        {
-          "tr": "ASYA",
-          "bg": "Азия",
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 2
-          }
-        },
-        {
-          "tr": "İSPANYA",
-          "bg": "Испания",
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 2
-          }
-        },
-        {
-          "tr": "MALARYA",
-          "bg": "малария",
-          "source": {
-            "source_id": "src-zup-tan-k-bg-ders",
-            "page": 2
-          }
-        }
-      ]
+      "marker": { "color_key": "indigo" },
+      "tooltip_tr": "SYON/Sİ → ЦИЯ: Fransızca/Latince kökenli kelimelerde yaygındır.",
+      "examples": [{ "tr": "DEKORASYON", "bg": "Декорация" }, { "tr": "DEMOKRASİ", "bg": "Демокрация" }]
+    },
+    {
+      "rule_id": "tr-loji-to-bg-logiya",
+      "category": "phonetic_mapping",
+      "title_tr": "Türkçedeki LOJİ bitişi Bulgarcada ЛОГИЯ olur",
+      "short_tr": "LOJİ → ЛОГИЯ",
+      "description_tr": "Bilim dallarını ifade eden -loji ekleri Bulgarcada -логия şeklinde yazılır.",
+      "pattern": {
+        "source_lang": "tr",
+        "target_lang": "bg",
+        "source_fragment": "LOJİ",
+        "target_fragment": "логия",
+        "match_type": "suffix"
+      },
+      "marker": { "color_key": "emerald" },
+      "tooltip_tr": "LOJİ → ЛОГИЯ: Bilim dalları için standart dönüşüm.",
+      "examples": [{ "tr": "İDEOLOJİ", "bg": "Идеология" }, { "tr": "KRONOLOJİ", "bg": "Хронология" }]
+    },
+    {
+      "rule_id": "tr-izm-to-bg-izum",
+      "category": "phonetic_mapping",
+      "title_tr": "Türkçedeki İZM bitişi Bulgarcada ИЗЪМ olur",
+      "short_tr": "İZM → ИЗЪМ",
+      "description_tr": "Düşünce akımlarını belirten -izm ekleri Bulgarcada araya bir 'er' sesi (ъ) alarak -изъм olur.",
+      "pattern": {
+        "source_lang": "tr",
+        "target_lang": "bg",
+        "source_fragment": "İZM",
+        "target_fragment": "изъм",
+        "match_type": "suffix"
+      },
+      "marker": { "color_key": "amber" },
+      "tooltip_tr": "İZM → ИЗЪМ: Bulgarcada sonu sessiz biten yabancı eklerde 'ъ' kullanımı yaygındır.",
+      "examples": [{ "tr": "EGOİZM", "bg": "Егоизъм" }, { "tr": "DİNAMİZM", "bg": "Динамизъм" }]
+    },
+    {
+      "rule_id": "tr-or-to-bg-or",
+      "category": "phonetic_mapping",
+      "title_tr": "Türkçedeki ÖR bitişi Bulgarcada ОР olur",
+      "short_tr": "ÖR → ОР",
+      "description_tr": "Meslek veya araç belirten -ör ekleri Bulgarcada -ор olarak yazılır.",
+      "pattern": {
+        "source_lang": "tr",
+        "target_lang": "bg",
+        "source_fragment": "ÖR",
+        "target_fragment": "ор",
+        "match_type": "suffix"
+      },
+      "marker": { "color_key": "rose" },
+      "tooltip_tr": "ÖR → ОР: Aktör, Direktör gibi kelimelerde görülür.",
+      "examples": [{ "tr": "DİREKTÖR", "bg": "Директор" }, { "tr": "DİKTATÖR", "bg": "Диктатор" }]
+    },
+    {
+      "rule_id": "tr-si-to-bg-ciya",
+      "category": "phonetic_mapping",
+      "title_tr": "Türkçedeki Sİ bitişi Bulgarcada ЦИЯ olur",
+      "short_tr": "Sİ → ЦИЯ",
+      "description_tr": "Demokrasi, diplomasi gibi kelimelerdeki -si sonu Bulgarcada -ция olur.",
+      "pattern": {
+        "source_lang": "tr",
+        "target_lang": "bg",
+        "source_fragment": "Sİ",
+        "target_fragment": "ция",
+        "match_type": "suffix"
+      },
+      "marker": { "color_key": "indigo" },
+      "tooltip_tr": "Sİ → ЦИЯ: Demokrasi, Diplomasi gibi kelimelerde görülür.",
+      "examples": [{ "tr": "DEMOKRASİ", "bg": "Демокрация" }]
+    },
+    {
+      "rule_id": "tr-grafi-to-bg-grafiya",
+      "category": "phonetic_mapping",
+      "title_tr": "Türkçedeki GRAFİ bitişi Bulgarcada ГРАФИЯ olur",
+      "short_tr": "GRAFİ → ГРАФИЯ",
+      "description_tr": "Grafi ile biten bilim dalları Bulgarcada -графия olur.",
+      "pattern": {
+        "source_lang": "tr",
+        "target_lang": "bg",
+        "source_fragment": "GRAFİ",
+        "target_fragment": "графия",
+        "match_type": "suffix"
+      },
+      "marker": { "color_key": "teal" },
+      "tooltip_tr": "GRAFİ → ГРАФИЯ: Litografya, Coğrafya vb.",
+      "examples": [{ "tr": "LİTOGRAFYA", "bg": "Литография" }]
+    },
+    {
+      "rule_id": "tr-aj-to-bg-aj",
+      "category": "phonetic_mapping",
+      "title_tr": "Türkçedeki AJ bitişi Bulgarcada АЖ olur",
+      "short_tr": "AJ → АЖ",
+      "description_tr": "Drenaj, kamuflaj, kortej gibi kelimelerdeki -aj/-ej sonu Bulgarcada -аж/-еж olur.",
+      "pattern": {
+        "source_lang": "tr",
+        "target_lang": "bg",
+        "source_fragment": "AJ",
+        "target_fragment": "аж",
+        "match_type": "suffix"
+      },
+      "marker": { "color_key": "orange" },
+      "tooltip_tr": "AJ → АЖ: Fransızca kökenli -aj sonu.",
+      "examples": [{ "tr": "DRENAJ", "bg": "Дренаж" }]
+    },
+    {
+      "rule_id": "tr-ist-to-bg-ist",
+      "category": "phonetic_mapping",
+      "title_tr": "Türkçedeki İST bitişi Bulgarcada ИСТ olur",
+      "short_tr": "İST → ИСТ",
+      "description_tr": "Egoist, Marksist gibi kelimelerdeki -ist sonu Bulgarcada -ист olur.",
+      "pattern": {
+        "source_lang": "tr",
+        "target_lang": "bg",
+        "source_fragment": "İST",
+        "target_fragment": "ист",
+        "match_type": "suffix"
+      },
+      "marker": { "color_key": "violet" },
+      "tooltip_tr": "İST → ИСТ: Kişi/akım ekleri.",
+      "examples": [{ "tr": "EGOİST", "bg": "Егоист" }]
     }
   ]
 }

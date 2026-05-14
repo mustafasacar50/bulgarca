@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-016-kucuk-sozluk-a-z-tam-calisma",
+  "exercise_set_id": "exercises-016-kucuk-sozluk-a-z-tam-calisma",
+  "title_tr": "Tam Sözlük Alıştırmaları",
+  "items": [
+    {
+      "exercise_id": "ex-016-001",
+      "type": "dictionary_search_task",
+      "prompt_tr": "Sözlükte KAMELYA, AMBAR, ASETİLEN ve MORFOLOJİ kelimelerini ara; her birinde hangi kural markerının çıktığını kontrol et.",
+      "target_entries": [
+        "KAMELYA",
+        "AMBAR",
+        "ASETİLEN",
+        "MORFOLOJİ"
+      ]
+    },
+    {
+      "exercise_id": "ex-016-002",
+      "type": "multiple_choice",
+      "prompt_tr": "Sözlükteki her kelime için hangi bilgi korunmalıdır?",
+      "choices": [
+        "entry_id, kaynak sayfası, Türkçe-Bulgarca karşılık, rule_refs",
+        "sadece kelime adı",
+        "sadece Türkçe anlam",
+        "yalnızca renk kodu"
+      ],
+      "answer": "entry_id, kaynak sayfası, Türkçe-Bulgarca karşılık, rule_refs"
+    },
+    {
+      "exercise_id": "ex-016-003",
+      "type": "rule_filter_task",
+      "prompt_tr": "-изм → -изъм kuralına göre en az üç kelime listele.",
+      "expected_rule_id": "ks-izm-to-izum"
+    }
+  ]
+}

@@ -516,6 +516,162 @@
         ],
         "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
       }
+    },
+    {
+      "entry_id": "phrase-koy-e-tozi",
+      "bg": "Кой е този човек?",
+      "tr": "Bu adam kim?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-koya-e-tazi",
+      "bg": "Коя е тази жена?",
+      "tr": "Bu kadin kim/hangi kadin?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-koe-e-tova",
+      "bg": "Кое е това дете?",
+      "tr": "Bu cocuk kim/hangi cocuk?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-koi-sa-tezi",
+      "bg": "Кои са тези хора?",
+      "tr": "Bu insanlar kim?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-kakuv-e-toz-problem",
+      "bg": "Какъв е проблемът?",
+      "tr": "Sorun nasil/ne?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-kakva-e-tazi-kola",
+      "bg": "Каква е тази кола?",
+      "tr": "Bu nasil bir araba?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-kakvo-pravish",
+      "bg": "Какво правиш?",
+      "tr": "Ne yapiyorsun?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-kakvi-sa-tezi-obuvki",
+      "bg": "Какви са тези обувки?",
+      "tr": "Bunlar nasil ayakkabilar?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-chiy-e-tozi-telefon",
+      "bg": "Чий е този телефон?",
+      "tr": "Bu telefon kimin?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-chiya-e-tazi-kniga",
+      "bg": "Чия е тази книга?",
+      "tr": "Bu kitap kimin?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-chie-e-tova-kuche",
+      "bg": "Чие е това куче?",
+      "tr": "Bu kopek kimin?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-chii-sa-tezi-klyuchove",
+      "bg": "Чии са тези ключове?",
+      "tr": "Bu anahtarlar kimin?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
+    },
+    {
+      "entry_id": "phrase-kolko-struva",
+      "bg": "Колко струва това?",
+      "tr": "Bu ne kadar (kac para)?",
+      "part_of_speech": "phrase",
+      "level": "A1",
+      "tags": [
+        "soru",
+        "zamirler",
+        "ornek"
+      ]
     }
   ]
 }

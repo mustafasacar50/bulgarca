@@ -1,0 +1,3387 @@
+{
+  "bundle_type": "bulgarca_import_bundle",
+  "schema_version": "1.0",
+  "bundle_id": "IMPORT_BUNDLE_009_FULL_COGNATE_PATTERN_MARKERS",
+  "created_at": "2026-05-14T09:29:56Z",
+  "title_tr": "Tam Türkçe-Bulgarca Ses/Harf Dönüşümü Marker Paketi",
+  "commit_message": "Apply full cognate pattern marker engine",
+  "files": [
+    {
+      "path": "public/data/rules/cognate-pattern-rules.full.json",
+      "operation": "upsert",
+      "content": {
+        "schema_version": "1.0",
+        "rule_file_id": "cognate-pattern-rules-full",
+        "title_tr": "Türkçe-Bulgarca Ortak Kelime Dönüşüm Kuralları — Tam Marker Seti",
+        "source_refs": [
+          {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "pages": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule_id": "cog-tr-sh-to-bg-sh",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki Ş sesi Bulgarcada Ш olur",
+            "short_tr": "Ş → Ш",
+            "description_tr": "Ş sesi Bulgarcada genellikle ш ile yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ş",
+              "target_fragment": "Ш",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ş",
+              "highlight_target": "Ш",
+              "style": "pill"
+            },
+            "tooltip_tr": "Ş sesi Bulgarcada genellikle ш ile yazılır.",
+            "panel_tr": {
+              "summary": "Ş sesi Bulgarcada genellikle ш ile yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "DUŞ",
+                "bg": "душ",
+                "rule_marks": {
+                  "source_text": "DUŞ",
+                  "source_fragment": "Ş",
+                  "target_text": "душ",
+                  "target_fragment": "Ш"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "AFİŞ",
+                "bg": "афиш",
+                "rule_marks": {
+                  "source_text": "AFİŞ",
+                  "source_fragment": "Ş",
+                  "target_text": "афиш",
+                  "target_fragment": "Ш"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "MARŞ",
+                "bg": "марш",
+                "rule_marks": {
+                  "source_text": "MARŞ",
+                  "source_fragment": "Ş",
+                  "target_text": "марш",
+                  "target_fragment": "Ш"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "GİŞE",
+                "bg": "гише",
+                "rule_marks": {
+                  "source_text": "GİŞE",
+                  "source_fragment": "Ş",
+                  "target_text": "гише",
+                  "target_fragment": "Ш"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  1
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-j-to-bg-zh",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki J sesi Bulgarcada Ж olur",
+            "short_tr": "J → Ж",
+            "description_tr": "J sesi Bulgarcada ж ile yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "J",
+              "target_fragment": "Ж",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "J",
+              "highlight_target": "Ж",
+              "style": "pill"
+            },
+            "tooltip_tr": "J sesi Bulgarcada ж ile yazılır.",
+            "panel_tr": {
+              "summary": "J sesi Bulgarcada ж ile yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "AJUR",
+                "bg": "ажур",
+                "rule_marks": {
+                  "source_text": "AJUR",
+                  "source_fragment": "J",
+                  "target_text": "ажур",
+                  "target_fragment": "Ж"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "STAJ",
+                "bg": "стаж",
+                "rule_marks": {
+                  "source_text": "STAJ",
+                  "source_fragment": "J",
+                  "target_text": "стаж",
+                  "target_fragment": "Ж"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "MASAJ",
+                "bg": "масаж",
+                "rule_marks": {
+                  "source_text": "MASAJ",
+                  "source_fragment": "J",
+                  "target_text": "масаж",
+                  "target_fragment": "Ж"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "KOLEJ",
+                "bg": "колеж",
+                "rule_marks": {
+                  "source_text": "KOLEJ",
+                  "source_fragment": "J",
+                  "target_text": "колеж",
+                  "target_fragment": "Ж"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "DRENAJ",
+                "bg": "дренаж",
+                "rule_marks": {
+                  "source_text": "DRENAJ",
+                  "source_fragment": "J",
+                  "target_text": "дренаж",
+                  "target_fragment": "Ж"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  1
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-ji-to-bg-giya",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki -Jİ sonu Bulgarcada -ГИ(Я) olur",
+            "short_tr": "Jİ → ГИ(Я)",
+            "description_tr": "Türkçedeki -ji/-ji̇ bitişi birçok ortak kelimede Bulgarcada -гия olur.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Jİ",
+              "target_fragment": "ГИ(Я)",
+              "match_type": "suffix_or_fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Jİ",
+              "highlight_target": "ГИ(Я)",
+              "style": "pill"
+            },
+            "tooltip_tr": "Türkçedeki -ji/-ji̇ bitişi birçok ortak kelimede Bulgarcada -гия olur.",
+            "panel_tr": {
+              "summary": "Türkçedeki -ji/-ji̇ bitişi birçok ortak kelimede Bulgarcada -гия olur.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "MORFOLOJİ",
+                "bg": "морфология",
+                "rule_marks": {
+                  "source_text": "MORFOLOJİ",
+                  "source_fragment": "Jİ",
+                  "target_text": "морфология",
+                  "target_fragment": "гия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "STRATEJİ",
+                "bg": "стратегия",
+                "rule_marks": {
+                  "source_text": "STRATEJİ",
+                  "source_fragment": "Jİ",
+                  "target_text": "стратегия",
+                  "target_fragment": "гия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "ZOOLOJİ",
+                "bg": "зоология",
+                "rule_marks": {
+                  "source_text": "ZOOLOJİ",
+                  "source_fragment": "Jİ",
+                  "target_text": "зоология",
+                  "target_fragment": "гия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "ENERJİ",
+                "bg": "енергия",
+                "rule_marks": {
+                  "source_text": "ENERJİ",
+                  "source_fragment": "Jİ",
+                  "target_text": "енергия",
+                  "target_fragment": "гия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  1
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-c-cedilla-to-bg-ch",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki Ç sesi Bulgarcada Ч olur",
+            "short_tr": "Ç → Ч",
+            "description_tr": "Ç sesi bazı ortak kelimelerde Bulgarcada ч ile yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ç",
+              "target_fragment": "Ч",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ç",
+              "highlight_target": "Ч",
+              "style": "pill"
+            },
+            "tooltip_tr": "Ç sesi bazı ortak kelimelerde Bulgarcada ч ile yazılır.",
+            "panel_tr": {
+              "summary": "Ç sesi bazı ortak kelimelerde Bulgarcada ч ile yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "SANDVİÇ",
+                "bg": "сандвич",
+                "rule_marks": {
+                  "source_text": "SANDVİÇ",
+                  "source_fragment": "Ç",
+                  "target_text": "сандвич",
+                  "target_fragment": "Ч"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "KAUÇUK",
+                "bg": "каучук",
+                "rule_marks": {
+                  "source_text": "KAUÇUK",
+                  "source_fragment": "Ç",
+                  "target_text": "каучук",
+                  "target_fragment": "Ч"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "ÇAR",
+                "bg": "чар",
+                "rule_marks": {
+                  "source_text": "ÇAR",
+                  "source_fragment": "Ç",
+                  "target_text": "чар",
+                  "target_fragment": "Ч"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "ÇORAP",
+                "bg": "чорап",
+                "rule_marks": {
+                  "source_text": "ÇORAP",
+                  "source_fragment": "Ç",
+                  "target_text": "чорап",
+                  "target_fragment": "Ч"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "ÇORBA",
+                "bg": "чорба",
+                "rule_marks": {
+                  "source_text": "ÇORBA",
+                  "source_fragment": "Ç",
+                  "target_text": "чорба",
+                  "target_fragment": "Ч"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  1
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-c-cedilla-to-bg-ts",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki Ç sesi bazı kelimelerde Ц olur",
+            "short_tr": "Ç → Ц",
+            "description_tr": "Bazı ortak kelimelerde Türkçedeki ç karşılığı Bulgarcada ц olabilir.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ç",
+              "target_fragment": "Ц",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ç",
+              "highlight_target": "Ц",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki ç karşılığı Bulgarcada ц olabilir.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Türkçedeki ç karşılığı Bulgarcada ц olabilir.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "DOÇENT",
+                "bg": "доцент",
+                "rule_marks": {
+                  "source_text": "DOÇENT",
+                  "source_fragment": "Ç",
+                  "target_text": "доцент",
+                  "target_fragment": "Ц"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  1
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-o-umlaut-to-bg-yo",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki Ö bazı kelimelerde ЬО olur",
+            "short_tr": "Ö → ЬО",
+            "description_tr": "Ö sesi bazı kelimelerde yumuşatma işaretiyle ьо biçiminde yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ö",
+              "target_fragment": "ЬО",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ö",
+              "highlight_target": "ЬО",
+              "style": "pill"
+            },
+            "tooltip_tr": "Ö sesi bazı kelimelerde yumuşatma işaretiyle ьо biçiminde yazılır.",
+            "panel_tr": {
+              "summary": "Ö sesi bazı kelimelerde yumuşatma işaretiyle ьо biçiminde yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "GÖN",
+                "bg": "гьон",
+                "rule_marks": {
+                  "source_text": "GÖN",
+                  "source_fragment": "Ö",
+                  "target_text": "гьон",
+                  "target_fragment": "ьо"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "DUBLÖR",
+                "bg": "дубльор",
+                "rule_marks": {
+                  "source_text": "DUBLÖR",
+                  "source_fragment": "Ö",
+                  "target_text": "дубльор",
+                  "target_fragment": "ьо"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              },
+              {
+                "tr": "KLASÖR",
+                "bg": "класьор",
+                "rule_marks": {
+                  "source_text": "KLASÖR",
+                  "source_fragment": "Ö",
+                  "target_text": "класьор",
+                  "target_fragment": "ьо"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 1
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  1
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-o-umlaut-to-bg-o",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki Ö çoğu ortak kelimede О olur",
+            "short_tr": "Ö → О",
+            "description_tr": "Ö sesi birçok ortak kelimede Bulgarcada o sesine yaklaşır ve о ile yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ö",
+              "target_fragment": "О",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ö",
+              "highlight_target": "О",
+              "style": "pill"
+            },
+            "tooltip_tr": "Ö sesi birçok ortak kelimede Bulgarcada o sesine yaklaşır ve о ile yazılır.",
+            "panel_tr": {
+              "summary": "Ö sesi birçok ortak kelimede Bulgarcada o sesine yaklaşır ve о ile yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "DEKORATÖR",
+                "bg": "декоратор",
+                "rule_marks": {
+                  "source_text": "DEKORATÖR",
+                  "source_fragment": "Ö",
+                  "target_text": "декоратор",
+                  "target_fragment": "О"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "DİREKTÖR",
+                "bg": "директор",
+                "rule_marks": {
+                  "source_text": "DİREKTÖR",
+                  "source_fragment": "Ö",
+                  "target_text": "директор",
+                  "target_fragment": "О"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "TERÖR",
+                "bg": "терор",
+                "rule_marks": {
+                  "source_text": "TERÖR",
+                  "source_fragment": "Ö",
+                  "target_text": "терор",
+                  "target_fragment": "О"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "PROFESÖR",
+                "bg": "професор",
+                "rule_marks": {
+                  "source_text": "PROFESÖR",
+                  "source_fragment": "Ö",
+                  "target_text": "професор",
+                  "target_fragment": "О"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "MONİTÖR",
+                "bg": "монитор",
+                "rule_marks": {
+                  "source_text": "MONİTÖR",
+                  "source_fragment": "Ö",
+                  "target_text": "монитор",
+                  "target_fragment": "О"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  2
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-o-umlaut-to-bg-ev",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki NÖRO- bazı kelimelerde НЕВРО- olur",
+            "short_tr": "Ö → ЕВ",
+            "description_tr": "Nöro- kökü Bulgarcada çoğu zaman невро- biçiminde görünür.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ö",
+              "target_fragment": "ЕВ",
+              "match_type": "pattern_contextual"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ö",
+              "highlight_target": "ЕВ",
+              "style": "pill"
+            },
+            "tooltip_tr": "Nöro- kökü Bulgarcada çoğu zaman невро- biçiminde görünür.",
+            "panel_tr": {
+              "summary": "Nöro- kökü Bulgarcada çoğu zaman невро- biçiminde görünür.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "NÖROLOG",
+                "bg": "невролог",
+                "rule_marks": {
+                  "source_text": "NÖROLOG",
+                  "source_fragment": "NÖRO",
+                  "target_text": "невролог",
+                  "target_fragment": "невро"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "NÖROLOJİ",
+                "bg": "неврология",
+                "rule_marks": {
+                  "source_text": "NÖROLOJİ",
+                  "source_fragment": "NÖRO",
+                  "target_text": "неврология",
+                  "target_fragment": "невро"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  2
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-o-umlaut-to-bg-eu",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki NÖ- bazı kelimelerde НЕУ- olur",
+            "short_tr": "Ö → ЕУ",
+            "description_tr": "Bazı bilimsel kelimelerde ö sesi Bulgarcada еу dizisiyle karşılanabilir.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ö",
+              "target_fragment": "ЕУ",
+              "match_type": "pattern_contextual"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ö",
+              "highlight_target": "ЕУ",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı bilimsel kelimelerde ö sesi Bulgarcada еу dizisiyle karşılanabilir.",
+            "panel_tr": {
+              "summary": "Bazı bilimsel kelimelerde ö sesi Bulgarcada еу dizisiyle karşılanabilir.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "NÖTRON",
+                "bg": "неутрон",
+                "rule_marks": {
+                  "source_text": "NÖTRON",
+                  "source_fragment": "NÖ",
+                  "target_text": "неутрон",
+                  "target_fragment": "неу"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  2
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-u-umlaut-to-bg-yu",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki Ü bazı kelimelerde Ю olur",
+            "short_tr": "Ü → Ю",
+            "description_tr": "Ü sesi bazı ortak kelimelerde Bulgarcada ю ile yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ü",
+              "target_fragment": "Ю",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ü",
+              "highlight_target": "Ю",
+              "style": "pill"
+            },
+            "tooltip_tr": "Ü sesi bazı ortak kelimelerde Bulgarcada ю ile yazılır.",
+            "panel_tr": {
+              "summary": "Ü sesi bazı ortak kelimelerde Bulgarcada ю ile yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "MENÜ",
+                "bg": "меню",
+                "rule_marks": {
+                  "source_text": "MENÜ",
+                  "source_fragment": "Ü",
+                  "target_text": "меню",
+                  "target_fragment": "Ю"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "BÜROKRAT",
+                "bg": "бюрократ",
+                "rule_marks": {
+                  "source_text": "BÜROKRAT",
+                  "source_fragment": "Ü",
+                  "target_text": "бюрократ",
+                  "target_fragment": "Ю"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "BÜST",
+                "bg": "бюст",
+                "rule_marks": {
+                  "source_text": "BÜST",
+                  "source_fragment": "Ü",
+                  "target_text": "бюст",
+                  "target_fragment": "Ю"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "BÜRO",
+                "bg": "бюро",
+                "rule_marks": {
+                  "source_text": "BÜRO",
+                  "source_fragment": "Ü",
+                  "target_text": "бюро",
+                  "target_fragment": "Ю"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  2
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-iy-to-bg-y",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki İY/Y geçişi Bulgarcada Й olur",
+            "short_tr": "(İ)Y → Й",
+            "description_tr": "Türkçedeki y/iy sesi Bulgarcada й ile gösterilebilir.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "(İ)Y",
+              "target_fragment": "Й",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "(İ)Y",
+              "highlight_target": "Й",
+              "style": "pill"
+            },
+            "tooltip_tr": "Türkçedeki y/iy sesi Bulgarcada й ile gösterilebilir.",
+            "panel_tr": {
+              "summary": "Türkçedeki y/iy sesi Bulgarcada й ile gösterilebilir.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "İYON",
+                "bg": "йон",
+                "rule_marks": {
+                  "source_text": "İYON",
+                  "source_fragment": "İY",
+                  "target_text": "йон",
+                  "target_fragment": "й"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "GAYDA",
+                "bg": "гайда",
+                "rule_marks": {
+                  "source_text": "GAYDA",
+                  "source_fragment": "Y",
+                  "target_text": "гайда",
+                  "target_fragment": "й"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "KALAY",
+                "bg": "калай",
+                "rule_marks": {
+                  "source_text": "KALAY",
+                  "source_fragment": "Y",
+                  "target_text": "калай",
+                  "target_fragment": "й"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "HEY",
+                "bg": "хей",
+                "rule_marks": {
+                  "source_text": "HEY",
+                  "source_fragment": "Y",
+                  "target_text": "хей",
+                  "target_fragment": "й"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "VOLEYBOL",
+                "bg": "волейбол",
+                "rule_marks": {
+                  "source_text": "VOLEYBOL",
+                  "source_fragment": "Y",
+                  "target_text": "волейбол",
+                  "target_fragment": "й"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  2
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-ya-to-bg-iya",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki YA bitişi bazı kelimelerde ИЯ olur",
+            "short_tr": "YA → ИЯ",
+            "description_tr": "Türkçedeki -ya bitişi birçok ülke/terim adında Bulgarcada -ия olur.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "YA",
+              "target_fragment": "ИЯ",
+              "match_type": "suffix_or_fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "YA",
+              "highlight_target": "ИЯ",
+              "style": "pill"
+            },
+            "tooltip_tr": "Türkçedeki -ya bitişi birçok ülke/terim adında Bulgarcada -ия olur.",
+            "panel_tr": {
+              "summary": "Türkçedeki -ya bitişi birçok ülke/terim adında Bulgarcada -ия olur.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "İTALYA",
+                "bg": "Италия",
+                "rule_marks": {
+                  "source_text": "İTALYA",
+                  "source_fragment": "YA",
+                  "target_text": "Италия",
+                  "target_fragment": "ия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "KAMELYA",
+                "bg": "Камелия",
+                "rule_marks": {
+                  "source_text": "KAMELYA",
+                  "source_fragment": "YA",
+                  "target_text": "Камелия",
+                  "target_fragment": "ия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "LİTOGRAFYA",
+                "bg": "литография",
+                "rule_marks": {
+                  "source_text": "LİTOGRAFYA",
+                  "source_fragment": "YA",
+                  "target_text": "литография",
+                  "target_fragment": "ия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "ASYA",
+                "bg": "Азия",
+                "rule_marks": {
+                  "source_text": "ASYA",
+                  "source_fragment": "YA",
+                  "target_text": "Азия",
+                  "target_fragment": "ия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "İSPANYA",
+                "bg": "Испания",
+                "rule_marks": {
+                  "source_text": "İSPANYA",
+                  "source_fragment": "YA",
+                  "target_text": "Испания",
+                  "target_fragment": "ия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "MALARYA",
+                "bg": "малария",
+                "rule_marks": {
+                  "source_text": "MALARYA",
+                  "source_fragment": "YA",
+                  "target_text": "малария",
+                  "target_fragment": "ия"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  2
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-ya-to-bg-ya-letter",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki YA bazı kelimelerde Я olur",
+            "short_tr": "YA → Я",
+            "description_tr": "Bazı kelimelerde Türkçedeki ya sesi Bulgarcada tek harf я ile yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "YA",
+              "target_fragment": "Я",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "YA",
+              "highlight_target": "Я",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı kelimelerde Türkçedeki ya sesi Bulgarcada tek harf я ile yazılır.",
+            "panel_tr": {
+              "summary": "Bazı kelimelerde Türkçedeki ya sesi Bulgarcada tek harf я ile yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "AMONYAK",
+                "bg": "амоняк",
+                "rule_marks": {
+                  "source_text": "AMONYAK",
+                  "source_fragment": "YA",
+                  "target_text": "амоняк",
+                  "target_fragment": "Я"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "BOYA",
+                "bg": "боя",
+                "rule_marks": {
+                  "source_text": "BOYA",
+                  "source_fragment": "YA",
+                  "target_text": "боя",
+                  "target_fragment": "Я"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "MAYA",
+                "bg": "мая",
+                "rule_marks": {
+                  "source_text": "MAYA",
+                  "source_fragment": "YA",
+                  "target_text": "мая",
+                  "target_fragment": "Я"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "SOYA",
+                "bg": "соя",
+                "rule_marks": {
+                  "source_text": "SOYA",
+                  "source_fragment": "YA",
+                  "target_text": "соя",
+                  "target_fragment": "Я"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  2
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-iya-to-bg-ia",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki İYA/YА dizisi Bulgarcada ИА olur",
+            "short_tr": "(İ)YA → ИА",
+            "description_tr": "İya/ya dizisi bazı ortak kelimelerde Bulgarcada иа olarak yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "(İ)YA",
+              "target_fragment": "ИА",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "(İ)YA",
+              "highlight_target": "ИА",
+              "style": "pill"
+            },
+            "tooltip_tr": "İya/ya dizisi bazı ortak kelimelerde Bulgarcada иа olarak yazılır.",
+            "panel_tr": {
+              "summary": "İya/ya dizisi bazı ortak kelimelerde Bulgarcada иа olarak yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "RADYATÖR",
+                "bg": "радиатор",
+                "rule_marks": {
+                  "source_text": "RADYATÖR",
+                  "source_fragment": "YA",
+                  "target_text": "радиатор",
+                  "target_fragment": "иа"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "DİYALEKT",
+                "bg": "диалект",
+                "rule_marks": {
+                  "source_text": "DİYALEKT",
+                  "source_fragment": "İYA",
+                  "target_text": "диалект",
+                  "target_fragment": "иа"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "DİYALOG",
+                "bg": "диалог",
+                "rule_marks": {
+                  "source_text": "DİYALOG",
+                  "source_fragment": "İYA",
+                  "target_text": "диалог",
+                  "target_fragment": "иа"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "GLADYATÖR",
+                "bg": "гладиатор",
+                "rule_marks": {
+                  "source_text": "GLADYATÖR",
+                  "source_fragment": "YA",
+                  "target_text": "гладиатор",
+                  "target_fragment": "иа"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              },
+              {
+                "tr": "DİYAGNOZ",
+                "bg": "диагноза",
+                "rule_marks": {
+                  "source_text": "DİYAGNOZ",
+                  "source_fragment": "İYA",
+                  "target_text": "диагноза",
+                  "target_fragment": "иа"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 2
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  2
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-iye-to-bg-ie",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki İYE/YЕ dizisi Bulgarcada ИЕ olur",
+            "short_tr": "(İ)YE → ИЕ",
+            "description_tr": "İye/ye dizisi Bulgarcada ие olarak yazılabilir.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "(İ)YE",
+              "target_fragment": "ИЕ",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "(İ)YE",
+              "highlight_target": "ИЕ",
+              "style": "pill"
+            },
+            "tooltip_tr": "İye/ye dizisi Bulgarcada ие olarak yazılabilir.",
+            "panel_tr": {
+              "summary": "İye/ye dizisi Bulgarcada ие olarak yazılabilir.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "DİYEZ",
+                "bg": "диез",
+                "rule_marks": {
+                  "source_text": "DİYEZ",
+                  "source_fragment": "İYE",
+                  "target_text": "диез",
+                  "target_fragment": "ие"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "ATELYE",
+                "bg": "ателие",
+                "rule_marks": {
+                  "source_text": "ATELYE",
+                  "source_fragment": "YE",
+                  "target_text": "ателие",
+                  "target_fragment": "ие"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  3
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-iyo-to-bg-io",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki İYO/YO dizisi Bulgarcada ИО olur",
+            "short_tr": "(İ)YO → ИО",
+            "description_tr": "İyo/yo dizisi birçok ortak kelimede Bulgarcada ио olarak yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "(İ)YO",
+              "target_fragment": "ИО",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "(İ)YO",
+              "highlight_target": "ИО",
+              "style": "pill"
+            },
+            "tooltip_tr": "İyo/yo dizisi birçok ortak kelimede Bulgarcada ио olarak yazılır.",
+            "panel_tr": {
+              "summary": "İyo/yo dizisi birçok ortak kelimede Bulgarcada ио olarak yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "KAMYON",
+                "bg": "камион",
+                "rule_marks": {
+                  "source_text": "KAMYON",
+                  "source_fragment": "YO",
+                  "target_text": "камион",
+                  "target_fragment": "ио"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "RADYO",
+                "bg": "радио",
+                "rule_marks": {
+                  "source_text": "RADYO",
+                  "source_fragment": "YO",
+                  "target_text": "радио",
+                  "target_fragment": "ио"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "BİYOLOG",
+                "bg": "биолог",
+                "rule_marks": {
+                  "source_text": "BİYOLOG",
+                  "source_fragment": "İYO",
+                  "target_text": "биолог",
+                  "target_fragment": "ио"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "BİYOLOJİ",
+                "bg": "биология",
+                "rule_marks": {
+                  "source_text": "BİYOLOJİ",
+                  "source_fragment": "İYO",
+                  "target_text": "биология",
+                  "target_fragment": "ио"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "MİLYON",
+                "bg": "милион",
+                "rule_marks": {
+                  "source_text": "MİLYON",
+                  "source_fragment": "YON",
+                  "target_text": "милион",
+                  "target_fragment": "ион"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  3
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-iyu-to-bg-iu",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki İYU/YU dizisi Bulgarcada ИУ olur",
+            "short_tr": "(İ)YU → ИУ",
+            "description_tr": "Yu/yum dizisi bazı kelimelerde Bulgarcada иу/иум olarak yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "(İ)YU",
+              "target_fragment": "ИУ",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "(İ)YU",
+              "highlight_target": "ИУ",
+              "style": "pill"
+            },
+            "tooltip_tr": "Yu/yum dizisi bazı kelimelerde Bulgarcada иу/иум olarak yazılır.",
+            "panel_tr": {
+              "summary": "Yu/yum dizisi bazı kelimelerde Bulgarcada иу/иум olarak yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "AKVARYUM",
+                "bg": "аквариум",
+                "rule_marks": {
+                  "source_text": "AKVARYUM",
+                  "source_fragment": "YUM",
+                  "target_text": "аквариум",
+                  "target_fragment": "иум"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  3
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-syon-to-bg-tsiya",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki -SYON/-Sİ kelime parçaları Bulgarcada Ц/ЦИЯ olur",
+            "short_tr": "S(YON) → Ц(ИЯ)",
+            "description_tr": "Türkçedeki s/syon dizileri birçok ortak kelimede Bulgarcada ц/ция biçimine döner.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "S(YON)",
+              "target_fragment": "Ц(ИЯ)",
+              "match_type": "suffix_or_fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "S(YON)",
+              "highlight_target": "Ц(ИЯ)",
+              "style": "pill"
+            },
+            "tooltip_tr": "Türkçedeki s/syon dizileri birçok ortak kelimede Bulgarcada ц/ция biçimine döner.",
+            "panel_tr": {
+              "summary": "Türkçedeki s/syon dizileri birçok ortak kelimede Bulgarcada ц/ция biçimine döner.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "SİGARA",
+                "bg": "цигара",
+                "rule_marks": {
+                  "source_text": "SİGARA",
+                  "source_fragment": "Sİ",
+                  "target_text": "цигара",
+                  "target_fragment": "ци"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "DESİGRAM",
+                "bg": "дециграм",
+                "rule_marks": {
+                  "source_text": "DESİGRAM",
+                  "source_fragment": "Sİ",
+                  "target_text": "дециграм",
+                  "target_fragment": "ци"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "DEKORASYON",
+                "bg": "декорация",
+                "rule_marks": {
+                  "source_text": "DEKORASYON",
+                  "source_fragment": "SYON",
+                  "target_text": "декорация",
+                  "target_fragment": "ция"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "DELEGASYON",
+                "bg": "делегация",
+                "rule_marks": {
+                  "source_text": "DELEGASYON",
+                  "source_fragment": "SYON",
+                  "target_text": "делегация",
+                  "target_fragment": "ция"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "AKASYA",
+                "bg": "акация",
+                "rule_marks": {
+                  "source_text": "AKASYA",
+                  "source_fragment": "SYA",
+                  "target_text": "акация",
+                  "target_fragment": "ция"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "NAVİGASYON",
+                "bg": "навигация",
+                "rule_marks": {
+                  "source_text": "NAVİGASYON",
+                  "source_fragment": "SYON",
+                  "target_text": "навигация",
+                  "target_fragment": "ция"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "SİRK",
+                "bg": "цирк",
+                "rule_marks": {
+                  "source_text": "SİRK",
+                  "source_fragment": "Sİ",
+                  "target_text": "цирк",
+                  "target_fragment": "ци"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  3
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-u-umlaut-to-bg-u",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki Ü bazı kelimelerde У olur",
+            "short_tr": "Ü → У",
+            "description_tr": "Ü sesi bazı ortak kelimelerde Bulgarcada у ile karşılanır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ü",
+              "target_fragment": "У",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ü",
+              "highlight_target": "У",
+              "style": "pill"
+            },
+            "tooltip_tr": "Ü sesi bazı ortak kelimelerde Bulgarcada у ile karşılanır.",
+            "panel_tr": {
+              "summary": "Ü sesi bazı ortak kelimelerde Bulgarcada у ile karşılanır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "AKÜMÜLATÖR",
+                "bg": "акумулатор",
+                "rule_marks": {
+                  "source_text": "AKÜMÜLATÖR",
+                  "source_fragment": "Ü",
+                  "target_text": "акумулатор",
+                  "target_fragment": "У"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "ALBÜM",
+                "bg": "албум",
+                "rule_marks": {
+                  "source_text": "ALBÜM",
+                  "source_fragment": "Ü",
+                  "target_text": "албум",
+                  "target_fragment": "У"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "DÜET",
+                "bg": "дует",
+                "rule_marks": {
+                  "source_text": "DÜET",
+                  "source_fragment": "Ü",
+                  "target_text": "дует",
+                  "target_fragment": "У"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "HÜMANİST",
+                "bg": "хуманист",
+                "rule_marks": {
+                  "source_text": "HÜMANİST",
+                  "source_fragment": "Ü",
+                  "target_text": "хуманист",
+                  "target_fragment": "У"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "LÜKS",
+                "bg": "лукс",
+                "rule_marks": {
+                  "source_text": "LÜKS",
+                  "source_fragment": "Ü",
+                  "target_text": "лукс",
+                  "target_fragment": "У"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "KAKTÜS",
+                "bg": "кактус",
+                "rule_marks": {
+                  "source_text": "KAKTÜS",
+                  "source_fragment": "Ü",
+                  "target_text": "кактус",
+                  "target_fragment": "У"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "KAPSÜL",
+                "bg": "капсула",
+                "rule_marks": {
+                  "source_text": "KAPSÜL",
+                  "source_fragment": "Ü",
+                  "target_text": "капсула",
+                  "target_fragment": "У"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  3
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-t-to-bg-d",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki T bazı kelimelerde Д olur",
+            "short_tr": "T → Д",
+            "description_tr": "Bazı kelimelerde Türkçedeki t sesi Bulgarcada d/д ile eşleşir.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "T",
+              "target_fragment": "Д",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "T",
+              "highlight_target": "Д",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı kelimelerde Türkçedeki t sesi Bulgarcada d/д ile eşleşir.",
+            "panel_tr": {
+              "summary": "Bazı kelimelerde Türkçedeki t sesi Bulgarcada d/д ile eşleşir.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "ELEKTROT",
+                "bg": "електрод",
+                "rule_marks": {
+                  "source_text": "ELEKTROT",
+                  "source_fragment": "T",
+                  "target_text": "електрод",
+                  "target_fragment": "д"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "İYOT",
+                "bg": "йод",
+                "rule_marks": {
+                  "source_text": "İYOT",
+                  "source_fragment": "T",
+                  "target_text": "йод",
+                  "target_fragment": "д"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "LİMONATA",
+                "bg": "лимонада",
+                "rule_marks": {
+                  "source_text": "LİMONATA",
+                  "source_fragment": "T",
+                  "target_text": "лимонада",
+                  "target_fragment": "д"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  3
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-f-to-bg-v",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki F bazı kelimelerde В olur",
+            "short_tr": "F → В",
+            "description_tr": "Bazı ortak kelimelerde Türkçedeki f Bulgarcada в ile karşılanır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "F",
+              "target_fragment": "В",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "F",
+              "highlight_target": "В",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki f Bulgarcada в ile karşılanır.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Türkçedeki f Bulgarcada в ile karşılanır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "APERİTİF",
+                "bg": "аперитив",
+                "rule_marks": {
+                  "source_text": "APERİTİF",
+                  "source_fragment": "F",
+                  "target_text": "аперитив",
+                  "target_fragment": "в"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "KOLEKTİF",
+                "bg": "колектив",
+                "rule_marks": {
+                  "source_text": "KOLEKTİF",
+                  "source_fragment": "F",
+                  "target_text": "колектив",
+                  "target_fragment": "в"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              },
+              {
+                "tr": "LOKOMOTİF",
+                "bg": "локомотив",
+                "rule_marks": {
+                  "source_text": "LOKOMOTİF",
+                  "source_fragment": "F",
+                  "target_text": "локомотив",
+                  "target_fragment": "в"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 3
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  3
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-k-to-bg-h",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki K bazı kelimelerde Х olur",
+            "short_tr": "K → Х",
+            "description_tr": "Bazı ortak kelimelerde Türkçedeki k Bulgarcada х ile yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "K",
+              "target_fragment": "Х",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "K",
+              "highlight_target": "Х",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki k Bulgarcada х ile yazılır.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Türkçedeki k Bulgarcada х ile yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "ALMANAK",
+                "bg": "алманах",
+                "rule_marks": {
+                  "source_text": "ALMANAK",
+                  "source_fragment": "K",
+                  "target_text": "алманах",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "BİYOKİMYA",
+                "bg": "биохимия",
+                "rule_marks": {
+                  "source_text": "BİYOKİMYA",
+                  "source_fragment": "K",
+                  "target_text": "биохимия",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "KAOS",
+                "bg": "хаос",
+                "rule_marks": {
+                  "source_text": "KAOS",
+                  "source_fragment": "K",
+                  "target_text": "хаос",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "KİMYA",
+                "bg": "химия",
+                "rule_marks": {
+                  "source_text": "KİMYA",
+                  "source_fragment": "K",
+                  "target_text": "химия",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "KLOR",
+                "bg": "хлор",
+                "rule_marks": {
+                  "source_text": "KLOR",
+                  "source_fragment": "K",
+                  "target_text": "хлор",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-sh-to-bg-h",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki Ş bazı kelimelerde Х olur",
+            "short_tr": "Ş → Х",
+            "description_tr": "Bazı köken ortak kelimelerde Türkçedeki ş Bulgarcada х olarak görünür.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Ş",
+              "target_fragment": "Х",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Ş",
+              "highlight_target": "Х",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı köken ortak kelimelerde Türkçedeki ş Bulgarcada х olarak görünür.",
+            "panel_tr": {
+              "summary": "Bazı köken ortak kelimelerde Türkçedeki ş Bulgarcada х olarak görünür.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "ANARŞİ",
+                "bg": "анархия",
+                "rule_marks": {
+                  "source_text": "ANARŞİ",
+                  "source_fragment": "Ş",
+                  "target_text": "анархия",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "MONARŞİ",
+                "bg": "монархия",
+                "rule_marks": {
+                  "source_text": "MONARŞİ",
+                  "source_fragment": "Ş",
+                  "target_text": "монархия",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-y-to-bg-h",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki Y bazı kelimelerde Х olur",
+            "short_tr": "Y → Х",
+            "description_tr": "Bazı bilimsel kelimelerde Türkçe y karşılığı Bulgarcada х olabilir.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "Y",
+              "target_fragment": "Х",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "Y",
+              "highlight_target": "Х",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı bilimsel kelimelerde Türkçe y karşılığı Bulgarcada х olabilir.",
+            "panel_tr": {
+              "summary": "Bazı bilimsel kelimelerde Türkçe y karşılığı Bulgarcada х olabilir.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "PSİKOLOJİ",
+                "bg": "психология",
+                "rule_marks": {
+                  "source_text": "PSİKOLOJİ",
+                  "source_fragment": "Y",
+                  "target_text": "психология",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-null-to-bg-h",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçede olmayan bazı başlangıç Х sesleri Bulgarcada eklenir",
+            "short_tr": "∅ → Х",
+            "description_tr": "Bazı ortak kelimelerde Bulgarcada başta х eklenir.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "∅",
+              "target_fragment": "Х",
+              "match_type": "insertion"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "∅",
+              "highlight_target": "Х",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Bulgarcada başta х eklenir.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Bulgarcada başta х eklenir.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "AMBAR",
+                "bg": "хамбар",
+                "rule_marks": {
+                  "source_text": "AMBAR",
+                  "source_fragment": "∅",
+                  "target_text": "хамбар",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "OTEL",
+                "bg": "хотел",
+                "rule_marks": {
+                  "source_text": "OTEL",
+                  "source_fragment": "∅",
+                  "target_text": "хотел",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "ASTAR",
+                "bg": "хастар",
+                "rule_marks": {
+                  "source_text": "ASTAR",
+                  "source_fragment": "∅",
+                  "target_text": "хастар",
+                  "target_fragment": "х"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-h-to-bg-f",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki H bazı kelimelerde Ф olur",
+            "short_tr": "H → Ф",
+            "description_tr": "Bazı ortak kelimelerde Türkçedeki h Bulgarcada ф olur.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "H",
+              "target_fragment": "Ф",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "H",
+              "highlight_target": "Ф",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki h Bulgarcada ф olur.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Türkçedeki h Bulgarcada ф olur.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "HURMA",
+                "bg": "фурма",
+                "rule_marks": {
+                  "source_text": "HURMA",
+                  "source_fragment": "H",
+                  "target_text": "фурма",
+                  "target_fragment": "ф"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-izm-to-bg-izum",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki -İZM Bulgarcada -ИЗЪМ olur",
+            "short_tr": "-İZM → -ИЗЪМ",
+            "description_tr": "-izm ile biten kelimeler Bulgarcada çoğunlukla -изъм ile yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "-İZM",
+              "target_fragment": "-ИЗЪМ",
+              "match_type": "suffix"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "-İZM",
+              "highlight_target": "-ИЗЪМ",
+              "style": "pill"
+            },
+            "tooltip_tr": "-izm ile biten kelimeler Bulgarcada çoğunlukla -изъм ile yazılır.",
+            "panel_tr": {
+              "summary": "-izm ile biten kelimeler Bulgarcada çoğunlukla -изъм ile yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "ATEİZM",
+                "bg": "атеизъм",
+                "rule_marks": {
+                  "source_text": "ATEİZM",
+                  "source_fragment": "İZM",
+                  "target_text": "атеизъм",
+                  "target_fragment": "изъм"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "BUDİZM",
+                "bg": "будизъм",
+                "rule_marks": {
+                  "source_text": "BUDİZM",
+                  "source_fragment": "İZM",
+                  "target_text": "будизъм",
+                  "target_fragment": "изъм"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "HÜMANİZM",
+                "bg": "хуманизъм",
+                "rule_marks": {
+                  "source_text": "HÜMANİZM",
+                  "source_fragment": "İZM",
+                  "target_text": "хуманизъм",
+                  "target_fragment": "изъм"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "DARVİNİZM",
+                "bg": "дарвинизъм",
+                "rule_marks": {
+                  "source_text": "DARVİNİZM",
+                  "source_fragment": "İZM",
+                  "target_text": "дарвинизъм",
+                  "target_fragment": "изъм"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "EGOİZM",
+                "bg": "егоизъм",
+                "rule_marks": {
+                  "source_text": "EGOİZM",
+                  "source_fragment": "İZM",
+                  "target_text": "егоизъм",
+                  "target_fragment": "изъм"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-i-to-bg-hard-a",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki I bazı kelimelerde Ъ olur",
+            "short_tr": "I → Ъ",
+            "description_tr": "Türkçedeki ı/i/e/o gibi bazı sesler Bulgarcada ъ ile karşılanabilir; bu kural örnek bazlı çalışmalıdır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "I",
+              "target_fragment": "Ъ",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "I",
+              "highlight_target": "Ъ",
+              "style": "pill"
+            },
+            "tooltip_tr": "Türkçedeki ı/i/e/o gibi bazı sesler Bulgarcada ъ ile karşılanabilir; bu kural örnek bazlı çalışmalıdır.",
+            "panel_tr": {
+              "summary": "Türkçedeki ı/i/e/o gibi bazı sesler Bulgarcada ъ ile karşılanabilir; bu kural örnek bazlı çalışmalıdır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "KATIR",
+                "bg": "катър",
+                "rule_marks": {
+                  "source_text": "KATIR",
+                  "source_fragment": "I",
+                  "target_text": "катър",
+                  "target_fragment": "ъ"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "KADASTRO",
+                "bg": "кадастър",
+                "rule_marks": {
+                  "source_text": "KADASTRO",
+                  "source_fragment": "O",
+                  "target_text": "кадастър",
+                  "target_fragment": "ъ"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "KİLOMETRE",
+                "bg": "километър",
+                "rule_marks": {
+                  "source_text": "KİLOMETRE",
+                  "source_fragment": "E",
+                  "target_text": "километър",
+                  "target_fragment": "ъ"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              },
+              {
+                "tr": "KRONOMETRE",
+                "bg": "хронометър",
+                "rule_marks": {
+                  "source_text": "KRONOMETRE",
+                  "source_fragment": "E",
+                  "target_text": "хронометър",
+                  "target_fragment": "ъ"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-i-to-bg-u",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki I bazı kelimelerde У olur",
+            "short_tr": "I → У",
+            "description_tr": "Bazı kelimelerde ı sesi Bulgarcada у ile görünür.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "I",
+              "target_fragment": "У",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "I",
+              "highlight_target": "У",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı kelimelerde ı sesi Bulgarcada у ile görünür.",
+            "panel_tr": {
+              "summary": "Bazı kelimelerde ı sesi Bulgarcada у ile görünür.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "FIRKETE",
+                "bg": "фуркет",
+                "rule_marks": {
+                  "source_text": "FIRKETE",
+                  "source_fragment": "I",
+                  "target_text": "фуркет",
+                  "target_fragment": "у"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-i-to-bg-null",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki bazı I/İ sesleri Bulgarcada düşebilir",
+            "short_tr": "I/İ → ∅",
+            "description_tr": "Bazı ortak kelimelerde Türkçedeki ara ses Bulgarca biçimde düşebilir.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "I/İ",
+              "target_fragment": "∅",
+              "match_type": "deletion"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "I/İ",
+              "highlight_target": "∅",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki ara ses Bulgarca biçimde düşebilir.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Türkçedeki ara ses Bulgarca biçimde düşebilir.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "PIRANGA",
+                "bg": "пранга",
+                "rule_marks": {
+                  "source_text": "PIRANGA",
+                  "source_fragment": "I",
+                  "target_text": "пранга",
+                  "target_fragment": "∅"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-i-to-bg-a",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki I bazı kelimelerde А olur",
+            "short_tr": "I → А",
+            "description_tr": "Bazı kelimelerde Türkçedeki ı sesi Bulgarcada а olarak karşılanabilir.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "I",
+              "target_fragment": "А",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "I",
+              "highlight_target": "А",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı kelimelerde Türkçedeki ı sesi Bulgarcada а olarak karşılanabilir.",
+            "panel_tr": {
+              "summary": "Bazı kelimelerde Türkçedeki ı sesi Bulgarcada а olarak karşılanabilir.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "IRGAT",
+                "bg": "аргат",
+                "rule_marks": {
+                  "source_text": "IRGAT",
+                  "source_fragment": "I",
+                  "target_text": "аргат",
+                  "target_fragment": "а"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 4
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  4
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-oto-to-bg-avto",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki OTO- Bulgarcada АВТО- olur",
+            "short_tr": "OTO- → АВТО-",
+            "description_tr": "Türkçedeki oto- kökü Bulgarcada авто- olarak yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "OTO-",
+              "target_fragment": "АВТО-",
+              "match_type": "prefix"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "OTO-",
+              "highlight_target": "АВТО-",
+              "style": "pill"
+            },
+            "tooltip_tr": "Türkçedeki oto- kökü Bulgarcada авто- olarak yazılır.",
+            "panel_tr": {
+              "summary": "Türkçedeki oto- kökü Bulgarcada авто- olarak yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "OTOBİYOGRAFİ",
+                "bg": "автобиография",
+                "rule_marks": {
+                  "source_text": "OTOBİYOGRAFİ",
+                  "source_fragment": "OTO",
+                  "target_text": "автобиография",
+                  "target_fragment": "авто"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              },
+              {
+                "tr": "OTOBÜS",
+                "bg": "автобус",
+                "rule_marks": {
+                  "source_text": "OTOBÜS",
+                  "source_fragment": "OTO",
+                  "target_text": "автобус",
+                  "target_fragment": "авто"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              },
+              {
+                "tr": "OTOMAT",
+                "bg": "автомат",
+                "rule_marks": {
+                  "source_text": "OTOMAT",
+                  "source_fragment": "OTO",
+                  "target_text": "автомат",
+                  "target_fragment": "авто"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              },
+              {
+                "tr": "OTOMATİK",
+                "bg": "автоматик",
+                "rule_marks": {
+                  "source_text": "OTOMATİK",
+                  "source_fragment": "OTO",
+                  "target_text": "автоматик",
+                  "target_fragment": "авто"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  5
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-e-to-bg-a",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki E bazı kelimelerde А olur",
+            "short_tr": "E → А",
+            "description_tr": "Bazı ortak kelimelerde Türkçedeki e Bulgarcada а olarak görünür.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "E",
+              "target_fragment": "А",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "E",
+              "highlight_target": "А",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki e Bulgarcada а olarak görünür.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Türkçedeki e Bulgarcada а olarak görünür.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "ATEŞE",
+                "bg": "аташе",
+                "rule_marks": {
+                  "source_text": "ATEŞE",
+                  "source_fragment": "E",
+                  "target_text": "аташе",
+                  "target_fragment": "а"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              },
+              {
+                "tr": "HELVA",
+                "bg": "халва",
+                "rule_marks": {
+                  "source_text": "HELVA",
+                  "source_fragment": "E",
+                  "target_text": "халва",
+                  "target_fragment": "а"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              },
+              {
+                "tr": "TARİFE",
+                "bg": "тарифа",
+                "rule_marks": {
+                  "source_text": "TARİFE",
+                  "source_fragment": "E",
+                  "target_text": "тарифа",
+                  "target_fragment": "а"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  5
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-a-to-bg-e",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki A bazı kelimelerde Е olur",
+            "short_tr": "A → Е",
+            "description_tr": "Bazı ortak kelimelerde Türkçedeki a Bulgarcada е ile yazılır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "A",
+              "target_fragment": "Е",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "A",
+              "highlight_target": "Е",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki a Bulgarcada е ile yazılır.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Türkçedeki a Bulgarcada е ile yazılır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "İMPARATOR",
+                "bg": "император",
+                "rule_marks": {
+                  "source_text": "İMPARATOR",
+                  "source_fragment": "A",
+                  "target_text": "император",
+                  "target_fragment": "е"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              },
+              {
+                "tr": "DİZANTERİ",
+                "bg": "дизентерия",
+                "rule_marks": {
+                  "source_text": "DİZANTERİ",
+                  "source_fragment": "A",
+                  "target_text": "дизентерия",
+                  "target_fragment": "е"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  5
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-a-to-bg-o",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki A bazı kelimelerde О olur",
+            "short_tr": "A → О",
+            "description_tr": "Bazı ortak kelimelerde Türkçedeki a/o uyarlaması görülebilir; bu kural örnek bazlı çalışmalıdır.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "A",
+              "target_fragment": "О",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "A",
+              "highlight_target": "О",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki a/o uyarlaması görülebilir; bu kural örnek bazlı çalışmalıdır.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Türkçedeki a/o uyarlaması görülebilir; bu kural örnek bazlı çalışmalıdır.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "DOSYA",
+                "bg": "досие",
+                "rule_marks": {
+                  "source_text": "DOSYA",
+                  "source_fragment": "A",
+                  "target_text": "досие",
+                  "target_fragment": "о"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  5
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          },
+          {
+            "rule_id": "cog-tr-p-to-bg-b",
+            "category": "phonetic_mapping",
+            "title_tr": "Türkçedeki P bazı kelimelerde Б olur",
+            "short_tr": "P → Б",
+            "description_tr": "Bazı ortak kelimelerde Türkçedeki p Bulgarcada б olur.",
+            "pattern": {
+              "source_lang": "tr",
+              "target_lang": "bg",
+              "source_fragment": "P",
+              "target_fragment": "Б",
+              "match_type": "fragment"
+            },
+            "marker": {
+              "color_key": "blue",
+              "highlight_source": "P",
+              "highlight_target": "Б",
+              "style": "pill"
+            },
+            "tooltip_tr": "Bazı ortak kelimelerde Türkçedeki p Bulgarcada б olur.",
+            "panel_tr": {
+              "summary": "Bazı ortak kelimelerde Türkçedeki p Bulgarcada б olur.",
+              "details": [
+                "Bu kural otomatik marker motorunda kullanılmalıdır.",
+                "Sözlük tablosu, ders örnekleri ve sağ panel aynı rule_id üzerinden marker göstermelidir.",
+                "Her örnekte Türkçe taraftaki dönüşen parça ve Bulgarca taraftaki karşılığı ayrı ayrı vurgulanmalıdır."
+              ],
+              "practice_hint": "Sözlükte bu parçayı taşıyan ortak kelimeleri arayıp dönüşen bölümü marker ile takip et."
+            },
+            "examples": [
+              {
+                "tr": "MİKROP",
+                "bg": "микроб",
+                "rule_marks": {
+                  "source_text": "MİKROP",
+                  "source_fragment": "P",
+                  "target_text": "микроб",
+                  "target_fragment": "б"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              },
+              {
+                "tr": "PORSUK",
+                "bg": "борсук",
+                "rule_marks": {
+                  "source_text": "PORSUK",
+                  "source_fragment": "P",
+                  "target_text": "борсук",
+                  "target_fragment": "б"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              },
+              {
+                "tr": "POTİNKA",
+                "bg": "ботинка",
+                "rule_marks": {
+                  "source_text": "POTİNKA",
+                  "source_fragment": "P",
+                  "target_text": "ботинка",
+                  "target_fragment": "б"
+                },
+                "source": {
+                  "source_id": "src-zup-tan-k-bg-ders",
+                  "page": 5
+                }
+              }
+            ],
+            "source_refs": [
+              {
+                "source_id": "src-zup-tan-k-bg-ders",
+                "pages": [
+                  5
+                ]
+              }
+            ],
+            "review_status": "source_extracted_verified"
+          }
+        ]
+      }
+    },
+    {
+      "path": "public/data/lessons/lesson-002-ses-harf-donusumleri.json",
+      "operation": "upsert",
+      "content": {
+        "schema_version": "1.1",
+        "lesson_id": "lesson-002-ses-harf-donusumleri",
+        "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri: Tam Kural Seti",
+        "level": "A1",
+        "order": 2,
+        "estimated_minutes": 90,
+        "tags": [
+          "ortak_kelime",
+          "ses_donusumu",
+          "marker",
+          "kirill"
+        ],
+        "source_refs": [
+          {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "pages": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ],
+        "learning_goals": [
+          "Türkçe-Bulgarca ortak kelimelerde sık görülen ses/harf dönüşümlerini tanımak",
+          "Kelimelerde dönüşen parçaları marker ile takip etmek",
+          "Sözlük aramasında kural temelli bağlantıları görmek"
+        ],
+        "sections": [
+          {
+            "section_id": "lesson-002-sec-full-pattern-rules",
+            "type": "conversion_rule_grid",
+            "title_tr": "Kaynak PDF’deki tüm dönüşüm kuralları",
+            "body_tr": "Bu bölüm, zup-tan-k BG Ders PDF’indeki tüm ses/harf dönüşüm başlıklarını marker motoruna bağlar. Her örnekte Türkçe taraftaki parça ve Bulgarca karşılığı birlikte işaretlenmelidir.",
+            "rule_file_ref": "/data/rules/cognate-pattern-rules.full.json",
+            "rule_ids": [
+              "cog-tr-sh-to-bg-sh",
+              "cog-tr-j-to-bg-zh",
+              "cog-tr-ji-to-bg-giya",
+              "cog-tr-c-cedilla-to-bg-ch",
+              "cog-tr-c-cedilla-to-bg-ts",
+              "cog-tr-o-umlaut-to-bg-yo",
+              "cog-tr-o-umlaut-to-bg-o",
+              "cog-tr-o-umlaut-to-bg-ev",
+              "cog-tr-o-umlaut-to-bg-eu",
+              "cog-tr-u-umlaut-to-bg-yu",
+              "cog-tr-iy-to-bg-y",
+              "cog-tr-ya-to-bg-iya",
+              "cog-tr-ya-to-bg-ya-letter",
+              "cog-tr-iya-to-bg-ia",
+              "cog-tr-iye-to-bg-ie",
+              "cog-tr-iyo-to-bg-io",
+              "cog-tr-iyu-to-bg-iu",
+              "cog-tr-syon-to-bg-tsiya",
+              "cog-tr-u-umlaut-to-bg-u",
+              "cog-tr-t-to-bg-d",
+              "cog-tr-f-to-bg-v",
+              "cog-tr-k-to-bg-h",
+              "cog-tr-sh-to-bg-h",
+              "cog-tr-y-to-bg-h",
+              "cog-tr-null-to-bg-h",
+              "cog-tr-h-to-bg-f",
+              "cog-tr-izm-to-bg-izum",
+              "cog-tr-i-to-bg-hard-a",
+              "cog-tr-i-to-bg-u",
+              "cog-tr-i-to-bg-null",
+              "cog-tr-i-to-bg-a",
+              "cog-tr-oto-to-bg-avto",
+              "cog-tr-e-to-bg-a",
+              "cog-tr-a-to-bg-e",
+              "cog-tr-a-to-bg-o",
+              "cog-tr-p-to-bg-b"
+            ]
+          }
+        ],
+        "linked_rules": [
+          "cog-tr-sh-to-bg-sh",
+          "cog-tr-j-to-bg-zh",
+          "cog-tr-ji-to-bg-giya",
+          "cog-tr-c-cedilla-to-bg-ch",
+          "cog-tr-c-cedilla-to-bg-ts",
+          "cog-tr-o-umlaut-to-bg-yo",
+          "cog-tr-o-umlaut-to-bg-o",
+          "cog-tr-o-umlaut-to-bg-ev",
+          "cog-tr-o-umlaut-to-bg-eu",
+          "cog-tr-u-umlaut-to-bg-yu",
+          "cog-tr-iy-to-bg-y",
+          "cog-tr-ya-to-bg-iya",
+          "cog-tr-ya-to-bg-ya-letter",
+          "cog-tr-iya-to-bg-ia",
+          "cog-tr-iye-to-bg-ie",
+          "cog-tr-iyo-to-bg-io",
+          "cog-tr-iyu-to-bg-iu",
+          "cog-tr-syon-to-bg-tsiya",
+          "cog-tr-u-umlaut-to-bg-u",
+          "cog-tr-t-to-bg-d",
+          "cog-tr-f-to-bg-v",
+          "cog-tr-k-to-bg-h",
+          "cog-tr-sh-to-bg-h",
+          "cog-tr-y-to-bg-h",
+          "cog-tr-null-to-bg-h",
+          "cog-tr-h-to-bg-f",
+          "cog-tr-izm-to-bg-izum",
+          "cog-tr-i-to-bg-hard-a",
+          "cog-tr-i-to-bg-u",
+          "cog-tr-i-to-bg-null",
+          "cog-tr-i-to-bg-a",
+          "cog-tr-oto-to-bg-avto",
+          "cog-tr-e-to-bg-a",
+          "cog-tr-a-to-bg-e",
+          "cog-tr-a-to-bg-o",
+          "cog-tr-p-to-bg-b"
+        ]
+      }
+    },
+    {
+      "path": "public/data/exercises/exercises-002-full-pattern-rules.json",
+      "operation": "upsert",
+      "content": {
+        "schema_version": "1.0",
+        "lesson_id": "lesson-002-ses-harf-donusumleri",
+        "exercise_set_id": "exercises-002-full-pattern-rules",
+        "title_tr": "Ses ve Harf Dönüşümleri — Tam Kural Pekiştirme",
+        "items": [
+          {
+            "exercise_id": "ex-002-full-001",
+            "type": "choose_rule",
+            "prompt_tr": "KAMELYA → Камелия örneğinde hangi dönüşüm markerlanmalıdır?",
+            "choices": [
+              "YA → ИЯ",
+              "Ş → Ш",
+              "P → Б",
+              "OTO → АВТО"
+            ],
+            "answer": "YA → ИЯ",
+            "explanation_tr": "KAMELYA kelimesindeki YA parçası Bulgarcada ия olur.",
+            "rule_refs": [
+              "cog-tr-ya-to-bg-iya"
+            ]
+          },
+          {
+            "exercise_id": "ex-002-full-002",
+            "type": "choose_rule",
+            "prompt_tr": "DEKORASYON → декорация örneğinde hangi dönüşüm var?",
+            "choices": [
+              "S(YON) → Ц(ИЯ)",
+              "J → Ж",
+              "Ü → Ю",
+              "P → Б"
+            ],
+            "answer": "S(YON) → Ц(ИЯ)",
+            "explanation_tr": "Türkçedeki -syon parçası Bulgarcada -ция olur.",
+            "rule_refs": [
+              "cog-tr-syon-to-bg-tsiya"
+            ]
+          },
+          {
+            "exercise_id": "ex-002-full-003",
+            "type": "choose_rule",
+            "prompt_tr": "OTOBÜS → автобус örneğinde hangi başlangıç dönüşümü var?",
+            "choices": [
+              "OTO- → АВТО-",
+              "YA → Я",
+              "Ç → Ч",
+              "Ö → О"
+            ],
+            "answer": "OTO- → АВТО-",
+            "explanation_tr": "Türkçedeki oto- kökü Bulgarcada авто- olarak yazılır.",
+            "rule_refs": [
+              "cog-tr-oto-to-bg-avto"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs/patches/PATCH_009_FULL_COGNATE_PATTERN_MARKERS.md",
+      "operation": "upsert",
+      "content": "# PATCH 009 — Full Cognate Pattern Marker Engine\n\n## Amaç\n\nÖnceki patch yalnızca `YA → ИЯ` örneğini görünür hale getirdi. Bu yeterli değildir. `zup-tan-k BG Ders.pdf` içinde onlarca Türkçe-Bulgarca ses/harf dönüşümü vardır ve sözlük/sağ panel/lesson renderer bu kuralların tamamını markerlayabilmelidir.\n\n## Eklenecek dosyalar\n\n- `public/data/rules/cognate-pattern-rules.full.json`\n- `public/data/lessons/lesson-002-ses-harf-donusumleri.json`\n- `public/data/exercises/exercises-002-full-pattern-rules.json`\n\n## Ana kural\n\nSözlükte, ders kartlarında, sağ panelde ve arama sonucunda bir Türkçe-Bulgarca ortak kelime çifti varsa uygulama sadece `rule_refs` alanına bakmayacak. Aşağıdaki sırayla marker arayacak:\n\n1. `entry.rule_marks`\n2. `entry.rule_refs`\n3. `rule.examples[].rule_marks`\n4. `cognate-pattern-rules.full.json` içindeki pattern-based / paired comparison eşleme\n5. fallback: marker yok\n\n## Desteklenmesi gereken kurallar\n\nBu patch içindeki JSON dosyasında 36 kural vardır. Örnek gruplar:\n\n- Ş → Ш\n- J → Ж\n- -Jİ → -ГИ(Я)\n- Ç → Ч / Ц\n- Ö → ЬО / О / ЕВ / ЕУ\n- Ü → Ю / У\n- (İ)Y → Й\n- YA → ИЯ / Я\n- (İ)YA → ИА\n- (İ)YE → ИЕ\n- (İ)YO → ИО\n- (İ)YU → ИУ\n- S(YON) → Ц(ИЯ)\n- T → Д\n- F → В\n- K/Ş/Y/∅/H → Х/Ф grubu\n- -İZM → -ИЗЪМ\n- I/İ varyantları\n- OTO- → АВТО-\n- E/A/P varyantları\n\n## Marker örneği\n\n`KAMELYA → Камелия`\n\nEkranda:\n\n- Türkçe tarafta `YA` markerlanmalı.\n- Bulgarca tarafta `ия` markerlanmalı.\n- Hover: `YA → ИЯ: -ya bitişi Bulgarcada -ия olur.`\n- Tıklama: sağ panelde kural detayı açılmalı.\n\n`DEKORASYON → декорация`\n\n- Türkçe tarafta `SYON`\n- Bulgarca tarafta `ция`\n\n`OTOBÜS → автобус`\n\n- Türkçe tarafta `OTO`\n- Bulgarca tarafta `авто`\n\n## Kod değişikliği\n\n### 1. Rule loader\n\n`cognate-pattern-rules.full.json` manifest/rule_files içine eklenmeli ve global rule registry'ye yüklenmeli.\n\n### 2. Marker engine\n\n`src/engine/ruleMatcher.ts` veya mevcut marker motorunda yeni fonksiyon:\n\n```ts\nfindCognatePatternMatches(pair: { tr: string; bg: string }, rules: Rule[]): RuleMatch[]\n```\n\nBu fonksiyon:\n- exact example eşleşmesini öncelemeli\n- sonra pattern eşlemesine geçmeli\n- aynı kelimede birden fazla kural varsa hepsini döndürmeli\n- çakışan aralıklar için explicit `rule_marks` öncelikli olmalı\n\n### 3. LearningText / WordTable\n\nSözlük satırı render edilirken:\n\n```tsx\n<LearningText bg={entry.bg} tr={entry.tr} ruleRefs={entry.rule_refs} ruleMarks={computedMatches} />\n```\n\n### 4. Sağ panel\n\nKelime detay panelinde:\n- `Uygulanan kurallar` bölümü gösterilmeli\n- her rule chip tıklanabilir olmalı\n- chip tıklanınca RuleDetail paneli açılmalı\n\n### 5. Lesson 002\n\n`conversion_rule_grid` section tipi `rule_file_ref` üzerinden tüm kuralları okuyup gruplu göstermeli.\n\n## Test\n\n- KAMELYA → Камелия: YA/ия marker görünmeli\n- MORFOLOJİ → морфология: Jİ/гия marker görünmeli\n- DEKORASYON → декорация: SYON/ция marker görünmeli\n- OTOBÜS → автобус: OTO/авто marker görünmeli\n- ATEİZM → атеизъм: İZM/изъм marker görünmeli\n- MİKROP → микроб: P/б marker görünmeli\n- NÖROLOG → невролог: NÖRO/невро marker görünmeli\n- Marker kapalı/sade/güçlü modları tüm örneklere uygulanmalı\n- npm run build hatasız çalışmalı\n\n## Commit mesajı\n\nApply full cognate pattern marker engine\n"
+    }
+  ],
+  "patches": [
+    {
+      "target_path": "public/data/manifest.json",
+      "operation": "merge_rule_files",
+      "data": [
+        "/data/rules/cognate-pattern-rules.full.json"
+      ]
+    },
+    {
+      "target_path": "public/data/manifest.json",
+      "operation": "upsert_lesson",
+      "data": {
+        "lesson_id": "lesson-002-ses-harf-donusumleri",
+        "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri: Tam Kural Seti",
+        "level": "A1",
+        "order": 2,
+        "path": "/data/lessons/lesson-002-ses-harf-donusumleri.json",
+        "exercise_path": "/data/exercises/exercises-002-full-pattern-rules.json",
+        "status": "active"
+      }
+    }
+  ],
+  "notes_tr": [
+    "Bu paket önceki YA-only marker yaklaşımını genişletir.",
+    "Toplam 36 dönüşüm kuralı içerir.",
+    "Kod tarafında PATCH_009 dosyasındaki marker engine değişiklikleri uygulanmalıdır."
+  ]
+}

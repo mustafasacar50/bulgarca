@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "entries": [
+    { "word": "Адрес", "bg": "Твоят адрес нов ли е?", "tr": "Senin adresin yeni mi?", "analysis": "Адрес eril bir kelimedir." },
+    { "word": "Адрес", "bg": "Трябва ми твоят адрес за доставката.", "tr": "Teslimat için senin adresin lazım.", "analysis": "Трябва mi (Bana lazım) kalıbı ile kullanım." },
+    { "word": "Автомобил", "bg": "Моят автомобил е в сервиза.", "tr": "Benim otomobilim serviste.", "analysis": "Автомобил kelimesi teknik bir terimdir, günlük dilde 'кола' da denir." },
+    { "word": "Автомобил", "bg": "Този автомобил е много скъп.", "tr": "Bu otomobil çok pahalı.", "analysis": "Скъп (pahalı) sıfatı ile eril uyum." },
+    { "word": "Банка", "bg": "Банката е затворена в събота.", "tr": "Banka cumartesi günü kapalıdır.", "analysis": "Банката (belirli dişil) formu." },
+    { "word": "Банка", "bg": "Къде е най-близката банка?", "tr": "En yakın banka nerede?", "analysis": "Най-близката (en yakın) üstünlük derecesi." },
+    { "word": "Бира", "bg": "Искате ли една студена бира?", "tr": "Soğuk bir bira ister misiniz?", "analysis": "Бира dişil olduğu için 'една' kullanılır." },
+    { "word": "Бира", "bg": "Тази бира е много добра.", "tr": "Bu bira çok iyi.", "analysis": "Тази (bu - dişil) işaret zamiri." },
+    { "word": "Хотел", "bg": "Резервирах стая в хотела.", "tr": "Otelde bir oda ayırttım.", "analysis": "В хотела (otelde) - belirli eril son eki -а." },
+    { "word": "Хотел", "bg": "Нашият хотел е близо до плажа.", "tr": "Bizim otelimiz plaja yakın.", "analysis": "Нашият (bizim - belirli eril) iyelik eki." },
+    { "word": "Студент", "bg": "Той е отличен студент в университета.", "tr": "O, üniversitede başarılı bir öğrencidir.", "analysis": "Студент (eril öğrenci)." },
+    { "word": "Студент", "bg": "Много студенти учат в библиотеката.", "tr": "Birçok öğrenci kütüphanede ders çalışıyor.", "analysis": "Студенти (çoğul form)." },
+    { "word": "Кафе", "bg": "Пия кафе със захар.", "tr": "Şekerli kahve içiyorum.", "analysis": "Кафе (nötr - sreden rod)." },
+    { "word": "Кафе", "bg": "Едно кафе, моля!", "tr": "Bir kahve, lütfen!", "analysis": "Едно (bir - nötr) sayı sıfatı." },
+    { "word": "Телефон", "bg": "Моят телефон не работи.", "tr": "Benim telefonum çalışmıyor.", "analysis": "Работи (çalışmak/işlemek) fiili." },
+    { "word": "Телефон", "bg": "Вдигни телефона, моля!", "tr": "Telefona bak/aç lütfen!", "analysis": "Вдигни (kaldır/aç) emir kipi." },
+    { "word": "Интернет", "bg": "Имате ли интернет в стаята?", "tr": "Odada internet var mı?", "analysis": "Имате ли (var mı - siz formu)." },
+    { "word": "Биология", "bg": "Биологията е любимият ми предмет.", "tr": "Biyoloji en sevdiğim derstir.", "analysis": "Любимият (en sevilen/favori)." },
+    { "word": "Център", "bg": "Живея в центъра на София.", "tr": "Sofya'nın merkezinde yaşıyorum.", "analysis": "В центъра (merkezde) - belirli eril hali." },
+    { "word": "Център", "bg": "Къде е градският център?", "tr": "Şehir merkezi nerede?", "analysis": "Градският (şehir/kentsel)." },
+    { "word": "Факултет", "bg": "Уча в медицинския факултет.", "tr": "Tıp fakültesinde okuyorum.", "analysis": "Медицинския (tıbbi/tıp)." },
+    { "word": "Агробиология", "bg": "Тя изучава агробиология в София.", "tr": "O, Sofya'da agrobiyoloji okuyor.", "analysis": "Агробиология (tarımsal biyoloji) birleşik bir kelimedir." },
+    { "word": "Агробиология", "bg": "Новите методи в агробиологията са важни.", "tr": "Agrobiyolojideki yeni metotlar önemlidir.", "analysis": "Важни (önemli) sıfatı çoğul formdadır." },
+    { "word": "Академик", "bg": "Той е известен академик.", "tr": "O, tanınmış bir akademisyendir.", "analysis": "Академик eril bir unvandır." },
+    { "word": "Акrobat", "bg": "Акrobatът изпълнява опасни трикове.", "tr": "Akrobat tehlikeli numaralar yapıyor.", "analysis": "Акrobatът (belirli eril) özne halidir." },
+    { "word": "Чай", "bg": "Обичам чай с лимон.", "tr": "Limonlu çay severim.", "analysis": "С лимон (limon ile)." }
+  ]
+}
