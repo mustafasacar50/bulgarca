@@ -1,0 +1,399 @@
+{
+  "schema_version": "1.1",
+  "lesson_id": "lesson-008-ozel-sesler-heceleme-yazma",
+  "title_tr": "Özel Sesler, Heceleme ve Yazma Pratiği",
+  "subtitle_tr": "Ю, Я, Щ, Й; ьо; дж; дз; sesli harfe göre hece sayısı",
+  "level": "A1",
+  "order": 8,
+  "estimated_minutes": 45,
+  "tags": [
+    "fonetik",
+    "heceleme",
+    "yazma",
+    "ozel-sesler",
+    "alfabe"
+  ],
+  "source_refs": [
+    {
+      "source_id": "src-a1-v-1-2",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "note": "Alfabe tablosu, özel sesler, 45 ses/30 harf bilgisi, heceleme ve yazma pratiği."
+    },
+    {
+      "source_id": "src-alfabe-ilk-ders",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "note": "Görsel harf kartları ve örnek kelimeler."
+    }
+  ],
+  "learning_goals": [
+    "Bulgarcada bazı harflerin tek işaretle iki sese yakın değer taşıdığını fark etmek.",
+    "Ünlü harfleri tanıyıp hece sayısını sezmek.",
+    "Ь, ДЖ, ДЗ gibi başlangıçta karışabilecek yapıları ayırt etmek.",
+    "Ortak kelimelerle el yazısı alıştırması yapmak."
+  ],
+  "sections": [
+    {
+      "section_id": "l008-s01",
+      "type": "rule_cards",
+      "title_tr": "Özel harf ve sesler",
+      "rules": [
+        {
+          "rule_id": "alphabet-yu-two-sounds",
+          "title_tr": "Ю = й + у",
+          "summary_tr": "Ю harfi kelime içinde yu benzeri bir etki verir.",
+          "examples": [
+            {
+              "bg": "ютия",
+              "tr": "ütü"
+            },
+            {
+              "bg": "юрган",
+              "tr": "yorgan"
+            }
+          ]
+        },
+        {
+          "rule_id": "alphabet-ya-two-sounds",
+          "title_tr": "Я = й + а",
+          "summary_tr": "Я harfi ya benzeri bir etki verir.",
+          "examples": [
+            {
+              "bg": "ябълка",
+              "tr": "elma"
+            },
+            {
+              "bg": "ято",
+              "tr": "sürü / kuş sürüsü"
+            }
+          ]
+        },
+        {
+          "rule_id": "alphabet-sht-two-sounds",
+          "title_tr": "Щ = ш + т",
+          "summary_tr": "Щ genellikle sht gibi translitere edilir.",
+          "examples": [
+            {
+              "bg": "щъркел",
+              "tr": "leylek"
+            },
+            {
+              "bg": "щраус",
+              "tr": "devekuşu"
+            }
+          ]
+        },
+        {
+          "rule_id": "alphabet-y-short",
+          "title_tr": "Й — kısa y sesi",
+          "summary_tr": "Й yarı ünlü gibi davranır; Türkçedeki y sesine yakın düşünülebilir.",
+          "examples": [
+            {
+              "bg": "лейка",
+              "tr": "sulama kabı"
+            },
+            {
+              "bg": "йена",
+              "tr": "yen"
+            }
+          ]
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            2
+          ],
+          "note": "Особености при буквите Ю, Я, Щ, Й."
+        }
+      ]
+    },
+    {
+      "section_id": "l008-s02",
+      "type": "rule_cards",
+      "title_tr": "Ь, ьо, дж, дз ve ses benzeşmeleri",
+      "rules": [
+        {
+          "rule_id": "soft-sign-yo",
+          "title_tr": "Ьо / ьо",
+          "summary_tr": "Ь tek başına ses vermez; bazı kelimelerde önceki sesi yumuşatır ve йо/yo benzeri okuma oluşturabilir.",
+          "examples": [
+            {
+              "bg": "синьо",
+              "tr": "mavi"
+            },
+            {
+              "bg": "шофьор",
+              "tr": "şoför"
+            },
+            {
+              "bg": "миньор",
+              "tr": "madenci"
+            }
+          ]
+        },
+        {
+          "rule_id": "special-dzh",
+          "title_tr": "Дж = c / dzh sesi",
+          "summary_tr": "Дж Türkçedeki c sesine yakın duyulabilir.",
+          "examples": [
+            {
+              "bg": "суджук",
+              "tr": "sucuk"
+            },
+            {
+              "bg": "надживея",
+              "tr": "hayatta kalmak / daha uzun yaşamak"
+            }
+          ]
+        },
+        {
+          "rule_id": "special-dz",
+          "title_tr": "Дз = dz sesi",
+          "summary_tr": "Дз başlangıçta ayrı bir ses birleşimi olarak görülür.",
+          "examples": [
+            {
+              "bg": "дзън",
+              "tr": "çın / zil sesi"
+            },
+            {
+              "bg": "дзифт",
+              "tr": "zift"
+            }
+          ]
+        },
+        {
+          "rule_id": "voicing-sgrada",
+          "title_tr": "Сграда [зграда]",
+          "summary_tr": "Bazı birleşimlerde telaffuz yazımdan farklılaşabilir.",
+          "examples": [
+            {
+              "bg": "сграда",
+              "tr": "bina"
+            }
+          ]
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            2
+          ],
+          "note": "Особени звукове: Дж, Дз, Сграда [зграда]."
+        }
+      ]
+    },
+    {
+      "section_id": "l008-s03",
+      "type": "grammar_table",
+      "title_tr": "Ünlüler ve hece sayısı",
+      "description_tr": "Kaynağa göre bir kelimedeki sesli harf sayısı, hece sayısını belirlemede ana ipucudur. Başlangıçta kelimeleri ünlüleri bularak bölmek öğrenmeyi kolaylaştırır.",
+      "columns": [
+        "Kelime",
+        "Heceleme",
+        "Türkçe"
+      ],
+      "table_rows": [
+        {
+          "bg": "азбука",
+          "syllables": "аз-бу-ка",
+          "tr": "alfabe"
+        },
+        {
+          "bg": "България",
+          "syllables": "Бъл-га-ри-я",
+          "tr": "Bulgaristan"
+        },
+        {
+          "bg": "камион",
+          "syllables": "ка-ми-он",
+          "tr": "kamyon"
+        },
+        {
+          "bg": "радио",
+          "syllables": "ра-ди-о",
+          "tr": "radyo"
+        },
+        {
+          "bg": "фабрика",
+          "syllables": "фа-бри-ка",
+          "tr": "fabrika"
+        },
+        {
+          "bg": "университет",
+          "syllables": "у-ни-вер-си-тет",
+          "tr": "üniversite"
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            2
+          ],
+          "note": "Hece tanımı ve ünlü sayısının hece sayısını belirlemesi."
+        }
+      ]
+    },
+    {
+      "section_id": "l008-s04",
+      "type": "writing_practice",
+      "title_tr": "El yazısı pratiği: ortak kelimeleri iki kez yaz",
+      "description_tr": "Kaynakta Kiril yazısını pekiştirmek için benzer/ortak kelimelerin en az iki kez yazılması önerilir. Uygulamada bu bölüm yazma/izleme modülüne bağlanabilir.",
+      "items": [
+        {
+          "tr": "DUŞ",
+          "bg": "душ",
+          "repeat": 2,
+          "rule_refs": [
+            "tr-sh-to-bg-sh"
+          ]
+        },
+        {
+          "tr": "MASAJ",
+          "bg": "масаж",
+          "repeat": 2,
+          "rule_refs": [
+            "tr-j-to-bg-zh"
+          ]
+        },
+        {
+          "tr": "STRATEJİ",
+          "bg": "стратегия",
+          "repeat": 2,
+          "rule_refs": [
+            "tr-ji-to-bg-giya"
+          ]
+        },
+        {
+          "tr": "ÇORBA",
+          "bg": "чорба",
+          "repeat": 2,
+          "rule_refs": [
+            "tr-ch-to-bg-ch"
+          ]
+        },
+        {
+          "tr": "MENÜ",
+          "bg": "меню",
+          "repeat": 2,
+          "rule_refs": [
+            "tr-u-umlaut-to-bg-yu"
+          ]
+        },
+        {
+          "tr": "OTOBÜS",
+          "bg": "автобус",
+          "repeat": 2,
+          "rule_refs": [
+            "tr-oto-to-bg-avto"
+          ]
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            3
+          ],
+          "note": "Benzer kelimelerle el yazısı çalışması."
+        }
+      ]
+    },
+    {
+      "section_id": "l008-s05",
+      "type": "visual_card_reference",
+      "title_tr": "Görsel harf kartı kaynakları",
+      "description_tr": "alfabe-ilk ders PDF’i görsel kart modülü için kullanılacak; şu aşamada metin/kelime havuzu olarak bağlanır.",
+      "cards": [
+        {
+          "letter": "С",
+          "bg": "слънчоглед",
+          "tr": "ayçiçeği",
+          "source_page": 1
+        },
+        {
+          "letter": "Ю",
+          "bg": "ютия",
+          "tr": "ütü",
+          "source_page": 2
+        },
+        {
+          "letter": "П",
+          "bg": "пеперуда",
+          "tr": "kelebek",
+          "source_page": 2
+        },
+        {
+          "letter": "Ъ",
+          "bg": "триъгълник",
+          "tr": "üçgen",
+          "source_page": 3
+        },
+        {
+          "letter": "Л",
+          "bg": "лимон",
+          "tr": "limon",
+          "source_page": 3
+        },
+        {
+          "letter": "К",
+          "bg": "кошница",
+          "tr": "sepet",
+          "source_page": 4
+        },
+        {
+          "letter": "Ч",
+          "bg": "чаша",
+          "tr": "fincan / bardak",
+          "source_page": 10
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-alfabe-ilk-ders",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            10
+          ],
+          "note": "Görsellerle harf örnekleri."
+        }
+      ]
+    }
+  ],
+  "linked_rules": [
+    "alphabet-yu-two-sounds",
+    "alphabet-ya-two-sounds",
+    "alphabet-sht-two-sounds",
+    "alphabet-y-short",
+    "soft-sign-yo",
+    "special-dzh",
+    "special-dz",
+    "voicing-sgrada"
+  ],
+  "linked_entries": [
+    "word-bg-yutiya",
+    "word-bg-yabulka",
+    "word-bg-sgrada",
+    "word-bg-sinyo"
+  ]
+}
