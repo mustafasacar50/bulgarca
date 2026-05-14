@@ -14,8 +14,11 @@ export interface LessonBlock {
   type: 'explanation' | 'vocabulary' | 'image' | 'alphabet_grid' | 'rule_cards' | 'alphabet_grid_v2' | 'rule_cards_v2' | 'plural_rule_cards' | 'word_table_v2' | 'phrase_cards' | 'dialog_cards' | 'grammar_panel' | 'study_tip' | 'text' | 'alphabet_cards' | 'conversion_rule_grid' | 'plural_rule_grid' | 'dialogue' | 'grammar_table' | 'word_table' | 'exercise_preview' | 'phrases' | 'glossary_table';
   text_tr?: string;
   title_tr?: string;
+  description_tr?: string;
   items?: any[];
+  entries?: any[];
   rules?: any[];
+  rule_ids?: string[];
   imageUrl?: string;
 }
 

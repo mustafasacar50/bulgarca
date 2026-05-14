@@ -13,7 +13,10 @@ export function Lessons({ onSelectLesson }: LessonsProps) {
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/manifest.json`)
       .then(res => res.json())
-      .then(data => setLessons(data.lessons));
+      .then(data => {
+        const sorted = (data.lessons || []).sort((a: any, b: any) => (a.order || 0) - (b.order || 0));
+        setLessons(sorted);
+      });
   }, []);
 
   const filteredLessons = lessons.filter(l => 
@@ -54,7 +57,10 @@ export function Lessons({ onSelectLesson }: LessonsProps) {
               </div>
               <span className="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded uppercase tracking-wider">{lesson.level}</span>
             </div>
-            <h3 className="font-bold text-slate-800 mb-1">{lesson.title_tr}</h3>
+            <div className="flex items-baseline gap-2 mb-1">
+              <span className="text-[10px] font-black text-primary-500 uppercase tracking-tighter">DERS {lesson.order || '?'}</span>
+              <h3 className="font-bold text-slate-800">{lesson.title_tr}</h3>
+            </div>
             <p className="text-sm text-slate-500 line-clamp-2">{lesson.summary_tr || 'Bu ders için açıklama bulunmuyor.'}</p>
           </div>
         ))}

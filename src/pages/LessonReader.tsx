@@ -343,7 +343,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                       </div>
                     )}
 
-                    {block.type === 'glossary_table' && block.items && (
+                    {(block.type === 'glossary_table') && (block.items || block.entries) && (
                       <div className="space-y-4">
                         <div className="relative">
                           <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
@@ -356,6 +356,10 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                           />
                         </div>
 
+                        {block.description_tr && (
+                          <p className="text-sm text-slate-500 italic px-2">{block.description_tr}</p>
+                        )}
+
                         <div className="bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm overflow-x-auto">
                           <table className="w-full text-left border-collapse min-w-[600px]">
                             <thead>
@@ -367,7 +371,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                               </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-50">
-                              {(block.items || [])
+                              {(block.items || block.entries || [])
                                 .filter((item: any) => {
                                   const query = (blockSearch[bIdx] || '').toLowerCase();
                                   return !query || 
@@ -396,9 +400,9 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                                   </td>
                                   <td className="p-4">
                                     <div className="flex flex-wrap gap-1">
-                                      {item.markers?.map((m: any, idx: number) => (
+                                      {(item.markers || item.rules || []).map((m: any, idx: number) => (
                                         <span key={idx} className="text-[9px] font-bold px-1.5 py-0.5 bg-slate-100 text-slate-500 rounded uppercase">
-                                          {m.rule_id || m.type || 'Ek'}
+                                          {m.rule_id || m.type || m || 'Ek'}
                                         </span>
                                       ))}
                                       {item.gender && <span className="text-[9px] font-bold px-1.5 py-0.5 bg-indigo-50 text-indigo-500 rounded uppercase">{item.gender}</span>}
@@ -406,7 +410,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                                   </td>
                                   <td className="p-4 text-right">
                                     <span className="text-[10px] font-mono text-slate-300 group-hover:text-slate-500">
-                                      S.{item.source_page || '??'}
+                                      S.{item.source_page || item.source?.page || '??'}
                                     </span>
                                   </td>
                                 </tr>
