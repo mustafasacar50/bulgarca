@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, ChevronRight, CheckCircle2, Info, Trophy, Type, PenTool, CaseUpper, CaseLower, Eye, EyeOff, XCircle, MessageSquare, Table, Settings as SettingsIcon, Search, AlertCircle } from 'lucide-react';
-import { Lesson, VocabularyItem, LessonBlock } from '../types/lesson';
+import { ArrowLeft, ChevronRight, CheckCircle2, Info, Trophy, PenTool, Eye, MessageSquare, Settings as SettingsIcon, Search, AlertCircle } from 'lucide-react';
 import { Rule } from '../types/rule';
 import { RightInfoPanel } from '../components/RightInfoPanel';
 import { Modal } from '../components/Modal';
@@ -38,11 +37,11 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
         const lessonPath = (lessonMeta.path || lessonMeta.filePath).replace(/^\//, '');
         const [lessonRes, ...ruleResponses] = await Promise.all([
           fetch(`${import.meta.env.BASE_URL}${lessonPath}`).then(r => {
-            if (!r.ok) throw new Error(`Ders dosyası yüklenemedi: ${r.statusText}`);
+            if (!r.ok) throw new Error("Ders dosyasi yuklenemedi");
             return r;
           }),
           ...(manifest.rules || []).map((r: any) => fetch(`${import.meta.env.BASE_URL}${r.filePath.replace(/^\//, '')}`).then(res => {
-            if (!res.ok) throw new Error(`Kural dosyası yüklenemedi (${r.title}): ${res.statusText}`);
+            if (!res.ok) throw new Error("Kural dosyasi yuklenemedi");
             return res;
           }))
         ]);
@@ -73,28 +72,25 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
     setShowCompleteModal(true);
   };
 
-  // Helper to normalize Turkish strings for search
   const normalize = (text: string) => text.toLocaleLowerCase('tr-TR').trim();
 
-  // Unified renderer for blocks to handle different schemas
   const renderBlock = (block: any, bIdx: number) => {
-    const type = block.type;
+    const type = (block.type || "").toString().trim();
     const items = block.items || block.table_rows || block.rules || block.lines || block.entries || block.prompts || block.content_blocks || [];
     
-    // Search filter
     if (lessonSearch) {
       const q = normalize(lessonSearch);
       const matches = items.some((item: any) => {
-        const bg = (item.bg || item.letter || item.pattern || item.form || item.display || '').toString();
-        const tr = (item.tr || item.meaning_tr || item.explanation_tr || item.note_tr || item.title_tr || '').toString();
+        const bg = (item.bg || item.letter || item.pattern || item.form || item.display || "").toString();
+        const tr = (item.tr || item.meaning_tr || item.explanation_tr || item.note_tr || item.title_tr || "").toString();
         return normalize(bg).includes(q) || normalize(tr).includes(q);
       });
-      if (!matches && !normalize(block.title_tr || '').includes(q)) return null;
+      if (!matches && !normalize(block.title_tr || "").includes(q)) return null;
     }
 
     switch (type) {
-      case 'explanation':
-      case 'text':
+      case "explanation":
+      case "text":
         return (
           <div className="space-y-4">
             {block.text_tr && <p className="text-slate-600 leading-relaxed">{block.text_tr}</p>}
@@ -112,9 +108,9 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case 'alphabet_grid':
-      case 'alphabet_grid_v2':
-      case 'alphabet_cards':
+      case "alphabet_grid":
+      case "alphabet_grid_v2":
+      case "alphabet_cards":
         return (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {items.map((item: any, i: number) => {
@@ -141,9 +137,9 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case 'rule_cards':
-      case 'rule_cards_v2':
-      case 'conversion_rule_grid':
+      case "rule_cards":
+      case "rule_cards_v2":
+      case "conversion_rule_grid":
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {items.map((ruleRef: any, i: number) => {
@@ -183,9 +179,9 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case 'grammar_table':
-      case 'word_table':
-      case 'word_table_v2':
+      case "grammar_table":
+      case "word_table":
+      case "word_table_v2":
         return (
           <div className="bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm">
             <table className="w-full text-left border-collapse">
@@ -220,8 +216,8 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case 'phrase_cards':
-      case 'phrases':
+      case "phrase_cards":
+      case "phrases":
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {items.map((item: any, i: number) => (
@@ -240,8 +236,8 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case 'dialogue':
-      case 'dialog_cards':
+      case "dialogue":
+      case "dialog_cards":
         return (
           <div className="space-y-6">
             {(block.items || block.dialogues || [block]).map((item: any, i: number) => (
@@ -277,8 +273,8 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case 'writing_template':
-      case 'writing_practice':
+      case "writing_template":
+      case "writing_practice":
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {items.map((it: any, i: number) => (
@@ -301,7 +297,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case 'visual_card_reference':
+      case "visual_card_reference":
         return (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {items.map((it: any, i: number) => (
@@ -316,7 +312,89 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case 'study_tip':
+      case "vocabulary":
+        return (
+          <div className="grid grid-cols-1 gap-4 mt-4">
+            {items.map((item: any, i: number) => (
+              <div 
+                key={i} 
+                className={`group bg-white p-4 rounded-xl border transition-all cursor-pointer flex items-center justify-between ${
+                  selectedItem?.data === item ? 'border-primary-500 shadow-md ring-2 ring-primary-50' : 'border-slate-200 hover:border-primary-300'
+                }`}
+                onClick={() => setSelectedItem({ type: 'word', data: item })}
+              >
+                <div className="space-y-0.5">
+                  <div className="flex items-center gap-2">
+                    <LearningText bg={item.bg} tr={item.tr} detail={item} onSelect={(data) => setSelectedItem({ type: 'word', data })} />
+                    {item.pronunciation && <span className="text-xs text-slate-400 font-medium">/{item.pronunciation}/</span>}
+                  </div>
+                </div>
+                <ChevronRight size={18} className="text-slate-300 group-hover:text-primary-500 transition-colors" />
+              </div>
+            ))}
+          </div>
+        );
+
+      case "glossary_table":
+        return (
+          <div className="space-y-4">
+            {block.description_tr && (
+              <p className="text-sm text-slate-500 italic px-2">{block.description_tr}</p>
+            )}
+            <div className="bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm overflow-x-auto">
+              <table className="w-full text-left border-collapse min-w-[600px]">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-100">
+                    <th className="p-4 text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">Bulgarca</th>
+                    <th className="p-4 text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">Turkce Anlam</th>
+                    <th className="p-4 text-xs font-bold text-slate-400 uppercase tracking-wider">Detay</th>
+                    <th className="p-4 text-xs font-bold text-slate-400 uppercase tracking-wider text-right">Kaynak</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-50">
+                  {items.map((item: any, i: number) => (
+                    <tr 
+                      key={i} 
+                      className="hover:bg-primary-50/30 transition-colors cursor-pointer group"
+                      onClick={() => setSelectedItem({ type: 'word', data: item })}
+                    >
+                      <td className="p-4">
+                        <div className="flex items-center gap-2">
+                          <LearningText bg={item.bg} tr={item.tr} detail={item} onSelect={(data) => setSelectedItem({ type: 'word', data })} className="font-bold" />
+                          {item.status === 'auto_extracted_needs_review' && (
+                            <span className="text-[8px] font-bold px-1.5 py-0.5 bg-amber-50 text-amber-600 rounded-full border border-amber-100 uppercase whitespace-nowrap">
+                              Otomatik
+                            </span>
+                          )}
+                        </div>
+                      </td>
+                      <td className="p-4">
+                        <span className="text-slate-600 text-sm font-medium">{item.tr}</span>
+                      </td>
+                      <td className="p-4">
+                        <div className="flex flex-wrap gap-1">
+                          {(item.markers || item.rules || []).map((m: any, idx: number) => (
+                            <span key={idx} className="text-[9px] font-bold px-1.5 py-0.5 bg-slate-100 text-slate-500 rounded uppercase">
+                              {m.rule_id || m.type || m || 'Ek'}
+                            </span>
+                          ))}
+                          {item.gender && <span className="text-[9px] font-bold px-1.5 py-0.5 bg-indigo-50 text-indigo-500 rounded uppercase">{item.gender}</span>}
+                        </div>
+                      </td>
+                      <td className="p-4 text-right">
+                        <span className="text-[10px] font-mono text-slate-300 group-hover:text-slate-500">
+                          S.{item.source_page || item.source?.page || '??'}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        );
+
+      case "study_tip":
         return (
           <div className="bg-amber-50 border border-amber-100 p-6 rounded-3xl flex gap-4">
             <div className="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -331,7 +409,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           <div className="p-6 bg-red-50 border border-red-100 rounded-2xl flex items-center gap-4 text-red-600">
             <AlertCircle size={24} />
             <div className="text-sm">
-              <div className="font-bold">Bilinmeyen Bölüm Tipi</div>
+              <div className="font-bold">Bilinmeyen Bolum Tipi</div>
               <div className="opacity-70 font-mono text-[10px]">{type}</div>
             </div>
           </div>
@@ -340,11 +418,10 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
   };
 
   if (isLoading) return <div className="flex items-center justify-center py-20"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div></div>;
-  if (!lesson) return <div>Ders bulunamadı.</div>;
+  if (!lesson) return <div>Ders bulunamadi.</div>;
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto px-4 py-8">
-      {/* Main Content Area */}
       <div className="flex-1 space-y-8">
         <header className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm space-y-6">
           <div className="flex items-center justify-between">
@@ -362,7 +439,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
               className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all ${showSettings ? 'bg-primary-600 text-white shadow-lg' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}`}
             >
               <SettingsIcon size={18} />
-              <span className="text-xs font-bold uppercase tracking-wider">Görünüm</span>
+              <span className="text-xs font-bold uppercase tracking-wider">Gorunum</span>
             </button>
           </div>
           
@@ -370,7 +447,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
             <input 
               type="text"
-              placeholder="Ders içinde ara (Türkçe veya Bulgarca)..."
+              placeholder="Ders icinde ara..."
               className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-primary-500 outline-none transition-all font-medium text-slate-700"
               value={lessonSearch}
               onChange={(e) => setLessonSearch(e.target.value)}
@@ -395,7 +472,6 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
         <div className="space-y-12">
           {lesson.sections.map((section: any, sIdx: number) => {
-            // Support both Section-with-blocks and Section-as-block
             const sectionBlocks = section.blocks || [section];
             const renderedBlocks = sectionBlocks.map((block: any, bIdx: number) => renderBlock(block, bIdx)).filter(Boolean);
             
@@ -431,7 +507,6 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
         </div>
       </div>
 
-      {/* Info Panel */}
       <div className="lg:w-96 flex-shrink-0">
         <div className="sticky top-24">
           <AnimatePresence mode="wait">
@@ -452,7 +527,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
             ) : (
               <div className="hidden lg:block border-2 border-dashed border-slate-200 rounded-3xl p-8 text-center text-slate-400">
                 <Info className="mx-auto mb-4 opacity-20" size={48} />
-                <p className="text-sm">Kelime veya kural hakkında detaylı bilgi almak için üzerine tıklayın.</p>
+                <p className="text-sm">Kelime veya kural hakkinda detayli bilgi almak icin uzerine tiklayin.</p>
               </div>
             )}
           </AnimatePresence>
@@ -471,8 +546,8 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
             </motion.div>
           </div>
           <div>
-            <h3 className="text-xl font-bold text-slate-900">Harika İş!</h3>
-            <p className="text-slate-500 text-sm mt-1">"{lesson.title_tr}" dersini başarıyla bitirdin.</p>
+            <h3 className="text-xl font-bold text-slate-900">Harika Is!</h3>
+            <p className="text-slate-500 text-sm mt-1">"{lesson.title_tr}" dersini basariyla bitirdin.</p>
           </div>
           <div className="grid grid-cols-2 gap-3 w-full pt-4">
              <div className="bg-slate-50 p-4 rounded-2xl">
@@ -488,7 +563,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
             onClick={onBack}
             className="w-full py-3 bg-slate-900 text-white rounded-xl font-bold mt-4"
           >
-            Ders Listesine Dön
+            Ders Listesine Don
           </button>
         </div>
       </Modal>

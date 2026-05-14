@@ -12,7 +12,10 @@ export function Dashboard({ onStartLesson }: DashboardProps) {
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/manifest.json`)
       .then(res => res.json())
-      .then(data => setRecentLessons(data.lessons.slice(0, 3)));
+      .then(data => {
+        const sorted = (data.lessons || []).sort((a: any, b: any) => (a.order || 0) - (b.order || 0));
+        setRecentLessons(sorted.slice(0, 6));
+      });
   }, []);
 
   return (
