@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.0",
+  "patch_id": "cognate-marker-corrections-010",
+  "title_tr": "ASETİLEN ve S → Ц/ц marker düzeltmeleri",
+  "source_refs": [
+    {
+      "source_id": "src-zup-tan-k-bg-ders",
+      "pages": [
+        3
+      ],
+      "note": "S (YON) → Ц (ИЯ) örnek grubu"
+    },
+    {
+      "source_id": "src-kucuk-sozluk",
+      "pages": [
+        31
+      ],
+      "note": "ASETİLEN ve ASETON sözlük girdileri"
+    }
+  ],
+  "rule_updates": [
+    {
+      "operation": "extend_rule_examples",
+      "rule_id": "cog-tr-syon-to-bg-tsiya",
+      "title_tr": "S / Sİ / SYON / SYA → Ц / ЦИ / ЦИЯ",
+      "description_tr": "Bu kaynak grubunda Türkçedeki s veya s+yapıları Bulgarcada ц/ци/ция olarak görünür. Ц harfi ts gibi okunur.",
+      "examples": [
+        {
+          "tr": "SİGARA",
+          "bg": "цигара",
+          "rule_marks": {
+            "source_text": "SİGARA",
+            "source_fragment": "Sİ",
+            "target_text": "цигара",
+            "target_fragment": "ци",
+            "tooltip_tr": "Sİ → ци: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        },
+        {
+          "tr": "DESİGRAM",
+          "bg": "дециграм",
+          "rule_marks": {
+            "source_text": "DESİGRAM",
+            "source_fragment": "Sİ",
+            "target_text": "дециграм",
+            "target_fragment": "ци",
+            "tooltip_tr": "Sİ → ци: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        },
+        {
+          "tr": "DEKORASYON",
+          "bg": "декорация",
+          "rule_marks": {
+            "source_text": "DEKORASYON",
+            "source_fragment": "SYON",
+            "target_text": "декорация",
+            "target_fragment": "ция",
+            "tooltip_tr": "SYON → ция: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        },
+        {
+          "tr": "DELEGASYON",
+          "bg": "делегация",
+          "rule_marks": {
+            "source_text": "DELEGASYON",
+            "source_fragment": "SYON",
+            "target_text": "делегация",
+            "target_fragment": "ция",
+            "tooltip_tr": "SYON → ция: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        },
+        {
+          "tr": "AKASYA",
+          "bg": "акация",
+          "rule_marks": {
+            "source_text": "AKASYA",
+            "source_fragment": "SYA",
+            "target_text": "акация",
+            "target_fragment": "ция",
+            "tooltip_tr": "SYA → ция: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        },
+        {
+          "tr": "ASETİLEN",
+          "bg": "ацетилен",
+          "rule_marks": {
+            "source_text": "ASETİLEN",
+            "source_fragment": "S",
+            "target_text": "ацетилен",
+            "target_fragment": "ц",
+            "tooltip_tr": "S → ц: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        },
+        {
+          "tr": "ASETON",
+          "bg": "ацетон",
+          "rule_marks": {
+            "source_text": "ASETON",
+            "source_fragment": "S",
+            "target_text": "ацетон",
+            "target_fragment": "ц",
+            "tooltip_tr": "S → ц: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        },
+        {
+          "tr": "NAVİGASYON",
+          "bg": "навигация",
+          "rule_marks": {
+            "source_text": "NAVİGASYON",
+            "source_fragment": "SYON",
+            "target_text": "навигация",
+            "target_fragment": "ция",
+            "tooltip_tr": "SYON → ция: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        },
+        {
+          "tr": "SİRK",
+          "bg": "цирк",
+          "rule_marks": {
+            "source_text": "SİRK",
+            "source_fragment": "Sİ",
+            "target_text": "цирк",
+            "target_fragment": "ци",
+            "tooltip_tr": "Sİ → ци: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        },
+        {
+          "tr": "SİVİL",
+          "bg": "цивилен",
+          "rule_marks": {
+            "source_text": "SİVİL",
+            "source_fragment": "Sİ",
+            "target_text": "цивилен",
+            "target_fragment": "ци",
+            "tooltip_tr": "Sİ → ци: Bu ortak kelimede Türkçedeki s/sy yapısı Bulgarcada ц/ци/ция ile yazılır."
+          },
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 3
+          },
+          "review_status": "source_verified"
+        }
+      ]
+    },
+    {
+      "operation": "set_rule_auto_apply",
+      "rule_ids": [
+        "cog-tr-e-to-bg-a",
+        "cog-tr-a-to-bg-e",
+        "cog-tr-a-to-bg-o",
+        "cog-tr-i-variants"
+      ],
+      "auto_apply": false,
+      "apply_mode": "explicit_examples_only",
+      "reason_tr": "Geniş vowel kuralları otomatik uygulandığında ASETİLEN gibi kelimelerde yanlış/önemsiz marker üretiyor. Sadece birebir kaynak örneklerinde çalışmalıdır."
+    }
+  ],
+  "glossary_entry_updates": [
+    {
+      "entry_match": {
+        "tr": "ASETİLEN",
+        "bg": "Ацетилен"
+      },
+      "rule_refs": [
+        "cog-tr-syon-to-bg-tsiya"
+      ],
+      "rule_marks": [
+        {
+          "rule_id": "cog-tr-syon-to-bg-tsiya",
+          "source_text": "ASETİLEN",
+          "source_fragment": "S",
+          "target_text": "Ацетилен",
+          "target_fragment": "ц",
+          "tooltip_tr": "Bu ortak kelimede Türkçedeki S, Bulgarcada Ц/ц yani ts sesiyle yazılır."
+        }
+      ],
+      "source": {
+        "source_id": "src-kucuk-sozluk",
+        "page": 31
+      }
+    },
+    {
+      "entry_match": {
+        "tr": "ASETON",
+        "bg": "Ацетон"
+      },
+      "rule_refs": [
+        "cog-tr-syon-to-bg-tsiya"
+      ],
+      "rule_marks": [
+        {
+          "rule_id": "cog-tr-syon-to-bg-tsiya",
+          "source_text": "ASETON",
+          "source_fragment": "S",
+          "target_text": "Ацетон",
+          "target_fragment": "ц",
+          "tooltip_tr": "Bu ortak kelimede Türkçedeki S, Bulgarcada Ц/ц yani ts sesiyle yazılır."
+        }
+      ],
+      "source": {
+        "source_id": "src-kucuk-sozluk",
+        "page": 31
+      }
+    }
+  ],
+  "matching_policy": {
+    "priority_order": [
+      "explicit_rule_marks",
+      "exact_example_pair",
+      "consonant_or_cluster_transform",
+      "suffix_or_prefix_transform",
+      "broad_vowel_transform_explicit_only"
+    ],
+    "suppress_identity_markers": true,
+    "do_not_mark_trivial_same_sound_vowels": true,
+    "notes_tr": "Asetilen örneğinde A/E harfleri değil, S→ц dönüşümü markerlanmalıdır."
+  }
+}
