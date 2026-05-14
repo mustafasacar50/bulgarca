@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.1",
+  "rules": [
+    {
+      "rule_id": "bg-kak-se-kazvate",
+      "category": "grammar_rule",
+      "title_tr": "Как се казвате? — Adınız ne?",
+      "short_tr": "Ad sorma kalıbı",
+      "description_tr": "Resmî durumda 'Как се казвате?' kullanılır. Samimi biçimi 'Как се казваш?' olur.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "казвате"
+      },
+      "tooltip_tr": "Ad sorma kalıbı: Как се казвате?",
+      "panel_tr": {
+        "summary": "Tanışma diyaloglarının ana sorusudur.",
+        "details": [
+          "Вие ile resmî konuşmada -те biçimi görülür.",
+          "Senli konuşmada 'Как се казваш?' kullanılır."
+        ],
+        "examples": [
+          {
+            "bg": "А Вие как се казвате?",
+            "tr": "Peki sizin adınız ne?"
+          },
+          {
+            "bg": "Как се казваш?",
+            "tr": "Adın ne?"
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "bg-kazvam-se-name",
+      "category": "grammar_rule",
+      "title_tr": "Казвам се... — Adım...",
+      "short_tr": "Kendini tanıtma",
+      "description_tr": "Казвам се kelime kelime 'kendime ... denir' gibi düşünülebilir; Türkçede doğal karşılığı 'Adım ...' olur.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "Казвам се"
+      },
+      "tooltip_tr": "Adını söyleme kalıbı.",
+      "panel_tr": {
+        "summary": "Kendini tanıtmak için en temel kalıptır.",
+        "details": [
+          "Аз се казвам... biçimi vurgulu kullanılır.",
+          "Üçüncü kişi için: Той/Тя се казва..."
+        ],
+        "examples": [
+          {
+            "bg": "Казвам се Станка Донева.",
+            "tr": "Adım Stanka Doneva."
+          },
+          {
+            "bg": "Той се казва Димитър Иванов.",
+            "tr": "Onun adı Dimitır Ivanov."
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "bg-az-sum-identity",
+      "category": "grammar_rule",
+      "title_tr": "Аз съм... — Ben ...-im",
+      "short_tr": "съм ile kimlik söyleme",
+      "description_tr": "съм Bulgarcada 'olmak' fiilinin 1. tekil biçimidir. İsim, meslek veya milliyet söylemek için kullanılır.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "съм"
+      },
+      "tooltip_tr": "Ben ...-im yapısı.",
+      "panel_tr": {
+        "summary": "Kimlik ve meslek söylemede temel yapı.",
+        "details": [
+          "Аз съм Димитър Петров = Ben Dimitır Petrov’um.",
+          "Аз съм студент = Ben öğrenciyim."
+        ],
+        "examples": [
+          {
+            "bg": "Аз съм Димитър Петров.",
+            "tr": "Ben Dimitır Petrov’um."
+          },
+          {
+            "bg": "Аз съм преподавателка.",
+            "tr": "Ben öğretmenim."
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "bg-formal-vie",
+      "category": "grammar_rule",
+      "title_tr": "Вие — resmî/saygılı 'siz'",
+      "short_tr": "Resmî siz kullanımı",
+      "description_tr": "Вие hem çoğul 'siz' hem de saygılı/resmî tekil 'siz' olarak kullanılır.",
+      "marker": {
+        "color_key": "amber",
+        "highlight_target": "Вие"
+      },
+      "tooltip_tr": "Resmî/saygılı siz.",
+      "panel_tr": {
+        "summary": "Tanışma diyaloglarında çok sık geçer.",
+        "details": [
+          "Resmî konuşmada 'Вие' büyük harfle de yazılabilir.",
+          "Samimi konuşmada 'ти' kullanılır."
+        ],
+        "examples": [
+          {
+            "bg": "А Вие как се казвате?",
+            "tr": "Peki sizin adınız ne?"
+          },
+          {
+            "bg": "Благодаря Ви!",
+            "tr": "Size teşekkür ederim!"
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "bg-polite-bihte-li",
+      "category": "grammar_rule",
+      "title_tr": "Бихте ли...? — nazik rica",
+      "short_tr": "Nazik soru/rica",
+      "description_tr": "Бихте ли... kalıbı Türkçede '... eder misiniz?' gibi nazik bir ricaya karşılık gelir.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "Бихте ли"
+      },
+      "tooltip_tr": "Nazik rica: ... eder misiniz?",
+      "panel_tr": {
+        "summary": "Adı tekrar ettirmek veya ricada bulunmak için kullanışlıdır.",
+        "examples": [
+          {
+            "bg": "Бихте ли повторили?",
+            "tr": "Tekrar eder misiniz?"
+          },
+          {
+            "bg": "Бихте ли казали името си?",
+            "tr": "Adınızı söyler misiniz?"
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "bg-li-question",
+      "category": "grammar_rule",
+      "title_tr": "ли ile evet/hayır sorusu",
+      "short_tr": "ли soru parçacığı",
+      "description_tr": "ли cümlede evet/hayır sorusu kurmaya yardım eder. Vurgulanan öğeden sonra gelir.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "ли"
+      },
+      "tooltip_tr": "Evet/hayır sorusu yapar.",
+      "panel_tr": {
+        "summary": "Tanışma diyalogunda 'Вие ли сте...?' biçimi geçer.",
+        "examples": [
+          {
+            "bg": "Вие ли сте Елка Боянова?",
+            "tr": "Siz Elka Boyanova mısınız?"
+          },
+          {
+            "bg": "Студент ли си?",
+            "tr": "Öğrenci misin?"
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "bg-tova-e",
+      "category": "grammar_rule",
+      "title_tr": "Това е... — Bu...",
+      "short_tr": "Birini/bir şeyi tanıtma",
+      "description_tr": "Това е... kalıbı bir kişi veya nesneyi tanıtırken kullanılır.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "Това е"
+      },
+      "tooltip_tr": "Bu ... demektir.",
+      "panel_tr": {
+        "summary": "Üçüncü kişiyi tanıtma kalıbı.",
+        "examples": [
+          {
+            "bg": "Това е приятелката ми.",
+            "tr": "Bu benim arkadaşım."
+          },
+          {
+            "bg": "Това е нашият екскурзовод.",
+            "tr": "Bu bizim rehberimiz."
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "bg-priyatno-mi-e",
+      "category": "phrase_rule",
+      "title_tr": "Приятно ми е — Memnun oldum",
+      "short_tr": "Tanışma cevabı",
+      "description_tr": "Tanışırken kullanılan temel nezaket kalıbıdır.",
+      "marker": {
+        "color_key": "green",
+        "highlight_target": "Приятно ми е"
+      },
+      "tooltip_tr": "Memnun oldum.",
+      "panel_tr": {
+        "summary": "Tanışma anında ve karşılıklı cevapta kullanılır.",
+        "examples": [
+          {
+            "bg": "Приятно ми е!",
+            "tr": "Memnun oldum!"
+          },
+          {
+            "bg": "На мен също ми е приятно.",
+            "tr": "Ben de memnun oldum."
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "bg-shte-future",
+      "category": "grammar_rule",
+      "title_tr": "ще — gelecek zaman başlangıcı",
+      "short_tr": "Gelecek zaman ipucu",
+      "description_tr": "ще Bulgarcada gelecek zaman kurarken kullanılır. Bu derste sadece tanıma düzeyinde geçer.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "ще"
+      },
+      "tooltip_tr": "Gelecek zaman işareti.",
+      "panel_tr": {
+        "summary": "İleri derslerde ayrıntılı işlenecek.",
+        "examples": [
+          {
+            "bg": "Ще чакам.",
+            "tr": "Bekleyeceğim."
+          },
+          {
+            "bg": "Ще се обадя.",
+            "tr": "Arayacağım."
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "bg-nali-confirmation",
+      "category": "grammar_rule",
+      "title_tr": "нали? — değil mi?",
+      "short_tr": "Onay isteme",
+      "description_tr": "нали konuşmada 'değil mi?' gibi onay istemek için kullanılır.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "нали"
+      },
+      "tooltip_tr": "değil mi? / öyle değil mi?",
+      "panel_tr": {
+        "summary": "Cümle sonunda onay ister.",
+        "examples": [
+          {
+            "bg": "Вие сте Елена Иванова, нали?",
+            "tr": "Siz Elena Ivanova’sınız, değil mi?"
+          }
+        ]
+      }
+    }
+  ]
+}
