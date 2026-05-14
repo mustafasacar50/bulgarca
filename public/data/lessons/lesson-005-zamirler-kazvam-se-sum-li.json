@@ -1,0 +1,523 @@
+{
+  "schema_version": "1.1",
+  "lesson_id": "lesson-005-zamirler-kazvam-se-sum-li",
+  "title_tr": "Şahıs Zamirleri, казвам се, съм ve ли Soruları",
+  "subtitle_tr": "Ben kimim? Adım ne? Öğrenciyim mi?",
+  "level": "A1",
+  "order": 5,
+  "estimated_minutes": 55,
+  "tags": [
+    "zamirler",
+    "kazvam-se",
+    "sum",
+    "li",
+    "tanisma",
+    "a1-gramer"
+  ],
+  "source_refs": [
+    {
+      "source_id": "src-a1-v-1-2",
+      "pages": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "note": "Şahıs zamirleri, kazвам се, съм, ли soru yapısı ve kendini tanıtma alıştırmaları."
+    }
+  ],
+  "learning_goals": [
+    "Bulgarcada temel şahıs zamirlerini tanımak: аз, ти, той, тя, то, ние, вие, те.",
+    "казвам се fiilini kişi eklerine göre kullanmak.",
+    "съм yardımcı fiilinin şimdiki zaman çekimini öğrenmek.",
+    "ли parçacığı ile basit evet/hayır sorusu kurmak.",
+    "Kısa bir kendini tanıtma metni oluşturmak."
+  ],
+  "ui_hints": {
+    "default_language_mode": "bg_hover_tr",
+    "default_marker_mode": "strong",
+    "supports_right_panel": true
+  },
+  "sections": [
+    {
+      "section_id": "l005-s01",
+      "type": "text",
+      "title_tr": "Bu ders neden önemli?",
+      "body_tr": "Bulgarcada kendini tanıtmak için üç temel yapı çok sık kullanılır: şahıs zamirleri, казвам се ve съм. li parçacığı ise kısa evet/hayır soruları kurmak için ilk öğrenilecek yapılardan biridir.",
+      "content_blocks": [
+        {
+          "bg": "Аз съм студент.",
+          "tr": "Ben öğrenciyim.",
+          "tooltip_tr": "Ben öğrenciyim.",
+          "type": "sentence",
+          "detail_tr": "съм = olmak fiilinin 1. tekil şahıs biçimi",
+          "rule_refs": [
+            "grammar-sum-present"
+          ]
+        },
+        {
+          "bg": "Как се казваш?",
+          "tr": "Adın ne? / Nasıl adlandırılıyorsun?",
+          "tooltip_tr": "Adın ne? / Nasıl adlandırılıyorsun?",
+          "type": "sentence",
+          "detail_tr": "казвам се = adım ... / kendime ... denir",
+          "rule_refs": [
+            "grammar-kazvam-se-present"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "l005-s02",
+      "type": "grammar_table",
+      "title_tr": "Şahıs zamirleri — yalın hâl",
+      "description_tr": "Bulgarcada zamirler kişi, sayı, hâl ve bazı formlarda cinsiyet bilgisi taşır. Başlangıçta yalın hâl formlarını iyi oturtmak yeterlidir.",
+      "columns": [
+        "Bulgarca",
+        "Türkçe",
+        "Not"
+      ],
+      "rows": [
+        {
+          "bg": "аз",
+          "tr": "ben",
+          "tooltip_tr": "ben",
+          "type": "word",
+          "detail_tr": "1. tekil kişi"
+        },
+        {
+          "bg": "ти",
+          "tr": "sen",
+          "tooltip_tr": "sen",
+          "type": "word",
+          "detail_tr": "2. tekil kişi"
+        },
+        {
+          "bg": "той",
+          "tr": "o",
+          "tooltip_tr": "o",
+          "type": "word",
+          "detail_tr": "eril: erkek/eril isimler için"
+        },
+        {
+          "bg": "тя",
+          "tr": "o",
+          "tooltip_tr": "o",
+          "type": "word",
+          "detail_tr": "dişil: kadın/dişil isimler için"
+        },
+        {
+          "bg": "то",
+          "tr": "o",
+          "tooltip_tr": "o",
+          "type": "word",
+          "detail_tr": "orta cins isimler için"
+        },
+        {
+          "bg": "ние",
+          "tr": "biz",
+          "tooltip_tr": "biz",
+          "type": "word",
+          "detail_tr": "1. çoğul kişi"
+        },
+        {
+          "bg": "вие",
+          "tr": "siz",
+          "tooltip_tr": "siz",
+          "type": "word",
+          "detail_tr": "2. çoğul veya resmî hitap"
+        },
+        {
+          "bg": "те",
+          "tr": "onlar",
+          "tooltip_tr": "onlar",
+          "type": "word",
+          "detail_tr": "3. çoğul kişi"
+        }
+      ],
+      "table_rows": [
+        {
+          "bg": "аз",
+          "tr": "ben",
+          "note_tr": "1. tekil kişi"
+        },
+        {
+          "bg": "ти",
+          "tr": "sen",
+          "note_tr": "2. tekil kişi"
+        },
+        {
+          "bg": "той",
+          "tr": "o",
+          "note_tr": "eril"
+        },
+        {
+          "bg": "тя",
+          "tr": "o",
+          "note_tr": "dişil"
+        },
+        {
+          "bg": "то",
+          "tr": "o",
+          "note_tr": "orta cins"
+        },
+        {
+          "bg": "ние",
+          "tr": "biz",
+          "note_tr": "1. çoğul"
+        },
+        {
+          "bg": "вие",
+          "tr": "siz",
+          "note_tr": "2. çoğul / resmî"
+        },
+        {
+          "bg": "те",
+          "tr": "onlar",
+          "note_tr": "3. çoğul"
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            25
+          ],
+          "note": "Лични местоимения – именителни форми."
+        }
+      ]
+    },
+    {
+      "section_id": "l005-s03",
+      "type": "grammar_table",
+      "title_tr": "казвам се — adım ... / kendime ... denir",
+      "description_tr": "Bu fiil Türkçedeki 'adım ...' kalıbı gibi kullanılır. se parçası fiilin bir parçası gibi birlikte düşünülmelidir.",
+      "rule_id": "grammar-kazvam-se-present",
+      "columns": [
+        "Kişi",
+        "Bulgarca",
+        "Türkçe"
+      ],
+      "table_rows": [
+        {
+          "person": "1. tekil",
+          "bg": "Аз се казвам Мустафа.",
+          "tr": "Benim adım Mustafa."
+        },
+        {
+          "person": "2. tekil",
+          "bg": "Ти се казваш Емин.",
+          "tr": "Senin adın Emin."
+        },
+        {
+          "person": "3. tekil",
+          "bg": "Той се казва Бюлент.",
+          "tr": "Onun adı Bülent."
+        },
+        {
+          "person": "3. tekil",
+          "bg": "Тя се казва Фери.",
+          "tr": "Onun adı Feri."
+        },
+        {
+          "person": "1. çoğul",
+          "bg": "Ние се казваме Фери и Емин.",
+          "tr": "Bizim adımız Feri ve Emin."
+        },
+        {
+          "person": "2. çoğul/resmî",
+          "bg": "Вие се казвате Станка Донева.",
+          "tr": "Sizin adınız Stanka Doneva."
+        },
+        {
+          "person": "3. çoğul",
+          "bg": "Те се казват Фери и Емин.",
+          "tr": "Onların adı Feri ve Emin."
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            25,
+            28
+          ],
+          "note": "Сегашно време на глагола казвам се ve kendini tanıtma örnekleri."
+        }
+      ]
+    },
+    {
+      "section_id": "l005-s04",
+      "type": "grammar_table",
+      "title_tr": "съм — olmak fiili",
+      "description_tr": "съм, Türkçedeki 'olmak' fiilinin Bulgarcadaki temel şimdiki zaman biçimidir. İsim, meslek, durum ve kimlik anlatırken çok sık kullanılır.",
+      "rule_id": "grammar-sum-present",
+      "columns": [
+        "Kişi",
+        "Bulgarca",
+        "Türkçe"
+      ],
+      "table_rows": [
+        {
+          "person": "1. tekil",
+          "bg": "Аз съм студент.",
+          "tr": "Ben öğrenciyim."
+        },
+        {
+          "person": "2. tekil",
+          "bg": "Ти си студент.",
+          "tr": "Sen öğrencisin."
+        },
+        {
+          "person": "3. tekil",
+          "bg": "Той е студент.",
+          "tr": "O öğrencidir."
+        },
+        {
+          "person": "3. tekil",
+          "bg": "Тя е студентка.",
+          "tr": "O öğrencidir."
+        },
+        {
+          "person": "1. çoğul",
+          "bg": "Ние сме студенти.",
+          "tr": "Biz öğrenciyiz."
+        },
+        {
+          "person": "2. çoğul/resmî",
+          "bg": "Вие сте преподавател.",
+          "tr": "Siz öğretmensiniz."
+        },
+        {
+          "person": "3. çoğul",
+          "bg": "Те са студенти.",
+          "tr": "Onlar öğrencidir."
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            25
+          ],
+          "note": "Сегашно време на глагола съм."
+        }
+      ]
+    },
+    {
+      "section_id": "l005-s05",
+      "type": "rule_cards",
+      "title_tr": "ли ile evet/hayır soruları",
+      "description_tr": "ли, Türkçede doğrudan tek bir ekle karşılanmaz; cümleyi evet/hayır sorusuna çeviren parçacık gibi düşün. Genellikle sorulan öğenin hemen arkasına gelir.",
+      "rules": [
+        {
+          "rule_id": "grammar-li-after-verb",
+          "title_tr": "Fiil + ли?",
+          "summary_tr": "Fiilden sonra ли gelirse '... mı?' sorusu oluşur.",
+          "examples": [
+            {
+              "bg": "Учиш ли?",
+              "tr": "Okuyor musun?"
+            },
+            {
+              "bg": "Разбираш ли?",
+              "tr": "Anlıyor musun?"
+            },
+            {
+              "bg": "Преподавате ли?",
+              "tr": "Ders veriyor musunuz?"
+            }
+          ]
+        },
+        {
+          "rule_id": "grammar-li-noun-sum",
+          "title_tr": "İsim + ли + съм/си/е...?",
+          "summary_tr": "İsim veya sıfatı sormak için ilgili kelimeden sonra ли gelir, ardından съм fiilinin kişi biçimi gelir.",
+          "examples": [
+            {
+              "bg": "Студент ли си?",
+              "tr": "Öğrenci misin?"
+            },
+            {
+              "bg": "Преподавател ли сте?",
+              "tr": "Öğretmen misiniz?"
+            },
+            {
+              "bg": "Той гладен ли е?",
+              "tr": "O aç mı?"
+            }
+          ]
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            27,
+            28
+          ],
+          "note": "Въпросителни изречения с частица ли."
+        }
+      ]
+    },
+    {
+      "section_id": "l005-s06",
+      "type": "dialogue",
+      "title_tr": "Mini diyalog: ad sorma",
+      "lines": [
+        {
+          "speaker": "A",
+          "bg": "Как се казваш?",
+          "tr": "Adın ne?"
+        },
+        {
+          "speaker": "B",
+          "bg": "Аз съм Емин. А ти?",
+          "tr": "Ben Emin. Ya sen?"
+        },
+        {
+          "speaker": "A",
+          "bg": "Аз съм Фери.",
+          "tr": "Ben Feri."
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            28
+          ],
+          "note": "Съставете кратък диалог по модела."
+        }
+      ]
+    },
+    {
+      "section_id": "l005-s07",
+      "type": "word_table",
+      "title_tr": "Kimlik ve meslek kelimeleri",
+      "columns": [
+        "Bulgarca",
+        "Türkçe",
+        "Not"
+      ],
+      "table_rows": [
+        {
+          "bg": "студент",
+          "tr": "erkek öğrenci",
+          "note_tr": "м.р. / eril"
+        },
+        {
+          "bg": "студентка",
+          "tr": "kadın öğrenci",
+          "note_tr": "ж.р. / dişil"
+        },
+        {
+          "bg": "студенти",
+          "tr": "öğrenciler",
+          "note_tr": "çoğul"
+        },
+        {
+          "bg": "преподавател",
+          "tr": "öğretmen / öğretim görevlisi",
+          "note_tr": "eril"
+        },
+        {
+          "bg": "преподавателка",
+          "tr": "kadın öğretmen",
+          "note_tr": "dişil"
+        },
+        {
+          "bg": "преподаватели",
+          "tr": "öğretmenler",
+          "note_tr": "çoğul"
+        },
+        {
+          "bg": "професор",
+          "tr": "profesör",
+          "note_tr": "eril"
+        },
+        {
+          "bg": "професори",
+          "tr": "profesörler",
+          "note_tr": "çoğul"
+        },
+        {
+          "bg": "гладен",
+          "tr": "aç",
+          "note_tr": "eril form; dişilde гладна"
+        }
+      ]
+    },
+    {
+      "section_id": "l005-s08",
+      "type": "writing_template",
+      "title_tr": "Kendini tanıtma şablonu",
+      "description_tr": "Aşağıdaki kalıpları kendi bilgilerinle doldur. Uygulama ileride bu alanları senin kişisel çalışma metnine çevirebilir.",
+      "prompts": [
+        {
+          "bg": "Аз съм ...",
+          "tr": "Ben ..."
+        },
+        {
+          "bg": "Казвам се ...",
+          "tr": "Adım ..."
+        },
+        {
+          "bg": "Роден съм в ...",
+          "tr": "... doğumluyum. (erkek)"
+        },
+        {
+          "bg": "Родена съм в ...",
+          "tr": "... doğumluyum. (kadın)"
+        },
+        {
+          "bg": "Сега съм на ... години.",
+          "tr": "Şu anda ... yaşındayım."
+        },
+        {
+          "bg": "Студент съм в ...",
+          "tr": "... öğrencisiyim. (erkek)"
+        },
+        {
+          "bg": "Студентка съм в ...",
+          "tr": "... öğrencisiyim. (kadın)"
+        },
+        {
+          "bg": "Обичам да ...",
+          "tr": "... yapmayı severim."
+        },
+        {
+          "bg": "Искам да стана ...",
+          "tr": "... olmak istiyorum."
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            28
+          ],
+          "note": "Представете се."
+        }
+      ]
+    }
+  ],
+  "linked_rules": [
+    "grammar-kazvam-se-present",
+    "grammar-sum-present",
+    "grammar-li-after-verb",
+    "grammar-li-noun-sum"
+  ],
+  "linked_entries": [
+    "phrase-kak-se-kazvash",
+    "phrase-az-sum-student",
+    "word-bg-az",
+    "word-bg-ti",
+    "word-bg-toy",
+    "word-bg-tya",
+    "word-bg-nie",
+    "word-bg-vie",
+    "word-bg-te"
+  ]
+}
