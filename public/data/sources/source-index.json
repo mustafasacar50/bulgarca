@@ -48,5 +48,38 @@
       "lesson-006"
     ],
     "notes_tr": "Kaynak, 750’den fazla ortak/benzer kelime içerdiğini ve gramer cinsi/çoğul alanları bıraktığını belirtir. Otomatik çıkarımda 687 sözlük girdisi üretildi; düzeltme/audit için review_status alanı eklendi."
+  },
+  {
+    "source_id": "src-a1-v-1-2",
+    "file_name": "A1-V-1-2.pdf",
+    "type": "pdf",
+    "description_tr": "A1 düzeyi Bulgarca kurs dokümanı; alfabe, özel sesler, heceleme, tanışma, zamirler, казвам се, съм ve ли soruları.",
+    "page_count": 28,
+    "used_pages": [
+      1,
+      2,
+      3,
+      15,
+      18,
+      19,
+      24,
+      25,
+      27,
+      28
+    ]
+  },
+  {
+    "source_id": "src-alfabe-ilk-ders",
+    "file_name": "alfabe-ilk ders.pdf",
+    "type": "pdf_image",
+    "description_tr": "Görsel alfabe kartları; harf-görsel-kelime eşleştirme kaynağı.",
+    "page_count": 18,
+    "used_pages": [
+      1,
+      2,
+      3,
+      4,
+      10
+    ]
   }
 ]
