@@ -53,7 +53,7 @@
     "source_id": "src-a1-v-1-2",
     "file_name": "A1-V-1-2.pdf",
     "type": "pdf",
-    "description_tr": "A1 düzeyi Bulgarca kurs dokümanı; alfabe, özel sesler, heceleme, tanışma, zamirler, казвам се, съм ve ли soruları.",
+    "description_tr": "A1 düzeyi Bulgarca kurs dokümanı; Ders 2 tanışma diyalogları dahil.",
     "page_count": 28,
     "used_pages": [
       1,
@@ -66,6 +66,18 @@
       25,
       27,
       28
+    ],
+    "used_in": [
+      "lesson-001-alfabe",
+      "lesson-005-zamirler-kazvam-se-sum-li",
+      "lesson-007-selamlasma-hitaplar-sosyal-ifadeler",
+      "lesson-009-a1-diyalog-kak-se-kazvate"
+    ],
+    "covered_pages": [
+      15,
+      16,
+      20,
+      21
     ]
   },
   {
