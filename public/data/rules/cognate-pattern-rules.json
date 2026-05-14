@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "rules": [
+    {
+      "rule_id": "tr-ya-to-bg-iya",
+      "category": "phonetic_mapping",
+      "title_tr": "Türkçedeki YA bitişi Bulgarcada ИЯ olur",
+      "short_tr": "YA → ИЯ",
+      "description_tr": "Türkçedeki -ya ile biten bazı ortak kelimeler Bulgarcada -ия ile yazılır. Bu özellikle ülke, bilim dalı ve ortak kökenli kelimelerde sık görülür.",
+      "pattern": {
+        "source_lang": "tr",
+        "target_lang": "bg",
+        "source_fragment": "YA",
+        "target_fragment": "ия",
+        "match_type": "suffix",
+        "position": "suffix"
+      },
+      "marker": {
+        "color_key": "blue",
+        "highlight_source": "YA",
+        "highlight_target": "ия",
+        "style": "background"
+      },
+      "tooltip_tr": "YA → ИЯ: Türkçedeki -ya bitişi Bulgarcada -ия olur.",
+      "panel_tr": {
+        "summary": "Bu kural Türkçe-Bulgarca ortak kelimelerde çok kullanışlıdır.",
+        "details": [
+          "Türkçede -ya ile biten bazı kelimeler Bulgarcada -ия ile biter.",
+          "Kural birebir her kelimeye uygulanmaz; kaynakta verilen ortak kelimeler üzerinden öğrenilmelidir.",
+          "Marker açıkken Türkçedeki YA ve Bulgarcadaki ия parçaları renkli gösterilmelidir."
+        ],
+        "practice_hint": "Kelimenin sonunda -ya sesi duyduğunda Bulgarcada -ия olma ihtimalini kontrol et."
+      },
+      "examples": [
+        {
+          "tr": "İTALYA",
+          "bg": "Италия",
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 2
+          }
+        },
+        {
+          "tr": "KAMELYA",
+          "bg": "Камелия",
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 2
+          }
+        },
+        {
+          "tr": "LİTOGRAFYA",
+          "bg": "литография",
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 2
+          }
+        },
+        {
+          "tr": "TENYA",
+          "bg": "тения",
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 2
+          }
+        },
+        {
+          "tr": "ASYA",
+          "bg": "Азия",
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 2
+          }
+        },
+        {
+          "tr": "İSPANYA",
+          "bg": "Испания",
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 2
+          }
+        },
+        {
+          "tr": "MALARYA",
+          "bg": "малария",
+          "source": {
+            "source_id": "src-zup-tan-k-bg-ders",
+            "page": 2
+          }
+        }
+      ]
+    }
+  ]
+}
