@@ -1,33 +1,116 @@
 {
   "schema_version": "1.1",
   "lesson_id": "lesson-002-ses-harf-donusumleri",
-  "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri: Genişletilmiş",
+  "title_tr": "Türkçe-Bulgarca Ses ve Harf Dönüşümleri: Tam Kural Seti",
   "level": "A1",
   "order": 2,
-  "estimated_minutes": 70,
-  "ui_hints": {"default_show_marker": true, "supports_rule_toggle": true, "supports_right_panel": true},
-  "sections": [
+  "estimated_minutes": 90,
+  "tags": [
+    "ortak_kelime",
+    "ses_donusumu",
+    "marker",
+    "kirill"
+  ],
+  "source_refs": [
     {
-      "section_id": "rules-rich",
-      "title_tr": "Kurallar ve çoklu örnekler",
-      "blocks": [
-        {
-          "type": "rule_cards_v2",
-          "items": [
-            {"rule_id":"phon_tr_sh_to_bg_sh","display":"Ş → Ш","explanation_tr":"Türkçedeki ş sesi Bulgarcada ш ile yazılır.","examples":[{"tr":"DUŞ","bg":"душ","markers":[{"source":"Ş","target":"Ш"}]},{"tr":"AFİŞ","bg":"афиш","markers":[{"source":"Ş","target":"Ш"}]},{"tr":"MARŞ","bg":"марш","markers":[{"source":"Ş","target":"Ш"}]},{"tr":"GİŞE","bg":"гише","markers":[{"source":"Ş","target":"Ш"}]}]},
-            {"rule_id":"phon_tr_j_to_bg_zh","display":"J → Ж","explanation_tr":"Türkçedeki j sesi Bulgarcada ж olur.","examples":[{"tr":"AJUR","bg":"ажур","markers":[{"source":"J","target":"Ж"}]},{"tr":"KAMUFLAJ","bg":"камуфлаж","markers":[{"source":"J","target":"Ж"}]},{"tr":"STAJ","bg":"стаж","markers":[{"source":"J","target":"Ж"}]},{"tr":"MASAJ","bg":"масаж","markers":[{"source":"J","target":"Ж"}]},{"tr":"KOLEJ","bg":"колеж","markers":[{"source":"J","target":"Ж"}]},{"tr":"DRENAJ","bg":"дренаж","markers":[{"source":"J","target":"Ж"}]}]},
-            {"rule_id":"phon_tr_ji_to_bg_gia","display":"-Jİ → -ГИЯ / -ЛОГИЯ","explanation_tr":"-ji / -loji sonlu ortak kelimelerde Bulgarcada -гия / -логия sık görülür.","examples":[{"tr":"MORFOLOJİ","bg":"морфология","markers":[{"source":"LOJİ","target":"ЛОГИЯ"}]},{"tr":"STRATEJİ","bg":"стратегия","markers":[{"source":"Jİ","target":"ГИЯ"}]},{"tr":"ZOOLOJİ","bg":"зоология","markers":[{"source":"LOJİ","target":"ЛОГИЯ"}]},{"tr":"HİDROLOJİ","bg":"хидрология","markers":[{"source":"LOJİ","target":"ЛОГИЯ"}]},{"tr":"ENERJİ","bg":"енергия","markers":[{"source":"Jİ","target":"ГИЯ"}]},{"tr":"ANTOLOJİ","bg":"антология","markers":[{"source":"LOJİ","target":"ЛОГИЯ"}]}]},
-            {"rule_id":"phon_tr_c_to_bg_ch","display":"Ç → Ч","explanation_tr":"Ç sesi çoğu ortak kelimede ч olur.","examples":[{"tr":"SANDVİÇ","bg":"сандвич","markers":[{"source":"Ç","target":"Ч"}]},{"tr":"KAUÇUK","bg":"каучук","markers":[{"source":"Ç","target":"Ч"}]},{"tr":"ÇAR","bg":"чар","markers":[{"source":"Ç","target":"Ч"}]},{"tr":"ÇİROZ","bg":"чироз","markers":[{"source":"Ç","target":"Ч"}]},{"tr":"ÇORAP","bg":"чорап","markers":[{"source":"Ç","target":"Ч"}]},{"tr":"ÇORBA","bg":"чорба","markers":[{"source":"Ç","target":"Ч"}]}]},
-            {"rule_id":"phon_tr_c_to_bg_ts","display":"Ç → Ц","explanation_tr":"Bazı kelimelerde ç karşılığı Bulgarcada ц olur.","examples":[{"tr":"DOÇENT","bg":"доцент","markers":[{"source":"Ç","target":"Ц"}]}]},
-            {"rule_id":"phon_tr_o_umlaut_mix","display":"Ö → ЬО / О / ЕВ / ЕУ","explanation_tr":"Ö sesi tek bir şekilde dönüşmez; kelimeye göre farklılaşır.","examples":[{"tr":"GÖN","bg":"гьон","markers":[{"source":"Ö","target":"ЬО"}]},{"tr":"DUBLÖR","bg":"дубльор","markers":[{"source":"Ö","target":"ЬО"}]},{"tr":"KLASÖR","bg":"класьор","markers":[{"source":"Ö","target":"ЬО"}]},{"tr":"DEKORATÖR","bg":"декоратор","markers":[{"source":"Ö","target":"О"}]},{"tr":"PROFESÖR","bg":"професор","markers":[{"source":"Ö","target":"О"}]},{"tr":"NÖROLOG","bg":"невролог","markers":[{"source":"Ö","target":"ЕВ"}]},{"tr":"NÖROLOJİ","bg":"неврология","markers":[{"source":"Ö","target":"ЕВ"}]},{"tr":"NÖTRON","bg":"неутрон","markers":[{"source":"Ö","target":"ЕУ"}]}]},
-            {"rule_id":"phon_tr_u_umlaut_mix","display":"Ü → Ю / У","explanation_tr":"Ü sesi bazı kelimelerde ю, bazılarında у olur.","examples":[{"tr":"MENÜ","bg":"меню","markers":[{"source":"Ü","target":"Ю"}]},{"tr":"BÜRO","bg":"бюро","markers":[{"source":"Ü","target":"Ю"}]},{"tr":"BÜST","bg":"бюст","markers":[{"source":"Ü","target":"Ю"}]},{"tr":"AKÜMÜLATÖR","bg":"акумулатор","markers":[{"source":"Ü","target":"У"}]},{"tr":"ALBÜM","bg":"албум","markers":[{"source":"Ü","target":"У"}]},{"tr":"DÜET","bg":"дует","markers":[{"source":"Ü","target":"У"}]},{"tr":"LÜKS","bg":"лукс","markers":[{"source":"Ü","target":"У"}]}]},
-            {"rule_id":"phon_tr_y_variants","display":"Y → Й / Я / ИА / ИО","explanation_tr":"Y sesi çevresindeki ünlülere göre farklı biçimlerde yazılabilir.","examples":[{"tr":"İYON","bg":"йон","markers":[{"source":"Y","target":"Й"}]},{"tr":"GAYDA","bg":"гайда","markers":[{"source":"Y","target":"Й"}]},{"tr":"İTALYA","bg":"Италия","markers":[{"source":"YA","target":"ИЯ"}]},{"tr":"ASYA","bg":"Азия","markers":[{"source":"YA","target":"ИЯ"}]},{"tr":"AMONYAK","bg":"амоняк","markers":[{"source":"YA","target":"Я"}]},{"tr":"BOYA","bg":"боя","markers":[{"source":"YA","target":"Я"}]},{"tr":"RADYATÖR","bg":"радиатор","markers":[{"source":"YA","target":"ИА"}]},{"tr":"DİYALOG","bg":"диалог","markers":[{"source":"YO/YA","target":"ИО/ИА"}]},{"tr":"RADYO","bg":"радио","markers":[{"source":"YO","target":"ИО"}]},{"tr":"BİYOLOJİ","bg":"биология","markers":[{"source":"YO","target":"ИО"}]}]},
-            {"rule_id":"phon_tr_syon_to_bg_tsiya","display":"-SYON → -ЦИЯ","explanation_tr":"-syon yapısı Bulgarcada çoğunlukla -ция olur.","examples":[{"tr":"DEKORASYON","bg":"декорация","markers":[{"source":"SYON","target":"ЦИЯ"}]},{"tr":"DELEGASYON","bg":"делегация","markers":[{"source":"SYON","target":"ЦИЯ"}]},{"tr":"NAVİGASYON","bg":"навигация","markers":[{"source":"SYON","target":"ЦИЯ"}]},{"tr":"AKASYA","bg":"акация","markers":[{"source":"SYA","target":"ЦИЯ"}]}]},
-            {"rule_id":"phon_tr_izm_to_bg_izam","display":"-İZM → -ИЗЪМ","explanation_tr":"-izm sonu Bulgarcada -изъм olarak görünür.","examples":[{"tr":"ATEİZM","bg":"атеизъм","markers":[{"source":"İZM","target":"ИЗЪМ"}]},{"tr":"BUDİZM","bg":"будизъм","markers":[{"source":"İZM","target":"ИЗЪМ"}]},{"tr":"HÜMANİZM","bg":"хуманизъм","markers":[{"source":"İZM","target":"ИЗЪМ"}]},{"tr":"DALTONİZM","bg":"далтонизъм","markers":[{"source":"İZM","target":"ИЗЪМ"}]},{"tr":"DRAMATİZM","bg":"драматизъм","markers":[{"source":"İZM","target":"ИЗЪМ"}]}]},
-            {"rule_id":"phon_tr_oto_to_avto","display":"OTO- → АВТО-","explanation_tr":"oto- öneki Bulgarcada çoğu zaman авто- olur.","examples":[{"tr":"OTOBİYOGRAFİ","bg":"автобиография","markers":[{"source":"OTO","target":"АВТО"}]},{"tr":"OTOBÜS","bg":"автобус","markers":[{"source":"OTO","target":"АВТО"}]},{"tr":"OTOMAT","bg":"автомат","markers":[{"source":"OTO","target":"АВТО"}]},{"tr":"OTOMATİK","bg":"автоматик","markers":[{"source":"OTO","target":"АВТО"}]}]}
-          ]
-        }
+      "source_id": "src-zup-tan-k-bg-ders",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
       ]
     }
+  ],
+  "learning_goals": [
+    "Türkçe-Bulgarca ortak kelimelerde sık görülen ses/harf dönüşümlerini tanımak",
+    "Kelimelerde dönüşen parçaları marker ile takip etmek",
+    "Sözlük aramasında kural temelli bağlantıları görmek"
+  ],
+  "sections": [
+    {
+      "section_id": "lesson-002-sec-full-pattern-rules",
+      "type": "conversion_rule_grid",
+      "title_tr": "Kaynak PDF’deki tüm dönüşüm kuralları",
+      "body_tr": "Bu bölüm, zup-tan-k BG Ders PDF’indeki tüm ses/harf dönüşüm başlıklarını marker motoruna bağlar. Her örnekte Türkçe taraftaki parça ve Bulgarca karşılığı birlikte işaretlenmelidir.",
+      "rule_file_ref": "/data/rules/cognate-pattern-rules.full.json",
+      "rule_ids": [
+        "cog-tr-sh-to-bg-sh",
+        "cog-tr-j-to-bg-zh",
+        "cog-tr-ji-to-bg-giya",
+        "cog-tr-c-cedilla-to-bg-ch",
+        "cog-tr-c-cedilla-to-bg-ts",
+        "cog-tr-o-umlaut-to-bg-yo",
+        "cog-tr-o-umlaut-to-bg-o",
+        "cog-tr-o-umlaut-to-bg-ev",
+        "cog-tr-o-umlaut-to-bg-eu",
+        "cog-tr-u-umlaut-to-bg-yu",
+        "cog-tr-iy-to-bg-y",
+        "cog-tr-ya-to-bg-iya",
+        "cog-tr-ya-to-bg-ya-letter",
+        "cog-tr-iya-to-bg-ia",
+        "cog-tr-iye-to-bg-ie",
+        "cog-tr-iyo-to-bg-io",
+        "cog-tr-iyu-to-bg-iu",
+        "cog-tr-syon-to-bg-tsiya",
+        "cog-tr-u-umlaut-to-bg-u",
+        "cog-tr-t-to-bg-d",
+        "cog-tr-f-to-bg-v",
+        "cog-tr-k-to-bg-h",
+        "cog-tr-sh-to-bg-h",
+        "cog-tr-y-to-bg-h",
+        "cog-tr-null-to-bg-h",
+        "cog-tr-h-to-bg-f",
+        "cog-tr-izm-to-bg-izum",
+        "cog-tr-i-to-bg-hard-a",
+        "cog-tr-i-to-bg-u",
+        "cog-tr-i-to-bg-null",
+        "cog-tr-i-to-bg-a",
+        "cog-tr-oto-to-bg-avto",
+        "cog-tr-e-to-bg-a",
+        "cog-tr-a-to-bg-e",
+        "cog-tr-a-to-bg-o",
+        "cog-tr-p-to-bg-b"
+      ]
+    }
+  ],
+  "linked_rules": [
+    "cog-tr-sh-to-bg-sh",
+    "cog-tr-j-to-bg-zh",
+    "cog-tr-ji-to-bg-giya",
+    "cog-tr-c-cedilla-to-bg-ch",
+    "cog-tr-c-cedilla-to-bg-ts",
+    "cog-tr-o-umlaut-to-bg-yo",
+    "cog-tr-o-umlaut-to-bg-o",
+    "cog-tr-o-umlaut-to-bg-ev",
+    "cog-tr-o-umlaut-to-bg-eu",
+    "cog-tr-u-umlaut-to-bg-yu",
+    "cog-tr-iy-to-bg-y",
+    "cog-tr-ya-to-bg-iya",
+    "cog-tr-ya-to-bg-ya-letter",
+    "cog-tr-iya-to-bg-ia",
+    "cog-tr-iye-to-bg-ie",
+    "cog-tr-iyo-to-bg-io",
+    "cog-tr-iyu-to-bg-iu",
+    "cog-tr-syon-to-bg-tsiya",
+    "cog-tr-u-umlaut-to-bg-u",
+    "cog-tr-t-to-bg-d",
+    "cog-tr-f-to-bg-v",
+    "cog-tr-k-to-bg-h",
+    "cog-tr-sh-to-bg-h",
+    "cog-tr-y-to-bg-h",
+    "cog-tr-null-to-bg-h",
+    "cog-tr-h-to-bg-f",
+    "cog-tr-izm-to-bg-izum",
+    "cog-tr-i-to-bg-hard-a",
+    "cog-tr-i-to-bg-u",
+    "cog-tr-i-to-bg-null",
+    "cog-tr-i-to-bg-a",
+    "cog-tr-oto-to-bg-avto",
+    "cog-tr-e-to-bg-a",
+    "cog-tr-a-to-bg-e",
+    "cog-tr-a-to-bg-o",
+    "cog-tr-p-to-bg-b"
   ]
 }
