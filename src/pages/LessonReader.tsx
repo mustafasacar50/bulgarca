@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, ChevronRight, CheckCircle2, Info, Trophy, Type, PenTool, CaseUpper, CaseLower, Eye, EyeOff, XCircle, MessageSquare, Table, Settings as SettingsIcon } from 'lucide-react';
+import { ArrowLeft, ChevronRight, CheckCircle2, Info, Trophy, Type, PenTool, CaseUpper, CaseLower, Eye, EyeOff, XCircle, MessageSquare, Table, Settings as SettingsIcon, Search } from 'lucide-react';
 import { Lesson, VocabularyItem } from '../types/lesson';
 import { Rule } from '../types/rule';
 import { RightInfoPanel } from '../components/RightInfoPanel';
@@ -21,6 +21,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [blockSearch, setBlockSearch] = useState<Record<number, string>>({});
 
   const { settings } = useDisplaySettings();
 
@@ -342,6 +343,80 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                       </div>
                     )}
 
+                    {block.type === 'glossary_table' && block.items && (
+                      <div className="space-y-4">
+                        <div className="relative">
+                          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                          <input 
+                            type="text"
+                            placeholder="Sözlükte ara (Türkçe veya Bulgarca)..."
+                            className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-2xl focus:ring-2 focus:ring-primary-500 outline-none transition-all"
+                            value={blockSearch[bIdx] || ''}
+                            onChange={(e) => setBlockSearch({ ...blockSearch, [bIdx]: e.target.value })}
+                          />
+                        </div>
+
+                        <div className="bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm overflow-x-auto">
+                          <table className="w-full text-left border-collapse min-w-[600px]">
+                            <thead>
+                              <tr className="bg-slate-50 border-b border-slate-100">
+                                <th className="p-4 text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">Bulgarca</th>
+                                <th className="p-4 text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">Türkçe Anlam</th>
+                                <th className="p-4 text-xs font-bold text-slate-400 uppercase tracking-wider">Detay</th>
+                                <th className="p-4 text-xs font-bold text-slate-400 uppercase tracking-wider text-right">Kaynak</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-50">
+                              {(block.items || [])
+                                .filter((item: any) => {
+                                  const query = (blockSearch[bIdx] || '').toLowerCase();
+                                  return !query || 
+                                    (item.bg || '').toLowerCase().includes(query) || 
+                                    (item.tr || '').toLowerCase().includes(query) ||
+                                    (item.entry_id || '').toLowerCase().includes(query);
+                                })
+                                .map((item: any, i: number) => (
+                                <tr 
+                                  key={i} 
+                                  className="hover:bg-primary-50/30 transition-colors cursor-pointer group"
+                                  onClick={() => setSelectedItem({ type: 'word', data: item })}
+                                >
+                                  <td className="p-4">
+                                    <div className="flex items-center gap-2">
+                                      <LearningText bg={item.bg} tr={item.tr} detail={item} onSelect={(data) => setSelectedItem({ type: 'word', data })} className="font-bold" />
+                                      {item.status === 'auto_extracted_needs_review' && (
+                                        <span className="text-[8px] font-bold px-1.5 py-0.5 bg-amber-50 text-amber-600 rounded-full border border-amber-100 uppercase whitespace-nowrap">
+                                          Otomatik
+                                        </span>
+                                      )}
+                                    </div>
+                                  </td>
+                                  <td className="p-4">
+                                    <span className="text-slate-600 text-sm font-medium">{item.tr}</span>
+                                  </td>
+                                  <td className="p-4">
+                                    <div className="flex flex-wrap gap-1">
+                                      {item.markers?.map((m: any, idx: number) => (
+                                        <span key={idx} className="text-[9px] font-bold px-1.5 py-0.5 bg-slate-100 text-slate-500 rounded uppercase">
+                                          {m.rule_id || m.type || 'Ek'}
+                                        </span>
+                                      ))}
+                                      {item.gender && <span className="text-[9px] font-bold px-1.5 py-0.5 bg-indigo-50 text-indigo-500 rounded uppercase">{item.gender}</span>}
+                                    </div>
+                                  </td>
+                                  <td className="p-4 text-right">
+                                    <span className="text-[10px] font-mono text-slate-300 group-hover:text-slate-500">
+                                      S.{item.source_page || '??'}
+                                    </span>
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    )}
+
                     {block.type === 'study_tip' && (
                       <div className="bg-amber-50 border border-amber-100 p-6 rounded-3xl flex gap-4">
                         <div className="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -351,7 +426,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                       </div>
                     )}
 
-                    {!['explanation', 'alphabet_grid', 'alphabet_grid_v2', 'alphabet_cards', 'rule_cards', 'rule_cards_v2', 'conversion_rule_grid', 'plural_rule_cards', 'word_table', 'word_table_v2', 'grammar_table', 'phrase_cards', 'phrases', 'dialogue', 'dialog_cards', 'grammar_panel', 'vocabulary', 'study_tip'].includes(block.type) && (
+                    {!['explanation', 'alphabet_grid', 'alphabet_grid_v2', 'alphabet_cards', 'rule_cards', 'rule_cards_v2', 'conversion_rule_grid', 'plural_rule_cards', 'word_table', 'word_table_v2', 'grammar_table', 'phrase_cards', 'phrases', 'dialogue', 'dialog_cards', 'grammar_panel', 'vocabulary', 'study_tip', 'glossary_table'].includes(block.type) && (
                       <div className="p-4 bg-red-50 border border-red-100 rounded-xl text-red-600 text-xs font-mono">
                         [DEBUG] Desteklenmeyen blok türü: {block.type}
                       </div>

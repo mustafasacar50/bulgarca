@@ -47,6 +47,9 @@
       "filePath": "/data/rules/alphabet-rules.json"
     }
   ],
-  "glossary": "/data/glossary/bg-tr-glossary.json",
+  "glossaries": [
+    "/data/glossary/bg-tr-glossary.json",
+    "/data/glossary/kucuk-sozluk-cognates.full.json"
+  ],
   "sources": "/data/sources/source-index.json"
 }

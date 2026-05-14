@@ -144,7 +144,32 @@ export function RightInfoPanel({ item, onClose, onSelectItem }: RightInfoPanelPr
                   <div className="text-sm font-medium text-slate-700">{data.gender}</div>
                 </div>
               )}
+              {data.source_page && (
+                <div className="bg-slate-50 p-3 rounded-xl">
+                  <div className="text-[10px] font-bold text-slate-400 uppercase">Kaynak Sayfa</div>
+                  <div className="text-sm font-medium text-slate-700">S. {data.source_page}</div>
+                </div>
+              )}
+              {data.status === 'auto_extracted_needs_review' && (
+                <div className="bg-amber-50 p-3 rounded-xl border border-amber-100">
+                  <div className="text-[10px] font-bold text-amber-500 uppercase">Durum</div>
+                  <div className="text-[10px] font-bold text-amber-700">OTOMATİK ÇIKARIM</div>
+                </div>
+              )}
             </div>
+
+            {data.markers && data.markers.length > 0 && (
+              <div className="space-y-2">
+                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">İlgili Kurallar</h4>
+                <div className="flex flex-wrap gap-2">
+                  {data.markers.map((m: any, idx: number) => (
+                    <span key={idx} className="px-2 py-1 bg-indigo-50 text-indigo-600 rounded-lg text-[10px] font-bold border border-indigo-100">
+                      {m.rule_id || m.type}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {data.plural && (
               <div className="bg-slate-50 p-3 rounded-xl">
@@ -155,11 +180,11 @@ export function RightInfoPanel({ item, onClose, onSelectItem }: RightInfoPanelPr
               </div>
             )}
 
-            {data.notes_tr && (
+            {(data.notes_tr || data.note_tr) && (
               <div className="space-y-2">
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Not</h4>
                 <p className="text-sm text-slate-600 leading-relaxed italic">
-                  {data.notes_tr}
+                  {data.notes_tr || data.note_tr}
                 </p>
               </div>
             )}
