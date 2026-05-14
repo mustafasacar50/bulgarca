@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0",
+  "entries": [
+    {
+      "entry_id": "phrase-kak-se-kazvash",
+      "bg": "Как се казваш?",
+      "tr": "Adın ne? / Nasıl adlandırılıyorsun?",
+      "tooltip_tr": "Adın ne? / Nasıl adlandırılıyorsun?",
+      "meaning_tr": "Adın ne? / Nasıl adlandırılıyorsun?",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-az-sum-student",
+      "bg": "Аз съм студент.",
+      "tr": "Ben öğrenciyim.",
+      "tooltip_tr": "Ben öğrenciyim.",
+      "meaning_tr": "Ben öğrenciyim.",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-az",
+      "bg": "аз",
+      "tr": "ben",
+      "tooltip_tr": "ben",
+      "meaning_tr": "ben",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-ti",
+      "bg": "ти",
+      "tr": "sen",
+      "tooltip_tr": "sen",
+      "meaning_tr": "sen",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-toy",
+      "bg": "той",
+      "tr": "o (eril)",
+      "tooltip_tr": "o (eril)",
+      "meaning_tr": "o (eril)",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-tya",
+      "bg": "тя",
+      "tr": "o (dişil)",
+      "tooltip_tr": "o (dişil)",
+      "meaning_tr": "o (dişil)",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-to",
+      "bg": "то",
+      "tr": "o (orta)",
+      "tooltip_tr": "o (orta)",
+      "meaning_tr": "o (orta)",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-nie",
+      "bg": "ние",
+      "tr": "biz",
+      "tooltip_tr": "biz",
+      "meaning_tr": "biz",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-vie",
+      "bg": "вие",
+      "tr": "siz / Siz",
+      "tooltip_tr": "siz / Siz",
+      "meaning_tr": "siz / Siz",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-te",
+      "bg": "те",
+      "tr": "onlar",
+      "tooltip_tr": "onlar",
+      "meaning_tr": "onlar",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-zdraveyte",
+      "bg": "Здравейте!",
+      "tr": "Merhaba!",
+      "tooltip_tr": "Merhaba!",
+      "meaning_tr": "Merhaba!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-zdrasti",
+      "bg": "Здрасти!",
+      "tr": "Selam!",
+      "tooltip_tr": "Selam!",
+      "meaning_tr": "Selam!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-dobro-utro",
+      "bg": "Добро утро!",
+      "tr": "Günaydın!",
+      "tooltip_tr": "Günaydın!",
+      "meaning_tr": "Günaydın!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-dobar-den",
+      "bg": "Добър ден!",
+      "tr": "İyi günler!",
+      "tooltip_tr": "İyi günler!",
+      "meaning_tr": "İyi günler!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-dobar-vecher",
+      "bg": "Добър вечер!",
+      "tr": "İyi akşamlar!",
+      "tooltip_tr": "İyi akşamlar!",
+      "meaning_tr": "İyi akşamlar!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-leka-nosht",
+      "bg": "Лека нощ!",
+      "tr": "İyi geceler!",
+      "tooltip_tr": "İyi geceler!",
+      "meaning_tr": "İyi geceler!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-dovizhdane",
+      "bg": "Довиждане!",
+      "tr": "Hoşça kalın / Görüşürüz!",
+      "tooltip_tr": "Hoşça kalın / Görüşürüz!",
+      "meaning_tr": "Hoşça kalın / Görüşürüz!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-sbogom",
+      "bg": "Сбогом!",
+      "tr": "Elveda!",
+      "tooltip_tr": "Elveda!",
+      "meaning_tr": "Elveda!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-blagodarya",
+      "bg": "Благодаря!",
+      "tr": "Teşekkür ederim!",
+      "tooltip_tr": "Teşekkür ederim!",
+      "meaning_tr": "Teşekkür ederim!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "phrase-izvinete",
+      "bg": "Извинете!",
+      "tr": "Affedersiniz!",
+      "tooltip_tr": "Affedersiniz!",
+      "meaning_tr": "Affedersiniz!",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-yutiya",
+      "bg": "ютия",
+      "tr": "ütü",
+      "tooltip_tr": "ütü",
+      "meaning_tr": "ütü",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-yabulka",
+      "bg": "ябълка",
+      "tr": "elma",
+      "tooltip_tr": "elma",
+      "meaning_tr": "elma",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-sgrada",
+      "bg": "сграда",
+      "tr": "bina",
+      "tooltip_tr": "bina",
+      "meaning_tr": "bina",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-sinyo",
+      "bg": "синьо",
+      "tr": "mavi",
+      "tooltip_tr": "mavi",
+      "meaning_tr": "mavi",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-sudzhuk",
+      "bg": "суджук",
+      "tr": "sucuk",
+      "tooltip_tr": "sucuk",
+      "meaning_tr": "sucuk",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    },
+    {
+      "entry_id": "word-bg-dush",
+      "bg": "душ",
+      "tr": "duş",
+      "tooltip_tr": "duş",
+      "meaning_tr": "duş",
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "page": null
+      },
+      "source_type": "a1_core_phrase",
+      "review_status": "curated_from_source"
+    }
+  ]
+}
