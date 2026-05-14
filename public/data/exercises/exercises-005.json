@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "lesson_id": "lesson-005-zamirler-kazvam-se-sum-li",
+  "exercise_set_id": "exercises-005",
+  "title_tr": "Zamirler, казвам се, съм ve ли alıştırmaları",
+  "items": [
+    {
+      "exercise_id": "ex005-001",
+      "type": "multiple_choice",
+      "prompt_tr": "'Ben' anlamındaki Bulgarca zamir hangisidir?",
+      "choices": [
+        "аз",
+        "ти",
+        "ние",
+        "те"
+      ],
+      "answer": "аз",
+      "explanation_tr": "аз = ben."
+    },
+    {
+      "exercise_id": "ex005-002",
+      "type": "multiple_choice",
+      "prompt_tr": "'Siz' veya resmî 'siz' için hangi zamir kullanılır?",
+      "choices": [
+        "вие",
+        "ние",
+        "те",
+        "то"
+      ],
+      "answer": "вие",
+      "explanation_tr": "вие hem çoğul 'siz' hem de resmî hitap olabilir."
+    },
+    {
+      "exercise_id": "ex005-003",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Аз ___ студент.",
+      "answer": "съм",
+      "accepted_answers": [
+        "съм"
+      ],
+      "explanation_tr": "Аз ile съм kullanılır."
+    },
+    {
+      "exercise_id": "ex005-004",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Ти ___ студент.",
+      "answer": "си",
+      "accepted_answers": [
+        "си"
+      ],
+      "explanation_tr": "Ти ile си kullanılır."
+    },
+    {
+      "exercise_id": "ex005-005",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Тя ___ студентка.",
+      "answer": "е",
+      "accepted_answers": [
+        "е"
+      ],
+      "explanation_tr": "Той/Тя/То ile е kullanılır."
+    },
+    {
+      "exercise_id": "ex005-006",
+      "type": "matching",
+      "prompt_tr": "Zamirleri Türkçeleriyle eşleştir.",
+      "pairs": [
+        {
+          "left": "аз",
+          "right": "ben"
+        },
+        {
+          "left": "ти",
+          "right": "sen"
+        },
+        {
+          "left": "ние",
+          "right": "biz"
+        },
+        {
+          "left": "те",
+          "right": "onlar"
+        }
+      ]
+    },
+    {
+      "exercise_id": "ex005-007",
+      "type": "multiple_choice",
+      "prompt_tr": "'Adım Mustafa' cümlesi hangisidir?",
+      "choices": [
+        "Аз се казвам Мустафа.",
+        "Ти се казваш Мустафа.",
+        "Те са Мустафа.",
+        "Вие сте Мустафа."
+      ],
+      "answer": "Аз се казвам Мустафа."
+    },
+    {
+      "exercise_id": "ex005-008",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Как се ___?",
+      "answer": "казваш",
+      "accepted_answers": [
+        "казваш"
+      ],
+      "explanation_tr": "Tekil/samimi 'sen' için казваш."
+    },
+    {
+      "exercise_id": "ex005-009",
+      "type": "transform",
+      "prompt_tr": "Düz cümleyi soru yap: Ти си студент.",
+      "answer": "Студент ли си?",
+      "accepted_answers": [
+        "Студент ли си?",
+        "Ти студент ли си?"
+      ],
+      "explanation_tr": "İsim/sıfat sorulurken ли sorulan öğenin arkasına gelir."
+    },
+    {
+      "exercise_id": "ex005-010",
+      "type": "multiple_choice",
+      "prompt_tr": "'Okuyor musun?' anlamı hangisidir?",
+      "choices": [
+        "Учиш ли?",
+        "Уча ли?",
+        "Студент ли си?",
+        "Казваш ли?"
+      ],
+      "answer": "Учиш ли?"
+    },
+    {
+      "exercise_id": "ex005-011",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Ние ___ студенти.",
+      "answer": "сме",
+      "accepted_answers": [
+        "сме"
+      ]
+    },
+    {
+      "exercise_id": "ex005-012",
+      "type": "fill_blank",
+      "prompt_tr": "Boşluğu doldur: Те ___ студенти.",
+      "answer": "са",
+      "accepted_answers": [
+        "са"
+      ]
+    },
+    {
+      "exercise_id": "ex005-013",
+      "type": "free_write",
+      "prompt_tr": "Bulgarca kendini tanıt: Adım ..., öğrenciyim, ... yaşındayım.",
+      "model_answer_bg": "Казвам се Мустафа. Аз съм студент. Сега съм на ... години.",
+      "explanation_tr": "Kendi bilgilerine göre düzenle."
+    }
+  ]
+}
