@@ -38,6 +38,36 @@
       "exercise_path": "/data/exercises/exercises-004.json",
       "order": 4,
       "level": "A1"
+    },
+    {
+      "id": "lesson-005-zamirler-kazvam-se-sum-li",
+      "lesson_id": "lesson-005-zamirler-kazvam-se-sum-li",
+      "title_tr": "Şahıs Zamirleri, казвам се, съм ve ли Soruları",
+      "level": "A1",
+      "order": 5,
+      "path": "/data/lessons/lesson-005-zamirler-kazvam-se-sum-li.json",
+      "exercise_path": "/data/exercises/exercises-005.json",
+      "description_tr": "Kendini tanıtma, olmak fiili ve li soru yapısı."
+    },
+    {
+      "id": "lesson-007-selamlasma-hitaplar-sosyal-ifadeler",
+      "lesson_id": "lesson-007-selamlasma-hitaplar-sosyal-ifadeler",
+      "title_tr": "Selamlaşma, Hitaplar ve Günlük Sosyal İfadeler",
+      "level": "A1",
+      "order": 7,
+      "path": "/data/lessons/lesson-007-selamlasma-hitaplar-sosyal-ifadeler.json",
+      "exercise_path": "/data/exercises/exercises-007.json",
+      "description_tr": "Günün saatine göre selamlaşma, teşekkür, özür, iyi dilek ve resmî/samimi biçimler."
+    },
+    {
+      "id": "lesson-008-ozel-sesler-heceleme-yazma",
+      "lesson_id": "lesson-008-ozel-sesler-heceleme-yazma",
+      "title_tr": "Özel Sesler, Heceleme ve Yazma Pratiği",
+      "level": "A1",
+      "order": 8,
+      "path": "/data/lessons/lesson-008-ozel-sesler-heceleme-yazma.json",
+      "exercise_path": "/data/exercises/exercises-008.json",
+      "description_tr": "Ю, Я, Щ, Й, ьо, дж, дз, heceleme ve el yazısı pratiği."
     }
   ],
   "rules": [
