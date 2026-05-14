@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0",
+  "rules": [
+    {
+      "rule_id": "grammar-kazvam-se-present",
+      "category": "grammar_rule",
+      "title_tr": "казвам се — adını söyleme kalıbı",
+      "short_tr": "казвам се = adım ...",
+      "description_tr": "Bulgarcada ad söylemek için казвам се kullanılır. Kişiye göre казвам/казваш/казва/казваме/казвате/казват değişir.",
+      "tooltip_tr": "казвам се = adım ... / kendime ... denir.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "се",
+        "style": "underline"
+      },
+      "examples": [
+        {
+          "bg": "Аз се казвам Мустафа.",
+          "tr": "Benim adım Mustafa."
+        },
+        {
+          "bg": "Как се казваш?",
+          "tr": "Adın ne?"
+        },
+        {
+          "bg": "Вие се казвате Станка.",
+          "tr": "Sizin adınız Stanka."
+        }
+      ],
+      "panel_tr": {
+        "summary": "Tanışma konuşmasının ana fiilidir.",
+        "details": [
+          "се parçası fiille birlikte öğrenilmelidir.",
+          "Resmî soruda Вие se kazvate kullanılır.",
+          "Samimi soruda Как се казваш? denir."
+        ]
+      }
+    },
+    {
+      "rule_id": "grammar-sum-present",
+      "category": "grammar_rule",
+      "title_tr": "съм — olmak fiili",
+      "short_tr": "съм = olmak",
+      "description_tr": "Kimlik, meslek, durum ve yaş gibi bilgilerde kullanılır.",
+      "tooltip_tr": "съм, Bulgarcada olmak fiilinin temel biçimidir.",
+      "marker": {
+        "color_key": "purple",
+        "highlight_target": "съм",
+        "style": "underline"
+      },
+      "examples": [
+        {
+          "bg": "Аз съм студент.",
+          "tr": "Ben öğrenciyim."
+        },
+        {
+          "bg": "Тя е студентка.",
+          "tr": "O öğrencidir."
+        },
+        {
+          "bg": "Те са студенти.",
+          "tr": "Onlar öğrencidir."
+        }
+      ],
+      "panel_tr": {
+        "summary": "съм fiili A1 düzeyinin omurga fiillerindendir.",
+        "details": [
+          "Аз съм, ти си, той/тя/то е, ние сме, вие сте, те са.",
+          "Türkçedeki isim cümlelerine benzer görev yapar."
+        ]
+      }
+    },
+    {
+      "rule_id": "grammar-li-after-verb",
+      "category": "grammar_rule",
+      "title_tr": "Fiil + ли?",
+      "short_tr": "ли ile soru",
+      "description_tr": "ли parçacığı fiilden sonra gelerek evet/hayır sorusu kurar.",
+      "tooltip_tr": "ли cümleyi evet/hayır sorusuna çevirir.",
+      "marker": {
+        "color_key": "amber",
+        "highlight_target": "ли",
+        "style": "background"
+      },
+      "examples": [
+        {
+          "bg": "Учиш ли?",
+          "tr": "Okuyor musun?"
+        },
+        {
+          "bg": "Разбираш ли?",
+          "tr": "Anlıyor musun?"
+        },
+        {
+          "bg": "Преподавате ли?",
+          "tr": "Ders veriyor musunuz?"
+        }
+      ],
+      "panel_tr": {
+        "summary": "ли, Bulgarcada çok temel soru parçacığıdır.",
+        "details": [
+          "Türkçedeki -mı/-mi gibi düşünülebilir ama kelime olarak ayrı yazılır.",
+          "Sorulan öğeden hemen sonra kullanılır."
+        ]
+      }
+    },
+    {
+      "rule_id": "grammar-li-noun-sum",
+      "category": "grammar_rule",
+      "title_tr": "İsim + ли + съм/си/е...?",
+      "short_tr": "Студент ли си?",
+      "description_tr": "Bir kişinin öğrenci, öğretmen, aç vb. olup olmadığını sormak için kullanılır.",
+      "tooltip_tr": "İsim/sıfat + ли + съм çekimi ile '... mısın?' sorusu kurulur.",
+      "marker": {
+        "color_key": "amber",
+        "highlight_target": "ли",
+        "style": "background"
+      },
+      "examples": [
+        {
+          "bg": "Студент ли си?",
+          "tr": "Öğrenci misin?"
+        },
+        {
+          "bg": "Преподавател ли сте?",
+          "tr": "Öğretmen misiniz?"
+        },
+        {
+          "bg": "Гладен ли е?",
+          "tr": "Aç mı?"
+        }
+      ]
+    },
+    {
+      "rule_id": "register-formal-informal",
+      "category": "grammar_rule",
+      "title_tr": "Resmî ve samimi ifade farkı",
+      "short_tr": "Вие ↔ ти",
+      "description_tr": "Вие resmî/saygılı veya çoğul siz; ти samimi sen anlamındadır.",
+      "tooltip_tr": "Вие daha resmî, ти daha samimidir.",
+      "marker": {
+        "color_key": "gray",
+        "highlight_target": "Ви",
+        "style": "underline"
+      },
+      "examples": [
+        {
+          "bg": "Моля Ви! → Моля те!",
+          "tr": "Lütfen/rica ederim: resmî → samimi"
+        },
+        {
+          "bg": "Извинете! → Извинявай!",
+          "tr": "Affedersiniz → affedersin"
+        }
+      ]
+    },
+    {
+      "rule_id": "alphabet-yu-two-sounds",
+      "category": "alphabet_rule",
+      "title_tr": "Ю = й + у",
+      "short_tr": "Ю özel ses",
+      "description_tr": "Ю harfi yu etkisi verir.",
+      "tooltip_tr": "Ю çoğu durumda yu gibi duyulur.",
+      "examples": [
+        {
+          "bg": "ютия",
+          "tr": "ütü"
+        },
+        {
+          "bg": "юрган",
+          "tr": "yorgan"
+        }
+      ]
+    },
+    {
+      "rule_id": "alphabet-ya-two-sounds",
+      "category": "alphabet_rule",
+      "title_tr": "Я = й + а",
+      "short_tr": "Я özel ses",
+      "description_tr": "Я harfi ya etkisi verir.",
+      "tooltip_tr": "Я çoğu durumda ya gibi duyulur.",
+      "examples": [
+        {
+          "bg": "ябълка",
+          "tr": "elma"
+        },
+        {
+          "bg": "ято",
+          "tr": "sürü"
+        }
+      ]
+    },
+    {
+      "rule_id": "alphabet-sht-two-sounds",
+      "category": "alphabet_rule",
+      "title_tr": "Щ = ш + т",
+      "short_tr": "Щ = sht",
+      "description_tr": "Щ harfi transliterasyonda sht olarak verilir.",
+      "tooltip_tr": "Щ = ш + т gibi düşün.",
+      "examples": [
+        {
+          "bg": "щъркел",
+          "tr": "leylek"
+        },
+        {
+          "bg": "щраус",
+          "tr": "devekuşu"
+        }
+      ]
+    },
+    {
+      "rule_id": "alphabet-y-short",
+      "category": "alphabet_rule",
+      "title_tr": "Й — kısa y",
+      "short_tr": "Й özel ses",
+      "description_tr": "Й Türkçedeki y sesine yakın yarı ünlü işlevi görür.",
+      "tooltip_tr": "Й kısa y gibi düşünülür.",
+      "examples": [
+        {
+          "bg": "лейка",
+          "tr": "sulama kabı"
+        },
+        {
+          "bg": "йена",
+          "tr": "yen"
+        }
+      ]
+    },
+    {
+      "rule_id": "soft-sign-yo",
+      "category": "alphabet_rule",
+      "title_tr": "Ьо / ьо",
+      "short_tr": "Yumuşatma işareti",
+      "description_tr": "Ь tek başına sesli harf değildir; önceki sesi yumuşatır.",
+      "tooltip_tr": "Ь önceki sesi yumuşatır.",
+      "examples": [
+        {
+          "bg": "синьо",
+          "tr": "mavi"
+        },
+        {
+          "bg": "шофьор",
+          "tr": "şoför"
+        },
+        {
+          "bg": "миньор",
+          "tr": "madenci"
+        }
+      ]
+    },
+    {
+      "rule_id": "special-dzh",
+      "category": "alphabet_rule",
+      "title_tr": "Дж sesi",
+      "short_tr": "Дж = dzh/c",
+      "description_tr": "Дж Türkçedeki c sesine yakın duyulabilir.",
+      "tooltip_tr": "Дж c/dzh benzeri sestir.",
+      "examples": [
+        {
+          "bg": "суджук",
+          "tr": "sucuk"
+        }
+      ]
+    },
+    {
+      "rule_id": "special-dz",
+      "category": "alphabet_rule",
+      "title_tr": "Дз sesi",
+      "short_tr": "Дз = dz",
+      "description_tr": "Дз iki harfli özel ses birleşimidir.",
+      "tooltip_tr": "Дз = dz sesi.",
+      "examples": [
+        {
+          "bg": "дзън",
+          "tr": "çın sesi"
+        },
+        {
+          "bg": "дзифт",
+          "tr": "zift"
+        }
+      ]
+    }
+  ]
+}
