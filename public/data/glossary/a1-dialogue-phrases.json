@@ -1,0 +1,521 @@
+{
+  "schema_version": "1.1",
+  "entries": [
+    {
+      "entry_id": "phrase-a1-dialogue-001",
+      "bg": "Как се казвате?",
+      "tr": "Adınız ne? / İsminiz ne?",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Adınız ne? / İsminiz ne?",
+      "usage_tr": "Resmî/saygılı ad sorma.",
+      "rule_refs": [
+        "bg-kak-se-kazvate",
+        "bg-formal-vie"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-002",
+      "bg": "Как се казваш?",
+      "tr": "Adın ne?",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Adın ne?",
+      "usage_tr": "Samimi ad sorma.",
+      "rule_refs": [
+        "bg-kak-se-kazvate"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-003",
+      "bg": "Казвам се...",
+      "tr": "Adım...",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Adım...",
+      "usage_tr": "Kendini tanıtmanın en temel kalıbı.",
+      "rule_refs": [
+        "bg-kazvam-se-name"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-004",
+      "bg": "Аз се казвам...",
+      "tr": "Benim adım...",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Benim adım...",
+      "usage_tr": "Vurgulu kendini tanıtma.",
+      "rule_refs": [
+        "bg-kazvam-se-name"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-005",
+      "bg": "Аз съм...",
+      "tr": "Ben... / Ben ...-im.",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Ben... / Ben ...-im.",
+      "usage_tr": "Kimlik, meslek veya isim söylemek için.",
+      "rule_refs": [
+        "bg-az-sum-identity"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-006",
+      "bg": "А Вие кой сте?",
+      "tr": "Peki siz kimsiniz?",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Peki siz kimsiniz?",
+      "usage_tr": "Resmî/saygılı kişiyi sorma.",
+      "rule_refs": [
+        "bg-koy-ste",
+        "bg-formal-vie"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-007",
+      "bg": "Вашето име, моля?",
+      "tr": "Adınız, lütfen?",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Adınız, lütfen?",
+      "usage_tr": "Kısa ve resmî ad isteme.",
+      "rule_refs": [
+        "bg-polite-name-request"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-008",
+      "bg": "Името Ви, моля?",
+      "tr": "Adınız, lütfen?",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Adınız, lütfen?",
+      "usage_tr": "Вашето име ile yakın anlamlı.",
+      "rule_refs": [
+        "bg-polite-name-request"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-009",
+      "bg": "Бихте ли повторили?",
+      "tr": "Tekrar eder misiniz?",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Tekrar eder misiniz?",
+      "usage_tr": "Nazik rica kalıbı.",
+      "rule_refs": [
+        "bg-polite-bihte-li"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-010",
+      "bg": "Бихте ли повторили името си?",
+      "tr": "Adınızı tekrar eder misiniz?",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Adınızı tekrar eder misiniz?",
+      "usage_tr": "Adı iyi duymayınca kullanılır.",
+      "rule_refs": [
+        "bg-polite-bihte-li"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-011",
+      "bg": "Приятно ми е.",
+      "tr": "Memnun oldum.",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Memnun oldum.",
+      "usage_tr": "Tanışmada en önemli kalıplardan biri.",
+      "rule_refs": [
+        "bg-priyatno-mi-e"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-012",
+      "bg": "На мен също.",
+      "tr": "Ben de.",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Ben de.",
+      "usage_tr": "Karşılıklı memnuniyet cevabı.",
+      "rule_refs": [
+        "bg-na-men-sashto"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-013",
+      "bg": "Радвам се, че се запознахме.",
+      "tr": "Tanıştığımıza sevindim.",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Tanıştığımıza sevindim.",
+      "usage_tr": "Tanışma sonrası olumlu kapanış.",
+      "rule_refs": [
+        "bg-radvam-se"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-014",
+      "bg": "Запознайте се!",
+      "tr": "Tanışın lütfen!",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Tanışın lütfen!",
+      "usage_tr": "Resmî veya çoğul hitap.",
+      "rule_refs": [
+        "bg-zapoznayte-se"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-015",
+      "bg": "Запознай се!",
+      "tr": "Tanış!",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Tanış!",
+      "usage_tr": "Samimi tekil hitap.",
+      "rule_refs": [
+        "bg-zapoznay-se"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-016",
+      "bg": "Това е...",
+      "tr": "Bu... / Bu kişi...",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Bu... / Bu kişi...",
+      "usage_tr": "Birini tanıtırken.",
+      "rule_refs": [
+        "bg-tova-e"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-017",
+      "bg": "Моя колежка",
+      "tr": "Benim kadın meslektaşım",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Benim kadın meslektaşım",
+      "usage_tr": "Kadın meslektaş için; kaynakta 'А това е моя колежка'.",
+      "rule_refs": [],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-018",
+      "bg": "Нашият екскурзовод",
+      "tr": "Bizim rehberimiz",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Bizim rehberimiz",
+      "usage_tr": "Belirli erkek rehber için членli biçim: нашият.",
+      "rule_refs": [],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-019",
+      "bg": "Ще се обадя.",
+      "tr": "Arayacağım.",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Arayacağım.",
+      "usage_tr": "Ще ile gelecek zaman başlangıç örneği.",
+      "rule_refs": [
+        "bg-shte-future"
+      ],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    },
+    {
+      "entry_id": "phrase-a1-dialogue-020",
+      "bg": "Няма защо!",
+      "tr": "Bir şey değil!",
+      "type": "phrase",
+      "tags": [
+        "a1",
+        "dialogue",
+        "tanisma"
+      ],
+      "tooltip_tr": "Bir şey değil!",
+      "usage_tr": "Teşekküre cevap.",
+      "rule_refs": [],
+      "source": {
+        "source_id": "src-a1-v-1-2",
+        "pages": [
+          15,
+          16,
+          20,
+          21
+        ],
+        "note": "Урок № 2 tanışma kalıpları ve BDK tanışma ifadeleri."
+      }
+    }
+  ]
+}
