@@ -74,6 +74,20 @@
       "exercise_path": "/data/exercises/exercises-008.json",
       "order": 8,
       "level": "A1"
+    },
+    {
+      "lesson_id": "lesson-009-a1-diyalog-kak-se-kazvate",
+      "title_tr": "Diyalog Dersi: Как се казвате?",
+      "level": "A1",
+      "order": 9,
+      "path": "/data/lessons/lesson-009-a1-diyalog-kak-se-kazvate.json",
+      "exercise_path": "/data/exercises/exercises-009-a1-dialogue-kak-se-kazvate.json",
+      "status": "active",
+      "tags": [
+        "diyalog",
+        "tanisma",
+        "kazvam-se"
+      ]
     }
   ],
   "rules": [
