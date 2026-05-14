@@ -1,63 +1,3723 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "lesson_id": "lesson-001-alfabe",
-  "title_tr": "Bulgar Alfabesi: Basılı + El Yazısı + Örnekler",
-  "title_bg": "Българска азбука",
+  "title_tr": "Bulgar Alfabesi: Harfler, El Yazısı, Örnekler ve Mini Test",
+  "subtitle_tr": "30 harf; basılı/el yazısı; her harf için zengin örnek havuzu",
   "level": "A1",
   "order": 1,
-  "estimated_minutes": 60,
+  "estimated_minutes": 55,
+  "tags": [
+    "alfabe",
+    "kirill",
+    "el-yazisi",
+    "telaffuz",
+    "ornek-kelimeler",
+    "quiz"
+  ],
+  "source_refs": [
+    {
+      "source_id": "src-a1-v-1-2",
+      "pages": [
+        1,
+        2
+      ],
+      "note": "Ana alfabe tablosu, telaffuz, transliterasyon, özel sesler, heceleme."
+    },
+    {
+      "source_id": "src-alfabe-ilk-ders",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "note": "Görsel alfabe kartları ve nesne eşleştirmeleri."
+    },
+    {
+      "source_id": "assistant-enrichment-bg-core-vocab",
+      "pages": [],
+      "note": "Ders zenginleştirme için eklenen temel A1 kelime örnekleri; kaynak dışı yardımcı örnekler olarak işaretlidir."
+    }
+  ],
+  "learning_goals": [
+    "Bulgar alfabesindeki 30 harfi basılı ve el yazısı biçimiyle tanımak.",
+    "Türkçe bilenler için karışabilecek harfleri ayırt etmek: В, Н, Р, С, У, Х.",
+    "Her harfi gerçek kelime içinde okuyarak ses-harf sezgisi geliştirmek.",
+    "Harf detay panelinden aynı harfe ait kaynak, görsel kart ve ek kelimeleri incelemek.",
+    "Mini testlerle harf-ses, transliterasyon ve kelime başı harf eşleştirmesi yapmak."
+  ],
   "ui_hints": {
-    "default_show_marker": false,
-    "supports_handwriting_toggle": true,
+    "default_show_marker": true,
     "supports_right_panel": true,
-    "supports_example_drawer": true
+    "supports_hover": true,
+    "supports_script_toggle": true,
+    "supports_quiz": true,
+    "letter_detail_min_examples": 12
   },
-  "summary_tr": "Bu derste her harf için basılı büyük-küçük biçim, el yazısı büyük-küçük biçim, ses karşılığı, Türkçe açıklama ve sağ panelde açılacak örnek kelimeler bulunur.",
   "sections": [
     {
-      "section_id": "alphabet-grid",
+      "section_id": "l001-intro",
+      "type": "explanation",
+      "title_tr": "Bu ders nasıl kullanılacak?",
+      "body_tr": "Harf kartına tıklayınca sağ panel açılmalı. Sağ panelde harfin basılı/el yazısı biçimi, ses açıklaması, transliterasyon, kaynak örnekleri, görsel kart örnekleri, ek A1 kelimeler ve mini alıştırma görünmelidir. Tüm Bulgarca kelimelerde hover Türkçe anlam göstermelidir."
+    },
+    {
+      "section_id": "l001-alphabet-cards",
+      "type": "alphabet_cards",
       "title_tr": "Harf kartları",
-      "blocks": [
+      "description_tr": "Her harfe tıkla; sağ panelde aynı harfle başlayan ve içinde o harf geçen zengin örnekleri gör.",
+      "letters": [
         {
-          "type": "alphabet_grid_v2",
-          "items": [
-            {"letter_id":"a","print_upper":"А","print_lower":"а","hand_upper":"А","hand_lower":"а","latin_hint":"A","sound":"a","note_tr":"Türkçedeki a sesine çok yakındır.","panel_examples":["азбука","автобус","анатомия","анархия"]},
-            {"letter_id":"be","print_upper":"Б","print_lower":"б","hand_upper":"Б","hand_lower":"б","latin_hint":"B","sound":"b","note_tr":"b sesi.","panel_examples":["баба","бюро","биология","болница"]},
-            {"letter_id":"ve","print_upper":"В","print_lower":"в","hand_upper":"В","hand_lower":"в","latin_hint":"V","sound":"v","note_tr":"Latin B gibi görünür ama V okunur.","panel_examples":["вагон","вино","врат","вокал"]},
-            {"letter_id":"ge","print_upper":"Г","print_lower":"г","hand_upper":"Г","hand_lower":"г","latin_hint":"G","sound":"g","note_tr":"g sesi.","panel_examples":["гара","грамада","география","гише"]},
-            {"letter_id":"de","print_upper":"Д","print_lower":"д","hand_upper":"Д","hand_lower":"д","latin_hint":"D","sound":"d","note_tr":"El yazısında biçimi basılı görünümden farklı fark edilebilir; ayrı gösterim aç/kapat özelliği kullanılmalı.","panel_examples":["ден","душ","диалог","директор"]},
-            {"letter_id":"e","print_upper":"Е","print_lower":"е","hand_upper":"Е","hand_lower":"е","latin_hint":"E","sound":"e","note_tr":"e sesi.","panel_examples":["енергия","енциклопедия","елха","Европа"]},
-            {"letter_id":"zhe","print_upper":"Ж","print_lower":"ж","hand_upper":"Ж","hand_lower":"ж","latin_hint":"Zh","sound":"j/zh","note_tr":"Türkçedeki j sesine yakındır.","panel_examples":["жаба","жест","ажиотaj","масаж"]},
-            {"letter_id":"ze","print_upper":"З","print_lower":"з","hand_upper":"З","hand_lower":"з","latin_hint":"Z","sound":"z","note_tr":"z sesi.","panel_examples":["зима","зоология","захар","завод"]},
-            {"letter_id":"i","print_upper":"И","print_lower":"и","hand_upper":"И","hand_lower":"и","latin_hint":"I/İ","sound":"i","note_tr":"i sesi.","panel_examples":["Италия","история","игра","инженер"]},
-            {"letter_id":"short-i","print_upper":"Й","print_lower":"й","hand_upper":"Й","hand_lower":"й","latin_hint":"Y","sound":"y glide","note_tr":"Kısa y kayması. Diftonglarda sık görülür.","panel_examples":["йон","май","хей","волейбол"]},
-            {"letter_id":"ka","print_upper":"К","print_lower":"к","hand_upper":"К","hand_lower":"к","latin_hint":"K","sound":"k","note_tr":"k sesi.","panel_examples":["кафе","камион","класьор","километър"]},
-            {"letter_id":"el","print_upper":"Л","print_lower":"л","hand_upper":"Л","hand_lower":"л","latin_hint":"L","sound":"l","note_tr":"El yazısında daha kıvrımlı olabilir.","panel_examples":["лимон","лекция","литография","лукс"]},
-            {"letter_id":"em","print_upper":"М","print_lower":"м","hand_upper":"М","hand_lower":"м","latin_hint":"M","sound":"m","note_tr":"m sesi.","panel_examples":["маса","монархия","механик","меню"]},
-            {"letter_id":"en","print_upper":"Н","print_lower":"н","hand_upper":"Н","hand_lower":"н","latin_hint":"N","sound":"n","note_tr":"Latin H gibi görünür ama N okunur.","panel_examples":["невролог","навигация","номер","нота"]},
-            {"letter_id":"o","print_upper":"О","print_lower":"о","hand_upper":"О","hand_lower":"о","latin_hint":"O","sound":"o","note_tr":"o sesi.","panel_examples":["опера","отел","океан","облак"]},
-            {"letter_id":"pe","print_upper":"П","print_lower":"п","hand_upper":"П","hand_lower":"п","latin_hint":"P","sound":"p","note_tr":"p sesi.","panel_examples":["парк","професор","психология","план"]},
-            {"letter_id":"er","print_upper":"Р","print_lower":"р","hand_upper":"Р","hand_lower":"р","latin_hint":"R","sound":"r","note_tr":"Latin P gibi görünür ama R okunur.","panel_examples":["радио","риба","ръка","река"]},
-            {"letter_id":"es","print_upper":"С","print_lower":"с","hand_upper":"С","hand_lower":"с","latin_hint":"S","sound":"s","note_tr":"Latin C gibi görünür ama S okunur.","panel_examples":["салата","сандвич","стратегия","сироп"]},
-            {"letter_id":"te","print_upper":"Т","print_lower":"т","hand_upper":"Т","hand_lower":"т","latin_hint":"T","sound":"t","note_tr":"t sesi.","panel_examples":["такси","тенор","тест","техника"]},
-            {"letter_id":"u","print_upper":"У","print_lower":"у","hand_upper":"У","hand_lower":"у","latin_hint":"U","sound":"u","note_tr":"Latin Y gibi görünür ama U okunur.","panel_examples":["университет","урок","дует","Сатурн"]},
-            {"letter_id":"ef","print_upper":"Ф","print_lower":"ф","hand_upper":"Ф","hand_lower":"ф","latin_hint":"F","sound":"f","note_tr":"f sesi.","panel_examples":["филм","фурма","факултет","форма"]},
-            {"letter_id":"ha","print_upper":"Х","print_lower":"х","hand_upper":"Х","hand_lower":"х","latin_hint":"H/Kh","sound":"h/kh","note_tr":"boğumlu h/kh.","panel_examples":["химия","хаос","хотел","хронология"]},
-            {"letter_id":"tse","print_upper":"Ц","print_lower":"ц","hand_upper":"Ц","hand_lower":"ц","latin_hint":"Ts","sound":"ts","note_tr":"ts sesi.","panel_examples":["център","цивилен","цигара","доцент"]},
-            {"letter_id":"che","print_upper":"Ч","print_lower":"ч","hand_upper":"Ч","hand_lower":"ч","latin_hint":"Ch","sound":"ç","note_tr":"Türkçedeki ç sesine yakındır.","panel_examples":["чай","чорап","чироз","чорба"]},
-            {"letter_id":"sha","print_upper":"Ш","print_lower":"ш","hand_upper":"Ш","hand_lower":"ш","latin_hint":"Sh","sound":"ş","note_tr":"ş sesi.","panel_examples":["шапка","душ","афиш","марш"]},
-            {"letter_id":"shta","print_upper":"Щ","print_lower":"щ","hand_upper":"Щ","hand_lower":"щ","latin_hint":"Sht","sound":"şt","note_tr":"Bulgarcada şt birleşik sesidir.","panel_examples":["щастие","поща","същност","къща"]},
-            {"letter_id":"er-golyam","print_upper":"Ъ","print_lower":"ъ","hand_upper":"Ъ","hand_lower":"ъ","latin_hint":"Ă/ɤ","sound":"kalın ı benzeri","note_tr":"Türkçedeki tam bir karşılığı yok; kalın, merkezî bir ünlüdür.","panel_examples":["български","къща","сън","мъж"]},
-            {"letter_id":"soft-sign","print_upper":"Ь","print_lower":"ь","hand_upper":"Ь","hand_lower":"ь","latin_hint":"soft sign","sound":"tek başına ses vermez","note_tr":"Yumuşatma işareti. Özellikle ю, я öncesinde veya bazı yabancı kelimelerde görülür.","panel_examples":["дубльор","класьор","гьон","льoд"]},
-            {"letter_id":"yu","print_upper":"Ю","print_lower":"ю","hand_upper":"Ю","hand_lower":"ю","latin_hint":"Yu","sound":"yu","note_tr":"y+u birleşik sesi.","panel_examples":["Юлия","бюро","меню","бюст"]},
-            {"letter_id":"ya","print_upper":"Я","print_lower":"я","hand_upper":"Я","hand_lower":"я","latin_hint":"Ya","sound":"ya","note_tr":"y+a birleşik sesi.","panel_examples":["Яна","анархия","стратегия","България"]}
+          "letter_id": "bg-letter-a",
+          "order": 1,
+          "print_upper": "А",
+          "print_lower": "а",
+          "handwriting_upper": "А",
+          "handwriting_lower": "а",
+          "sound": "a",
+          "transliteration": "A, a",
+          "tr_hint": "Türkçedeki a sesine yakındır.",
+          "confusion_tr": "Latin A/a ile benzediği için kolaydır; asıl dikkat Kiril kelimede diğer harflerle birlikte okumaktır.",
+          "examples": [
+            {
+              "bg": "азбука",
+              "tr": "alfabe",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "вагон",
+              "tr": "vagon",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "ананас",
+              "tr": "ananas",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 7
+              }
+            },
+            {
+              "bg": "адрес",
+              "tr": "adres",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "автобус",
+              "tr": "otobüs",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "аптека",
+              "tr": "eczane",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "април",
+              "tr": "nisan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "артист",
+              "tr": "sanatçı",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "атом",
+              "tr": "atom",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "албум",
+              "tr": "albüm",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "Англия",
+              "tr": "İngiltere",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "агне",
+              "tr": "kuzu",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "армия",
+              "tr": "ordu",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki a sesine yakındır.",
+          "panel_tr": {
+            "summary": "Türkçedeki a sesine yakındır.",
+            "details": [
+              "Latin A/a ile benzediği için kolaydır; asıl dikkat Kiril kelimede diğer harflerle birlikte okumaktır.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-b",
+          "order": 2,
+          "print_upper": "Б",
+          "print_lower": "б",
+          "handwriting_upper": "Б",
+          "handwriting_lower": "б",
+          "sound": "b",
+          "transliteration": "B, b",
+          "tr_hint": "Türkçedeki b sesidir.",
+          "confusion_tr": "Basılı Б, Latin B’ye benzer ama biçimi farklıdır; küçük б özellikle alışma ister.",
+          "examples": [
+            {
+              "bg": "баба",
+              "tr": "büyükanne",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "бебе",
+              "tr": "bebek",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "банка",
+              "tr": "banka",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "бира",
+              "tr": "bira",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "банан",
+              "tr": "muz",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "България",
+              "tr": "Bulgaristan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "болница",
+              "tr": "hastane",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "билет",
+              "tr": "bilet",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "балон",
+              "tr": "balon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ботуш",
+              "tr": "çizme",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "брат",
+              "tr": "erkek kardeş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "библиотека",
+              "tr": "kütüphane",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki b sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki b sesidir.",
+            "details": [
+              "Basılı Б, Latin B’ye benzer ama biçimi farklıdır; küçük б özellikle alışma ister.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-v",
+          "order": 3,
+          "print_upper": "В",
+          "print_lower": "в",
+          "handwriting_upper": "В",
+          "handwriting_lower": "в",
+          "sound": "v",
+          "transliteration": "V, v",
+          "tr_hint": "Türkçedeki v sesidir.",
+          "confusion_tr": "Kiril В, Latin B gibi görünür ama v okunur; Türkçe bilenler için en kritik karışıklıklardan biridir.",
+          "examples": [
+            {
+              "bg": "вол",
+              "tr": "öküz",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "вятър",
+              "tr": "rüzgâr",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "вода",
+              "tr": "su",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "вагон",
+              "tr": "vagon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "вино",
+              "tr": "şarap",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "врата",
+              "tr": "kapı",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "време",
+              "tr": "zaman / hava",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "вечер",
+              "tr": "akşam",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "влак",
+              "tr": "tren",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ваза",
+              "tr": "vazo",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "висок",
+              "tr": "yüksek",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "вирус",
+              "tr": "virüs",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki v sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki v sesidir.",
+            "details": [
+              "Kiril В, Latin B gibi görünür ama v okunur; Türkçe bilenler için en kritik karışıklıklardan biridir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-g",
+          "order": 4,
+          "print_upper": "Г",
+          "print_lower": "г",
+          "handwriting_upper": "Г",
+          "handwriting_lower": "г",
+          "sound": "g",
+          "transliteration": "G, g",
+          "tr_hint": "Türkçedeki g sesidir.",
+          "confusion_tr": "Г harfi Latin G’ye benzemez; köşeli biçimiyle g sesi verir.",
+          "examples": [
+            {
+              "bg": "гъба",
+              "tr": "mantar",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "гьол",
+              "tr": "göl",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "гол",
+              "tr": "çıplak / gol",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "гъба",
+              "tr": "mantar",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 8
+              }
+            },
+            {
+              "bg": "град",
+              "tr": "şehir",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "гора",
+              "tr": "orman",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "гара",
+              "tr": "istasyon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "география",
+              "tr": "coğrafya",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "герой",
+              "tr": "kahraman",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "гост",
+              "tr": "misafir",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "глас",
+              "tr": "ses / oy",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "глад",
+              "tr": "açlık",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "година",
+              "tr": "yıl",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "грам",
+              "tr": "gram",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki g sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki g sesidir.",
+            "details": [
+              "Г harfi Latin G’ye benzemez; köşeli biçimiyle g sesi verir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-d",
+          "order": 5,
+          "print_upper": "Д",
+          "print_lower": "д",
+          "handwriting_upper": "Д",
+          "handwriting_lower": "д",
+          "sound": "d",
+          "transliteration": "D, d",
+          "tr_hint": "Türkçedeki d sesidir.",
+          "confusion_tr": "Küçük д basılı ve el yazısında farklı görünebilir; bu yüzden el yazısı modu önemlidir.",
+          "examples": [
+            {
+              "bg": "добро",
+              "tr": "iyi",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "дете",
+              "tr": "çocuk",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "дядо",
+              "tr": "dede",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "домат",
+              "tr": "domates",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 6
+              }
+            },
+            {
+              "bg": "дом",
+              "tr": "ev",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ден",
+              "tr": "gün",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "дърво",
+              "tr": "ağaç",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "душ",
+              "tr": "duş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "декан",
+              "tr": "dekan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "документ",
+              "tr": "belge",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "доктор",
+              "tr": "doktor",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "дълъг",
+              "tr": "uzun",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "диван",
+              "tr": "divan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "делегация",
+              "tr": "delegasyon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki d sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki d sesidir.",
+            "details": [
+              "Küçük д basılı ve el yazısında farklı görünebilir; bu yüzden el yazısı modu önemlidir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-e",
+          "order": 6,
+          "print_upper": "Е",
+          "print_lower": "е",
+          "handwriting_upper": "Е",
+          "handwriting_lower": "е",
+          "sound": "e",
+          "transliteration": "E, e",
+          "tr_hint": "Türkçedeki e sesine yakındır.",
+          "confusion_tr": "Görünüş ve ses olarak Latin E’ye yakındır.",
+          "examples": [
+            {
+              "bg": "ехо",
+              "tr": "yankı",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "елха",
+              "tr": "çam ağacı",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "език",
+              "tr": "dil",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "Европа",
+              "tr": "Avrupa",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "есен",
+              "tr": "sonbahar",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "етаж",
+              "tr": "kat",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "енергия",
+              "tr": "enerji",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "етикет",
+              "tr": "etiket",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "екран",
+              "tr": "ekran",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "един",
+              "tr": "bir",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "елен",
+              "tr": "geyik",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "елемент",
+              "tr": "unsur",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki e sesine yakındır.",
+          "panel_tr": {
+            "summary": "Türkçedeki e sesine yakındır.",
+            "details": [
+              "Görünüş ve ses olarak Latin E’ye yakındır.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-zh",
+          "order": 7,
+          "print_upper": "Ж",
+          "print_lower": "ж",
+          "handwriting_upper": "Ж",
+          "handwriting_lower": "ж",
+          "sound": "j / zh",
+          "transliteration": "Zh, zh",
+          "tr_hint": "Türkçedeki j sesine yakındır: jandarma kelimesindeki j gibi.",
+          "confusion_tr": "Kiril Ж, Türkçedeki J sesini verir. Ortak kelimelerde J → Ж kuralıyla çok sık görülür.",
+          "linked_rule_ids": [
+            "cog-tr-j-to-bg-zh"
+          ],
+          "examples": [
+            {
+              "bg": "жаба",
+              "tr": "kurbağa",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "жетон",
+              "tr": "jeton",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "плаж",
+              "tr": "plaj",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "жаба",
+              "tr": "kurbağa",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 7
+              }
+            },
+            {
+              "bg": "жена",
+              "tr": "kadın",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "живот",
+              "tr": "hayat",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "жираф",
+              "tr": "zürafa",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "журнал",
+              "tr": "jurnal / dergi",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "жълт",
+              "tr": "sarı",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "жега",
+              "tr": "sıcak hava",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "желязо",
+              "tr": "demir",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "жито",
+              "tr": "buğday",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "жребий",
+              "tr": "kura",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "жест",
+              "tr": "jest",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki j sesine yakındır: jandarma kelimesindeki j gibi.",
+          "panel_tr": {
+            "summary": "Türkçedeki j sesine yakındır: jandarma kelimesindeki j gibi.",
+            "details": [
+              "Kiril Ж, Türkçedeki J sesini verir. Ortak kelimelerde J → Ж kuralıyla çok sık görülür.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-z",
+          "order": 8,
+          "print_upper": "З",
+          "print_lower": "з",
+          "handwriting_upper": "З",
+          "handwriting_lower": "з",
+          "sound": "z",
+          "transliteration": "Z, z",
+          "tr_hint": "Türkçedeki z sesidir.",
+          "confusion_tr": "Kiril З, sayı 3 gibi görünür ama z okunur.",
+          "examples": [
+            {
+              "bg": "зима",
+              "tr": "kış",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "зар",
+              "tr": "zar",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "зеле",
+              "tr": "lahana",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 8
+              }
+            },
+            {
+              "bg": "захар",
+              "tr": "şeker",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "зала",
+              "tr": "salon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "зебра",
+              "tr": "zebra",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "зехтин",
+              "tr": "zeytinyağı",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "звезда",
+              "tr": "yıldız",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "звук",
+              "tr": "ses",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "зъб",
+              "tr": "diş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "зелен",
+              "tr": "yeşil",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "закон",
+              "tr": "yasa",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "заповед",
+              "tr": "emir",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki z sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki z sesidir.",
+            "details": [
+              "Kiril З, sayı 3 gibi görünür ama z okunur.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-i",
+          "order": 9,
+          "print_upper": "И",
+          "print_lower": "и",
+          "handwriting_upper": "И",
+          "handwriting_lower": "и",
+          "sound": "i",
+          "transliteration": "I, i",
+          "tr_hint": "Türkçedeki i sesidir.",
+          "confusion_tr": "Latin N’ye benzer gibi görünse de i sesidir; özellikle başlangıçta karışabilir.",
+          "examples": [
+            {
+              "bg": "идвам",
+              "tr": "geliyorum",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "игла",
+              "tr": "iğne",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "игленик",
+              "tr": "iğnelik",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 4
+              }
+            },
+            {
+              "bg": "име",
+              "tr": "isim",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "интернет",
+              "tr": "internet",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "икономика",
+              "tr": "ekonomi",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "индиго",
+              "tr": "indigo",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "извор",
+              "tr": "kaynak",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "изложба",
+              "tr": "sergi",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "игра",
+              "tr": "oyun",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "идея",
+              "tr": "fikir",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "история",
+              "tr": "tarih",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "изпит",
+              "tr": "sınav",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki i sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki i sesidir.",
+            "details": [
+              "Latin N’ye benzer gibi görünse de i sesidir; özellikle başlangıçta karışabilir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-y",
+          "order": 10,
+          "print_upper": "Й",
+          "print_lower": "й",
+          "handwriting_upper": "Й",
+          "handwriting_lower": "й",
+          "sound": "y / kısa i kayması",
+          "transliteration": "Y, y",
+          "tr_hint": "Türkçedeki y sesine yaklaşır; yarı ünlü gibi davranır.",
+          "confusion_tr": "Й tek başına çoğu zaman y benzeri kayma verir; Ю ve Я gibi harflerin içinde de bu y sesi vardır.",
+          "linked_rule_ids": [
+            "alphabet-y-special",
+            "cog-tr-iy-to-bg-y"
+          ],
+          "examples": [
+            {
+              "bg": "лейка",
+              "tr": "sulama kabı",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "йена",
+              "tr": "yen",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "йон",
+              "tr": "iyon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "йога",
+              "tr": "yoga",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "йогурт",
+              "tr": "yoğurt",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "край",
+              "tr": "son",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "чай",
+              "tr": "çay",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "герой",
+              "tr": "kahraman",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "музей",
+              "tr": "müze",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "майка",
+              "tr": "anne",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "лайка",
+              "tr": "papatya",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "хей",
+              "tr": "hey",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki y sesine yaklaşır; yarı ünlü gibi davranır.",
+          "panel_tr": {
+            "summary": "Türkçedeki y sesine yaklaşır; yarı ünlü gibi davranır.",
+            "details": [
+              "Й tek başına çoğu zaman y benzeri kayma verir; Ю ve Я gibi harflerin içinde de bu y sesi vardır.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-k",
+          "order": 11,
+          "print_upper": "К",
+          "print_lower": "к",
+          "handwriting_upper": "К",
+          "handwriting_lower": "к",
+          "sound": "k",
+          "transliteration": "K, k",
+          "tr_hint": "Türkçedeki k sesidir.",
+          "confusion_tr": "Bazı ortak kelimelerde Türkçedeki k sesi Bulgarcada х olabilir: ALMANAK → алманах gibi.",
+          "linked_rule_ids": [
+            "cog-tr-k-to-bg-h"
+          ],
+          "examples": [
+            {
+              "bg": "котка",
+              "tr": "kedi",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "кифла",
+              "tr": "poğaça / çörek",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "кошница",
+              "tr": "sepet",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 4
+              }
+            },
+            {
+              "bg": "книга",
+              "tr": "kitap",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "кафе",
+              "tr": "kahve",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ключ",
+              "tr": "anahtar",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "кабел",
+              "tr": "kablo",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "кабина",
+              "tr": "kabin",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "къща",
+              "tr": "ev",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "крак",
+              "tr": "bacak / ayak",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "кухня",
+              "tr": "mutfak",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "клас",
+              "tr": "sınıf",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "килограм",
+              "tr": "kilogram",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki k sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki k sesidir.",
+            "details": [
+              "Bazı ortak kelimelerde Türkçedeki k sesi Bulgarcada х olabilir: ALMANAK → алманах gibi.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-l",
+          "order": 12,
+          "print_upper": "Л",
+          "print_lower": "л",
+          "handwriting_upper": "Л",
+          "handwriting_lower": "л",
+          "sound": "l",
+          "transliteration": "L, l",
+          "tr_hint": "Türkçedeki l sesidir.",
+          "confusion_tr": "Л sesi Türkçedeki l’ye yakındır; bazı kelimelerde Türk öğrenciler l’yi gereksiz yumuşatabilir.",
+          "examples": [
+            {
+              "bg": "лов",
+              "tr": "av",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "липа",
+              "tr": "ıhlamur",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "лейка",
+              "tr": "sulama kabı",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "лимон",
+              "tr": "limon",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 3
+              }
+            },
+            {
+              "bg": "лъв",
+              "tr": "aslan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "лист",
+              "tr": "yaprak",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "луна",
+              "tr": "ay",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "лампа",
+              "tr": "lamba",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "лекар",
+              "tr": "doktor",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "любов",
+              "tr": "aşk",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ластик",
+              "tr": "lastik",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "лидер",
+              "tr": "lider",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "лети",
+              "tr": "uçuyor",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "лице",
+              "tr": "yüz",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki l sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki l sesidir.",
+            "details": [
+              "Л sesi Türkçedeki l’ye yakındır; bazı kelimelerde Türk öğrenciler l’yi gereksiz yumuşatabilir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-m",
+          "order": 13,
+          "print_upper": "М",
+          "print_lower": "м",
+          "handwriting_upper": "М",
+          "handwriting_lower": "м",
+          "sound": "m",
+          "transliteration": "M, m",
+          "tr_hint": "Türkçedeki m sesidir.",
+          "confusion_tr": "Latin M ile hem şekil hem ses açısından benzerdir.",
+          "examples": [
+            {
+              "bg": "майка",
+              "tr": "anne",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "месец",
+              "tr": "ay",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "море",
+              "tr": "deniz",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "маса",
+              "tr": "masa",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "масло",
+              "tr": "yağ",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "мляко",
+              "tr": "süt",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "мост",
+              "tr": "köprü",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "моля",
+              "tr": "lütfen",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "март",
+              "tr": "mart",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "мед",
+              "tr": "bal",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "мотор",
+              "tr": "motor",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "музика",
+              "tr": "müzik",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki m sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki m sesidir.",
+            "details": [
+              "Latin M ile hem şekil hem ses açısından benzerdir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-n",
+          "order": 14,
+          "print_upper": "Н",
+          "print_lower": "н",
+          "handwriting_upper": "Н",
+          "handwriting_lower": "н",
+          "sound": "n",
+          "transliteration": "N, n",
+          "tr_hint": "Türkçedeki n sesidir.",
+          "confusion_tr": "Kiril Н, Latin H gibi görünür ama n okunur; önemli karışıklıklardan biridir.",
+          "examples": [
+            {
+              "bg": "нос",
+              "tr": "burun",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "нива",
+              "tr": "tarla",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "нощ",
+              "tr": "gece",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "нож",
+              "tr": "bıçak",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "номер",
+              "tr": "numara",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "не",
+              "tr": "hayır / değil",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "нота",
+              "tr": "nota",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "нектар",
+              "tr": "nektar",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "народ",
+              "tr": "halk",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "нов",
+              "tr": "yeni",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "над",
+              "tr": "üstünde",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "наш",
+              "tr": "bizim",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki n sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki n sesidir.",
+            "details": [
+              "Kiril Н, Latin H gibi görünür ama n okunur; önemli karışıklıklardan biridir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-o",
+          "order": 15,
+          "print_upper": "О",
+          "print_lower": "о",
+          "handwriting_upper": "О",
+          "handwriting_lower": "о",
+          "sound": "o",
+          "transliteration": "O, o",
+          "tr_hint": "Türkçedeki o sesidir.",
+          "confusion_tr": "Latin O/o ile benzerdir.",
+          "examples": [
+            {
+              "bg": "огън",
+              "tr": "ateş",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "око",
+              "tr": "göz",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "октомври",
+              "tr": "ekim",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "опера",
+              "tr": "opera",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "офис",
+              "tr": "ofis",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "остров",
+              "tr": "ada",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "орех",
+              "tr": "ceviz",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "обичам",
+              "tr": "seviyorum",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "океан",
+              "tr": "okyanus",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "отговор",
+              "tr": "cevap",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "оранжев",
+              "tr": "turuncu",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "овца",
+              "tr": "koyun",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki o sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki o sesidir.",
+            "details": [
+              "Latin O/o ile benzerdir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-p",
+          "order": 16,
+          "print_upper": "П",
+          "print_lower": "п",
+          "handwriting_upper": "П",
+          "handwriting_lower": "п",
+          "sound": "p",
+          "transliteration": "P, p",
+          "tr_hint": "Türkçedeki p sesidir.",
+          "confusion_tr": "Kiril П, Latin P’ye benzemez ama p okunur. Latin p’ye benzeyen Kiril harf ise Р’dir ve r okunur.",
+          "examples": [
+            {
+              "bg": "пламък",
+              "tr": "alev",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "паяк",
+              "tr": "örümcek",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "поща",
+              "tr": "posta",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "пеперуда",
+              "tr": "kelebek",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 2
+              }
+            },
+            {
+              "bg": "парк",
+              "tr": "park",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "професор",
+              "tr": "profesör",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "пет",
+              "tr": "beş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "пазар",
+              "tr": "pazar",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "приятел",
+              "tr": "arkadaş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "плод",
+              "tr": "meyve",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "писмо",
+              "tr": "mektup",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "птица",
+              "tr": "kuş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "път",
+              "tr": "yol",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "план",
+              "tr": "plan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki p sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki p sesidir.",
+            "details": [
+              "Kiril П, Latin P’ye benzemez ama p okunur. Latin p’ye benzeyen Kiril harf ise Р’dir ve r okunur.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-r",
+          "order": 17,
+          "print_upper": "Р",
+          "print_lower": "р",
+          "handwriting_upper": "Р",
+          "handwriting_lower": "р",
+          "sound": "r",
+          "transliteration": "R, r",
+          "tr_hint": "Türkçedeki r sesidir.",
+          "confusion_tr": "Kiril Р, Latin P gibi görünür ama r okunur; Türkçe bilenler için çok kritik bir karışıklıktır.",
+          "examples": [
+            {
+              "bg": "риба",
+              "tr": "balık",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "ръка",
+              "tr": "el / kol",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "радио",
+              "tr": "radyo",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "река",
+              "tr": "nehir",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "работа",
+              "tr": "iş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "рафт",
+              "tr": "raf",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ракия",
+              "tr": "rakı",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "радост",
+              "tr": "sevinç",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ректор",
+              "tr": "rektör",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "роза",
+              "tr": "gül",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ресторант",
+              "tr": "restoran",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ринг",
+              "tr": "ring",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki r sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki r sesidir.",
+            "details": [
+              "Kiril Р, Latin P gibi görünür ama r okunur; Türkçe bilenler için çok kritik bir karışıklıktır.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-s",
+          "order": 18,
+          "print_upper": "С",
+          "print_lower": "с",
+          "handwriting_upper": "С",
+          "handwriting_lower": "с",
+          "sound": "s",
+          "transliteration": "S, s",
+          "tr_hint": "Türkçedeki s sesidir.",
+          "confusion_tr": "Görünüş olarak Latin C’ye benzer ama s okunur.",
+          "examples": [
+            {
+              "bg": "сова",
+              "tr": "baykuş",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "сила",
+              "tr": "güç",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "слънчоглед",
+              "tr": "ayçiçeği",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 1
+              }
+            },
+            {
+              "bg": "сезон",
+              "tr": "sezon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "салон",
+              "tr": "salon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "сода",
+              "tr": "soda",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "стая",
+              "tr": "oda",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "синьо",
+              "tr": "mavi",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "сън",
+              "tr": "uyku / rüya",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "студент",
+              "tr": "öğrenci",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "слънце",
+              "tr": "güneş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "стол",
+              "tr": "sandalye",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "село",
+              "tr": "köy",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki s sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki s sesidir.",
+            "details": [
+              "Görünüş olarak Latin C’ye benzer ama s okunur.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-t",
+          "order": 19,
+          "print_upper": "Т",
+          "print_lower": "т",
+          "handwriting_upper": "Т",
+          "handwriting_lower": "т",
+          "sound": "t",
+          "transliteration": "T, t",
+          "tr_hint": "Türkçedeki t sesidir.",
+          "confusion_tr": "Basılı Т kolaydır; el yazısı biçimi Latin m’ye benzeyebilir, bu yüzden el yazısı modu ayrıca çalışılmalı.",
+          "examples": [
+            {
+              "bg": "торба",
+              "tr": "çanta",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "тире",
+              "tr": "tire / çizgi",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "триъгълник",
+              "tr": "üçgen",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 3
+              }
+            },
+            {
+              "bg": "табела",
+              "tr": "tabela",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "тетрадка",
+              "tr": "defter",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "телефон",
+              "tr": "telefon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "тайга",
+              "tr": "tayga",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "театър",
+              "tr": "tiyatro",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "топка",
+              "tr": "top",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "три",
+              "tr": "üç",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "тук",
+              "tr": "burada",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "тънък",
+              "tr": "ince",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "турист",
+              "tr": "turist",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki t sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki t sesidir.",
+            "details": [
+              "Basılı Т kolaydır; el yazısı biçimi Latin m’ye benzeyebilir, bu yüzden el yazısı modu ayrıca çalışılmalı.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-u",
+          "order": 20,
+          "print_upper": "У",
+          "print_lower": "у",
+          "handwriting_upper": "У",
+          "handwriting_lower": "у",
+          "sound": "u",
+          "transliteration": "U, u",
+          "tr_hint": "Türkçedeki u sesidir.",
+          "confusion_tr": "Kiril У, Latin Y’ye benzer görünebilir ama u okunur.",
+          "examples": [
+            {
+              "bg": "ухо",
+              "tr": "kulak",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "дух",
+              "tr": "ruh / esinti",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "ухо",
+              "tr": "kulak",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 9
+              }
+            },
+            {
+              "bg": "улица",
+              "tr": "sokak",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "университет",
+              "tr": "üniversite",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "урок",
+              "tr": "ders",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "утро",
+              "tr": "sabah",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "уиски",
+              "tr": "viski",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "успех",
+              "tr": "başarı",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ученик",
+              "tr": "öğrenci",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ум",
+              "tr": "akıl",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "учител",
+              "tr": "öğretmen",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "усмивка",
+              "tr": "gülümseme",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki u sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki u sesidir.",
+            "details": [
+              "Kiril У, Latin Y’ye benzer görünebilir ama u okunur.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-f",
+          "order": 21,
+          "print_upper": "Ф",
+          "print_lower": "ф",
+          "handwriting_upper": "Ф",
+          "handwriting_lower": "ф",
+          "sound": "f",
+          "transliteration": "F, f",
+          "tr_hint": "Türkçedeki f sesidir.",
+          "confusion_tr": "Ortak kelimelerde Türkçedeki F çoğu zaman В’ye dönebilir; fakat gerçek f sesi için Ф kullanılır.",
+          "examples": [
+            {
+              "bg": "факла",
+              "tr": "meşale",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "фенер",
+              "tr": "fener",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "фотоапарат",
+              "tr": "fotoğraf makinesi",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 10
+              }
+            },
+            {
+              "bg": "фабрика",
+              "tr": "fabrika",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "физика",
+              "tr": "fizik",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "фамилия",
+              "tr": "soyadı / aile",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "фурма",
+              "tr": "hurma",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "футбол",
+              "tr": "futbol",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "фризьор",
+              "tr": "kuaför",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "филм",
+              "tr": "film",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "форма",
+              "tr": "form",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ферма",
+              "tr": "çiftlik",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "фолклор",
+              "tr": "folklor",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki f sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki f sesidir.",
+            "details": [
+              "Ortak kelimelerde Türkçedeki F çoğu zaman В’ye dönebilir; fakat gerçek f sesi için Ф kullanılır.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-h",
+          "order": 22,
+          "print_upper": "Х",
+          "print_lower": "х",
+          "handwriting_upper": "Х",
+          "handwriting_lower": "х",
+          "sound": "h / hırıltılı h",
+          "transliteration": "H, h",
+          "tr_hint": "Türkçedeki h sesine yakındır; bazı kelimelerde daha boğazdan/hırıltılı duyulabilir.",
+          "confusion_tr": "Kiril Х, Latin X gibi görünür ama h okunur. AMBAR → хамбар örneğinde Türkçe tarafta harf yokken Bulgarcada başta Х gelir.",
+          "linked_rule_ids": [
+            "cog-empty-to-bg-h",
+            "cog-tr-k-to-bg-h",
+            "cog-tr-sh-to-bg-h"
+          ],
+          "examples": [
+            {
+              "bg": "хора",
+              "tr": "insanlar",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "хитрец",
+              "tr": "kurnaz",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "хляб",
+              "tr": "ekmek",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 9
+              }
+            },
+            {
+              "bg": "хотел",
+              "tr": "otel",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "хамбар",
+              "tr": "ambar",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "хаос",
+              "tr": "kaos",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "характер",
+              "tr": "karakter",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "химия",
+              "tr": "kimya",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "хуманист",
+              "tr": "hümanist",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "хартия",
+              "tr": "kağıt",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "хладен",
+              "tr": "serin",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "хоро",
+              "tr": "halk dansı",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "хастар",
+              "tr": "astar",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki h sesine yakındır; bazı kelimelerde daha boğazdan/hırıltılı duyulabilir.",
+          "panel_tr": {
+            "summary": "Türkçedeki h sesine yakındır; bazı kelimelerde daha boğazdan/hırıltılı duyulabilir.",
+            "details": [
+              "Kiril Х, Latin X gibi görünür ama h okunur. AMBAR → хамбар örneğinde Türkçe tarafta harf yokken Bulgarcada başta Х gelir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-ts",
+          "order": 23,
+          "print_upper": "Ц",
+          "print_lower": "ц",
+          "handwriting_upper": "Ц",
+          "handwriting_lower": "ц",
+          "sound": "ts",
+          "transliteration": "Ts, ts",
+          "tr_hint": "Türkçedeki ts birleşik sesine benzer; tek bir Bulgarca harftir.",
+          "confusion_tr": "Bu harf Türkçede tek harfle yazılmaz; ts gibi okunur. ASETİLEN → ацетилен örneğinde S → Ц dönüşümü görülür.",
+          "linked_rule_ids": [
+            "cog-tr-s-to-bg-ts",
+            "cog-tr-syon-to-bg-tsiya"
+          ],
+          "examples": [
+            {
+              "bg": "цвете",
+              "tr": "çiçek",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "цяр",
+              "tr": "ilaç / çare",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "цар",
+              "tr": "çar / kral",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "център",
+              "tr": "merkez",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "цирк",
+              "tr": "sirk",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "цимент",
+              "tr": "çimento",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "цвят",
+              "tr": "renk",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "цена",
+              "tr": "fiyat",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "цел",
+              "tr": "hedef",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "цигара",
+              "tr": "sigara",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "цивилен",
+              "tr": "sivil",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "церемония",
+              "tr": "tören",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "цигулка",
+              "tr": "keman",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki ts birleşik sesine benzer; tek bir Bulgarca harftir.",
+          "panel_tr": {
+            "summary": "Türkçedeki ts birleşik sesine benzer; tek bir Bulgarca harftir.",
+            "details": [
+              "Bu harf Türkçede tek harfle yazılmaz; ts gibi okunur. ASETİLEN → ацетилен örneğinde S → Ц dönüşümü görülür.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-ch",
+          "order": 24,
+          "print_upper": "Ч",
+          "print_lower": "ч",
+          "handwriting_upper": "Ч",
+          "handwriting_lower": "ч",
+          "sound": "ç / ch",
+          "transliteration": "Ch, ch",
+          "tr_hint": "Türkçedeki ç sesidir.",
+          "confusion_tr": "Ç → Ч dönüşümü ortak kelimelerde çok kullanışlıdır: ÇORBA → чорба gibi.",
+          "linked_rule_ids": [
+            "cog-tr-c-to-bg-ch"
+          ],
+          "examples": [
+            {
+              "bg": "чорба",
+              "tr": "çorba",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "чам",
+              "tr": "çam",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "чаша",
+              "tr": "fincan / bardak",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 10
+              }
+            },
+            {
+              "bg": "чай",
+              "tr": "çay",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "час",
+              "tr": "saat / ders",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "човек",
+              "tr": "insan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "чета",
+              "tr": "okuyorum",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "четири",
+              "tr": "dört",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "черен",
+              "tr": "siyah",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "череша",
+              "tr": "kiraz",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "чанта",
+              "tr": "çanta",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "чудо",
+              "tr": "mucize",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "сандвич",
+              "tr": "sandviç",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki ç sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki ç sesidir.",
+            "details": [
+              "Ç → Ч dönüşümü ortak kelimelerde çok kullanışlıdır: ÇORBA → чорба gibi.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-sh",
+          "order": 25,
+          "print_upper": "Ш",
+          "print_lower": "ш",
+          "handwriting_upper": "Ш",
+          "handwriting_lower": "ш",
+          "sound": "ş / sh",
+          "transliteration": "Sh, sh",
+          "tr_hint": "Türkçedeki ş sesidir.",
+          "confusion_tr": "Türkçedeki Ş sesi Bulgarcada Ш ile yazılır.",
+          "linked_rule_ids": [
+            "cog-tr-sh-to-bg-sh"
+          ],
+          "examples": [
+            {
+              "bg": "шебек",
+              "tr": "şebek",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "шосе",
+              "tr": "şose",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "шишарка",
+              "tr": "kozalak",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 6
+              }
+            },
+            {
+              "bg": "шапка",
+              "tr": "şapka",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "шкаф",
+              "tr": "dolap",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "шише",
+              "tr": "şişe",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "шоколад",
+              "tr": "çikolata",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "шеф",
+              "tr": "şef",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "шал",
+              "tr": "şal",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "шут",
+              "tr": "şut",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "шофьор",
+              "tr": "şoför",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "марш",
+              "tr": "marş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "афиш",
+              "tr": "afiş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki ş sesidir.",
+          "panel_tr": {
+            "summary": "Türkçedeki ş sesidir.",
+            "details": [
+              "Türkçedeki Ş sesi Bulgarcada Ш ile yazılır.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-sht",
+          "order": 26,
+          "print_upper": "Щ",
+          "print_lower": "щ",
+          "handwriting_upper": "Щ",
+          "handwriting_lower": "щ",
+          "sound": "şt / sht",
+          "transliteration": "Sht, sht",
+          "tr_hint": "Ş + T birleşimi gibi okunur.",
+          "confusion_tr": "Щ tek harftir ama ш + т gibi iki ses içerir.",
+          "linked_rule_ids": [
+            "alphabet-sht-special"
+          ],
+          "examples": [
+            {
+              "bg": "щъркел",
+              "tr": "leylek",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "щраус",
+              "tr": "devekuşu",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "щипка",
+              "tr": "mandal",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 5
+              }
+            },
+            {
+              "bg": "щастие",
+              "tr": "mutluluk",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ще",
+              "tr": "-ecek / -acak yardımcı parçacık",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "още",
+              "tr": "daha",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "къща",
+              "tr": "ev",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "поща",
+              "tr": "posta",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "площ",
+              "tr": "alan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "нощ",
+              "tr": "gece",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "щит",
+              "tr": "kalkan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "свещ",
+              "tr": "mum",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "леща",
+              "tr": "mercimek",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Ş + T birleşimi gibi okunur.",
+          "panel_tr": {
+            "summary": "Ş + T birleşimi gibi okunur.",
+            "details": [
+              "Щ tek harftir ama ш + т gibi iki ses içerir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-er-golyam",
+          "order": 27,
+          "print_upper": "Ъ",
+          "print_lower": "ъ",
+          "handwriting_upper": "Ъ",
+          "handwriting_lower": "ъ",
+          "sound": "ı / ъ",
+          "transliteration": "A, a",
+          "tr_hint": "Türkçedeki ı sesine yaklaşır; Bulgarcanın önemli özel seslerinden biridir.",
+          "confusion_tr": "Ъ Türkçedeki ı sesine yaklaştırılabilir ama birebir aynı değildir; özellikle çok temel bir Bulgarca sestir.",
+          "examples": [
+            {
+              "bg": "ъгъл",
+              "tr": "açı / köşe",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "ръка",
+              "tr": "el / kol",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "къща",
+              "tr": "ev",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "път",
+              "tr": "yol",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "мъж",
+              "tr": "erkek",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "дъщеря",
+              "tr": "kız evlat",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "сън",
+              "tr": "uyku / rüya",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "зъб",
+              "tr": "diş",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "български",
+              "tr": "Bulgarca",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "къс",
+              "tr": "kısa",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "върх",
+              "tr": "zirve",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "тъмен",
+              "tr": "karanlık",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Türkçedeki ı sesine yaklaşır; Bulgarcanın önemli özel seslerinden biridir.",
+          "panel_tr": {
+            "summary": "Türkçedeki ı sesine yaklaşır; Bulgarcanın önemli özel seslerinden biridir.",
+            "details": [
+              "Ъ Türkçedeki ı sesine yaklaştırılabilir ama birebir aynı değildir; özellikle çok temel bir Bulgarca sestir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-er-malak",
+          "order": 28,
+          "print_upper": "Ь",
+          "print_lower": "ь",
+          "handwriting_upper": "Ь",
+          "handwriting_lower": "ь",
+          "sound": "yumuşatma işareti",
+          "transliteration": "Y, y",
+          "tr_hint": "Tek başına tam bir ses vermez; bazı kelimelerde önceki sesi yumuşatır.",
+          "confusion_tr": "Ь bir yumuşatma işaretidir; Türkçede bağımsız bir harf gibi düşünülmemelidir.",
+          "examples": [
+            {
+              "bg": "шофьор",
+              "tr": "şoför",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "миньор",
+              "tr": "madenci",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "боксьор",
+              "tr": "boksör",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 5
+              }
+            },
+            {
+              "bg": "синьо",
+              "tr": "mavi",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "класьор",
+              "tr": "klasör",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "дубльор",
+              "tr": "dublör",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "актьор",
+              "tr": "aktör",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "фризьор",
+              "tr": "kuaför",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "каньон",
+              "tr": "kanyon",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "пеньо",
+              "tr": "Penyo / özel ad",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "асьо",
+              "tr": "Asyo / özel ad",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "Гьоте",
+              "tr": "Goethe",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "бельо",
+              "tr": "iç çamaşırı",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Tek başına tam bir ses vermez; bazı kelimelerde önceki sesi yumuşatır.",
+          "panel_tr": {
+            "summary": "Tek başına tam bir ses vermez; bazı kelimelerde önceki sesi yumuşatır.",
+            "details": [
+              "Ь bir yumuşatma işaretidir; Türkçede bağımsız bir harf gibi düşünülmemelidir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-yu",
+          "order": 29,
+          "print_upper": "Ю",
+          "print_lower": "ю",
+          "handwriting_upper": "Ю",
+          "handwriting_lower": "ю",
+          "sound": "yu",
+          "transliteration": "Yu, yu",
+          "tr_hint": "Yu gibi okunur; й + у seslerini içerir.",
+          "confusion_tr": "Ю tek harf olarak yazılır ama й + у gibi iki ses değeri taşır.",
+          "linked_rule_ids": [
+            "alphabet-yu-special",
+            "cog-tr-u-umlaut-to-bg-yu"
+          ],
+          "examples": [
+            {
+              "bg": "ютия",
+              "tr": "ütü",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "юрган",
+              "tr": "yorgan",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "ютия",
+              "tr": "ütü",
+              "kind": "visual_card",
+              "source": {
+                "source_id": "src-alfabe-ilk-ders",
+                "page": 2
+              }
+            },
+            {
+              "bg": "юни",
+              "tr": "haziran",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "юли",
+              "tr": "temmuz",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "юг",
+              "tr": "güney",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "юнак",
+              "tr": "yiğit",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "меню",
+              "tr": "menü",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "бюро",
+              "tr": "büro",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "бюст",
+              "tr": "büst",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "кюфте",
+              "tr": "köfte",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "компютър",
+              "tr": "bilgisayar",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "Сюзън",
+              "tr": "Susan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Yu gibi okunur; й + у seslerini içerir.",
+          "panel_tr": {
+            "summary": "Yu gibi okunur; й + у seslerini içerir.",
+            "details": [
+              "Ю tek harf olarak yazılır ama й + у gibi iki ses değeri taşır.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        },
+        {
+          "letter_id": "bg-letter-ya",
+          "order": 30,
+          "print_upper": "Я",
+          "print_lower": "я",
+          "handwriting_upper": "Я",
+          "handwriting_lower": "я",
+          "sound": "ya",
+          "transliteration": "Ya, ya",
+          "tr_hint": "Ya gibi okunur; й + а seslerini içerir.",
+          "confusion_tr": "Я tek harf olarak yazılır ama й + а gibi iki ses değeri taşır. Ortak kelimelerde YA → ИЯ / Я / ИА gibi farklı kurallar olabilir.",
+          "linked_rule_ids": [
+            "alphabet-ya-special",
+            "cog-tr-ya-to-bg-iya",
+            "cog-tr-ya-to-bg-ya",
+            "cog-tr-iya-to-bg-ia"
+          ],
+          "examples": [
+            {
+              "bg": "ято",
+              "tr": "sürü",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "ябълка",
+              "tr": "elma",
+              "kind": "source_example",
+              "source": {
+                "source_id": "src-a1-v-1-2",
+                "page": 1
+              }
+            },
+            {
+              "bg": "яхта",
+              "tr": "yat",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "януари",
+              "tr": "ocak",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ягода",
+              "tr": "çilek",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "яйце",
+              "tr": "yumurta",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ям",
+              "tr": "yiyorum",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "ясно",
+              "tr": "açık / anlaşılır",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "стая",
+              "tr": "oda",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "България",
+              "tr": "Bulgaristan",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "Италия",
+              "tr": "İtalya",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            },
+            {
+              "bg": "Испания",
+              "tr": "İspanya",
+              "kind": "assistant_enriched_core_vocab",
+              "review_status": "assistant_curated"
+            }
+          ],
+          "tooltip_tr": "Ya gibi okunur; й + а seslerini içerir.",
+          "panel_tr": {
+            "summary": "Ya gibi okunur; й + а seslerini içerir.",
+            "details": [
+              "Я tek harf olarak yazılır ama й + а gibi iki ses değeri taşır. Ortak kelimelerde YA → ИЯ / Я / ИА gibi farklı kurallar olabilir.",
+              "Örnek kelimeler sağ panelde kaynak örnekleri, görsel kart örnekleri ve uygulama içi zenginleştirilmiş kelime havuzu olarak gruplanmalıdır."
+            ],
+            "practice_hint": "Bu harfi önce kelime başında, sonra kelime içinde arayarak oku; el yazısı modunda tekrar kontrol et."
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "l001-confusing-letters",
+      "type": "focus_cards",
+      "title_tr": "Türkçe bilenler için karışabilecek harfler",
+      "cards": [
+        {
+          "bg": "В в",
+          "tr": "v sesi",
+          "note_tr": "Latin B gibi görünür ama v okunur.",
+          "letter_ids": [
+            "bg-letter-v"
           ]
         },
         {
-          "type": "study_tip",
-          "text_tr": "Arayüzde harf kartlarında 'Basılı', 'El Yazısı', 'Büyük', 'Küçük' anahtarları olmalı. Bir harfe tıklanınca sağ panelde o harfin geçtiği örnek kelimeler, sık karıştırıldığı harfler ve mini test görünmeli."
+          "bg": "Н н",
+          "tr": "n sesi",
+          "note_tr": "Latin H gibi görünür ama n okunur.",
+          "letter_ids": [
+            "bg-letter-n"
+          ]
+        },
+        {
+          "bg": "Р р",
+          "tr": "r sesi",
+          "note_tr": "Latin P gibi görünür ama r okunur.",
+          "letter_ids": [
+            "bg-letter-r"
+          ]
+        },
+        {
+          "bg": "С с",
+          "tr": "s sesi",
+          "note_tr": "Latin C gibi görünür ama s okunur.",
+          "letter_ids": [
+            "bg-letter-s"
+          ]
+        },
+        {
+          "bg": "У у",
+          "tr": "u sesi",
+          "note_tr": "Latin Y gibi görünür ama u okunur.",
+          "letter_ids": [
+            "bg-letter-u"
+          ]
+        },
+        {
+          "bg": "Х х",
+          "tr": "h sesi",
+          "note_tr": "Latin X gibi görünür ama h okunur.",
+          "letter_ids": [
+            "bg-letter-h"
+          ]
         }
       ]
+    },
+    {
+      "section_id": "l001-special-sounds",
+      "type": "rule_cards",
+      "title_tr": "Özel harf ve sesler",
+      "rules": [
+        {
+          "rule_id": "alphabet-yu-special",
+          "bg": "Ю = й + у",
+          "tr": "Ю harfi yu gibi okunur.",
+          "examples": [
+            {
+              "bg": "ютия",
+              "tr": "ütü"
+            },
+            {
+              "bg": "юрган",
+              "tr": "yorgan"
+            },
+            {
+              "bg": "меню",
+              "tr": "menü"
+            }
+          ]
+        },
+        {
+          "rule_id": "alphabet-ya-special",
+          "bg": "Я = й + а",
+          "tr": "Я harfi ya gibi okunur.",
+          "examples": [
+            {
+              "bg": "ябълка",
+              "tr": "elma"
+            },
+            {
+              "bg": "ято",
+              "tr": "sürü"
+            },
+            {
+              "bg": "Италия",
+              "tr": "İtalya"
+            }
+          ]
+        },
+        {
+          "rule_id": "alphabet-sht-special",
+          "bg": "Щ = ш + т",
+          "tr": "Щ harfi şt/sht gibi okunur.",
+          "examples": [
+            {
+              "bg": "щъркел",
+              "tr": "leylek"
+            },
+            {
+              "bg": "щраус",
+              "tr": "devekuşu"
+            },
+            {
+              "bg": "поща",
+              "tr": "posta"
+            }
+          ]
+        },
+        {
+          "rule_id": "alphabet-y-special",
+          "bg": "Й = kısa y kayması",
+          "tr": "Й yarı ünlü gibi davranır.",
+          "examples": [
+            {
+              "bg": "йон",
+              "tr": "iyon"
+            },
+            {
+              "bg": "чай",
+              "tr": "çay"
+            },
+            {
+              "bg": "музей",
+              "tr": "müze"
+            }
+          ]
+        },
+        {
+          "rule_id": "alphabet-ts-special",
+          "bg": "Ц = ts",
+          "tr": "Ц tek harftir ama ts gibi okunur.",
+          "examples": [
+            {
+              "bg": "цвете",
+              "tr": "çiçek"
+            },
+            {
+              "bg": "цирк",
+              "tr": "sirk"
+            },
+            {
+              "bg": "Ацетилен",
+              "tr": "asetilen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "l001-visual-cards",
+      "type": "visual_card_reference",
+      "title_tr": "Görsel kartlardan gelen örnekler",
+      "description_tr": "alfabe-ilk ders PDF’indeki görsel kartlar, harfi somut nesneyle eşleştirmek için kullanılır.",
+      "examples": [
+        {
+          "letter": "С",
+          "bg": "слънчоглед",
+          "tr": "ayçiçeği",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 1
+          }
+        },
+        {
+          "letter": "Ю",
+          "bg": "ютия",
+          "tr": "ütü",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 2
+          }
+        },
+        {
+          "letter": "П",
+          "bg": "пеперуда",
+          "tr": "kelebek",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 2
+          }
+        },
+        {
+          "letter": "Ъ",
+          "bg": "триъгълник",
+          "tr": "üçgen",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 3
+          }
+        },
+        {
+          "letter": "Л",
+          "bg": "лимон",
+          "tr": "limon",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 3
+          }
+        },
+        {
+          "letter": "И",
+          "bg": "игленик",
+          "tr": "iğnelik",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 4
+          }
+        },
+        {
+          "letter": "К",
+          "bg": "кошница",
+          "tr": "sepet",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 4
+          }
+        },
+        {
+          "letter": "Щ",
+          "bg": "щипка",
+          "tr": "mandal",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 5
+          }
+        },
+        {
+          "letter": "Ь",
+          "bg": "боксьор",
+          "tr": "boksör",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 5
+          }
+        },
+        {
+          "letter": "Ш",
+          "bg": "шишарка",
+          "tr": "kozalak",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 6
+          }
+        },
+        {
+          "letter": "Д",
+          "bg": "домат",
+          "tr": "domates",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 6
+          }
+        },
+        {
+          "letter": "А",
+          "bg": "ананас",
+          "tr": "ananas",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 7
+          }
+        },
+        {
+          "letter": "Ж",
+          "bg": "жаба",
+          "tr": "kurbağa",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 7
+          }
+        },
+        {
+          "letter": "З",
+          "bg": "зеле",
+          "tr": "lahana",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 8
+          }
+        },
+        {
+          "letter": "Г",
+          "bg": "гъба",
+          "tr": "mantar",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 8
+          }
+        },
+        {
+          "letter": "У",
+          "bg": "ухо",
+          "tr": "kulak",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 9
+          }
+        },
+        {
+          "letter": "Х",
+          "bg": "хляб",
+          "tr": "ekmek",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 9
+          }
+        },
+        {
+          "letter": "Ф",
+          "bg": "фотоапарат",
+          "tr": "fotoğraf makinesi",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 10
+          }
+        },
+        {
+          "letter": "Ч",
+          "bg": "чаша",
+          "tr": "fincan / bardak",
+          "source": {
+            "source_id": "src-alfabe-ilk-ders",
+            "page": 10
+          }
+        }
+      ]
+    },
+    {
+      "section_id": "l001-mini-quiz-preview",
+      "type": "exercise_preview",
+      "title_tr": "Mini testler",
+      "exercise_set_id": "exercises-001",
+      "description_tr": "Harf-ses eşleştirme, karışan harfler, özel sesler ve kelime başı harf tanıma alıştırmaları."
     }
-  ]
+  ],
+  "linked_rules": [
+    "alphabet-yu-special",
+    "alphabet-ya-special",
+    "alphabet-sht-special",
+    "alphabet-y-special",
+    "alphabet-ts-special"
+  ],
+  "linked_entries": []
 }
