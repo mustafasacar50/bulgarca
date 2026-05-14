@@ -1,0 +1,432 @@
+{
+  "schema_version": "1.1",
+  "lesson_id": "lesson-007-selamlasma-hitaplar-sosyal-ifadeler",
+  "title_tr": "Selamlaşma, Hitaplar ve Günlük Sosyal İfadeler",
+  "subtitle_tr": "Ne zaman Здравейте, ne zaman Добър ден?",
+  "level": "A1",
+  "order": 7,
+  "estimated_minutes": 60,
+  "tags": [
+    "selamlasma",
+    "hitap",
+    "tesekkur",
+    "ozur",
+    "diyalog",
+    "a1"
+  ],
+  "source_refs": [
+    {
+      "source_id": "src-a1-v-1-2",
+      "pages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "note": "Tanışma diyalogları, hitaplar, selamlaşma, teşekkür, özür, resmî/samimi biçimler."
+    }
+  ],
+  "learning_goals": [
+    "Günün saatine göre doğru selamlaşmayı seçmek.",
+    "Resmî ve samimi ifadeleri ayırt etmek.",
+    "Teşekkür, özür ve iyi dilek kalıplarını tanımak.",
+    "Tanışma diyaloglarını parça parça anlamak."
+  ],
+  "ui_hints": {
+    "default_language_mode": "bg_hover_tr",
+    "default_marker_mode": "soft",
+    "supports_right_panel": true
+  },
+  "sections": [
+    {
+      "section_id": "l007-s01",
+      "type": "phrase_cards",
+      "title_tr": "Temel selamlaşmalar",
+      "cards": [
+        {
+          "bg": "Здравейте!",
+          "tr": "Merhaba!",
+          "usage_tr": "Her zaman kullanılabilir, daha resmî/nötr."
+        },
+        {
+          "bg": "Здрасти!",
+          "tr": "Selam!",
+          "usage_tr": "Samimi biçim."
+        },
+        {
+          "bg": "Добро утро!",
+          "tr": "Günaydın!",
+          "usage_tr": "Sabah erken saatlerde, kaynakta 5.00–9.00 arası."
+        },
+        {
+          "bg": "Добър ден!",
+          "tr": "İyi günler!",
+          "usage_tr": "Gündüz, kaynakta 9.00–18.00 arası."
+        },
+        {
+          "bg": "Добър вечер!",
+          "tr": "İyi akşamlar!",
+          "usage_tr": "Akşam, kaynakta 18.00 sonrası."
+        },
+        {
+          "bg": "Лека нощ!",
+          "tr": "İyi geceler!",
+          "usage_tr": "Gece ayrılırken veya yatmadan önce."
+        },
+        {
+          "bg": "Довиждане!",
+          "tr": "Hoşça kalın / Görüşürüz!",
+          "usage_tr": "Genel ayrılma ifadesi."
+        },
+        {
+          "bg": "Чао!",
+          "tr": "Çao / görüşürüz!",
+          "usage_tr": "Samimi konuşma."
+        },
+        {
+          "bg": "Сбогом!",
+          "tr": "Elveda!",
+          "usage_tr": "Kalıcı ayrılıkta kullanılır."
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            18,
+            19
+          ],
+          "note": "ПОЗДРАВИ, ПОЖЕЛАНИЯ, БЛАГОДАРНОСТИ, ИЗВИНЕНИЯ."
+        }
+      ]
+    },
+    {
+      "section_id": "l007-s02",
+      "type": "phrase_cards",
+      "title_tr": "İyi dilekler",
+      "cards": [
+        {
+          "bg": "Добър път!",
+          "tr": "İyi yolculuklar!",
+          "usage_tr": "Yola çıkan kişiye söylenir."
+        },
+        {
+          "bg": "На добър път!",
+          "tr": "Yolun açık olsun!",
+          "usage_tr": "Добър път ile yakın anlamlı."
+        },
+        {
+          "bg": "Приятно пътуване!",
+          "tr": "İyi yolculuklar!",
+          "usage_tr": "Daha açık yolculuk dileği."
+        },
+        {
+          "bg": "Успешен ден!",
+          "tr": "Başarılı bir gün!",
+          "usage_tr": "Gün başında iyi dilek."
+        },
+        {
+          "bg": "Лек ден!",
+          "tr": "Kolay bir gün!",
+          "usage_tr": "Gün içinde ayrılırken yaygın."
+        },
+        {
+          "bg": "Приятна работа!",
+          "tr": "İyi çalışmalar!",
+          "usage_tr": "Çalışan kişiye söylenir."
+        },
+        {
+          "bg": "Успех!",
+          "tr": "Başarılar!",
+          "usage_tr": "Kısa ve kullanışlı dilek."
+        },
+        {
+          "bg": "Честит рожден ден!",
+          "tr": "Doğum günün kutlu olsun!",
+          "usage_tr": "Kısaltma: ЧРД."
+        },
+        {
+          "bg": "Честита нова година!",
+          "tr": "Mutlu yıllar!",
+          "usage_tr": "Kısaltma: ЧНГ."
+        },
+        {
+          "bg": "Честит празник!",
+          "tr": "Bayramın / kutlaman kutlu olsun!",
+          "usage_tr": "Genel kutlama."
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            18,
+            19
+          ],
+          "note": "Пожелания ve kutlama ifadeleri."
+        }
+      ]
+    },
+    {
+      "section_id": "l007-s03",
+      "type": "phrase_cards",
+      "title_tr": "Teşekkür, rica ve özür",
+      "cards": [
+        {
+          "bg": "Благодаря!",
+          "tr": "Teşekkür ederim!",
+          "usage_tr": "En temel teşekkür."
+        },
+        {
+          "bg": "Много Ви благодаря!",
+          "tr": "Size çok teşekkür ederim!",
+          "usage_tr": "Resmî/saygılı."
+        },
+        {
+          "bg": "Много ти благодаря!",
+          "tr": "Sana çok teşekkür ederim!",
+          "usage_tr": "Samimi."
+        },
+        {
+          "bg": "Моля Ви!",
+          "tr": "Rica ederim / Lütfen!",
+          "usage_tr": "Resmî."
+        },
+        {
+          "bg": "Моля те!",
+          "tr": "Rica ederim / Lütfen!",
+          "usage_tr": "Samimi."
+        },
+        {
+          "bg": "Няма защо!",
+          "tr": "Bir şey değil!",
+          "usage_tr": "Teşekküre cevap."
+        },
+        {
+          "bg": "Няма нищо!",
+          "tr": "Önemli değil!",
+          "usage_tr": "Samimi cevap."
+        },
+        {
+          "bg": "Извинете!",
+          "tr": "Affedersiniz!",
+          "usage_tr": "Resmî."
+        },
+        {
+          "bg": "Извинявай!",
+          "tr": "Affedersin!",
+          "usage_tr": "Samimi."
+        },
+        {
+          "bg": "Простете, моля Ви!",
+          "tr": "Lütfen bağışlayın!",
+          "usage_tr": "Daha nazik/resmî özür."
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            18,
+            19
+          ],
+          "note": "Благодарности ve извинения."
+        }
+      ]
+    },
+    {
+      "section_id": "l007-s04",
+      "type": "phrase_cards",
+      "title_tr": "Hitaplar",
+      "description_tr": "Bu bölümde aile ve yakın çevre hitapları özellikle vokatif biçimleriyle verilir. Türkçeye birebir çevrilirken bağlam önemlidir.",
+      "cards": [
+        {
+          "bg": "Мамо!",
+          "tr": "Anne!",
+          "usage_tr": "Anneye hitap."
+        },
+        {
+          "bg": "Мамче!",
+          "tr": "Anneciğim!",
+          "usage_tr": "Daha sıcak/samimi."
+        },
+        {
+          "bg": "Татко!",
+          "tr": "Baba!",
+          "usage_tr": "Babaya hitap."
+        },
+        {
+          "bg": "Тате!",
+          "tr": "Babacığım!",
+          "usage_tr": "Daha sıcak/samimi."
+        },
+        {
+          "bg": "Чедо!",
+          "tr": "Evladım!",
+          "usage_tr": "Çocuğa hitap."
+        },
+        {
+          "bg": "Сине!",
+          "tr": "Oğlum!",
+          "usage_tr": "Erkek çocuğa hitap."
+        },
+        {
+          "bg": "Синко!",
+          "tr": "Oğulcuğum!",
+          "usage_tr": "Samimi."
+        },
+        {
+          "bg": "Дъще!",
+          "tr": "Kızım!",
+          "usage_tr": "Kız çocuğa hitap."
+        },
+        {
+          "bg": "Бабо!",
+          "tr": "Büyükanne!",
+          "usage_tr": "Büyükanneye hitap."
+        },
+        {
+          "bg": "Дядо!",
+          "tr": "Büyükbaba!",
+          "usage_tr": "Büyükbabaya hitap."
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            18
+          ],
+          "note": "Hitap örnekleri: Мамо, Татко, Чедо vb."
+        }
+      ]
+    },
+    {
+      "section_id": "l007-s05",
+      "type": "dialogue",
+      "title_tr": "Diyalog: Как се казвате?",
+      "description_tr": "Kaynak diyalog uzun olduğu için öğrenme uygulamasında parçalara ayrıldı. Varsayılan modda Bulgarca görünür, Türkçe hover/panelde çıkar.",
+      "lines": [
+        {
+          "speaker": "Преподавателка",
+          "bg": "Добър ден!",
+          "tr": "İyi günler!"
+        },
+        {
+          "speaker": "Студент",
+          "bg": "Добър ден!",
+          "tr": "İyi günler!"
+        },
+        {
+          "speaker": "Преподавателка",
+          "bg": "Аз съм вашата преподавателка по български език.",
+          "tr": "Ben sizin Bulgarca öğretmeninizim."
+        },
+        {
+          "speaker": "Преподавателка",
+          "bg": "Казвам се Станка Донева.",
+          "tr": "Adım Stanka Doneva."
+        },
+        {
+          "speaker": "Преподавателка",
+          "bg": "А Вие как се казвате?",
+          "tr": "Peki sizin adınız ne?"
+        },
+        {
+          "speaker": "Студент",
+          "bg": "Аз се казвам Симеон Димитров.",
+          "tr": "Benim adım Simeon Dimitrov."
+        },
+        {
+          "speaker": "Преподавателка",
+          "bg": "Благодаря! А Вие кой сте?",
+          "tr": "Teşekkürler! Peki siz kimsiniz?"
+        },
+        {
+          "speaker": "Студент",
+          "bg": "Аз съм Димитър Петров.",
+          "tr": "Ben Dimitır Petrov’um."
+        },
+        {
+          "speaker": "Преподавателка",
+          "bg": "Извинете, не чух добре. Бихте ли повторили?",
+          "tr": "Affedersiniz, iyi duymadım. Tekrar eder misiniz?"
+        },
+        {
+          "speaker": "Студент",
+          "bg": "Да. Румен Василев.",
+          "tr": "Evet. Rumen Vasilev."
+        },
+        {
+          "speaker": "Преподавателка",
+          "bg": "Беше ми приятно да се запозная с вас.",
+          "tr": "Sizinle tanıştığıma memnun oldum."
+        },
+        {
+          "speaker": "Студенти",
+          "bg": "Ние също се радваме, че се запознахме с Вас!",
+          "tr": "Biz de sizinle tanıştığımıza sevindik!"
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            15
+          ],
+          "note": "Урок № 2: Как се казвате? Представяне и запознанство."
+        }
+      ]
+    },
+    {
+      "section_id": "l007-s06",
+      "type": "rule_cards",
+      "title_tr": "Resmî ↔ samimi dönüşümler",
+      "rules": [
+        {
+          "rule_id": "register-formal-informal",
+          "title_tr": "Вие ↔ ти ayrımı",
+          "summary_tr": "Вие resmî/saygılı veya çoğul 'siz' için; ти samimi 'sen' için kullanılır.",
+          "examples": [
+            {
+              "bg": "Моля Ви! → Моля те!",
+              "tr": "Lütfen / rica ederim: resmî → samimi"
+            },
+            {
+              "bg": "Извинете! → Извинявай!",
+              "tr": "Affedersiniz → affedersin"
+            },
+            {
+              "bg": "Много съм Ви благодарен. → Много ти благодаря!",
+              "tr": "Size minnettarım → sana çok teşekkür ederim"
+            }
+          ]
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "src-a1-v-1-2",
+          "pages": [
+            19
+          ],
+          "note": "Resmî ifadelerin samimi karşılıkları."
+        }
+      ]
+    }
+  ],
+  "linked_rules": [
+    "register-formal-informal"
+  ],
+  "linked_entries": [
+    "phrase-zdraveyte",
+    "phrase-dobro-utro",
+    "phrase-dobar-den",
+    "phrase-blagodarya",
+    "phrase-izvinete"
+  ]
+}
