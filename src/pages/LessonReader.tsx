@@ -117,21 +117,25 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
         </header>
 
         <div className="space-y-12">
-          {(lesson.sections || []).map((section, sIdx) => (
-            <section key={section.section_id || sIdx} className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-8 bg-primary-500 rounded-full" />
-                <h2 className="text-xl font-bold text-slate-800">{section.title_tr}</h2>
-              </div>
+          {(lesson.sections || []).map((section: any, sIdx) => {
+            // Handle flat sections where the section itself is the block
+            const blocks = section.blocks || [section];
+            
+            return (
+              <section key={section.section_id || sIdx} className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-1 h-8 bg-primary-500 rounded-full" />
+                  <h2 className="text-xl font-bold text-slate-800">{section.title_tr}</h2>
+                </div>
 
-              <div className="space-y-8">
-                {(section.blocks || []).map((block, bIdx) => (
-                  <div key={bIdx} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                    {block.type === 'explanation' && (
-                      <p className="text-lg text-slate-700 leading-relaxed whitespace-pre-wrap">
-                        {block.text_tr}
-                      </p>
-                    )}
+                <div className="space-y-8">
+                  {(blocks || []).map((block: any, bIdx: number) => (
+                    <div key={bIdx} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                      {block.type === 'explanation' && (
+                        <p className="text-lg text-slate-700 leading-relaxed whitespace-pre-wrap">
+                          {block.text_tr || block.body_tr}
+                        </p>
+                      )}
 
                     {(block.type === 'alphabet_grid' || block.type === 'alphabet_grid_v2' || block.type === 'alphabet_cards') && (block.items || (block as any).cards) && (
                       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -159,24 +163,29 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                       </div>
                     )}
 
-                    {(block.type === 'rule_cards' || block.type === 'rule_cards_v2' || block.type === 'conversion_rule_grid') && (block.rules || block.items || (block as any).conversion_rules) && (
+                    {(block.type === 'rule_cards' || block.type === 'rule_cards_v2' || block.type === 'conversion_rule_grid') && (block.rules || block.items || (block as any).conversion_rules || block.rule_ids) && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {(block.rules || block.items || (block as any).conversion_rules || []).map((ruleRef: any, i: number) => {
-                          const ruleData = rules[ruleRef.rule_id];
+                        {(block.rules || block.items || (block as any).conversion_rules || block.rule_ids || []).map((ruleRef: any, i: number) => {
+                          const ruleId = typeof ruleRef === 'string' ? ruleRef : ruleRef.rule_id;
+                          const ruleData = rules[ruleId];
+                          const displayData = typeof ruleRef === 'string' ? ruleData : ruleRef;
+                          
+                          if (!displayData) return null;
+
                           return (
                             <div 
                               key={i}
                               className="bg-slate-50 border border-slate-200 p-5 rounded-2xl hover:border-primary-400 transition-colors cursor-pointer group"
-                              onClick={() => setSelectedItem({ type: 'rule', data: ruleData || ruleRef })}
+                              onClick={() => setSelectedItem({ type: 'rule', data: ruleData || displayData })}
                             >
                               <div className="flex justify-between items-start mb-3">
-                                <h3 className="font-bold text-slate-900 text-lg">{ruleRef.display || ruleData?.title || ruleRef.title_tr}</h3>
+                                <h3 className="font-bold text-slate-900 text-lg">{displayData.display || displayData.title || displayData.title_tr}</h3>
                                 <Info size={18} className="text-slate-400 group-hover:text-primary-500" />
                               </div>
-                              <p className="text-sm text-slate-600 line-clamp-2">{ruleRef.explanation_tr || ruleRef.panel_tr || ruleData?.description}</p>
-                              {ruleRef.examples && (
+                              <p className="text-sm text-slate-600 line-clamp-2">{displayData.explanation_tr || displayData.panel_tr || displayData.description}</p>
+                              {displayData.examples && (
                                 <div className="mt-4 flex flex-wrap gap-2">
-                                  {(ruleRef.examples || []).slice(0, 3).map((ex: any, idx: number) => (
+                                  {(displayData.examples || []).slice(0, 3).map((ex: any, idx: number) => (
                                     <LearningText 
                                       key={idx} 
                                       bg={ex.bg} 
@@ -196,7 +205,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
                     {block.type === 'plural_rule_cards' && block.items && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {(block.items || []).map((item, i) => (
+                        {(block.items || []).map((item: any, i: number) => (
                           <div 
                             key={i}
                             className="bg-white border border-slate-100 p-6 rounded-3xl shadow-sm hover:shadow-md transition-all cursor-pointer"
@@ -323,7 +332,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
                     {block.type === 'vocabulary' && block.items && (
                       <div className="grid grid-cols-1 gap-4 mt-4">
-                        {(block.items || []).map((item, i) => (
+                        {(block.items || []).map((item: any, i: number) => (
                           <div 
                             key={i} 
                             className={`group bg-white p-4 rounded-xl border transition-all cursor-pointer flex items-center justify-between ${
@@ -438,8 +447,9 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                   </div>
                 ))}
               </div>
-            </section>
-          ))}
+              </section>
+            );
+          })}
         </div>
 
         <div className="pt-10 flex justify-center">
