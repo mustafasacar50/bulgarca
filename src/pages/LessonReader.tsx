@@ -198,8 +198,8 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
     }
   };
 
-  const normalize = (text: string) => {
-    if (!text) return "";
+  const normalize = (text: any) => {
+    if (!text || typeof text !== 'string') return "";
     let t = text.toLocaleLowerCase('tr-TR').trim();
     // Script normalization: Map Latin look-alikes to Cyrillic counterparts
     // common in Bulgarian data when typed on mixed keyboards
@@ -290,17 +290,35 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
       if (searchMatch && ruleMatch) {
         seen.add(id);
-        if (!markers) {
-          markers = findPairMarkers({ 
+        
+        // 4. Resolve Markers (Explicit + Detected)
+        let resolvedMarkers = markers;
+        if (!resolvedMarkers) {
+          resolvedMarkers = findPairMarkers({ 
             tr: item.tr || item.meaning_tr, 
             bg: item.bg || item.pattern || item.form, 
             ruleRefs: item.rule_refs, 
             rules: allRulesArray 
           });
         }
+
+        // Add "Virtual Marker" for highlighting if matched via smart context
+        if (selectedRuleId && activeRuleObj && !resolvedMarkers.some((m: any) => m.rule_id === selectedRuleId)) {
+          const target = activeRuleObj.marker?.highlight_target || activeRuleObj.pattern;
+          if (target && typeof target === 'string') {
+            resolvedMarkers = [...resolvedMarkers, {
+              rule_id: selectedRuleId,
+              bg_fragment: target,
+              color_key: activeRuleObj.marker?.color_key || 'amber',
+              is_detected: true,
+              score: 5
+            }];
+          }
+        }
+
         allItems.push({ 
           ...item, 
-          rule_marks: markers, 
+          rule_marks: resolvedMarkers, 
           _parentBlockType: blockType,
           _sourceLabel: sourceLabel,
           _sourceType: sourceType

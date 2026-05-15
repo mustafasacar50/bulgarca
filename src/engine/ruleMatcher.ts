@@ -21,7 +21,7 @@ export function findPairMarkers(params: {
   entryRuleMarks?: any[];
 }): PairMarker[] {
   const { tr, bg, ruleRefs, rules, entryRuleMarks } = params;
-  if (!tr || !bg) return [];
+  if (!tr || !bg || typeof tr !== 'string' || typeof bg !== 'string') return [];
   
   const trUpper = tr.toUpperCase();
   const bgLower = bg.toLowerCase();
@@ -157,6 +157,7 @@ export function findPairMarkers(params: {
 }
 
 export function matchRules(text: string, rules: Rule[]): Rule[] {
+  if (!text || typeof text !== 'string') return [];
   return rules.filter(rule => {
     if (!rule.pattern) return false;
     // Handle both old string pattern and new object pattern
@@ -164,7 +165,8 @@ export function matchRules(text: string, rules: Rule[]): Rule[] {
         return text.includes(rule.pattern.split('→')[0].trim());
     }
     const sourceFrag = (rule.pattern as any).source_fragment;
-    return text.toLowerCase().includes(sourceFrag?.toLowerCase() || "");
+    if (typeof sourceFrag !== 'string') return false;
+    return text.toLowerCase().includes(sourceFrag.toLowerCase());
   });
 }
 

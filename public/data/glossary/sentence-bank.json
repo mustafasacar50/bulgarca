@@ -26,6 +26,14 @@
     { "word": "Агробиология", "bg": "Новите методи в агробиологията са важни.", "tr": "Agrobiyolojideki yeni metotlar önemlidir.", "analysis": "Важни (önemli) sıfatı çoğul formdadır." },
     { "word": "Академик", "bg": "Той е известен академик.", "tr": "O, tanınmış bir akademisyendir.", "analysis": "Академик eril bir unvandır." },
     { "word": "Акrobat", "bg": "Акrobatът изпълнява опасни трикове.", "tr": "Akrobat tehlikeli numaralar yapıyor.", "analysis": "Акrobatът (belirli eril) özne halidir." },
-    { "word": "Чай", "bg": "Обичам чай с лимон.", "tr": "Limonlu çay severim.", "analysis": "С лимон (limon ile)." }
+    { "word": "Чай", "bg": "Обичам чай с лимон.", "tr": "Limonlu çay severim.", "analysis": "С лимон (limon ile)." },
+    { "word": "Работа", "bg": "Той не работи днес.", "tr": "O bugün çalışmıyor.", "analysis": "Olumsuzluk: 'не' fiilden önce gelir." },
+    { "word": "Работа", "bg": "Ти работиш ли тук?", "tr": "Sen burada mı çalışıyorsun?", "analysis": "Soru: 'ли' fiilden sonra gelir." },
+    { "word": "Студент", "bg": "Ти не си ли студент?", "tr": "Sen öğrenci değil misin?", "analysis": "Olumsuz soru: 'не си ли'." },
+    { "word": "Кафе", "bg": "Искате ли кафе или чай?", "tr": "Kahve mi yoksa çay mı istersiniz?", "analysis": "Soru parçacığı 'ли' kullanımı." },
+    { "word": "Гладен", "bg": "Аз не съм гладен.", "tr": "Ben aç değilim.", "analysis": "Olumsuz cümle: 'не съм'." },
+    { "word": "Гладен", "bg": "Ти гладен ли си?", "tr": "Sen aç mısın?", "analysis": "Soru cümlesi: 'ли си'." },
+    { "word": "Нов", "bg": "Това не е нов телефон.", "tr": "Bu yeni bir telefon değil.", "analysis": "Olumsuzluk sıfatla kullanım." },
+    { "word": "Днес", "bg": "Днес не е ли понеделник?", "tr": "Bugün pazartesi değil mi?", "analysis": "Zaman ifadesiyle olumsuz soru." }
   ]
 }
