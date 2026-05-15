@@ -1711,6 +1711,18 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   const [showResult, setShowResult] = useState(false);
   const [bank, setBank] = useState<any>(null);
   const [randomSeed, setRandomSeed] = useState(Math.random());
+  const timerRef = useRef<any>(null);
+
+  const clearTimer = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    return () => clearTimer();
+  }, []);
 
   useEffect(() => {
     if (lesson?.quiz_bank) {
@@ -1772,7 +1784,8 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
     setMatchResult(result);
     if (result !== 'wrong') setScore(s => s + 1);
     
-    setTimeout(() => {
+    clearTimer();
+    timerRef.current = setTimeout(() => {
       if (currentIdx < questions.length - 1) {
         setCurrentIdx(s => s + 1);
         setSelectedOpt(null);
@@ -1928,7 +1941,10 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
 
       <div className="flex items-center justify-between pt-4 border-t border-slate-100">
         <button 
-          onClick={() => currentIdx > 0 && setCurrentIdx(currentIdx - 1)}
+          onClick={() => {
+            clearTimer();
+            currentIdx > 0 && setCurrentIdx(currentIdx - 1);
+          }}
           disabled={currentIdx === 0}
           className="flex items-center gap-2 px-4 py-2 text-slate-400 hover:text-slate-600 font-bold text-sm disabled:opacity-20 transition-colors"
         >
@@ -1938,6 +1954,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
         
         <button 
           onClick={() => {
+            clearTimer();
             if (currentIdx < questions.length - 1) {
               setCurrentIdx(currentIdx + 1);
               setSelectedOpt(null);
