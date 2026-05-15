@@ -74,17 +74,33 @@ export function matchAnswer(userInput: string, correct: string): MatchResult {
   const normalize = (s: string) => s.trim().toLowerCase().replace(/[!?.,;:\-–—()'"«»\s]+/g, '');
   const u = normalize(userInput);
   const c = normalize(correct);
+  
+  // Basic Cyrillic to Latin normalization
   const cLat = normalize(cyrillicToLatin(correct));
 
   if (u === c || u === cLat) return 'exact';
   
-  // Check pronoun flexibility before fuzzy matching
+  // Also try with common transliteration variants for ъ (a, u, y)
+  const cLatAlt1 = cLat.replace(/a/g, 'u');
+  const cLatAlt2 = cLat.replace(/a/g, 'y');
+  if (u === cLatAlt1 || u === cLatAlt2) return 'exact';
+
+  // Check pronoun flexibility
   if (checkPronounFlexibility(userInput, correct) || checkPronounFlexibility(userInput, cyrillicToLatin(correct))) {
     return 'exact';
   }
 
-  const dist = Math.min(levenshtein(u, c), levenshtein(u, cLat));
-  if (dist <= 1 || hasTransposition(u, c) || hasTransposition(u, cLat)) return 'close';
+  const dist = Math.min(
+    levenshtein(u, c), 
+    levenshtein(u, cLat),
+    levenshtein(u, cLatAlt1),
+    levenshtein(u, cLatAlt2)
+  );
+
+  // For short strings, 1 char diff is close. For long strings (>12), 2 chars is close.
+  const threshold = (c.length > 12 || cLat.length > 12) ? 2 : 1;
+  
+  if (dist <= threshold || hasTransposition(u, c) || hasTransposition(u, cLat)) return 'close';
   
   return 'wrong';
 }
