@@ -5,17 +5,18 @@ import { LessonReader } from './pages/LessonReader';
 import { Settings } from './pages/Settings';
 import { Import } from './pages/Import';
 import { Quiz } from './pages/Quiz';
+import { AdminUsers } from './pages/AdminUsers';
 import { SyncState } from './types/sync';
 import { storage } from './engine/storage';
 import { useAuth } from './state/AuthContext';
 import { LoginPage } from './pages/Login';
-import { LogOut, Book, Settings as SettingsIcon, Menu, X, Upload, ArrowLeftRight, Trophy } from 'lucide-react';
+import { LogOut, Book, Settings as SettingsIcon, Menu, X, Upload, ArrowLeftRight, Trophy, Users } from 'lucide-react';
 import { SidebarSearch } from './components/SidebarSearch';
 import { useDisplaySettings } from './state/DisplaySettingsContext';
 
 export default function App() {
   const { user, isAdmin, logout } = useAuth();
-  const [currentPage, setCurrentPage] = useState<'lessons' | 'reader' | 'settings' | 'import' | 'quiz'>('lessons');
+  const [currentPage, setCurrentPage] = useState<'lessons' | 'reader' | 'settings' | 'import' | 'quiz' | 'users'>('lessons');
   const [selectedLessonId, setSelectedLessonId] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { settings, updateSettings } = useDisplaySettings();
@@ -24,7 +25,7 @@ export default function App() {
   if (!user) return <LoginPage />;
 
   // Navigation handlers
-  const navigateTo = (page: 'lessons' | 'reader' | 'settings' | 'import' | 'quiz', lessonId?: string) => {
+  const navigateTo = (page: 'lessons' | 'reader' | 'settings' | 'import' | 'quiz' | 'users', lessonId?: string) => {
     setCurrentPage(page);
     if (lessonId) setSelectedLessonId(lessonId);
     setIsSidebarOpen(false);
@@ -77,6 +78,14 @@ export default function App() {
               label={isRev ? 'Импортиране' : 'İçe Aktar'} 
               active={currentPage === 'import'} 
               onClick={() => navigateTo('import')} 
+            />
+          )}
+          {isAdmin && (
+            <SidebarLink 
+              icon={<Users size={20} />} 
+              label={isRev ? 'Потребители' : 'Kullanıcılar'} 
+              active={currentPage === 'users'} 
+              onClick={() => navigateTo('users')} 
             />
           )}
           <SidebarLink 
@@ -148,7 +157,8 @@ export default function App() {
         </div>
         <nav className="p-4 space-y-1">
           <SidebarLink icon={<Book size={20} />} label={isRev ? 'Учебна програма' : 'Ders Programı'} active={currentPage === 'lessons' || currentPage === 'reader'} onClick={() => navigateTo('lessons')} />
-          <SidebarLink icon={<Upload size={20} />} label={isRev ? 'Импортиране' : 'İçe Aktar'} active={currentPage === 'import'} onClick={() => navigateTo('import')} />
+          {isAdmin && <SidebarLink icon={<Upload size={20} />} label={isRev ? 'Импортиране' : 'İçe Aktar'} active={currentPage === 'import'} onClick={() => navigateTo('import')} />}
+          {isAdmin && <SidebarLink icon={<Users size={20} />} label={isRev ? 'Потребители' : 'Kullanıcılar'} active={currentPage === 'users'} onClick={() => navigateTo('users')} />}
           <SidebarLink icon={<SettingsIcon size={20} />} label={isRev ? 'Настройки' : 'Ayarlar'} active={currentPage === 'settings'} onClick={() => navigateTo('settings')} />
           <SidebarLink icon={<Trophy size={20} />} label={isRev ? 'Тест' : 'Quiz'} active={currentPage === 'quiz'} onClick={() => navigateTo('quiz')} />
         </nav>
@@ -183,6 +193,7 @@ export default function App() {
           {currentPage === 'import' && <Import />}
           {currentPage === 'settings' && <Settings />}
           {currentPage === 'quiz' && <Quiz />}
+          {currentPage === 'users' && <AdminUsers />}
         </div>
         
         <footer className="mt-auto py-8 border-t border-slate-100 text-center text-slate-400 text-xs">
