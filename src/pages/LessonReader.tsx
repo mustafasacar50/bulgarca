@@ -971,8 +971,16 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                         {displayExamples.map((m: any, mi: number) => (
                           <div 
                             key={mi} 
-                            className="flex items-center justify-between px-3 py-2 bg-slate-50/50 rounded-xl border border-slate-100 hover:bg-white hover:border-primary-100 transition-all cursor-pointer group/ex"
-                            onClick={() => setSelectedItem({ type: 'word', data: m })}
+                            className="flex items-center justify-between px-3 py-2 bg-slate-50/50 rounded-xl border border-slate-100 hover:border-primary-100 transition-all cursor-pointer group/ex"
+                            onClick={() => setSelectedItem({ 
+                              type: 'word', 
+                              data: m,
+                              navigation: {
+                                list: displayExamples,
+                                currentIndex: mi,
+                                contextRule: rule
+                              }
+                            })}
                           >
                              <div className="flex flex-col">
                                <LearningText bg={m.bg || m.bg_singular} tr={m.tr} detail={m} className="font-bold text-slate-900 text-xs" />

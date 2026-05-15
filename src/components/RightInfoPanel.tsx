@@ -200,8 +200,9 @@ export function RightInfoPanel({ item, onClose, onSelectItem, onSearchRule, allR
                             // Inject a temporary marker to highlight the target word,
                             // AND preserve any rule markers that were injected into the word.
                             rule_marks: [
-                              ...(ex.rule_marks || []),
-                              ...(data.rule_marks || []),
+                              ...(Array.isArray(ex.rule_marks) ? ex.rule_marks : (ex.rule_marks ? [ex.rule_marks] : [])),
+                              ...(Array.isArray(data.rule_marks) ? data.rule_marks : (data.rule_marks ? [data.rule_marks] : [])),
+                              ...(Array.isArray(ex.markers) ? ex.markers : (ex.markers ? [ex.markers] : [])),
                               {
                                 bg_fragment: data.bg,
                                 tr_fragment: data.tr,
