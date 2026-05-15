@@ -3,6 +3,7 @@ export interface GitHubConfig {
   owner: string;
   repo: string;
   branch: string;
+  username?: string;
 }
 
 export interface SyncState {

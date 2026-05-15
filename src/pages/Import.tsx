@@ -4,23 +4,20 @@ import { storage } from '../engine/storage';
 import { applyImportBundleToGithub } from '../engine/githubSync';
 import { Modal } from '../components/Modal';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useAuth } from '../state/AuthContext';
 
 export function Import() {
+  const { user } = useAuth();
+  const token = user?.token || null;
   const [jsonInput, setJsonInput] = useState('');
   const [status, setStatus] = useState<{ 
     type: 'idle' | 'success' | 'error' | 'syncing' | 'warning', 
     message: string, 
     details?: any 
   }>({ type: 'idle', message: '' });
-  const [token, setToken] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [progressMsg, setProgressMsg] = useState('');
   const [importSummary, setImportSummary] = useState<any>(null);
-
-  useEffect(() => {
-    const savedToken = storage.get<string>('github_token') || storage.get<string>('github_token', true);
-    setToken(savedToken);
-  }, []);
 
   const handleValidate = () => {
     try {

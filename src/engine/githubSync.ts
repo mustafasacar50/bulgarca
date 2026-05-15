@@ -326,10 +326,12 @@ export async function testGithubConnection(config: GitHubConfig) {
 }
 
 export async function loadUserDataFile<T>(config: GitHubConfig, fileName: string): Promise<T | null> {
-  const result = await getGithubFile({ ...config, path: `users/mustafa/${fileName}` });
+  const userPath = config.username || 'mustafa';
+  const result = await getGithubFile({ ...config, path: `users/${userPath}/${fileName}` });
   return result?.content as T || null;
 }
 
 export async function saveUserDataFile<T>(config: GitHubConfig, fileName: string, data: T) {
-  return saveJsonToGithub(config, `users/mustafa/${fileName}`, data, `Update ${fileName}`);
+  const userPath = config.username || 'mustafa';
+  return saveJsonToGithub(config, `users/${userPath}/${fileName}`, data, `Update ${fileName}`);
 }

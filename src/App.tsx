@@ -7,16 +7,21 @@ import { Import } from './pages/Import';
 import { Quiz } from './pages/Quiz';
 import { SyncState } from './types/sync';
 import { storage } from './engine/storage';
-import { Book, Settings as SettingsIcon, Menu, X, Upload, ArrowLeftRight, Trophy } from 'lucide-react';
+import { useAuth } from './state/AuthContext';
+import { LoginPage } from './pages/Login';
+import { LogOut, Book, Settings as SettingsIcon, Menu, X, Upload, ArrowLeftRight, Trophy } from 'lucide-react';
 import { SidebarSearch } from './components/SidebarSearch';
 import { useDisplaySettings } from './state/DisplaySettingsContext';
 
 export default function App() {
+  const { user, isAdmin, logout } = useAuth();
   const [currentPage, setCurrentPage] = useState<'lessons' | 'reader' | 'settings' | 'import' | 'quiz'>('lessons');
   const [selectedLessonId, setSelectedLessonId] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { settings, updateSettings } = useDisplaySettings();
   const isRev = settings.isReversed;
+
+  if (!user) return <LoginPage />;
 
   // Navigation handlers
   const navigateTo = (page: 'lessons' | 'reader' | 'settings' | 'import' | 'quiz', lessonId?: string) => {
@@ -66,12 +71,14 @@ export default function App() {
             active={currentPage === 'lessons' || currentPage === 'reader'} 
             onClick={() => navigateTo('lessons')} 
           />
-          <SidebarLink 
-            icon={<Upload size={20} />} 
-            label={isRev ? 'Импортиране' : 'İçe Aktar'} 
-            active={currentPage === 'import'} 
-            onClick={() => navigateTo('import')} 
-          />
+          {isAdmin && (
+            <SidebarLink 
+              icon={<Upload size={20} />} 
+              label={isRev ? 'Импортиране' : 'İçe Aktar'} 
+              active={currentPage === 'import'} 
+              onClick={() => navigateTo('import')} 
+            />
+          )}
           <SidebarLink 
             icon={<SettingsIcon size={20} />} 
             label={isRev ? 'Настройки' : 'Ayarlar'} 
@@ -89,14 +96,23 @@ export default function App() {
         <div className="h-px bg-slate-100 mx-6 my-2 shrink-0" />
         <SidebarSearch />
 
-        <div className="p-4 border-t border-slate-100 shrink-0">
-          <div className="bg-slate-50 rounded-xl p-4 flex items-center gap-3">
-            <div className="w-8 h-8 bg-emerald-500 rounded-full"></div>
+        <div className="p-4 border-t border-slate-100 shrink-0 space-y-2">
+          <div className="bg-slate-50 rounded-xl p-4 flex items-center gap-3 group relative">
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-[10px] font-bold ${isAdmin ? 'bg-slate-900' : 'bg-emerald-500'}`}>
+              {user.username.slice(0,2).toUpperCase()}
+            </div>
             <div className="flex-1 overflow-hidden">
-              <div className="text-sm font-bold text-slate-800 truncate">Mustafa</div>
-              <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">{isRev ? 'Ниво A1' : 'A1 Seviyesi'}</div>
+              <div className="text-sm font-bold text-slate-800 truncate">{user.username}</div>
+              <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">{isAdmin ? (isRev ? 'Админ' : 'Yönetici') : (isRev ? 'Ниво A1' : 'A1 Seviyesi')}</div>
             </div>
           </div>
+          <button 
+            onClick={logout}
+            className="w-full flex items-center gap-2 px-4 py-2 text-xs font-bold text-rose-500 hover:bg-rose-50 rounded-xl transition-all"
+          >
+            <LogOut size={14} />
+            {isRev ? 'Изход' : 'Çıkış Yap'}
+          </button>
         </div>
       </aside>
 
