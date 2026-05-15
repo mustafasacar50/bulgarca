@@ -1,0 +1,119 @@
+{
+  "id": "lesson-015-fiillerin-4-temel-formu",
+  "title_tr": "Fiillerin 4 Temel Formu: Olumlu, Olumsuz ve Soru",
+  "title_bg": "Четирите основни форми на глаголите",
+  "description_tr": "Bulgarca fiillerin dört farklı durumu (Olumlu, Olumsuz, Soru ve Olumsuz-Soru) СЪМ, УЧА ve КАЗВАМ СЕ fiilleri üzerinden detaylı anlatımı.",
+  "description_bg": "Подробно обяснение на четирите форми на глаголите (положителна, отрицателна, въпросителна и отрицателно-въпросителна).",
+  "week": 3,
+  "order": 5,
+  "level": "A1",
+  "blocks": [
+    {
+      "type": "text",
+      "body_tr": "Bulgarcada fiilleri kullanırken dört temel yapıya hakim olmamız gerekir. Bu yapılar cümlenin anlamını (olumlu, olumsuz veya soru) belirler. Bu dersimizde 'olmak' (СЪМ), 'öğrenmek/çalışmak' (УЧА) ve 'adı olmak' (КАЗВАМ СЕ) fiillerini tüm bu formlarda inceleyeceğiz.",
+      "body_bg": "В българския език трябва да владеем четири основни структури при използването на глаголите. В този урок ще разгледаме глаголите 'съм', 'уча' и 'казвам се' във всички тези форми."
+    },
+    {
+      "type": "text",
+      "title_tr": "1. СЪМ (Olmak) Fiili: 4 Form",
+      "title_bg": "1. Глаголът СЪМ: 4 форми",
+      "body_tr": "СЪМ fiili Bulgarcanın en temel taşıdır. Soru sorarken 'ЛИ' edatının, olumsuz yaparken 'НЕ' edatının konumuna dikkat edin.",
+      "body_bg": "Глаголът СЪМ е основата на българския език. Обърнете внимание на позицията на частиците 'ЛИ' и 'НЕ'."
+    },
+    {
+      "type": "grammar_table",
+      "title_tr": "СЪМ (Olmak) - Şimdiki Zaman Çekimi",
+      "headers_tr": ["Şahıs", "Olumlu", "Olumsuz", "Soru", "Olumsuz-Soru"],
+      "rows": [
+        ["Аз (Ben)", "съм", "не съм", "съм ли / ли съм", "не съм ли"],
+        ["Ти (Sen)", "си", "не си", "си ли / ли си", "не си li"],
+        ["Той/Тя/То (O)", "е", "не е", "ли е / е ли", "не е ли"],
+        ["Ние (Biz)", "сме", "не сме", "сме ли / ли сме", "не сме ли"],
+        ["Вие (Siz)", "сте", "не сте", "сте ли / ли сте", "не сте ли"],
+        ["Те (Onlar)", "са", "не са", "са ли / ли са", "не са ли"]
+      ]
+    },
+    {
+      "type": "rule_cards",
+      "title_tr": "Önemli Kurallar: 'ЛИ' ve 'НЕ' Konumu",
+      "rule_ids": ["gram-li-position", "gram-ne-negation"]
+    },
+    {
+      "type": "text",
+      "title_tr": "2. КАЗВАМ СЕ (Adı Olmak / İsmi Olmak)",
+      "title_bg": "2. КАЗВАМ СЕ",
+      "body_tr": "Bu fiil dönüşlü (reflexive) bir fiildir. 'СЕ' parçacığının konumu formlara göre değişir.",
+      "body_bg": "Този глагол е възвратен. Позицията на частицата 'СЕ' се променя според формата."
+    },
+    {
+      "type": "word_table_v2",
+      "title_tr": "КАЗВАМ СЕ - 4 Farklı Form Örnekleri",
+      "entries": [
+        { "bg": "Аз се казвам...", "tr": "Benim adım...", "note_tr": "Olumlu Form" },
+        { "bg": "Ти не се казваш...", "tr": "Senin adın ... değil", "note_tr": "Olumsuz Form" },
+        { "bg": "Той ли се казва...?", "tr": "Onun adı ... mı?", "note_tr": "Soru Formu" },
+        { "bg": "Ние не се ли казваме...?", "tr": "Bizim adımız ... değil mi?", "note_tr": "Olumsuz Soru Formu" }
+      ]
+    },
+    {
+      "type": "text",
+      "title_tr": "3. УЧА (Okumak / Öğrenmek / Çalışmak)",
+      "title_bg": "3. УЧА",
+      "body_tr": "Düzenli bir fiil olan УЧА, genel fiil çekim kurallarını anlamak için mükemmel bir örnektir.",
+      "body_bg": "Редовният глагол УЧА е отличен пример за разбиране на общите правила за спрежение."
+    },
+    {
+      "type": "phrase_cards",
+      "title_tr": "УЧА Fiili ile Cümle Kurulumu",
+      "cards": [
+        { "bg": "Аз уча български.", "tr": "Ben Bulgarca öğreniyorum.", "analysis": "Olumlu: Fiil şahsa göre çekimlenir." },
+        { "bg": "Ти не учиш ли?", "tr": "Sen öğrenmiyor musun?", "analysis": "Olumsuz Soru: не + fiil + ли yapısı." },
+        { "bg": "Те учат ли?", "tr": "Onlar öğreniyorlar mı?", "analysis": "Soru: Fiil + ли yapısı." },
+        { "bg": "Вие не учите.", "tr": "Siz öğrenmiyorsunuz.", "analysis": "Olumsuz: не + fiil yapısı." }
+      ]
+    },
+    {
+      "type": "text",
+      "title_tr": "Özet Karşılaştırma",
+      "body_tr": "Aşağıdaki tabloda her üç fiilin de 1. tekil şahıs (AZ) formlarını karşılaştırmalı olarak görebilirsiniz."
+    },
+    {
+      "type": "grammar_table",
+      "headers_tr": ["Fiil", "Olumlu", "Olumsuz", "Soru", "Olumsuz Soru"],
+      "rows": [
+        ["СЪМ (Olmak)", "Аз съм", "Аз не съм", "Аз ли съм?", "Аz не съм ли?"],
+        ["УЧА (Öğrenmek)", "Аз уча", "Аз не уча", "Аз уча ли?", "Аз не уча ли?"],
+        ["КАЗВАМ СЕ (Adı olmak)", "Аз се казвам", "Аз не се казвам", "Аз ли се казвам?", "Аз не се ли казвам?"]
+      ]
+    },
+    {
+      "type": "quiz",
+      "title_tr": "Ders Sonu Testi: Fiil Formları",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question_tr": "'Ben öğrenci değilim' cümlesinin Bulgarca karşılığı hangisidir?",
+          "options": ["Аз съм студент", "Аз не съм студент", "Аз ли съм студент?", "Аз не съм ли студент?"],
+          "answer_idx": 1
+        },
+        {
+          "type": "multiple_choice",
+          "question_tr": "'Senin adın Mustafa mı?' (Soru formu) hangisidir?",
+          "options": ["Ти се казваш Мустафа", "Ти не се казваш Мустафа", "Ти ли се казваш Мустафа?", "Ти не се ли казваш Мустафа?"],
+          "answer_idx": 2
+        },
+        {
+          "type": "multiple_choice",
+          "question_tr": "'Onlar çalışmıyorlar mı?' (Olumsuz soru) hangisidir?",
+          "options": ["Те учат ли?", "Те не учат ли?", "Те не учат", "Те са учители"],
+          "answer_idx": 1
+        },
+        {
+          "type": "fill_in_the_blank",
+          "question_tr": "Ние ___ сме гладни. (Biz aç değiliz - Olumsuz yapın)",
+          "answer": "не"
+        }
+      ]
+    }
+  ]
+}

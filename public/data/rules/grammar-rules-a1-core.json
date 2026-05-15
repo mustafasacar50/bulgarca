@@ -279,6 +279,45 @@
           "tr": "zift"
         }
       ]
+    },
+    {
+      "rule_id": "gram-li-position",
+      "category": "grammar_rule",
+      "title_tr": "Soruda 'ЛИ' Konumu",
+      "short_tr": "ЛИ Konumu",
+      "description_tr": "Soru parçacığı 'ли' genellikle fiilden veya vurgulanan kelimeden hemen sonra gelir. Ancak 'съм' fiili ile kullanımda şahıs zamiri başa gelebilir: 'Аз ли съм?' veya 'Съм ли аз?'.",
+      "marker": {
+        "color_key": "amber",
+        "highlight_target": "ли",
+        "style": "pill"
+      },
+      "panel_tr": {
+        "summary": "ли her zaman sorulan öğeden sonra gelir.",
+        "details": [
+          "Fiil cümlelerinde: Fiil + ли (Учиш ли?)",
+          "İsim cümlelerinde: İsim + ли (Студент ли си?)",
+          "Zamir vurgulu: Zamir + ли (Аз ли съм?)"
+        ]
+      }
+    },
+    {
+      "rule_id": "gram-ne-negation",
+      "category": "grammar_rule",
+      "title_tr": "Olumsuzluk: 'НЕ' Konumu",
+      "short_tr": "НЕ ile Olumsuzluk",
+      "description_tr": "Bulgarcada fiili olumsuz yapmak için önüne 'НЕ' parçacığı getirilir. 'Аз не уча' (Ben öğrenmiyorum).",
+      "marker": {
+        "color_key": "red",
+        "highlight_target": "не",
+        "style": "underline"
+      },
+      "panel_tr": {
+        "summary": "не her zaman fiilden önce gelir.",
+        "details": [
+          "Olumsuz soru yaparken: не + fiil + ли (Не учиш ли?)",
+          "СЪМ fiili ile: не + съм/си/е... (Не съм гладен)"
+        ]
+      }
     }
   ]
 }

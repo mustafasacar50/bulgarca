@@ -56,6 +56,16 @@
       "summary_tr": "650+ ortak kelime, ses dönüşüm kuralları ve bağlamsal örneklerle tam sözlük çalışması.",
       "isDictionary": true,
       "week": 99
+    },
+    {
+      "id": "lesson-015-fiillerin-4-temel-formu",
+      "title_tr": "Fiillerin 4 Temel Formu: Olumlu, Olumsuz ve Soru",
+      "title_bg": "Четирите основни форми на глаголите",
+      "summary_tr": "СЪМ, УЧА ve КАЗВАМ СЕ fiilleri üzerinden 4 temel yapının (Olumlu, Olumsuz, Soru) detaylı incelenmesi.",
+      "path": "/data/lessons/lesson-015-fiillerin-4-temel-formu.json",
+      "order": 5,
+      "level": "A1",
+      "week": 3
     }
   ],
   "rules": [
