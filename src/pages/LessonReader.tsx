@@ -332,7 +332,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
   const renderBlock = (block: any, bIdx: number) => {
     const type = (block.type || "").toString().trim();
-    let rawItems = block.items || block.cards || block.table_rows || block.rules || block.rule_ids || block.lines || block.entries || block.prompts || block.content_blocks || [];
+    let rawItems = block.items || block.cards || block.table_rows || block.rows || block.rules || block.rule_ids || block.lines || block.entries || block.prompts || block.content_blocks || [];
     
     // Enrich items with markers
     const items = rawItems.map((it: any) => {
@@ -433,19 +433,21 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
         );
 
       case "grammar_table":
-        if (block.headers && block.rows) {
+        const gHeaders = block.headers || block.headers_tr;
+        const gRows = block.rows || block.table_rows;
+        if (gHeaders && gRows) {
           return (
             <div className="bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm overflow-x-auto">
               <table className="w-full text-left border-collapse min-w-[600px]">
                 <thead className="bg-slate-50 border-b border-slate-100">
                   <tr>
-                    {block.headers.map((h: string, i: number) => (
+                    {gHeaders.map((h: string, i: number) => (
                       <th key={i} className="p-4 text-xs font-bold text-slate-500 uppercase tracking-widest">{h}</th>
                     ))}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-50">
-                  {block.rows.map((row: string[], i: number) => (
+                  {gRows.map((row: string[], i: number) => (
                     <tr 
                       key={i} 
                       className="hover:bg-primary-50/30 transition-colors cursor-pointer"
@@ -457,7 +459,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                           data: {
                             bg: bgCombined,
                             tr: trCombined,
-                            note_tr: `Karşılaştırma Detayı:\n${block.headers?.map((h: string, idx: number) => `${h}: ${row[idx]}`).join('\n')}`
+                            note_tr: `Karşılaştırma Detayı:\n${gHeaders.map((h: string, idx: number) => `${h}: ${row[idx]}`).join('\n')}`
                           }
                         });
                       }}
@@ -757,7 +759,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                 <div className="text-sm text-slate-500 leading-relaxed">{card.description_tr || card.tr}</div>
                 {card.examples && (
                   <div className="mt-4 pt-4 border-t border-slate-50 space-y-2">
-                    {card.examples.slice(0, 2).map((ex: any, ei: number) => (
+                    {(card.examples || []).slice(0, 2).map((ex: any, ei: number) => (
                       <div key={ei} className="text-xs">
                         <span className="font-bold text-slate-700">{ex.bg}</span>
                         <span className="text-slate-400 ml-2">{secText(ex)}</span>
@@ -832,7 +834,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                 <div className="text-xl font-black text-primary-600 mb-2 font-mono bg-primary-50 inline-block px-3 py-1 rounded-lg">{rule.display}</div>
                 <div className="text-sm text-slate-600 mb-4">{rule.explanation_tr}</div>
                 <div className="space-y-2">
-                  {rule.examples.map((ex: any, ei: number) => (
+                  {(rule.examples || []).map((ex: any, ei: number) => (
                     <div 
                       key={ei} 
                       className="flex items-center justify-between text-sm p-2 rounded-lg hover:bg-slate-50 cursor-pointer group/ex"
@@ -1817,7 +1819,8 @@ function DynamicDataTable({ block, onSelectItem }: any) {
   const rows = block.rows || block.items || [];
   if (rows.length === 0) return null;
 
-  const columns = Object.keys(rows[0]).filter(k => k !== 'entry_id' && k !== 'source' && k !== 'panel_tr' && k !== 'tooltip_tr');
+  const firstRow = rows[0] || {};
+  const columns = Object.keys(firstRow).filter(k => k !== 'entry_id' && k !== 'source' && k !== 'panel_tr' && k !== 'tooltip_tr');
   
   const getColLabel = (key: string) => {
     const labels: any = {
