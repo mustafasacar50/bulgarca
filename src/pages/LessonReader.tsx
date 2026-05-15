@@ -220,20 +220,14 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
     const allRulesArray = Object.values(rules);
 
     let activeRuleObj: any = rules[selectedRuleId || ""];
-    if (!activeRuleObj && selectedRuleId && lesson.sections) {
-      for (const sec of lesson.sections) {
-        for (const blk of (sec.blocks || [sec])) {
-          const ruleFound = (blk.rules || []).find((r: any) => r.rule_id === selectedRuleId || r.id === selectedRuleId);
-          if (ruleFound) {
-            activeRuleObj = ruleFound;
-            break;
-          }
-        }
-        if (activeRuleObj) break;
-      }
+    if (!activeRuleObj && selectedRuleId) {
+      // Search in lesson blocks if not in global rules
+      const allLessonBlocks = (lesson.sections || []).flatMap((s: any) => s.blocks || [s]);
+      const ruleInLesson = allLessonBlocks.flatMap((b: any) => b.rules || []).find((r: any) => r.rule_id === selectedRuleId);
+      if (ruleInLesson) activeRuleObj = ruleInLesson;
     }
 
-    const addItem = (item: any, blockType?: string) => {
+    const addItem = (item: any, blockType: string = 'unknown', sourceLabel: string = '', sourceType: string = 'lesson') => {
       if (!item || typeof item !== 'object') return;
       const bg = (item.bg || item.letter || item.pattern || item.form || item.display || "").toString();
       const tr = (item.tr || item.meaning_tr || item.explanation_tr || item.note_tr || item.title_tr || "").toString();
@@ -269,24 +263,38 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           if (hasMarkerMatch) {
             ruleMatch = true;
           } else {
-            // 3. Pattern match (using rule titles if available)
-            const patternSources = [selectedRuleId];
-            if (activeRuleObj) {
-              if (activeRuleObj.title_tr) patternSources.push(activeRuleObj.title_tr);
-              if (activeRuleObj.title_bg) patternSources.push(activeRuleObj.title_bg);
-              if (activeRuleObj.display) patternSources.push(activeRuleObj.display);
-            }
-            
+            // 3. Smart Context Match (Global Scanning)
             const bgClean = normalize(bg);
-            ruleMatch = patternSources.some(pattern => {
-                if (!pattern) return false;
-                const ridClean = normalize(pattern).replace(/[\s/]+/g, '');
-                if (ridClean.length >= 2 && bgClean.includes(ridClean)) return true;
-                
+            const trClean = normalize(tr);
+
+            // a. Scan for highlight target (e.g. "не", "ли")
+            const target = activeRuleObj.marker?.highlight_target;
+            if (target && bgClean.includes(normalize(target))) {
+              ruleMatch = true;
+            } 
+            
+            // b. Scan for rule titles or keywords in text
+            if (!ruleMatch) {
+              const keywords = [
+                selectedRuleId,
+                activeRuleObj.title_tr,
+                activeRuleObj.title_bg,
+                activeRuleObj.short_tr
+              ].filter(Boolean).map(k => normalize(k));
+
+              if (keywords.some(k => bgClean.includes(k) || trClean.includes(k))) {
+                ruleMatch = true;
+              }
+            }
+
+            // c. Fallback to pattern matching
+            if (!ruleMatch) {
+              const pattern = activeRuleObj.pattern || activeRuleObj.marker?.highlight_target;
+              if (pattern) {
                 const parts = normalize(pattern).split(/[\s/]+/).filter(p => p.length >= 2);
-                if (parts.some(p => bgClean.includes(p))) return true;
-                return false;
-            });
+                if (parts.some(p => bgClean.includes(p))) ruleMatch = true;
+              }
+            }
           }
         }
       }
@@ -301,18 +309,25 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
             rules: allRulesArray 
           });
         }
-        allItems.push({ ...item, rule_marks: markers, _parentBlockType: blockType });
+        allItems.push({ 
+          ...item, 
+          rule_marks: markers, 
+          _parentBlockType: blockType,
+          _sourceLabel: sourceLabel,
+          _sourceType: sourceType
+        });
       }
     };
     
     // 1. Process Lesson Sections
     const lessonSections = lesson.sections || [{ blocks: lesson.blocks || [] }];
     for (const section of lessonSections) {
+      const sectionLabel = section.title_tr || lesson.title_tr || 'Ders';
       const blocks = section.blocks || [section];
       for (const block of blocks) {
-        const items = block.items || block.table_rows || block.rules || block.rule_ids || block.lines || block.entries || block.prompts || block.content_blocks || [];
+        const items = block.items || block.table_rows || block.rows || block.rules || block.rule_ids || block.lines || block.entries || block.prompts || block.content_blocks || [];
         for (const item of items) {
-          addItem(item, block.type);
+          addItem(item, block.type, sectionLabel, 'lesson');
           if (allItems.length >= 500) break;
         }
         if (allItems.length >= 500) break;
@@ -323,7 +338,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
     // 2. Process Glossary (if limit not reached)
     if (allItems.length < 500) {
       for (const item of glossary) {
-        addItem(item, 'glossary');
+        addItem(item, 'glossary', 'Sözlük', 'glossary');
         if (allItems.length >= 500) break;
       }
     }
@@ -1283,9 +1298,18 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                             </div>
                           </td>
                           <td className="p-4 text-right">
-                            <span className="text-[10px] font-mono text-slate-300 group-hover:text-slate-500">
-                              S.{item.source_page || item.source?.page || '??'}
-                            </span>
+                            <div className="flex flex-col items-end">
+                              <span className={`text-[9px] font-black px-1.5 py-0.5 rounded uppercase tracking-tighter ${
+                                item._sourceType === 'glossary' ? 'bg-slate-100 text-slate-500' : 'bg-primary-50 text-primary-600'
+                              }`}>
+                                {item._sourceLabel || (item._sourceType === 'glossary' ? 'SÖZLÜK' : 'DERS')}
+                              </span>
+                              {(item.source_page || item.source?.page) && (
+                                <span className="text-[9px] font-mono text-slate-300 mt-1">
+                                  S.{item.source_page || item.source?.page}
+                                </span>
+                              )}
+                            </div>
                           </td>
                         </tr>
                       ))}
