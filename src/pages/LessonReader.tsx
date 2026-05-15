@@ -1711,6 +1711,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   const [showResult, setShowResult] = useState(false);
   const [bank, setBank] = useState<any>(null);
   const [randomSeed, setRandomSeed] = useState(Math.random());
+  const [userHistory, setUserHistory] = useState<any[]>([]);
   const timerRef = useRef<any>(null);
 
   const clearTimer = () => {
@@ -1755,12 +1756,44 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
             setMatchResult(null);
             setScore(0);
             setShowResult(false);
+            setUserHistory([]);
             setRandomSeed(Math.random());
           }}
-          className="mt-4 px-6 py-2 bg-white text-primary-600 rounded-xl font-bold"
+          className="mt-4 px-6 py-2 bg-white text-primary-600 rounded-xl font-bold hover:bg-primary-50 transition-colors"
         >
           Tekrar Dene
         </button>
+
+        <div className="mt-8 space-y-3">
+          <div className="text-left text-xs font-black uppercase tracking-widest text-primary-200 mb-2 px-1">Soru Detayları</div>
+          {userHistory.map((h, i) => (
+            <div key={i} className={`p-4 rounded-2xl border-l-4 text-left shadow-sm animate-in fade-in slide-in-from-bottom-2 duration-500 delay-${i * 100} ${
+              h.result === 'exact' ? 'bg-white/10 border-emerald-400' : 
+              h.result === 'close' ? 'bg-white/10 border-amber-400' : 'bg-white/10 border-rose-400'
+            }`}>
+              <div className="text-[10px] font-black uppercase tracking-tighter opacity-60 mb-1 flex justify-between">
+                <span>Soru {i + 1}</span>
+                <span className={
+                  h.result === 'exact' ? 'text-emerald-300' : 
+                  h.result === 'close' ? 'text-amber-300' : 'text-rose-300'
+                }>
+                  {h.result === 'exact' ? 'Tam Doğru' : h.result === 'close' ? 'Yakın Cevap' : 'Yanlış'}
+                </span>
+              </div>
+              <div className="font-bold text-sm mb-2 leading-snug">{h.question}</div>
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="p-2 bg-black/20 rounded-lg">
+                  <div className="opacity-50 text-[9px] font-bold uppercase mb-0.5">Sizin Cevabınız</div>
+                  <div className="font-bold truncate">{h.userAnswer || '-'}</div>
+                </div>
+                <div className="p-2 bg-emerald-500/20 rounded-lg border border-emerald-500/20">
+                  <div className="opacity-70 text-[9px] font-bold uppercase mb-0.5 text-emerald-200">Doğru Cevap</div>
+                  <div className="font-bold text-emerald-50 truncate">{h.correctAnswer}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
@@ -1782,6 +1815,13 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
     const correctVal = currentQ.correctAnswer;
     const result = matchAnswer(ansText, correctVal);
     setMatchResult(result);
+    setUserHistory(prev => [...prev, { 
+      question: currentQ.prompt || currentQ.question_tr || currentQ.question, 
+      userAnswer: ansText, 
+      correctAnswer: correctVal,
+      result 
+    }]);
+    
     if (result !== 'wrong') setScore(s => s + 1);
     
     clearTimer();
