@@ -1731,7 +1731,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   const currentQ = questions[currentIdx];
 
   const handleSelect = (ans: any) => {
-    if (selectedOpt !== null) return;
+    if (matchResult !== null) return;
     setSelectedOpt(ans);
     
     let ansText = "";
