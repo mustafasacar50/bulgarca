@@ -1792,35 +1792,99 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
       </h3>
 
       <div className="grid grid-cols-1 gap-3">
-        {(currentQ.options || []).map((opt: string, i: number) => {
-          let stateClass = "border-slate-100 hover:border-primary-300";
-          const correctVal = currentQ.correctAnswer;
-          const correctIdx = currentQ.correct_idx !== undefined ? currentQ.correct_idx : currentQ.answer_idx;
-          const isThisCorrect = (i === correctIdx) || (opt === correctVal);
-          
-          if (selectedOpt === i) {
-            stateClass = isCorrect ? "border-emerald-500 bg-emerald-50 text-emerald-700" : "border-red-500 bg-red-50 text-red-700";
-          } else if (selectedOpt !== null && isThisCorrect) {
-            stateClass = "border-emerald-500 bg-emerald-50 text-emerald-700";
-          }
+        {currentQ.options && currentQ.options.length > 0 ? (
+          currentQ.options.map((opt: string, i: number) => {
+            let stateClass = "border-slate-100 hover:border-primary-300";
+            const correctVal = currentQ.correctAnswer;
+            const correctIdx = currentQ.correct_idx !== undefined ? currentQ.correct_idx : currentQ.answer_idx;
+            const isThisCorrect = (i === correctIdx) || (opt === correctVal);
+            
+            if (selectedOpt === i) {
+              stateClass = isCorrect ? "border-emerald-500 bg-emerald-50 text-emerald-700" : "border-red-500 bg-red-50 text-red-700";
+            } else if (selectedOpt !== null && isThisCorrect) {
+              stateClass = "border-emerald-500 bg-emerald-50 text-emerald-700";
+            }
 
-          return (
+            return (
+              <button
+                key={i}
+                disabled={selectedOpt !== null}
+                onClick={() => handleSelect(i)}
+                className={`w-full p-4 rounded-2xl border-2 text-left font-medium transition-all flex justify-between items-center ${stateClass}`}
+              >
+                <span>{opt}</span>
+                {selectedOpt === i && (
+                  isCorrect ? <CheckCircle2 size={20} className="text-emerald-500" /> : <AlertCircle size={20} className="text-red-500" />
+                )}
+                {selectedOpt !== null && isThisCorrect && i !== selectedOpt && (
+                  <CheckCircle2 size={20} className="text-emerald-500" />
+                )}
+              </button>
+            );
+          })
+        ) : (
+          <div className="space-y-3">
+            <div className="relative">
+              <input 
+                type="text"
+                autoFocus
+                className={`w-full p-4 rounded-2xl border-2 outline-none transition-all font-bold text-lg ${
+                  selectedOpt === null ? 'border-slate-200 focus:border-primary-500 bg-slate-50' : 
+                  isCorrect ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-red-500 bg-red-50 text-red-700'
+                }`}
+                placeholder="Cevabınızı buraya yazın..."
+                value={typeof selectedOpt === 'string' ? selectedOpt : ""}
+                onChange={(e) => selectedOpt === null && setSelectedOpt(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && selectedOpt !== null && typeof selectedOpt === 'string' && handleSelect(selectedOpt)}
+                disabled={isCorrect !== null}
+              />
+              {isCorrect !== null && (
+                <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                  {isCorrect ? <CheckCircle2 size={24} className="text-emerald-500" /> : <AlertCircle size={24} className="text-red-500" />}
+                </div>
+              )}
+            </div>
+            {isCorrect === false && (
+              <div className="p-3 bg-emerald-50 border border-emerald-100 rounded-xl text-emerald-700 text-sm font-bold animate-in fade-in slide-in-from-top-2">
+                Doğru Cevap: <span className="underline">{currentQ.correctAnswer}</span>
+              </div>
+            )}
             <button
-              key={i}
-              disabled={selectedOpt !== null}
-              onClick={() => handleSelect(i)}
-              className={`w-full p-4 rounded-2xl border-2 text-left font-medium transition-all flex justify-between items-center ${stateClass}`}
+              onClick={() => handleSelect(selectedOpt || "")}
+              disabled={!selectedOpt || isCorrect !== null}
+              className="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold shadow-lg shadow-slate-200 disabled:opacity-50"
             >
-              <span>{opt}</span>
-              {selectedOpt === i && (
-                isCorrect ? <CheckCircle2 size={20} className="text-emerald-500" /> : <AlertCircle size={20} className="text-red-500" />
-              )}
-              {selectedOpt !== null && isThisCorrect && i !== selectedOpt && (
-                <CheckCircle2 size={20} className="text-emerald-500" />
-              )}
+              Cevabı Kontrol Et
             </button>
-          );
-        })}
+          </div>
+        )}
+      </div>
+
+      <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+        <button 
+          onClick={() => currentIdx > 0 && setCurrentIdx(currentIdx - 1)}
+          disabled={currentIdx === 0}
+          className="flex items-center gap-2 px-4 py-2 text-slate-400 hover:text-slate-600 font-bold text-sm disabled:opacity-20 transition-colors"
+        >
+          <ArrowLeft size={16} />
+          Önceki
+        </button>
+        
+        <button 
+          onClick={() => {
+            if (currentIdx < questions.length - 1) {
+              setCurrentIdx(currentIdx + 1);
+              setSelectedOpt(null);
+              setIsCorrect(null);
+            } else {
+              setShowResult(true);
+            }
+          }}
+          className="flex items-center gap-2 px-4 py-2 text-primary-600 hover:text-primary-700 font-bold text-sm transition-colors"
+        >
+          {currentIdx === questions.length - 1 ? 'Sonucu Gör' : 'Sıradaki Soru'}
+          <ChevronRight size={16} />
+        </button>
       </div>
     </div>
   );
