@@ -46,12 +46,11 @@ export function AdminUsers() {
   const initializeRegistry = async () => {
     setLoading(true);
     try {
-      // Create empty files if they don't exist
-      await Promise.all([
-        saveJsonToGithub(config, 'registry/users.json', [], 'Initialize users registry'),
-        saveJsonToGithub(config, 'registry/requests.json', [], 'Initialize requests registry')
-      ]);
+      // Create empty files sequentially to avoid race conditions
+      await saveJsonToGithub(config, 'registry/users.json', [], 'Initialize users registry');
+      await saveJsonToGithub(config, 'registry/requests.json', [], 'Initialize requests registry');
       await loadData();
+      alert("Sistem başarıyla kuruldu!");
     } catch (e) {
       console.error("Initialization error:", e);
       alert("Sistem dosyaları oluşturulurken hata oluştu. Token yetkilerini kontrol edin.");

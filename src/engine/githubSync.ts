@@ -128,9 +128,10 @@ export async function saveJsonToGithub<T>(config: GitHubConfig, path: string, co
     const status = error.status;
     const isConflict = status === 409 || status === 422 || error.message?.toLowerCase().includes('conflict') || error.message?.toLowerCase().includes('sha');
     
-    if (isConflict && retryCount < 3) {
-      console.warn(`GitHub conflict detected for ${cleanPath}. Retrying (${retryCount + 1}) with fresh SHA...`);
-      await new Promise(resolve => setTimeout(resolve, 800 * (retryCount + 1)));
+    if (isConflict && retryCount < 5) {
+      console.warn(`GitHub conflict detected for ${cleanPath}. Retrying (${retryCount + 1}/5) with fresh SHA...`);
+      // Exponential backoff
+      await new Promise(resolve => setTimeout(resolve, 1000 * (retryCount + 1)));
       return saveJsonToGithub(config, cleanPath, content, message, retryCount + 1);
     }
     throw error;
