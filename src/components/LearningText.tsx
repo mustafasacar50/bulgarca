@@ -49,7 +49,7 @@ export function LearningText({
   const formattedBg = formatBulgarianText(bg, settings);
 
   const renderWithMarkers = (text: string, isBg: boolean) => {
-    // 1. Collect markers
+    if (!isBg) return text;
     let rawMarkers = (resolvedDetail?.rule_marks || resolvedDetail?.markers || []);
     // Safety check: ensure markers is an array
     const markers = Array.isArray(rawMarkers) ? rawMarkers : (rawMarkers ? [rawMarkers] : []);

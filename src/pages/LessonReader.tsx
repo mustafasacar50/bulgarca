@@ -1527,9 +1527,14 @@ function GlossaryTableSection({ block, glossary, rules, setSelectedItem, setSele
     <div className="space-y-6">
       <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-          <div className="relative md:col-span-6">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+          <div className="relative md:col-span-6 group">
+            <Search 
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary-500 transition-colors cursor-pointer" 
+              size={18} 
+              onClick={() => document.getElementById('dict-search-normal')?.focus()}
+            />
             <input 
+              id="dict-search-normal"
               type="text"
               placeholder="Sözlükte ara (TR/BG)..."
               className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-2xl focus:ring-2 focus:ring-primary-500 outline-none transition-all font-medium"
@@ -1537,9 +1542,14 @@ function GlossaryTableSection({ block, glossary, rules, setSelectedItem, setSele
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <div className="relative md:col-span-6">
-            <Languages className="absolute left-4 top-1/2 -translate-y-1/2 text-indigo-400" size={18} />
+          <div className="relative md:col-span-6 group">
+            <Languages 
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-indigo-400 group-focus-within:text-indigo-600 transition-colors cursor-pointer" 
+              size={18} 
+              onClick={() => document.getElementById('dict-search-latin')?.focus()}
+            />
             <input 
+              id="dict-search-latin"
               type="text"
               placeholder="Latin harf ile oku/ara (örn: lap...)"
               className="w-full pl-12 pr-4 py-3 bg-white border border-indigo-100 rounded-2xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all font-medium placeholder:text-indigo-300"
