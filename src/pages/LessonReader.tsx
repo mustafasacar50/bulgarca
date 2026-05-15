@@ -29,6 +29,7 @@ import { AppearanceSettings } from '../components/AppearanceSettings';
 import { findPairMarkers } from '../engine/ruleMatcher';
 import { transliterateCyrillic } from '../utils/textFormat';
 import { matchAnswer, MatchResult } from '../utils/transliterate';
+import { BulgarianKeyboard } from '../components/BulgarianKeyboard';
 
 interface LessonReaderProps {
   lessonId: string;
@@ -1709,6 +1710,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [bank, setBank] = useState<any>(null);
+  const [randomSeed, setRandomSeed] = useState(Math.random());
 
   useEffect(() => {
     if (lesson?.quiz_bank) {
@@ -1722,9 +1724,9 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   const questions = useMemo(() => {
     const raw = (bank?.questions || block.questions || []);
     if (raw.length === 0) return [];
-    // Pick 4 random
+    // Shuffle using the seed
     return [...raw].sort(() => Math.random() - 0.5).slice(0, 4);
-  }, [bank, block.questions]);
+  }, [bank, block.questions, randomSeed]);
 
   if (questions.length === 0) return null;
 
@@ -1771,6 +1773,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
             setMatchResult(null);
             setScore(0);
             setShowResult(false);
+            setRandomSeed(Math.random());
           }}
           className="mt-4 px-6 py-2 bg-white text-primary-600 rounded-xl font-bold"
         >
@@ -1862,6 +1865,25 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
                 Neredeyse Doğru! Küçük bir yazım hatası var.
               </div>
             )}
+
+            <div className="pt-2">
+              <BulgarianKeyboard 
+                onKey={(char) => {
+                  if (matchResult !== null) return;
+                  const current = typeof selectedOpt === 'string' ? selectedOpt : "";
+                  setSelectedOpt(current + char);
+                }}
+                onBackspace={() => {
+                  if (matchResult !== null) return;
+                  const current = typeof selectedOpt === 'string' ? selectedOpt : "";
+                  setSelectedOpt(current.slice(0, -1));
+                }}
+                onEnter={() => {
+                  if (selectedOpt && matchResult === null) handleSelect(selectedOpt);
+                }}
+              />
+            </div>
+
             <button
               onClick={() => handleSelect(selectedOpt || "")}
               disabled={!selectedOpt || matchResult !== null}
