@@ -55,7 +55,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
   const [lessonSearch, setLessonSearch] = useState("");
   const [selectedRuleId, setSelectedRuleId] = useState<string | null>(null);
 
-  const { user } = useAuth();
+  const { user, isAdmin } = useAuth();
   const { settings, updateSettings } = useDisplaySettings();
   const [isCompleted, setIsCompleted] = useState(false);
   const [isSyncing, setIsSyncing] = useState(false);
