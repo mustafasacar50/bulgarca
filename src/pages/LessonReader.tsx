@@ -1870,17 +1870,29 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
               )}
             </div>
             {matchResult === 'wrong' && (
-              <div className="p-3 bg-emerald-50 border border-emerald-100 rounded-xl text-emerald-700 text-sm font-bold animate-in fade-in slide-in-from-top-2">
-                Doğru Cevap: <span className="underline">{currentQ.correctAnswer}</span>
+              <div className="p-4 bg-emerald-50/80 backdrop-blur-sm border border-emerald-100 rounded-2xl flex items-center gap-4 animate-in zoom-in-95 duration-500">
+                <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <CheckCircle2 size={28} />
+                </div>
+                <div>
+                  <div className="text-[10px] text-emerald-500 uppercase font-black tracking-widest mb-0.5">Doğru Cevap</div>
+                  <div className="text-xl font-black text-emerald-900 leading-none">{currentQ.correctAnswer}</div>
+                </div>
               </div>
             )}
             {matchResult === 'close' && (
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <div className="p-3 bg-amber-50 border border-amber-100 rounded-xl text-amber-700 text-sm font-bold animate-in fade-in slide-in-from-top-2">
                   Neredeyse Doğru! Küçük bir yazım hatası var.
                 </div>
-                <div className="p-2 bg-emerald-50/50 border border-emerald-100/30 rounded-xl text-emerald-600 text-[10px] font-bold text-center">
-                   Tam Doğrusu: {currentQ.correctAnswer}
+                <div className="p-4 bg-emerald-50/80 backdrop-blur-sm border border-emerald-100 rounded-2xl flex items-center gap-4 animate-in zoom-in-95 duration-500">
+                  <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <CheckCircle2 size={28} />
+                  </div>
+                  <div>
+                    <div className="text-[10px] text-emerald-500 uppercase font-black tracking-widest mb-0.5">Tam Doğrusu</div>
+                    <div className="text-xl font-black text-emerald-900 leading-none">{currentQ.correctAnswer}</div>
+                  </div>
                 </div>
               </div>
             )}
