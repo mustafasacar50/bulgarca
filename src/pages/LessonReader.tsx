@@ -340,9 +340,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case "rule_cards":
       case "rule_cards_v2":
-      case "conversion_rule_grid":
         return (
           <div className="grid grid-cols-1 gap-4">
             {items.map((ruleRef: any, i: number) => {
@@ -412,7 +410,6 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
         }
         // Fallthrough if it uses the legacy items format
       case "word_table":
-      case "word_table_v2":
         return (
           <div className="bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm">
             <table className="w-full text-left border-collapse">
@@ -447,7 +444,6 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case "phrase_cards":
       case "phrases":
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -571,8 +567,6 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </div>
         );
 
-      case "glossary_table":
-        return <GlossaryTableSection key={bIdx} block={block} glossary={glossary} rules={rules} setSelectedItem={setSelectedItem} setSelectedRuleId={setSelectedRuleId} setLessonSearch={setLessonSearch} />;
 
       case "dialogue_scenes":
         return (
