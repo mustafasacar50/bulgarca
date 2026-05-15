@@ -155,9 +155,29 @@ export function LoginPage() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               className="space-y-5"
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                setSuccess('Kayıt başvurunuz alındı! Yönetici onayı bekliyor.');
+                setError('');
+                setSuccess('');
+                const btn = e.currentTarget.querySelector('button[type="submit"]');
+                if (btn) (btn as HTMLButtonElement).disabled = true;
+                
+                try {
+                  const response = await fetch('/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, email, password })
+                  });
+                  
+                  const data = await response.json();
+                  if (!response.ok) throw new Error(data.error || 'Kayıt başarısız.');
+                  
+                  setSuccess('Kayıt başvurunuz alındı! Yönetici onayı bekliyor.');
+                } catch (err: any) {
+                  setError(err.message);
+                } finally {
+                  if (btn) (btn as HTMLButtonElement).disabled = false;
+                }
               }}
             >
               {success ? (
@@ -170,7 +190,8 @@ export function LoginPage() {
                     <p className="text-xs text-emerald-600">Yönetici hesabınızı onayladığında giriş yapabileceksiniz.</p>
                   </div>
                   <button 
-                    onClick={() => setActiveTab('login')}
+                    type="button"
+                    onClick={() => { setActiveTab('login'); setSuccess(''); }}
                     className="w-full py-2 bg-emerald-600 text-white rounded-xl font-bold text-xs"
                   >
                     Giriş Ekranına Dön
@@ -178,6 +199,12 @@ export function LoginPage() {
                 </div>
               ) : (
                 <>
+                  {error && (
+                    <div className="p-4 bg-rose-50 border border-rose-100 rounded-2xl flex items-center gap-3 text-rose-600 text-sm animate-shake mb-4">
+                      <AlertCircle size={18} />
+                      <span>{error}</span>
+                    </div>
+                  )}
                   <div className="space-y-4">
                     <div className="relative group">
                       <UserIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary-500 transition-colors" size={18} />
