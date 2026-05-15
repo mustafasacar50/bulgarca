@@ -169,8 +169,16 @@ export function LoginPage() {
                     body: JSON.stringify({ username, email, password })
                   });
                   
-                  const data = await response.json();
-                  if (!response.ok) throw new Error(data.error || 'Kayıt başarısız.');
+                  let data;
+                  const contentType = response.headers.get("content-type");
+                  if (contentType && contentType.includes("application/json")) {
+                    data = await response.json();
+                  } else {
+                    const text = await response.text();
+                    throw new Error(window.location.hostname === 'localhost' ? 'Lokal çalışmada (localhost) kayıt özelliği devre dışıdır. Lütfen Vercel linki üzerinden deneyin.' : 'Sunucu hatası oluştu.');
+                  }
+                  
+                  if (!response.ok) throw new Error(data?.error || 'Kayıt başarısız.');
                   
                   setSuccess('Kayıt başvurunuz alındı! Yönetici onayı bekliyor.');
                 } catch (err: any) {
