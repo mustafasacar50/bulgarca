@@ -23,6 +23,8 @@ export function AdminUsers() {
   const [systemExists, setSystemExists] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [showAddModal, setShowAddModal] = useState(false);
+  const [showDetailModal, setShowDetailModal] = useState(false);
+  const [selectedUser, setSelectedUser] = useState<UserProfile | null>(null);
   const [newUserData, setNewUserData] = useState({ username: '', email: '', password: '' });
 
   const config = {
@@ -302,7 +304,7 @@ export function AdminUsers() {
                       {activeTab === 'active' ? (
                         <>
                           <button 
-                            onClick={() => alert(`Kullanıcı Detayları:\n\nİsim: ${u.username}\nE-posta: ${u.email || 'Belirtilmedi'}\nRol: ${u.role}\nKayıt: ${new Date(u.joinedAt).toLocaleString('tr-TR')}\nİlerleme: %${u.progress || 0}`)}
+                            onClick={() => { setSelectedUser(u); setShowDetailModal(true); }}
                             className="p-2 text-slate-400 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-all" 
                             title="Detaylar"
                           >
@@ -426,6 +428,64 @@ export function AdminUsers() {
                 </div>
               </form>
             </div>
+          </motion.div>
+        </div>
+      )}
+      
+      {showDetailModal && selectedUser && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            className="bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl overflow-hidden p-8 space-y-6"
+          >
+            <div className="flex items-center justify-between">
+              <h3 className="text-2xl font-black text-slate-900">Kullanıcı Detayı</h3>
+              <button onClick={() => setShowDetailModal(false)} className="text-slate-400 hover:text-slate-600">
+                <RefreshCw className="rotate-45" size={24} />
+              </button>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-white text-xl shadow-lg ${selectedUser.role === 'admin' ? 'bg-slate-900' : 'bg-emerald-500'}`}>
+                  {selectedUser.username.slice(0,2).toUpperCase()}
+                </div>
+                <div>
+                  <div className="text-lg font-black text-slate-900">{selectedUser.username}</div>
+                  <span className={`px-2 py-0.5 rounded-lg text-[9px] font-black uppercase ${selectedUser.role === 'admin' ? 'bg-slate-900 text-white' : 'bg-emerald-50 text-emerald-600'}`}>
+                    {selectedUser.role === 'admin' ? 'Yönetici' : 'Öğrenci'}
+                  </span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 gap-2 text-sm">
+                <div className="p-4 bg-white border border-slate-100 rounded-2xl">
+                  <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">E-POSTA</div>
+                  <div className="font-bold text-slate-700">{selectedUser.email || 'Belirtilmedi'}</div>
+                </div>
+                <div className="p-4 bg-white border border-slate-100 rounded-2xl">
+                  <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">KAYIT TARİHİ</div>
+                  <div className="font-bold text-slate-700">{new Date(selectedUser.joinedAt).toLocaleString('tr-TR')}</div>
+                </div>
+                <div className="p-4 bg-white border border-slate-100 rounded-2xl">
+                  <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">DERS İLERLEMESİ</div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden">
+                      <div className="h-full bg-primary-500" style={{ width: `${selectedUser.progress || 0}%` }} />
+                    </div>
+                    <span className="font-black text-primary-600">%{(selectedUser.progress || 0).toFixed(0)}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button 
+              onClick={() => setShowDetailModal(false)}
+              className="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-xl shadow-slate-100"
+            >
+              Kapat
+            </button>
           </motion.div>
         </div>
       )}
