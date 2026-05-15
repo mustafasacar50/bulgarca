@@ -1729,8 +1729,32 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   }, [bank, block.questions, randomSeed]);
 
   if (questions.length === 0) return null;
+  if (showResult) {
+    return (
+      <div className="bg-primary-600 rounded-3xl p-8 text-center text-white space-y-4">
+        <Trophy className="mx-auto mb-4" size={48} />
+        <h3 className="text-2xl font-bold">Quiz Tamamlandı!</h3>
+        <p className="text-primary-100">Başarı Oranı: %{Math.round((score / questions.length) * 100)}</p>
+        <div className="text-4xl font-black">{score} / {questions.length}</div>
+        <button 
+          onClick={() => {
+            setCurrentIdx(0);
+            setSelectedOpt(null);
+            setMatchResult(null);
+            setScore(0);
+            setShowResult(false);
+            setRandomSeed(Math.random());
+          }}
+          className="mt-4 px-6 py-2 bg-white text-primary-600 rounded-xl font-bold"
+        >
+          Tekrar Dene
+        </button>
+      </div>
+    );
+  }
 
   const currentQ = questions[currentIdx];
+  if (!currentQ) return null;
 
   const handleSelect = (ans: any) => {
     if (matchResult !== null) return;
@@ -1758,30 +1782,6 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
       }
     }, 5000);
   };
-
-  if (showResult) {
-    return (
-      <div className="bg-primary-600 rounded-3xl p-8 text-center text-white space-y-4">
-        <Trophy className="mx-auto mb-4" size={48} />
-        <h3 className="text-2xl font-bold">Quiz Tamamlandı!</h3>
-        <p className="text-primary-100">Başarı Oranı: %{Math.round((score / questions.length) * 100)}</p>
-        <div className="text-4xl font-black">{score} / {questions.length}</div>
-        <button 
-          onClick={() => {
-            setCurrentIdx(0);
-            setSelectedOpt(null);
-            setMatchResult(null);
-            setScore(0);
-            setShowResult(false);
-            setRandomSeed(Math.random());
-          }}
-          className="mt-4 px-6 py-2 bg-white text-primary-600 rounded-xl font-bold"
-        >
-          Tekrar Dene
-        </button>
-      </div>
-    );
-  }
 
   return (
     <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm space-y-6 relative overflow-hidden">
