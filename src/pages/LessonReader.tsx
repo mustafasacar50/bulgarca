@@ -306,7 +306,8 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
     };
     
     // 1. Process Lesson Sections
-    for (const section of lesson.sections) {
+    const lessonSections = lesson.sections || [{ blocks: lesson.blocks || [] }];
+    for (const section of lessonSections) {
       const blocks = section.blocks || [section];
       for (const block of blocks) {
         const items = block.items || block.table_rows || block.rules || block.rule_ids || block.lines || block.entries || block.prompts || block.content_blocks || [];
@@ -1299,7 +1300,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
               )}
             </section>
           ) : (
-            lesson.sections.map((section: any, sIdx: number) => {
+            (lesson.sections || [{ blocks: lesson.blocks || [] }]).map((section: any, sIdx: number) => {
               const sectionBlocks = section.blocks || [section];
               const renderedBlocks = sectionBlocks.map((block: any, bIdx: number) => renderBlock(block, bIdx)).filter(Boolean);
               
