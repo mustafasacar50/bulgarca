@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 interface UserProfile {
   username: string;
+  email?: string;
   role: 'admin' | 'user';
   joinedAt: string;
   lastActive?: string;
@@ -20,6 +21,8 @@ export function AdminUsers() {
   const [loading, setLoading] = useState(true);
   const [systemExists, setSystemExists] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
+  const [showAddModal, setShowAddModal] = useState(false);
+  const [newUserData, setNewUserData] = useState({ username: '', email: '', password: '' });
 
   const config = {
     token: user?.token || '',
@@ -58,6 +61,7 @@ export function AdminUsers() {
       // 1. Prepare new user object
       const newUser: UserProfile = {
         username: request.username,
+        email: request.email,
         role: 'user',
         joinedAt: new Date().toISOString(),
         progress: 0
@@ -108,6 +112,37 @@ export function AdminUsers() {
     } catch (e) {
       console.error("Initialization error:", e);
       alert("Sistem dosyaları oluşturulurken hata oluştu. Token yetkilerini kontrol edin.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleAddUser = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newUserData.username || !newUserData.email || !newUserData.password) return;
+    
+    setLoading(true);
+    try {
+      const newUser: UserProfile = {
+        username: newUserData.username,
+        email: newUserData.email,
+        role: 'user',
+        joinedAt: new Date().toISOString(),
+        progress: 0
+      };
+
+      // In a real app, you'd also save the password somewhere or handle it.
+      // For now, we add to users.json (the manual login logic will need this).
+      const updatedUsers = [...users, newUser];
+      await saveJsonToGithub(config, 'registry/users.json', updatedUsers, `Manual add user ${newUser.username}`);
+      
+      await loadData();
+      setShowAddModal(false);
+      setNewUserData({ username: '', email: '', password: '' });
+      alert("Kullanıcı başarıyla eklendi!");
+    } catch (e) {
+      console.error("Manual add error:", e);
+      alert("Kullanıcı eklenirken hata oluştu.");
     } finally {
       setLoading(false);
     }
@@ -215,7 +250,7 @@ export function AdminUsers() {
                       </div>
                       <div>
                         <div className="text-sm font-bold text-slate-800">{u.username || u.name}</div>
-                        <div className="text-[10px] text-slate-400 font-mono">ID: {btoa(u.username || u.name).slice(0,8)}</div>
+                        <div className="text-[10px] text-slate-400 font-medium">{u.email || 'Email yok'}</div>
                       </div>
                     </div>
                   </td>
@@ -285,7 +320,10 @@ export function AdminUsers() {
           </div>
           <h3 className="text-xl font-black">Manuel Kullanıcı Ekle</h3>
           <p className="text-slate-400 text-sm leading-relaxed">Yeni bir öğrenciyi sisteme manuel olarak kaydedin. Bu işlem kullanıcıya reponuzda bir klasör açacaktır.</p>
-          <button className="px-6 py-3 bg-white text-slate-900 font-bold rounded-2xl hover:bg-primary-50 transition-all active:scale-95 shadow-lg">
+          <button 
+            onClick={() => setShowAddModal(true)}
+            className="px-6 py-3 bg-white text-slate-900 font-bold rounded-2xl hover:bg-primary-50 transition-all active:scale-95 shadow-lg"
+          >
             Hemen Ekle
           </button>
         </div>
@@ -295,6 +333,74 @@ export function AdminUsers() {
           <p className="text-slate-600 text-sm leading-relaxed font-medium">Kullanıcı ilerleme verileri GitHub reposunda şifrelenmiş veya açık formatta saklanabilir. Şu anki yapı her kullanıcı için ayrı bir klasör mimarisi üzerine kuruludur.</p>
         </div>
       </div>
+
+      {showAddModal && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            className="bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl overflow-hidden"
+          >
+            <div className="p-8 space-y-6">
+              <div className="flex items-center justify-between">
+                <h3 className="text-2xl font-black text-slate-900">Kullanıcı Ekle</h3>
+                <button onClick={() => setShowAddModal(false)} className="text-slate-400 hover:text-slate-600">
+                  <RefreshCw className="rotate-45" size={24} />
+                </button>
+              </div>
+
+              <form onSubmit={handleAddUser} className="space-y-4">
+                <div className="space-y-1.5">
+                  <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Kullanıcı Adı</label>
+                  <input 
+                    type="text"
+                    required
+                    className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-primary-500 outline-none transition-all font-medium"
+                    value={newUserData.username}
+                    onChange={e => setNewUserData({...newUserData, username: e.target.value})}
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">E-posta</label>
+                  <input 
+                    type="email"
+                    required
+                    className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-primary-500 outline-none transition-all font-medium"
+                    value={newUserData.email}
+                    onChange={e => setNewUserData({...newUserData, email: e.target.value})}
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Şifre</label>
+                  <input 
+                    type="password"
+                    required
+                    className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-primary-500 outline-none transition-all font-medium"
+                    value={newUserData.password}
+                    onChange={e => setNewUserData({...newUserData, password: e.target.value})}
+                  />
+                </div>
+
+                <div className="flex gap-3 pt-4">
+                  <button 
+                    type="button"
+                    onClick={() => setShowAddModal(false)}
+                    className="flex-1 py-4 bg-slate-100 text-slate-600 font-bold rounded-2xl hover:bg-slate-200 transition-all"
+                  >
+                    Vazgeç
+                  </button>
+                  <button 
+                    type="submit"
+                    className="flex-2 px-8 py-4 bg-primary-600 text-white font-black rounded-2xl hover:bg-primary-700 transition-all shadow-lg shadow-primary-100 uppercase tracking-wider text-xs"
+                  >
+                    KAYDET
+                  </button>
+                </div>
+              </form>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 }
