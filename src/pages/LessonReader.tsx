@@ -1756,7 +1756,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
       } else {
         setShowResult(true);
       }
-    }, 2000);
+    }, 5000);
   };
 
   if (showResult) {
@@ -1784,7 +1784,21 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   }
 
   return (
-    <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm space-y-6">
+    <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm space-y-6 relative overflow-hidden">
+      {/* Progress Bar for Auto-Advance */}
+      {matchResult !== null && (
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-slate-50">
+          <motion.div 
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 5, ease: "linear" }}
+            className={`h-full ${
+              matchResult === 'exact' ? 'bg-emerald-500' : 
+              matchResult === 'close' ? 'bg-amber-500' : 'bg-red-500'
+            }`}
+          />
+        </div>
+      )}
       <div className="flex justify-between items-center">
         <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Mini Test</span>
         <span className="text-xs font-bold text-primary-600 bg-primary-50 px-2 py-1 rounded-lg">Soru {currentIdx + 1} / {questions.length}</span>
@@ -1861,8 +1875,13 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
               </div>
             )}
             {matchResult === 'close' && (
-              <div className="p-3 bg-amber-50 border border-amber-100 rounded-xl text-amber-700 text-sm font-bold animate-in fade-in slide-in-from-top-2">
-                Neredeyse Doğru! Küçük bir yazım hatası var.
+              <div className="space-y-2">
+                <div className="p-3 bg-amber-50 border border-amber-100 rounded-xl text-amber-700 text-sm font-bold animate-in fade-in slide-in-from-top-2">
+                  Neredeyse Doğru! Küçük bir yazım hatası var.
+                </div>
+                <div className="p-2 bg-emerald-50/50 border border-emerald-100/30 rounded-xl text-emerald-600 text-[10px] font-bold text-center">
+                   Tam Doğrusu: {currentQ.correctAnswer}
+                </div>
               </div>
             )}
 
