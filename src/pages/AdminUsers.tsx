@@ -34,10 +34,27 @@ export function AdminUsers() {
         getGithubFile({ ...config, path: 'registry/users.json' }),
         getGithubFile({ ...config, path: 'registry/requests.json' })
       ]);
-      if (userRes?.content) setUsers(userRes.content);
-      if (requestRes?.content) setRequests(requestRes.content);
+      setUsers(userRes?.content || []);
+      setRequests(requestRes?.content || []);
     } catch (e) {
       console.error("Data load error:", e);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const initializeRegistry = async () => {
+    setLoading(true);
+    try {
+      // Create empty files if they don't exist
+      await Promise.all([
+        saveJsonToGithub(config, 'registry/users.json', [], 'Initialize users registry'),
+        saveJsonToGithub(config, 'registry/requests.json', [], 'Initialize requests registry')
+      ]);
+      await loadData();
+    } catch (e) {
+      console.error("Initialization error:", e);
+      alert("Sistem dosyaları oluşturulurken hata oluştu. Token yetkilerini kontrol edin.");
     } finally {
       setLoading(false);
     }
@@ -85,6 +102,18 @@ export function AdminUsers() {
               Kayıt Talepleri ({requests.length})
             </button>
           </div>
+
+          {!loading && users.length === 0 && requests.length === 0 && (
+            <div className="flex items-center gap-4 bg-amber-50 border border-amber-100 px-4 py-2 rounded-2xl">
+              <span className="text-[10px] font-bold text-amber-700">Sistem dosyaları eksik!</span>
+              <button 
+                onClick={initializeRegistry}
+                className="px-3 py-1 bg-amber-600 text-white rounded-lg text-[10px] font-bold hover:bg-amber-700"
+              >
+                SİSTEMİ KUR
+              </button>
+            </div>
+          )}
           
           <div className="relative w-full md:w-72">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
