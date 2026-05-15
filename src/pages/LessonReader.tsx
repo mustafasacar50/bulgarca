@@ -15,7 +15,8 @@ import {
   ChevronDown,
   Languages,
   RefreshCw,
-  ArrowLeftRight
+  ArrowLeftRight,
+  XCircle
 } from 'lucide-react';
 import { Rule } from '../types/rule';
 import { RightInfoPanel } from '../components/RightInfoPanel';
@@ -1744,11 +1745,22 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   if (questions.length === 0) return null;
   if (showResult) {
     return (
-      <div className="bg-primary-600 rounded-3xl p-8 text-center text-white space-y-4">
-        <Trophy className="mx-auto mb-4" size={48} />
-        <h3 className="text-2xl font-bold">Quiz Tamamlandı!</h3>
-        <p className="text-primary-100">Başarı Oranı: %{Math.round((score / questions.length) * 100)}</p>
-        <div className="text-4xl font-black">{score} / {questions.length}</div>
+      <div className="bg-white border border-slate-200 rounded-[32px] p-8 text-center space-y-6 shadow-xl shadow-slate-200/50 animate-in zoom-in-95 duration-500">
+        <div className="w-20 h-20 bg-primary-100 text-primary-600 rounded-3xl flex items-center justify-center mx-auto mb-2 rotate-3 hover:rotate-0 transition-transform">
+          <Trophy size={40} />
+        </div>
+        
+        <div>
+          <h3 className="text-3xl font-black text-slate-900 tracking-tight">Quiz Tamamlandı!</h3>
+          <p className="text-slate-500 font-bold mt-1">Başarı Oranı: <span className="text-primary-600">%{Math.round((score / questions.length) * 100)}</span></p>
+        </div>
+
+        <div className="flex items-center justify-center gap-4 py-4">
+           <div className="text-5xl font-black text-slate-900">{score}</div>
+           <div className="text-2xl font-bold text-slate-300">/</div>
+           <div className="text-3xl font-bold text-slate-400">{questions.length}</div>
+        </div>
+
         <button 
           onClick={() => {
             setCurrentIdx(0);
@@ -1759,36 +1771,62 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
             setUserHistory([]);
             setRandomSeed(Math.random());
           }}
-          className="mt-4 px-6 py-2 bg-white text-primary-600 rounded-xl font-bold hover:bg-primary-50 transition-colors"
+          className="w-full py-4 bg-primary-600 text-white rounded-2xl font-black shadow-lg shadow-primary-200 hover:bg-primary-700 hover:scale-[1.02] active:scale-95 transition-all"
         >
           Tekrar Dene
         </button>
 
-        <div className="mt-8 space-y-3">
-          <div className="text-left text-xs font-black uppercase tracking-widest text-primary-200 mb-2 px-1">Soru Detayları</div>
+        <div className="mt-8 space-y-4">
+          <div className="flex items-center gap-2 px-2">
+            <div className="h-px bg-slate-100 flex-1"></div>
+            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Soru Detayları</div>
+            <div className="h-px bg-slate-100 flex-1"></div>
+          </div>
+          
           {userHistory.map((h, i) => (
-            <div key={i} className={`p-4 rounded-2xl border-l-4 text-left shadow-sm animate-in fade-in slide-in-from-bottom-2 duration-500 delay-${i * 100} ${
-              h.result === 'exact' ? 'bg-white/10 border-emerald-400' : 
-              h.result === 'close' ? 'bg-white/10 border-amber-400' : 'bg-white/10 border-rose-400'
+            <div key={i} className={`group p-6 rounded-3xl border-2 text-left transition-all hover:shadow-md animate-in fade-in slide-in-from-bottom-4 duration-700 delay-${i * 150} ${
+              h.result === 'exact' ? 'bg-white border-emerald-100/50 hover:border-emerald-200' : 
+              h.result === 'close' ? 'bg-white border-amber-100/50 hover:border-amber-200' : 'bg-white border-rose-100/50 hover:border-rose-200'
             }`}>
-              <div className="text-[10px] font-black uppercase tracking-tighter opacity-60 mb-1 flex justify-between">
-                <span>Soru {i + 1}</span>
-                <span className={
-                  h.result === 'exact' ? 'text-emerald-300' : 
-                  h.result === 'close' ? 'text-amber-300' : 'text-rose-300'
-                }>
-                  {h.result === 'exact' ? 'Tam Doğru' : h.result === 'close' ? 'Yakın Cevap' : 'Yanlış'}
-                </span>
-              </div>
-              <div className="font-bold text-sm mb-2 leading-snug">{h.question}</div>
-              <div className="grid grid-cols-2 gap-2 text-xs">
-                <div className="p-2 bg-black/20 rounded-lg">
-                  <div className="opacity-50 text-[9px] font-bold uppercase mb-0.5">Sizin Cevabınız</div>
-                  <div className="font-bold truncate">{h.userAnswer || '-'}</div>
+              <div className="flex justify-between items-start mb-4">
+                <div className="flex items-center gap-3">
+                   <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-black text-xs ${
+                     h.result === 'exact' ? 'bg-emerald-100 text-emerald-600' : 
+                     h.result === 'close' ? 'bg-amber-100 text-amber-600' : 'bg-rose-100 text-rose-600'
+                   }`}>
+                     {i + 1}
+                   </div>
+                   <div className="font-black text-[10px] uppercase tracking-widest text-slate-400">Soru</div>
                 </div>
-                <div className="p-2 bg-emerald-500/20 rounded-lg border border-emerald-500/20">
-                  <div className="opacity-70 text-[9px] font-bold uppercase mb-0.5 text-emerald-200">Doğru Cevap</div>
-                  <div className="font-bold text-emerald-50 truncate">{h.correctAnswer}</div>
+                <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider ${
+                  h.result === 'exact' ? 'bg-emerald-50 text-emerald-600' : 
+                  h.result === 'close' ? 'bg-amber-50 text-amber-600' : 'bg-rose-50 text-rose-600'
+                }`}>
+                  {h.result === 'exact' ? <CheckCircle2 size={12} /> : h.result === 'close' ? <CheckCircle2 size={12} /> : <XCircle size={12} />}
+                  {h.result === 'exact' ? 'Tam Doğru' : h.result === 'close' ? 'Yakın Cevap' : 'Yanlış'}
+                </div>
+              </div>
+
+              <div className="text-lg font-bold text-slate-800 mb-4 leading-relaxed">{h.question}</div>
+              
+              <div className="space-y-2">
+                <div className={`p-4 rounded-2xl border flex items-center justify-between ${
+                   h.result === 'exact' ? 'bg-emerald-50/30 border-emerald-100/50' : 
+                   h.result === 'close' ? 'bg-amber-50/30 border-amber-100/50' : 'bg-rose-50/30 border-rose-100/50'
+                }`}>
+                  <div className="flex-1">
+                    <div className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">Sizin Cevabınız</div>
+                    <div className={`font-bold text-base ${
+                      h.result === 'exact' ? 'text-emerald-700' : 
+                      h.result === 'close' ? 'text-amber-700' : 'text-rose-700'
+                    }`}>{h.userAnswer || 'Boş Bırakıldı'}</div>
+                  </div>
+                  {h.result !== 'exact' && (
+                    <div className="flex-1 border-l border-slate-100 pl-4 ml-4">
+                      <div className="text-[9px] font-black uppercase tracking-widest text-emerald-500 mb-1">Doğru Cevap</div>
+                      <div className="font-bold text-base text-emerald-700">{h.correctAnswer}</div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
