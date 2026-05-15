@@ -938,6 +938,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
               </div>
             )}
             <div className="grid grid-cols-1 gap-5">
+              {(block.rule_ids || []).map((rid: string, i: number) => {
                 const rule = rules[rid];
                 if (!rule) return null;
                 
