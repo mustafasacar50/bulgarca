@@ -3,6 +3,9 @@ import { useDisplaySettings } from '../state/DisplaySettingsContext';
 import { Trophy, Play, RotateCcw, CheckCircle2, XCircle, ChevronRight, Sparkles, AlertCircle } from 'lucide-react';
 import { matchAnswer, MatchResult, cyrillicToLatin } from '../utils/transliterate';
 import { BulgarianKeyboard } from '../components/BulgarianKeyboard';
+import { useAuth } from '../state/AuthContext';
+import { getGithubFile, saveJsonToGithub } from '../engine/githubSync';
+import { Trash2 } from 'lucide-react';
 
 interface QuizQuestion {
   id: string;
@@ -34,6 +37,7 @@ interface QuizResult {
 type Phase = 'setup' | 'active' | 'result';
 
 export function Quiz() {
+  const { user } = useAuth();
   const { settings } = useDisplaySettings();
   const isRev = settings.isReversed;
   const inputRef = useRef<HTMLInputElement>(null);
@@ -49,6 +53,7 @@ export function Quiz() {
   const [feedback, setFeedback] = useState<{ result: MatchResult; shown: boolean }>({ result: 'wrong', shown: false });
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
   const [history, setHistory] = useState<QuizResult[]>([]);
+  const [syncing, setSyncing] = useState(false);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/manifest.json`)
@@ -56,9 +61,34 @@ export function Quiz() {
       .then(d => {
         setLessons((d.lessons || []).filter((l: any) => !l.isDictionary).sort((a: any, b: any) => (a.order || 0) - (b.order || 0)));
       });
-    const s = localStorage.getItem('quiz_history');
-    if (s) setHistory(JSON.parse(s));
-  }, []);
+
+    const loadHistory = async () => {
+      // 1. Try local first
+      const s = localStorage.getItem('quiz_history');
+      if (s) setHistory(JSON.parse(s));
+
+      // 2. Try GitHub if logged in
+      if (user?.token) {
+        setSyncing(true);
+        try {
+          const res = await getGithubFile({
+            token: user.token,
+            owner: 'mustafasacar50',
+            repo: 'bulgarca-user-data',
+            path: `users/${user.username}/quiz_results.json`,
+            branch: 'main'
+          });
+          if (res?.content) {
+            setHistory(res.content);
+            localStorage.setItem('quiz_history', JSON.stringify(res.content));
+          }
+        } catch (e) { console.error("History sync error:", e); }
+        finally { setSyncing(false); }
+      }
+    };
+
+    loadHistory();
+  }, [user]);
 
   const buildQuestions = async () => {
     const lessonBank: QuizQuestion[] = [];
@@ -209,9 +239,20 @@ export function Quiz() {
       const close = answers.filter(a => a.result === 'close').length;
       const wrong = answers.filter(a => a.result === 'wrong').length;
       const r: QuizResult = { date: new Date().toISOString(), lessons: selectedIds, total: questions.length, exact, close, wrong, percent: Math.round(((exact + close * 0.5) / questions.length) * 100) };
-      const nh = [r, ...history].slice(0, 20);
+      const nh = [r, ...history].slice(0, 50); // Keep last 50
       setHistory(nh);
       localStorage.setItem('quiz_history', JSON.stringify(nh));
+      
+      // Save to GitHub
+      if (user?.token) {
+        saveJsonToGithub({
+          token: user.token,
+          owner: 'mustafasacar50',
+          repo: 'bulgarca-user-data',
+          branch: 'main'
+        }, `users/${user.username}/quiz_results.json`, nh, `Add quiz result ${r.date}`);
+      }
+      
       setPhase('result');
     } else {
       setIdx(i => i + 1);
@@ -219,6 +260,21 @@ export function Quiz() {
   };
 
   const toggle = (id: string) => setSelectedIds(p => p.includes(id) ? p.filter(x => x !== id) : [...p, id]);
+
+  const deleteHistory = async (date: string) => {
+    if (!confirm('Bu sonucu silmek istiyor musunuz?')) return;
+    const nh = history.filter(h => h.date !== date);
+    setHistory(nh);
+    localStorage.setItem('quiz_history', JSON.stringify(nh));
+    if (user?.token) {
+      await saveJsonToGithub({
+        token: user.token,
+        owner: 'mustafasacar50',
+        repo: 'bulgarca-user-data',
+        branch: 'main'
+      }, `users/${user.username}/quiz_results.json`, nh, `Delete quiz result ${date}`);
+    }
+  };
 
   // ─── SETUP ───
   if (phase === 'setup') {
@@ -263,17 +319,28 @@ export function Quiz() {
 
         {history.length > 0 && (
           <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 space-y-4">
-            <h2 className="font-bold text-slate-800 flex items-center gap-2"><Sparkles size={18} className="text-amber-500" />{isRev ? 'Предишни резултати' : 'Geçmiş Sonuçlar'}</h2>
+            <h2 className="font-bold text-slate-800 flex items-center justify-between">
+              <span className="flex items-center gap-2"><Sparkles size={18} className="text-amber-500" />{isRev ? 'Предишни резултати' : 'Geçmiş Sonuçlar'}</span>
+              {syncing && <span className="text-[10px] text-primary-500 animate-pulse uppercase tracking-widest font-black">Senkronize Ediliyor...</span>}
+            </h2>
             <div className="space-y-2">
-              {history.slice(0, 5).map((r, i) => (
-                <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-slate-50">
-                  <div>
-                    <div className="text-xs text-slate-400">{new Date(r.date).toLocaleDateString('tr-TR')}</div>
+              {history.slice(0, 10).map((r, i) => (
+                <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 group">
+                  <div className="flex-1">
+                    <div className="text-[9px] font-black text-slate-400 uppercase tracking-tighter mb-0.5">{new Date(r.date).toLocaleString('tr-TR')}</div>
                     <div className="text-sm font-bold text-slate-700">
                       <span className="text-emerald-500">{r.exact}✓</span> <span className="text-amber-500">{r.close}≈</span> <span className="text-rose-400">{r.wrong}✗</span> / {r.total}
                     </div>
                   </div>
-                  <div className={`text-2xl font-black ${r.percent >= 80 ? 'text-emerald-500' : r.percent >= 50 ? 'text-amber-500' : 'text-rose-500'}`}>%{r.percent}</div>
+                  <div className="flex items-center gap-4">
+                    <div className={`text-xl font-black ${r.percent >= 80 ? 'text-emerald-500' : r.percent >= 50 ? 'text-amber-500' : 'text-rose-500'}`}>%{r.percent}</div>
+                    <button 
+                      onClick={() => deleteHistory(r.date)}
+                      className="p-2 text-slate-300 hover:text-rose-500 transition-colors opacity-0 group-hover:opacity-100"
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>

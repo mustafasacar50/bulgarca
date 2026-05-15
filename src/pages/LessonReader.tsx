@@ -22,6 +22,8 @@ import { RightInfoPanel } from '../components/RightInfoPanel';
 import { Modal } from '../components/Modal';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDisplaySettings } from '../state/DisplaySettingsContext';
+import { useAuth } from '../state/AuthContext';
+import { getGithubFile, saveJsonToGithub } from '../engine/githubSync';
 import { LearningText } from '../components/LearningText';
 import { AppearanceSettings } from '../components/AppearanceSettings';
 import { findPairMarkers } from '../engine/ruleMatcher';
@@ -51,7 +53,11 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
   const [lessonSearch, setLessonSearch] = useState("");
   const [selectedRuleId, setSelectedRuleId] = useState<string | null>(null);
 
+  const { user } = useAuth();
   const { settings, updateSettings } = useDisplaySettings();
+  const [isCompleted, setIsCompleted] = useState(false);
+  const [isSyncing, setIsSyncing] = useState(false);
+  
   const isRev = settings.isReversed;
   // Helper: returns the "secondary" text column based on direction
   const secText = (item: any) => isRev ? (item.bg || '') : (item.tr || '');
@@ -71,6 +77,23 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
         const manifestRes = await fetch(`${import.meta.env.BASE_URL}data/manifest.json`);
         const manifest = await manifestRes.json();
         
+        // Fetch User Progress from GitHub
+        if (user?.token) {
+          try {
+            const progRes = await getGithubFile({
+              token: user.token,
+              owner: 'mustafasacar50',
+              repo: 'bulgarca-user-data',
+              path: `users/${user.username}/progress.json`,
+              branch: 'main'
+            });
+            if (progRes?.content) {
+              const completed = progRes.content.completedLessons || [];
+              setIsCompleted(completed.includes(lessonId));
+            }
+          } catch (e) { /* ignore missing progress file */ }
+        }
+
         const lessonMeta = manifest.lessons.find((l: any) => l.id === lessonId);
         if (!lessonMeta) return;
 
@@ -128,8 +151,51 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
     loadData();
   }, [lessonId]);
 
-  const handleComplete = () => {
-    setShowCompleteModal(true);
+  const handleToggleComplete = async () => {
+    if (!user?.token) return;
+    
+    setIsSyncing(true);
+    const newState = !isCompleted;
+    setIsCompleted(newState);
+    
+    try {
+      // 1. Get current progress
+      let currentProgress = { completedLessons: [] };
+      try {
+        const res = await getGithubFile({
+          token: user.token,
+          owner: 'mustafasacar50',
+          repo: 'bulgarca-user-data',
+          path: `users/${user.username}/progress.json`,
+          branch: 'main'
+        });
+        if (res?.content) currentProgress = res.content;
+      } catch (e) { /* ignore */ }
+
+      // 2. Update list
+      let list = currentProgress.completedLessons || [];
+      if (newState) {
+        if (!list.includes(lessonId)) list.push(lessonId);
+      } else {
+        list = list.filter((id: string) => id !== lessonId);
+      }
+
+      // 3. Save back
+      await saveJsonToGithub({
+        token: user.token,
+        owner: 'mustafasacar50',
+        repo: 'bulgarca-user-data',
+        branch: 'main'
+      }, `users/${user.username}/progress.json`, { ...currentProgress, completedLessons: list }, `${newState ? 'Complete' : 'Re-review'} lesson ${lessonId}`);
+      
+      if (newState) setShowCompleteModal(true);
+    } catch (e) {
+      console.error("Progress save error:", e);
+      alert("İlerleme kaydedilemedi.");
+      setIsCompleted(!newState); // Rollback
+    } finally {
+      setIsSyncing(false);
+    }
   };
 
   const normalize = (text: string) => {
@@ -1199,11 +1265,22 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
         <div className="pt-10 flex justify-center">
           <button 
-            onClick={handleComplete}
-            className="flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white rounded-2xl font-bold shadow-lg shadow-emerald-200 hover:bg-emerald-700 transition-all"
+            onClick={handleToggleComplete}
+            disabled={isSyncing || !user?.token}
+            className={`flex items-center gap-2 px-8 py-4 rounded-2xl font-bold shadow-lg transition-all ${
+              isCompleted 
+                ? 'bg-amber-50 text-amber-600 border border-amber-200 shadow-amber-100 hover:bg-amber-100' 
+                : 'bg-emerald-600 text-white shadow-emerald-200 hover:bg-emerald-700'
+            } disabled:opacity-50`}
           >
-            <CheckCircle2 size={24} />
-            Dersi Tamamla
+            {isSyncing ? (
+              <RefreshCw size={24} className="animate-spin" />
+            ) : isCompleted ? (
+              <RefreshCw size={24} />
+            ) : (
+              <CheckCircle2 size={24} />
+            )}
+            {isSyncing ? 'Senkronize ediliyor...' : isCompleted ? 'Yeniden İncele' : 'Dersi Tamamla'}
           </button>
         </div>
       </div>

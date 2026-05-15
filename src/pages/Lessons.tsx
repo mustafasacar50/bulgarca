@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { LessonMeta } from '../types/lesson';
-import { Search, BookOpen } from 'lucide-react';
+import { Search, BookOpen, CheckCircle2 } from 'lucide-react';
 import { useDisplaySettings } from '../state/DisplaySettingsContext';
+import { useAuth } from '../state/AuthContext';
+import { getGithubFile } from '../engine/githubSync';
 
 interface LessonsProps {
   onSelectLesson: (id: string) => void;
 }
 
 export function Lessons({ onSelectLesson }: LessonsProps) {
+  const { user } = useAuth();
   const [lessons, setLessons] = useState<LessonMeta[]>([]);
+  const [completedIds, setCompletedIds] = useState<string[]>([]);
   const [search, setSearch] = useState('');
   const { settings } = useDisplaySettings();
   const isRev = settings.isReversed;
@@ -20,7 +24,25 @@ export function Lessons({ onSelectLesson }: LessonsProps) {
         const sorted = (data.lessons || []).sort((a: any, b: any) => (a.order || 0) - (b.order || 0));
         setLessons(sorted);
       });
-  }, []);
+      
+    const loadProgress = async () => {
+      if (user?.token) {
+        try {
+          const res = await getGithubFile({
+            token: user.token,
+            owner: 'mustafasacar50',
+            repo: 'bulgarca-user-data',
+            path: `users/${user.username}/progress.json`,
+            branch: 'main'
+          });
+          if (res?.content) {
+            setCompletedIds(res.content.completedLessons || []);
+          }
+        } catch (e) { /* skip */ }
+      }
+    };
+    loadProgress();
+  }, [user]);
 
   const filteredLessons = lessons.filter(l => 
     l.title_tr.toLowerCase().includes(search.toLowerCase()) || 
@@ -100,7 +122,14 @@ export function Lessons({ onSelectLesson }: LessonsProps) {
                     
                     <div className="hidden md:flex items-center gap-4">
                       <p className="text-sm text-slate-500 line-clamp-1 max-w-sm">{lt(lesson, 'summary') || (isRev ? 'Няма описание за този урок.' : 'Bu ders için açıklama bulunmuyor.')}</p>
-                      <span className="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded uppercase tracking-wider shrink-0">{lesson.level}</span>
+                      <div className="flex items-center gap-2">
+                        {completedIds.includes(lesson.id) && (
+                          <div className="w-8 h-8 bg-emerald-50 text-emerald-500 rounded-lg flex items-center justify-center shadow-sm" title="Tamamlandı">
+                            <CheckCircle2 size={16} />
+                          </div>
+                        )}
+                        <span className="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded uppercase tracking-wider shrink-0">{lesson.level}</span>
+                      </div>
                     </div>
                   </div>
                 ))}

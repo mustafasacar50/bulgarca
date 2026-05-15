@@ -2,8 +2,11 @@ import React from 'react';
 import { GitHubSyncPanel } from '../components/GitHubSyncPanel';
 import { Shield, Smartphone, Bell, HelpCircle, Palette } from 'lucide-react';
 import { AppearanceSettings } from '../components/AppearanceSettings';
+import { useAuth } from '../state/AuthContext';
 
 export function Settings() {
+  const { user } = useAuth();
+  const isAdmin = user?.role === 'admin';
   return (
     <div className="max-w-2xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header>
@@ -20,7 +23,7 @@ export function Settings() {
           <AppearanceSettings />
         </div>
 
-        <GitHubSyncPanel />
+        {isAdmin && <GitHubSyncPanel />}
 
         <div className="card divide-y divide-slate-100">
           <div className="p-4 flex items-center justify-between group cursor-pointer hover:bg-slate-50 transition-colors">

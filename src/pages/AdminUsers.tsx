@@ -151,6 +151,23 @@ export function AdminUsers() {
     }
   };
 
+  const handleRemoveUser = async (username: string) => {
+    if (!confirm(`${username} isimli kullanıcıyı tamamen silmek istediğinize emin misiniz?`)) return;
+    
+    setLoading(true);
+    try {
+      const updatedUsers = users.filter(u => u.username !== username);
+      await saveJsonToGithub(config, 'registry/users.json', updatedUsers, `Remove user ${username}`);
+      await loadData();
+      alert("Kullanıcı silindi.");
+    } catch (e) {
+      console.error("Remove error:", e);
+      alert("Kullanıcı silinemedi.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
     loadData();
   }, []);
@@ -284,10 +301,18 @@ export function AdminUsers() {
                     <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                       {activeTab === 'active' ? (
                         <>
-                          <button className="p-2 text-slate-400 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-all" title="Detaylar">
+                          <button 
+                            onClick={() => alert(`Kullanıcı Detayları:\n\nİsim: ${u.username}\nE-posta: ${u.email || 'Belirtilmedi'}\nRol: ${u.role}\nKayıt: ${new Date(u.joinedAt).toLocaleString('tr-TR')}\nİlerleme: %${u.progress || 0}`)}
+                            className="p-2 text-slate-400 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-all" 
+                            title="Detaylar"
+                          >
                             <ExternalLink size={16} />
                           </button>
-                          <button className="p-2 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-all" title="Sil">
+                          <button 
+                            onClick={() => handleRemoveUser(u.username)}
+                            className="p-2 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-all" 
+                            title="Sil"
+                          >
                             <Trash2 size={16} />
                           </button>
                         </>
