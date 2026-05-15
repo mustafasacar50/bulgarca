@@ -53,6 +53,9 @@ function normalizeSimple(s: string) {
   return s.trim().toLowerCase()
     .replace(/ç/g, 'ch')
     .replace(/ş/g, 'sh')
+    .replace(/ğ/g, 'g')
+    .replace(/ü/g, 'u')
+    .replace(/ö/g, 'o')
     .replace(/ı/g, 'a')
     .replace(/[!?.,;:\-–—()'"«»]+/g, '')
     .replace(/\s+/g, ' ');
@@ -63,7 +66,7 @@ function checkPronounFlexibility(u: string, c: string): boolean {
   const cN = normalizeSimple(c);
   if (uN === cN) return true;
   
-  // Try with u variant for ı/ъ
+  // Try with u variant for ı/ъ/a
   const cNAlt = cN.replace(/a/g, 'u');
   if (uN === cNAlt) return true;
 
@@ -89,6 +92,9 @@ export function matchAnswer(userInput: string, correct: string): MatchResult {
   const normalize = (s: string) => s.trim().toLowerCase()
     .replace(/ç/g, 'ch')
     .replace(/ş/g, 'sh')
+    .replace(/ğ/g, 'g')
+    .replace(/ü/g, 'u')
+    .replace(/ö/g, 'o')
     .replace(/ı/g, 'a')
     .replace(/[!?.,;:\-–—()'"«»\s]+/g, '');
   
