@@ -1741,6 +1741,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
       ansText = ans;
     }
     
+    const correctVal = currentQ.correctAnswer;
     const result = matchAnswer(ansText, correctVal);
     setMatchResult(result);
     if (result !== 'wrong') setScore(s => s + 1);
