@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 interface UserProfile {
   username: string;
   email?: string;
+  password?: string;
   role: 'admin' | 'user';
   joinedAt: string;
   lastActive?: string;
@@ -62,6 +63,7 @@ export function AdminUsers() {
       const newUser: UserProfile = {
         username: request.username,
         email: request.email,
+        password: request.password,
         role: 'user',
         joinedAt: new Date().toISOString(),
         progress: 0
@@ -126,6 +128,7 @@ export function AdminUsers() {
       const newUser: UserProfile = {
         username: newUserData.username,
         email: newUserData.email,
+        password: newUserData.password,
         role: 'user',
         joinedAt: new Date().toISOString(),
         progress: 0

@@ -14,13 +14,39 @@ export function LoginPage() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!username || !token) {
-      setError('Lütfen kullanıcı adı ve token giriniz.');
-      return;
+    setError('');
+    
+    if (role === 'admin') {
+      if (!username || !token) {
+        setError('Lütfen kullanıcı adı ve GitHub token giriniz.');
+        return;
+      }
+      login(username, token, role);
+    } else {
+      if (!username || !password) {
+        setError('Lütfen kullanıcı adı ve şifre giriniz.');
+        return;
+      }
+      
+      // Call Student Login API
+      try {
+        const res = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+        
+        if (!res.ok) throw new Error(data.error || 'Giriş başarısız.');
+        
+        // Login success - uses the token returned by the API (Master Token)
+        login(data.user.username, data.user.token, 'user');
+      } catch (err: any) {
+        setError(err.message);
+      }
     }
-    login(username, token, role);
   };
 
   return (
