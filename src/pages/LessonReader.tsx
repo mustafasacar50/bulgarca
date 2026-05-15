@@ -1840,8 +1840,8 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
                 }`}
                 placeholder="Cevabınızı buraya yazın..."
                 value={typeof selectedOpt === 'string' ? selectedOpt : ""}
-                onChange={(e) => selectedOpt === null && setSelectedOpt(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && selectedOpt !== null && typeof selectedOpt === 'string' && handleSelect(selectedOpt)}
+                onChange={(e) => matchResult === null && setSelectedOpt(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && selectedOpt && typeof selectedOpt === 'string' && handleSelect(selectedOpt)}
                 disabled={matchResult !== null}
               />
               {matchResult !== null && (
