@@ -50,13 +50,22 @@ const PRONOUNS = [
 ];
 
 function normalizeSimple(s: string) {
-  return s.trim().toLowerCase().replace(/[!?.,;:\-–—()'"«»]+/g, '').replace(/\s+/g, ' ');
+  return s.trim().toLowerCase()
+    .replace(/ç/g, 'ch')
+    .replace(/ş/g, 'sh')
+    .replace(/ı/g, 'a')
+    .replace(/[!?.,;:\-–—()'"«»]+/g, '')
+    .replace(/\s+/g, ' ');
 }
 
 function checkPronounFlexibility(u: string, c: string): boolean {
   const uN = normalizeSimple(u);
   const cN = normalizeSimple(c);
   if (uN === cN) return true;
+  
+  // Try with u variant for ı/ъ
+  const cNAlt = cN.replace(/a/g, 'u');
+  if (uN === cNAlt) return true;
 
   const uParts = uN.split(' ');
   const cParts = cN.split(' ');
@@ -64,14 +73,25 @@ function checkPronounFlexibility(u: string, c: string): boolean {
   const uP = PRONOUNS.includes(uParts[0]);
   const cP = PRONOUNS.includes(cParts[0]);
 
-  if (cP && !uP) return uParts.join(' ') === cParts.slice(1).join(' ');
-  if (uP && !cP) return uParts.slice(1).join(' ') === cParts.join(' ');
+  if (cP && !uP) {
+    const rest = cParts.slice(1).join(' ');
+    return uParts.join(' ') === rest || uParts.join(' ') === rest.replace(/a/g, 'u');
+  }
+  if (uP && !cP) {
+    const rest = uParts.slice(1).join(' ');
+    return rest === cParts.join(' ') || rest === cParts.join(' ').replace(/a/g, 'u');
+  }
   
   return false;
 }
 
 export function matchAnswer(userInput: string, correct: string): MatchResult {
-  const normalize = (s: string) => s.trim().toLowerCase().replace(/[!?.,;:\-–—()'"«»\s]+/g, '');
+  const normalize = (s: string) => s.trim().toLowerCase()
+    .replace(/ç/g, 'ch')
+    .replace(/ş/g, 'sh')
+    .replace(/ı/g, 'a')
+    .replace(/[!?.,;:\-–—()'"«»\s]+/g, '');
+  
   const u = normalize(userInput);
   const c = normalize(correct);
   
