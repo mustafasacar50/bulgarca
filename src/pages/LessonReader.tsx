@@ -704,21 +704,28 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
       case "phrase_cards":
         return (
-          <div className="grid grid-cols-1 gap-3">
+          <div className="grid grid-cols-1 gap-4">
             {(block.cards || block.items || []).map((card: any, i: number) => (
               <div 
                 key={i} 
-                className="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm hover:border-primary-400 hover:shadow-md transition-all cursor-pointer group flex items-center justify-between gap-4"
+                className="group bg-white p-6 rounded-[2.5rem] border border-slate-100 shadow-sm hover:border-primary-400 hover:shadow-2xl hover:shadow-primary-100/30 transition-all duration-500 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-6"
                 onClick={() => setSelectedItem({ type: 'word', data: card })}
               >
-                <div className="flex-1">
-                  {block.title_tr && <div className="text-[10px] font-black text-primary-500 mb-1 uppercase tracking-widest">{t(block)}</div>}
-                  <div className="text-lg font-bold text-slate-900 group-hover:text-primary-600">
-                    <LearningText bg={card.bg} tr={card.tr} detail={card} />
+                <div className="flex-1 space-y-1">
+                  <div className="text-2xl font-black text-slate-900 group-hover:text-primary-600 transition-colors">
+                    <LearningText bg={card.bg} tr={card.tr} detail={card} className="tracking-tight" />
+                  </div>
+                  <div className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity">
+                    Tıkla ve detayları gör
                   </div>
                 </div>
-                <div className="flex-1 text-right">
-                  <div className="text-sm font-medium text-slate-600">{secText(card)}</div>
+                <div className="flex-shrink-0 flex items-center gap-6">
+                  <div className="text-lg font-medium text-slate-500 bg-slate-50 px-5 py-2 rounded-2xl border border-slate-100 group-hover:bg-primary-50 group-hover:border-primary-100 group-hover:text-primary-700 transition-all">
+                    {secText(card)}
+                  </div>
+                  <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-300 group-hover:bg-primary-600 group-hover:text-white group-hover:rotate-90 transition-all duration-500">
+                    <ChevronRight size={24} />
+                  </div>
                 </div>
               </div>
             ))}
@@ -746,7 +753,6 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {(block.cards || block.items || []).map((card: any, i: number) => (
               <div key={i} className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:border-primary-400 transition-all cursor-pointer group" onClick={() => setSelectedItem({ type: 'word', data: card })}>
-                <div className="text-[10px] font-black text-primary-500 mb-2 uppercase tracking-widest">{card.category}</div>
                 <div className="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary-600">{card.title_bg || card.bg}</div>
                 <div className="text-sm text-slate-500 leading-relaxed">{card.description_tr || card.tr}</div>
                 {card.examples && (
@@ -924,19 +930,67 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
       case "rule_cards":
       case "conversion_rule_grid":
         return (
-          <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm space-y-4">
-            <h3 className="font-bold text-slate-900">{t(block)}</h3>
-            {block.description_tr && <p className="text-sm text-slate-500 leading-relaxed">{block.description_tr}</p>}
-            <div className="flex flex-wrap gap-2 pt-2">
-              {(block.rule_ids || []).map((rid: string, i: number) => (
-                <button 
-                  key={i}
-                  className="px-3 py-1.5 bg-primary-50 hover:bg-primary-100 text-primary-600 text-xs font-bold rounded-xl transition-colors border border-primary-100"
-                  onClick={() => setSelectedRuleId(rid)}
-                >
-                  {rules[rid]?.title_tr || rid}
-                </button>
-              ))}
+          <div className="space-y-6">
+            {block.title_tr && (
+              <div className="flex items-center gap-3 ml-2">
+                <div className="w-1.5 h-6 bg-primary-500 rounded-full"></div>
+                <h3 className="font-black text-slate-900 text-lg uppercase tracking-tight">{t(block)}</h3>
+              </div>
+            )}
+            <div className="grid grid-cols-1 gap-5">
+              {(block.rule_ids || []).map((rid: string, i: number) => {
+                const rule = rules[rid];
+                if (!rule) return null;
+                // Find top 2 examples from glossary
+                const matches = glossary.filter(e => (e.rule_refs || []).includes(rid));
+                return (
+                  <div 
+                    key={i} 
+                    className="group bg-white p-7 rounded-[2rem] border border-slate-100 shadow-sm hover:border-primary-300 hover:shadow-xl hover:shadow-primary-50 transition-all duration-300 relative overflow-hidden"
+                  >
+                    {/* Decorative Background Element */}
+                    <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary-50 rounded-full opacity-0 group-hover:opacity-40 transition-opacity blur-2xl"></div>
+                    
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                      <div className="space-y-1">
+                        <div className="text-xl font-black text-slate-900 group-hover:text-primary-600 transition-colors">
+                          {rule.title_tr || rid}
+                        </div>
+                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">{rule.category || 'SES DÖNÜŞÜMÜ'}</div>
+                      </div>
+                      <div className="flex-shrink-0 bg-primary-50 text-primary-600 text-[10px] font-black px-3 py-1.5 rounded-xl border border-primary-100 uppercase tracking-widest">
+                        KURAL ID: {rid.split('-').pop()}
+                      </div>
+                    </div>
+
+                    {matches.length > 0 && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        {matches.slice(0, 2).map((m: any, mi: number) => (
+                          <div 
+                            key={mi} 
+                            className="flex items-center justify-between p-4 bg-slate-50/50 rounded-2xl border border-slate-100 hover:bg-white hover:border-primary-200 hover:shadow-md transition-all cursor-pointer group/ex"
+                            onClick={() => setSelectedItem({ type: 'word', data: m })}
+                          >
+                             <div className="flex flex-col">
+                               <LearningText bg={m.bg || m.bg_singular} tr={m.tr} detail={m} className="font-bold text-slate-900 group-hover/ex:text-primary-600" />
+                               <span className="text-[9px] text-slate-400 font-medium uppercase tracking-tighter italic">({transliterateCyrillic(m.bg || m.bg_singular)})</span>
+                             </div>
+                             <div className="text-xs font-medium text-slate-500">{secText(m)}</div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    <button 
+                      onClick={() => setSelectedRuleId(rid)}
+                      className="w-full flex items-center justify-center gap-2 py-4 bg-slate-900 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-primary-600 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-slate-100"
+                    >
+                      <RefreshCw size={14} className="group-hover:rotate-180 transition-transform duration-700" />
+                      TÜMÜNÜ LİSTELE ({matches.length} KELİME)
+                    </button>
+                  </div>
+                );
+              })}
             </div>
           </div>
         );
