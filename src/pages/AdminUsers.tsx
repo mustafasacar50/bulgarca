@@ -50,6 +50,53 @@ export function AdminUsers() {
     }
   };
 
+  const handleApprove = async (request: any) => {
+    if (!confirm(`${request.username} isimli öğrenciyi onaylamak istiyor musunuz?`)) return;
+    
+    setLoading(true);
+    try {
+      // 1. Prepare new user object
+      const newUser: UserProfile = {
+        username: request.username,
+        role: 'user',
+        joinedAt: new Date().toISOString(),
+        progress: 0
+      };
+
+      // 2. Add to users.json
+      const updatedUsers = [...users, newUser];
+      await saveJsonToGithub(config, 'registry/users.json', updatedUsers, `Approve user ${request.username}`);
+
+      // 3. Remove from requests.json
+      const updatedRequests = requests.filter(r => r.username !== request.username);
+      await saveJsonToGithub(config, 'registry/requests.json', updatedRequests, `Remove request for ${request.username}`);
+
+      // 4. Reload data
+      await loadData();
+      alert("Kullanıcı başarıyla onaylandı!");
+    } catch (e) {
+      console.error("Approval error:", e);
+      alert("Onaylama sırasında bir hata oluştu.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleReject = async (request: any) => {
+    if (!confirm(`${request.username} isimli başvuruyu reddetmek istediğinize emin misiniz?`)) return;
+    
+    setLoading(true);
+    try {
+      const updatedRequests = requests.filter(r => r.username !== request.username);
+      await saveJsonToGithub(config, 'registry/requests.json', updatedRequests, `Reject request for ${request.username}`);
+      await loadData();
+    } catch (e) {
+      console.error("Rejection error:", e);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const initializeRegistry = async () => {
     setLoading(true);
     try {
@@ -208,10 +255,16 @@ export function AdminUsers() {
                         </>
                       ) : (
                         <>
-                          <button className="px-3 py-1.5 bg-emerald-600 text-white rounded-xl text-[10px] font-bold hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-100">
+                          <button 
+                            onClick={() => handleApprove(u)}
+                            className="px-3 py-1.5 bg-emerald-600 text-white rounded-xl text-[10px] font-bold hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-100"
+                          >
                             ONAYLA
                           </button>
-                          <button className="px-3 py-1.5 bg-rose-50 text-rose-600 rounded-xl text-[10px] font-bold hover:bg-rose-100 transition-all">
+                          <button 
+                            onClick={() => handleReject(u)}
+                            className="px-3 py-1.5 bg-rose-50 text-rose-600 rounded-xl text-[10px] font-bold hover:bg-rose-100 transition-all"
+                          >
                             REDDET
                           </button>
                         </>
