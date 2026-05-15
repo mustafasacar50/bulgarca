@@ -1,5 +1,4 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import fetch from 'node-fetch';
 
 const OWNER = 'mustafasacar50';
 const REPO = 'bulgarca-user-data';
