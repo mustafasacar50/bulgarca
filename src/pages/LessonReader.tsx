@@ -938,44 +938,45 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
               </div>
             )}
             <div className="grid grid-cols-1 gap-5">
-              {(block.rule_ids || []).map((rid: string, i: number) => {
                 const rule = rules[rid];
                 if (!rule) return null;
-                // Find top 2 examples from glossary
-                const matches = glossary.filter(e => (e.rule_refs || []).includes(rid));
+                
+                // Enhanced matching logic
+                const ruleExamples = rule.examples || [];
+                const glossaryMatches = glossary.filter(e => 
+                  (e.rule_refs || []).includes(rid) || 
+                  (e.markers || []).some((m: any) => m.rule_id === rid || m.rule_id === rid.replace('cog-tr-', 'cognate_').replace('-to-bg-', '_to_'))
+                );
+                
+                const displayExamples = glossaryMatches.length > 0 ? glossaryMatches.slice(0, 2) : ruleExamples.slice(0, 2);
+                const totalCount = Math.max(glossaryMatches.length, ruleExamples.length);
+
                 return (
                   <div 
                     key={i} 
-                    className="group bg-white p-7 rounded-[2rem] border border-slate-100 shadow-sm hover:border-primary-300 hover:shadow-xl hover:shadow-primary-50 transition-all duration-300 relative overflow-hidden"
+                    className="group bg-white p-5 rounded-3xl border border-slate-100 shadow-sm hover:border-primary-300 hover:shadow-md transition-all duration-200"
                   >
-                    {/* Decorative Background Element */}
-                    <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary-50 rounded-full opacity-0 group-hover:opacity-40 transition-opacity blur-2xl"></div>
-                    
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                      <div className="space-y-1">
-                        <div className="text-xl font-black text-slate-900 group-hover:text-primary-600 transition-colors">
-                          {rule.title_tr || rid}
-                        </div>
-                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">{rule.category || 'SES DÖNÜŞÜMÜ'}</div>
+                    <div className="flex justify-between items-start mb-3">
+                      <div className="text-base font-bold text-slate-800 group-hover:text-primary-600 transition-colors">
+                        {rule.title_tr || rid}
                       </div>
-                      <div className="flex-shrink-0 bg-primary-50 text-primary-600 text-[10px] font-black px-3 py-1.5 rounded-xl border border-primary-100 uppercase tracking-widest">
-                        KURAL ID: {rid.split('-').pop()}
+                      <div className="text-[10px] font-bold text-slate-400 bg-slate-50 px-2 py-0.5 rounded-lg border border-slate-100">
+                        {totalCount} ÖRNEK
                       </div>
                     </div>
 
-                    {matches.length > 0 && (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                        {matches.slice(0, 2).map((m: any, mi: number) => (
+                    {displayExamples.length > 0 && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+                        {displayExamples.map((m: any, mi: number) => (
                           <div 
                             key={mi} 
-                            className="flex items-center justify-between p-4 bg-slate-50/50 rounded-2xl border border-slate-100 hover:bg-white hover:border-primary-200 hover:shadow-md transition-all cursor-pointer group/ex"
+                            className="flex items-center justify-between px-3 py-2 bg-slate-50/50 rounded-xl border border-slate-100 hover:bg-white hover:border-primary-100 transition-all cursor-pointer group/ex"
                             onClick={() => setSelectedItem({ type: 'word', data: m })}
                           >
                              <div className="flex flex-col">
-                               <LearningText bg={m.bg || m.bg_singular} tr={m.tr} detail={m} className="font-bold text-slate-900 group-hover/ex:text-primary-600" />
-                               <span className="text-[9px] text-slate-400 font-medium uppercase tracking-tighter italic">({transliterateCyrillic(m.bg || m.bg_singular)})</span>
+                               <LearningText bg={m.bg || m.bg_singular} tr={m.tr} detail={m} className="font-bold text-slate-900 text-xs" />
                              </div>
-                             <div className="text-xs font-medium text-slate-500">{secText(m)}</div>
+                             <div className="text-[10px] font-medium text-slate-400">{secText(m)}</div>
                           </div>
                         ))}
                       </div>
@@ -983,10 +984,10 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
                     <button 
                       onClick={() => setSelectedRuleId(rid)}
-                      className="w-full flex items-center justify-center gap-2 py-4 bg-slate-900 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-primary-600 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-slate-100"
+                      className="text-primary-500 hover:text-primary-700 text-[10px] font-black uppercase tracking-widest flex items-center gap-1 transition-colors pl-1"
                     >
-                      <RefreshCw size={14} className="group-hover:rotate-180 transition-transform duration-700" />
-                      TÜMÜNÜ LİSTELE ({matches.length} KELİME)
+                      Tümünü Gör 
+                      <ChevronRight size={12} />
                     </button>
                   </div>
                 );
