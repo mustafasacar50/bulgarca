@@ -264,36 +264,25 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
             ruleMatch = true;
           } else {
             // 3. Smart Context Match (Global Scanning)
+            // Restricted to Bulgarian text only for grammar patterns
             const bgClean = normalize(bg);
-            const trClean = normalize(tr);
 
-            // a. Scan for highlight target (e.g. "не", "ли")
+            // a. Scan for highlight target (e.g. "не", "ли") as a WHOLE WORD
             const target = activeRuleObj.marker?.highlight_target;
-            if (target && bgClean.includes(normalize(target))) {
-              ruleMatch = true;
-            } 
-            
-            // b. Scan for rule titles or keywords in text
-            if (!ruleMatch) {
-              const keywords = [
-                selectedRuleId,
-                activeRuleObj.title_tr,
-                activeRuleObj.title_bg,
-                activeRuleObj.short_tr
-              ].filter(Boolean).map(k => normalize(k));
-
-              if (keywords.some(k => bgClean.includes(k) || trClean.includes(k))) {
+            if (target) {
+              const normTarget = normalize(target);
+              // Regex for whole word in Cyrillic/Latin: 
+              // Matches if surrounded by non-alphanumeric chars or at start/end
+              const regex = new RegExp(`(^|[^a-zа-я])(${normTarget})([^a-zа-я]|$)`, 'i');
+              if (regex.test(bgClean)) {
                 ruleMatch = true;
               }
-            }
-
-            // c. Fallback to pattern matching
-            if (!ruleMatch) {
-              const pattern = activeRuleObj.pattern || activeRuleObj.marker?.highlight_target;
-              if (pattern) {
-                const parts = normalize(pattern).split(/[\s/]+/).filter(p => p.length >= 2);
-                if (parts.some(p => bgClean.includes(p))) ruleMatch = true;
-              }
+            } 
+            
+            // b. Fallback to pattern matching (only if rule has a specific pattern)
+            if (!ruleMatch && activeRuleObj.pattern) {
+              const parts = normalize(activeRuleObj.pattern).split(/[\s/]+/).filter(p => p.length >= 2);
+              if (parts.some(p => bgClean.includes(p))) ruleMatch = true;
             }
           }
         }
