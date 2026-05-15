@@ -28,6 +28,7 @@ import { LearningText } from '../components/LearningText';
 import { AppearanceSettings } from '../components/AppearanceSettings';
 import { findPairMarkers } from '../engine/ruleMatcher';
 import { transliterateCyrillic } from '../utils/textFormat';
+import { matchAnswer, MatchResult } from '../utils/transliterate';
 
 interface LessonReaderProps {
   lessonId: string;
@@ -1704,7 +1705,7 @@ function GlossaryTableSection({ block, glossary, rules, setSelectedItem, setSele
 function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selectedOpt, setSelectedOpt] = useState<any>(null);
-  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+  const [matchResult, setMatchResult] = useState<MatchResult | null>(null);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [bank, setBank] = useState<any>(null);
@@ -1733,28 +1734,26 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
     if (selectedOpt !== null) return;
     setSelectedOpt(ans);
     
-    let correct = false;
-    const correctVal = currentQ.correctAnswer;
-    const correctIdx = currentQ.correct_idx !== undefined ? currentQ.correct_idx : currentQ.answer_idx;
-
+    let ansText = "";
     if (typeof ans === 'number') {
-      correct = (ans === correctIdx) || (currentQ.options?.[ans] === correctVal);
+      ansText = currentQ.options?.[ans] || "";
     } else {
-      correct = ans.toLowerCase().trim() === correctVal.toLowerCase().trim();
+      ansText = ans;
     }
     
-    setIsCorrect(correct);
-    if (correct) setScore(s => s + 1);
+    const result = matchAnswer(ansText, correctVal);
+    setMatchResult(result);
+    if (result !== 'wrong') setScore(s => s + 1);
     
     setTimeout(() => {
       if (currentIdx < questions.length - 1) {
         setCurrentIdx(s => s + 1);
         setSelectedOpt(null);
-        setIsCorrect(null);
+        setMatchResult(null);
       } else {
         setShowResult(true);
       }
-    }, 1500);
+    }, 2000);
   };
 
   if (showResult) {
@@ -1768,7 +1767,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
           onClick={() => {
             setCurrentIdx(0);
             setSelectedOpt(null);
-            setIsCorrect(null);
+            setMatchResult(null);
             setScore(0);
             setShowResult(false);
           }}
@@ -1800,7 +1799,9 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
             const isThisCorrect = (i === correctIdx) || (opt === correctVal);
             
             if (selectedOpt === i) {
-              stateClass = isCorrect ? "border-emerald-500 bg-emerald-50 text-emerald-700" : "border-red-500 bg-red-50 text-red-700";
+              if (matchResult === 'exact') stateClass = "border-emerald-500 bg-emerald-50 text-emerald-700";
+              else if (matchResult === 'close') stateClass = "border-amber-500 bg-amber-50 text-amber-700";
+              else stateClass = "border-red-500 bg-red-50 text-red-700";
             } else if (selectedOpt !== null && isThisCorrect) {
               stateClass = "border-emerald-500 bg-emerald-50 text-emerald-700";
             }
@@ -1808,13 +1809,15 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
             return (
               <button
                 key={i}
-                disabled={selectedOpt !== null}
+                disabled={selectedOpt !== null && typeof selectedOpt === 'number'}
                 onClick={() => handleSelect(i)}
                 className={`w-full p-4 rounded-2xl border-2 text-left font-medium transition-all flex justify-between items-center ${stateClass}`}
               >
                 <span>{opt}</span>
                 {selectedOpt === i && (
-                  isCorrect ? <CheckCircle2 size={20} className="text-emerald-500" /> : <AlertCircle size={20} className="text-red-500" />
+                  matchResult === 'exact' ? <CheckCircle2 size={20} className="text-emerald-500" /> : 
+                  matchResult === 'close' ? <CheckCircle2 size={20} className="text-amber-500" /> : 
+                  <AlertCircle size={20} className="text-red-500" />
                 )}
                 {selectedOpt !== null && isThisCorrect && i !== selectedOpt && (
                   <CheckCircle2 size={20} className="text-emerald-500" />
@@ -1830,28 +1833,37 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
                 autoFocus
                 className={`w-full p-4 rounded-2xl border-2 outline-none transition-all font-bold text-lg ${
                   selectedOpt === null ? 'border-slate-200 focus:border-primary-500 bg-slate-50' : 
-                  isCorrect ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-red-500 bg-red-50 text-red-700'
+                  matchResult === 'exact' ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 
+                  matchResult === 'close' ? 'border-amber-500 bg-amber-50 text-amber-700' : 
+                  'border-red-500 bg-red-50 text-red-700'
                 }`}
                 placeholder="Cevabınızı buraya yazın..."
                 value={typeof selectedOpt === 'string' ? selectedOpt : ""}
                 onChange={(e) => selectedOpt === null && setSelectedOpt(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && selectedOpt !== null && typeof selectedOpt === 'string' && handleSelect(selectedOpt)}
-                disabled={isCorrect !== null}
+                disabled={matchResult !== null}
               />
-              {isCorrect !== null && (
+              {matchResult !== null && (
                 <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                  {isCorrect ? <CheckCircle2 size={24} className="text-emerald-500" /> : <AlertCircle size={24} className="text-red-500" />}
+                  {matchResult === 'exact' ? <CheckCircle2 size={24} className="text-emerald-500" /> : 
+                   matchResult === 'close' ? <CheckCircle2 size={24} className="text-amber-500" /> :
+                   <AlertCircle size={24} className="text-red-500" />}
                 </div>
               )}
             </div>
-            {isCorrect === false && (
+            {matchResult === 'wrong' && (
               <div className="p-3 bg-emerald-50 border border-emerald-100 rounded-xl text-emerald-700 text-sm font-bold animate-in fade-in slide-in-from-top-2">
                 Doğru Cevap: <span className="underline">{currentQ.correctAnswer}</span>
               </div>
             )}
+            {matchResult === 'close' && (
+              <div className="p-3 bg-amber-50 border border-amber-100 rounded-xl text-amber-700 text-sm font-bold animate-in fade-in slide-in-from-top-2">
+                Neredeyse Doğru! Küçük bir yazım hatası var.
+              </div>
+            )}
             <button
               onClick={() => handleSelect(selectedOpt || "")}
-              disabled={!selectedOpt || isCorrect !== null}
+              disabled={!selectedOpt || matchResult !== null}
               className="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold shadow-lg shadow-slate-200 disabled:opacity-50"
             >
               Cevabı Kontrol Et
@@ -1875,7 +1887,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
             if (currentIdx < questions.length - 1) {
               setCurrentIdx(currentIdx + 1);
               setSelectedOpt(null);
-              setIsCorrect(null);
+              setMatchResult(null);
             } else {
               setShowResult(true);
             }
