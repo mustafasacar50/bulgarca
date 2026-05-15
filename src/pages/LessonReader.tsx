@@ -47,6 +47,8 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
       contextRule?: any
     }
   } | null>(null);
+  const [quizBank, setQuizBank] = useState<any>(null);
+  const [showAdminQuizModal, setShowAdminQuizModal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [showCompleteModal, setShowCompleteModal] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -96,6 +98,14 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
         const lessonMeta = manifest.lessons.find((l: any) => l.id === lessonId);
         if (!lessonMeta) return;
+
+        // Fetch Quiz Bank if linked
+        if (lessonMeta.quiz_bank) {
+          fetch(`${import.meta.env.BASE_URL}${lessonMeta.quiz_bank}`)
+            .then(r => r.json())
+            .then(setQuizBank)
+            .catch(e => console.error("Quiz bank load error:", e));
+        }
 
         const lessonPath = (lessonMeta.path || lessonMeta.filePath).replace(/^\//, '');
         const [lessonRes, ...ruleResponses] = await Promise.all([
@@ -1032,7 +1042,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
 
 
       case "quiz":
-        return <QuizBlock key={bIdx} block={block} />;
+        return <QuizBlock key={bIdx} block={block} lesson={lesson} />;
 
       case "study_tip":
         return (
@@ -1291,7 +1301,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
                             </div>
                           </td>
                           <td className="p-4">
-                            <span className="text-slate-600 text-sm font-medium">{isRev ? (item.bg || item.letter || item.pattern || item.form || '') : (item.tr || item.meaning_tr || '')}</span>
+                            <span className="text-slate-800 text-sm font-semibold">{isRev ? (item.bg || item.letter || item.pattern || item.form || '') : (item.tr || item.meaning_tr || '')}</span>
                           </td>
                           <td className="p-4">
                             <div className="flex flex-wrap gap-1">
@@ -1381,6 +1391,23 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
             {isSyncing ? 'Senkronize ediliyor...' : isCompleted ? 'Yeniden İncele' : 'Dersi Tamamla'}
           </button>
         </div>
+        {isAdmin && quizBank && (
+          <div className="mt-12 p-6 bg-slate-900 rounded-3xl text-white flex items-center justify-between gap-4">
+            <div>
+              <h4 className="font-bold flex items-center gap-2">
+                <Trophy size={18} className="text-amber-400" />
+                Soru Bankası Kontrolü (Yönetici)
+              </h4>
+              <p className="text-xs text-slate-400 mt-1">Bu ders için {quizBank.questions?.length || 0} hazır soru bulunmaktadır.</p>
+            </div>
+            <button 
+              onClick={() => setShowAdminQuizModal(true)}
+              className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-xs font-bold transition-all"
+            >
+              Tüm Soruları Gör
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="lg:w-96 flex-shrink-0">
@@ -1418,6 +1445,30 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
           </AnimatePresence>
         </div>
       </div>
+
+      <Modal isOpen={showAdminQuizModal} onClose={() => setShowAdminQuizModal(false)} title="Soru Bankası (Tüm Sorular)">
+        <div className="max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar space-y-4">
+          {(quizBank?.questions || []).map((q: any, i: number) => (
+            <div key={i} className="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+              <div className="flex justify-between items-start">
+                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Soru {i+1} ({q.type})</span>
+                <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">{q.correctAnswer}</span>
+              </div>
+              <p className="text-sm font-bold text-slate-800">{q.prompt}</p>
+              {q.options && (
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {q.options.map((opt: string, oi: number) => (
+                    <span key={oi} className={`text-[10px] px-2 py-1 rounded border ${opt === q.correctAnswer ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 'bg-white border-slate-200 text-slate-500'}`}>
+                      {opt}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {q.explanation_tr && <p className="text-[10px] text-slate-500 italic">💡 {q.explanation_tr}</p>}
+            </div>
+          ))}
+        </div>
+      </Modal>
 
       <Modal isOpen={showCompleteModal} onClose={() => setShowCompleteModal(false)} title="Tebrikler!">
         <div className="flex flex-col items-center text-center space-y-4 py-4">
@@ -1650,22 +1701,48 @@ function GlossaryTableSection({ block, glossary, rules, setSelectedItem, setSele
   );
 }
 
-function QuizBlock({ block }: { block: any }) {
+function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [selectedOpt, setSelectedOpt] = useState<number | null>(null);
+  const [selectedOpt, setSelectedOpt] = useState<any>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
+  const [bank, setBank] = useState<any>(null);
 
-  const questions = block.questions || [];
+  useEffect(() => {
+    if (lesson?.quiz_bank) {
+      fetch(`${import.meta.env.BASE_URL}${lesson.quiz_bank}`)
+        .then(r => r.json())
+        .then(setBank)
+        .catch(console.error);
+    }
+  }, [lesson?.quiz_bank]);
+
+  const questions = useMemo(() => {
+    const raw = (bank?.questions || block.questions || []);
+    if (raw.length === 0) return [];
+    // Pick 4 random
+    return [...raw].sort(() => Math.random() - 0.5).slice(0, 4);
+  }, [bank, block.questions]);
+
   if (questions.length === 0) return null;
 
   const currentQ = questions[currentIdx];
 
-  const handleSelect = (idx: number) => {
+  const handleSelect = (ans: any) => {
     if (selectedOpt !== null) return;
-    setSelectedOpt(idx);
-    const correct = idx === currentQ.correct_idx || idx === currentQ.answer_idx;
+    setSelectedOpt(ans);
+    
+    let correct = false;
+    const correctVal = currentQ.correctAnswer;
+    const correctIdx = currentQ.correct_idx !== undefined ? currentQ.correct_idx : currentQ.answer_idx;
+
+    if (typeof ans === 'number') {
+      correct = (ans === correctIdx) || (currentQ.options?.[ans] === correctVal);
+    } else {
+      correct = ans.toLowerCase().trim() === correctVal.toLowerCase().trim();
+    }
+    
     setIsCorrect(correct);
     if (correct) setScore(s => s + 1);
     

@@ -9,6 +9,7 @@
   "order": 5,
   "level": "A1",
   "summary_tr": "Bulgarcada fiillerin dört temel halini (Olumlu, Olumsuz, Soru ve Olumsuz-Soru) 'СЪМ', 'УЧА' ve 'КАЗВАМ СЕ' fiilleri üzerinden karşılaştırmalı olarak öğreten kapsamlı bir ders.",
+  "quiz_bank": "data/quizzes/quiz-lesson-015.json",
   "sections": [
     {
       "section_id": "verb-forms-intro",

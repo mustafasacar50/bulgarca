@@ -143,14 +143,14 @@ export function LearningText({
       content = (
         <div className="flex flex-col leading-tight">
           <span className="font-bold text-slate-900">{renderWithMarkers(resolvedTr, false)}</span>
-          <span className={`${scriptClass} text-xs text-slate-500 font-medium`}>{renderWithMarkers(formattedBg, true)}</span>
+          <span className={`${scriptClass} text-xs text-slate-600 font-semibold`}>{renderWithMarkers(formattedBg, true)}</span>
         </div>
       );
     } else {
       content = (
         <div className="flex flex-col leading-tight">
           <span className={`${scriptClass} font-bold text-slate-900`}>{renderWithMarkers(formattedBg, true)}</span>
-          <span className="text-xs text-slate-500 font-medium">{renderWithMarkers(resolvedTr, false)}</span>
+          <span className="text-xs text-slate-600 font-semibold">{renderWithMarkers(resolvedTr, false)}</span>
         </div>
       );
     }
