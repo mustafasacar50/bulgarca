@@ -44,6 +44,32 @@ export function hasTransposition(a: string, b: string): boolean {
 
 export type MatchResult = 'exact' | 'close' | 'wrong';
 
+const PRONOUNS = [
+  'аз','ти', 'той', 'тя', 'то', 'ние', 'вие', 'те', // BG
+  'ben', 'sen', 'o', 'biz', 'siz', 'onlar' // TR
+];
+
+function normalizeSimple(s: string) {
+  return s.trim().toLowerCase().replace(/[!?.,;:\-–—()'"«»]+/g, '').replace(/\s+/g, ' ');
+}
+
+function checkPronounFlexibility(u: string, c: string): boolean {
+  const uN = normalizeSimple(u);
+  const cN = normalizeSimple(c);
+  if (uN === cN) return true;
+
+  const uParts = uN.split(' ');
+  const cParts = cN.split(' ');
+
+  const uP = PRONOUNS.includes(uParts[0]);
+  const cP = PRONOUNS.includes(cParts[0]);
+
+  if (cP && !uP) return uParts.join(' ') === cParts.slice(1).join(' ');
+  if (uP && !cP) return uParts.slice(1).join(' ') === cParts.join(' ');
+  
+  return false;
+}
+
 export function matchAnswer(userInput: string, correct: string): MatchResult {
   const normalize = (s: string) => s.trim().toLowerCase().replace(/[!?.,;:\-–—()'"«»\s]+/g, '');
   const u = normalize(userInput);
@@ -52,6 +78,11 @@ export function matchAnswer(userInput: string, correct: string): MatchResult {
 
   if (u === c || u === cLat) return 'exact';
   
+  // Check pronoun flexibility before fuzzy matching
+  if (checkPronounFlexibility(userInput, correct) || checkPronounFlexibility(userInput, cyrillicToLatin(correct))) {
+    return 'exact';
+  }
+
   const dist = Math.min(levenshtein(u, c), levenshtein(u, cLat));
   if (dist <= 1 || hasTransposition(u, c) || hasTransposition(u, cLat)) return 'close';
   

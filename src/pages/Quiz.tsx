@@ -82,7 +82,9 @@ export function Quiz() {
             setHistory(res.content);
             localStorage.setItem('quiz_history', JSON.stringify(res.content));
           }
-        } catch (e) { console.error("History sync error:", e); }
+        } catch (e: any) { 
+          if (e?.status !== 404) console.error("History sync error:", e); 
+        }
         finally { setSyncing(false); }
       }
     };
