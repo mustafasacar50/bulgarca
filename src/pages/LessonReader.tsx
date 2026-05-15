@@ -1788,17 +1788,19 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
       </div>
 
       <h3 className="text-xl font-bold text-slate-800 leading-relaxed">
-        {currentQ.question_tr || currentQ.question}
+        {currentQ.prompt || currentQ.question_tr || currentQ.question}
       </h3>
 
       <div className="grid grid-cols-1 gap-3">
         {(currentQ.options || []).map((opt: string, i: number) => {
           let stateClass = "border-slate-100 hover:border-primary-300";
+          const correctVal = currentQ.correctAnswer;
           const correctIdx = currentQ.correct_idx !== undefined ? currentQ.correct_idx : currentQ.answer_idx;
+          const isThisCorrect = (i === correctIdx) || (opt === correctVal);
           
           if (selectedOpt === i) {
             stateClass = isCorrect ? "border-emerald-500 bg-emerald-50 text-emerald-700" : "border-red-500 bg-red-50 text-red-700";
-          } else if (selectedOpt !== null && i === correctIdx) {
+          } else if (selectedOpt !== null && isThisCorrect) {
             stateClass = "border-emerald-500 bg-emerald-50 text-emerald-700";
           }
 
@@ -1813,7 +1815,7 @@ function QuizBlock({ block, lesson }: { block: any, lesson?: any }) {
               {selectedOpt === i && (
                 isCorrect ? <CheckCircle2 size={20} className="text-emerald-500" /> : <AlertCircle size={20} className="text-red-500" />
               )}
-              {selectedOpt !== null && i === correctIdx && i !== selectedOpt && (
+              {selectedOpt !== null && isThisCorrect && i !== selectedOpt && (
                 <CheckCircle2 size={20} className="text-emerald-500" />
               )}
             </button>
