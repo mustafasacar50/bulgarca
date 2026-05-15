@@ -160,7 +160,7 @@ export function LessonReader({ lessonId, onBack }: LessonReaderProps) {
     
     try {
       // 1. Get current progress
-      let currentProgress = { completedLessons: [] };
+      let currentProgress: { completedLessons: string[] } = { completedLessons: [] };
       try {
         const res = await getGithubFile({
           token: user.token,
